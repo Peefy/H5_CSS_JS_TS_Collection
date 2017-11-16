@@ -1,0 +1,4449 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DuGu_JavaScript</title>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="6"/> <!--每6秒中刷新当前页面-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+  <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+  <script src="../js/myjs.js"></script>
+</head>
+<body style="padding-top:10px;">   
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+<style>
+    body
+    {
+        font: "Times New Roman";
+        color: #ccc;
+        background-color: #222222;
+    }
+    h1,h2,h3,h4,h5,h6,p
+    {
+        font: "Times New Roman";
+        color :#ccc;
+    }
+</style>
+    <!--JavaScript 教程-->
+    <h2>JavaScript 教程</h2>
+    <p>JavaScript是Web的编程语言。<br>
+        所有现代的HTML页面都使用JavaScript。<br>
+    </p>
+    <hr>
+    <h2>JavaScript在线实例</h2>
+    <button type="button" class="button" id="btnDate" onclick="displaydate()">点击获得日期</button>
+    <script>
+        function displaydate()
+        {
+            document.getElementById("btnDate").innerHTML = Date();
+        }
+    </script>
+    <h2>为什么学习JavaScript</h2>
+    <ul>
+        <li><b>HTML</b>定义了网页的内容</li>
+        <li><b>CSS</b>描述了网页的布局</li>
+        <li><b>JavaScript</b>定义了网页的行为</li>
+    </ul>
+    <!--end JavaScript 教程-->
+
+    <!--JavaScript 简介-->
+    <h2>JavaScript简介</h2>
+    <p>JavaScript是互联网上最流行的脚本语言，这门语言可用于HTML和web，更可广泛用于服务器、PC
+        、笔记本电脑、平板电脑和智能手机设备。
+    </p>
+    <hr>
+    <h2>JavaScript是脚本语言</h2>
+    <ul>
+        <li>JavaScript是一种轻量级脚本语言</li>
+        <li>JavaScript是可插入HTML页面的编程代码</li>
+        <li>JavaScript插入HTML页面后，可由所有的现代浏览器执行</li>
+        <li>JavaScript很容易学习</li>
+    </ul>
+    <h2>JavaScript:直接写入HTML输出流</h2>
+    <script>
+        document.write("<h4>这是一个js写的标题</h4>");
+        document.write("<p>这是一个js写的段落</p>");
+    </script>
+    <p>您只能在HTML输出流中使用<strong>document.write()</strong>
+        如果您在文档中已经加载后使用它(比如在函数中)，会覆盖整个文档。
+    </p>
+    <h2>JavaScript对事件的反应</h2>
+    <p>alert()函数在JS中并不常用，但用于测试非常方便。<br>
+        onclick事件指示很小的一部分.
+    </p>
+    <h2>JavaScript：改变HTML内容</h2>
+    <p>使用JavaScript来处理HTML内容是非常强大的功能</p>
+    <p>会经常看到document.getElementById("some id").这个方法是在HTML DOM中定义的. <br>
+        DOM(Document Object Model)(文档对象模型)是用于访问HTML元素正式的W3C标准。<br>
+    </p>
+    <button type="button" class="button" id="btnAlert" onclick="showAlert()">showAlert</button>
+    <script>
+        function showAlert()
+        {
+            document.getElementById("btnAlert").innerHTML = "展示了对话框";
+            alert("这是一个对话框");
+        }
+    </script>
+    <h2>JavaScript：改变HTML图像</h2>
+    <img src="http://www.runoob.com/images/pic_bulboff.gif" id="myImg" onclick="changeImage()">
+    <script>
+        function changeImage()
+        {
+            var img = document.getElementById("myImg");
+            if(img.src.match("bulbon") )
+            {
+                img.src = "http://www.runoob.com/images/pic_bulboff.gif";
+            }
+            else
+            {
+                img.src = "http://www.runoob.com/images/pic_bulbon.gif";
+            }
+        }
+    </script>
+    <h2>JavaScript：改变HTML样式</h2>
+    <p>改变HTML元素的样式，属于改变HTML属性的变种</p>
+    <button type="button" class="button" id="btnChangeStyle" onclick="changeStyle()">点我改变样式</button>
+    <script>
+        function changeStyle()
+        {
+            document.getElementById("btnChangeStyle").style.color = "red";
+        }
+    </script>
+    <h2>JavaScript：验证输入</h2>
+    <p>用于验证用户的输入</p>
+    <p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+    <input id="input_num" type="text">
+    <button type="button" class="button" onclick="myJudge()">验证数字</button>
+    <script>
+        function myJudge()
+        {
+            var x = document.getElementById("input_num").value;
+            if(x == "" || isNaN(x))
+            {
+                alert("输入的文本不是数字");
+            }
+            else
+            {
+                alert("验证通过");
+            }
+        }
+    </script>
+    <hr>
+    <i>注意:JavaScript和Java是两种完全不同的语言，无论在概念上还是设计上。<br>
+        Java(由Sun发明)是更复杂的语言。<br>
+        ECMA-262是JavaScript标准的官方名称。<br>
+        JavaScript由Brendan发明。它于1995年出现在Netscape中(该浏览器已经停止更新)，
+        并于1997年被ECMA(一个标准协会采纳)
+    </i>
+    <!--end JavaScript 简介-->
+
+    <!--JavaScript 用法-->
+    <h2>JavaScript 用法</h2>
+    <hr>
+    <p>HTML中的脚本必须位于&lt;script&gt;与&lt;/script&gt;标签之间<br>
+        脚本可被放置在HTML页面的&lt;body&gt;和&lt;head&gt;部分中.
+    </p>
+    <hr>
+    <h2>&lt;script&gt;标签</h2>
+    <p>&lt;script&gt;与&lt;/script&gt;标签之间的代码包含了JavaScript</p>
+    <hr>
+    <h2>JavaScript函数和事件</h2>
+    <p>通常，我们需要在某个事件发生时执行代码，比如当用户点击按钮时，<br>
+        如果我们把JavaScript代码放入函数中，就可以在事件发生时调用该函数。<br> 
+    </p>
+    <p>通常的做法是把函数放入head标签部分中，或者放在页面底部，这样不会干扰页面的内容。</p>
+    <h2>外部的JavaScript</h2>
+    <p>也可以把脚本保存到外部文件中。外部文件通常包含被多个页面使用的代码。<br>
+        外部JavaScript文件的文件扩展名是.js。<br>
+        如果使用外部文件。就在&lt;script&gt;的标签的"src"属性中设置该.js文件. <br>
+        不论脚本放置在head标签还是body标签中，运行效果与script标签中完全一致
+    </p>
+    <button type="button" class="button"
+        id="runExJs" onclick="myClick()">运行外部js文件</button>
+    <script>
+        function myClick()
+        {
+            document.getElementById("runExJs").innerHTML = getReturn();
+        }
+    </script>
+    <br>
+    <i><b>注意：</b>外部脚本不能包含&lt;script&gt;标签</i>
+    <!--end JavaScript 用法-->
+
+    <!--JavaScript 输出-->
+    <h2>JavaScript输出</h2>
+    <hr>
+    <p>JavaScript没有打印任何或者输出的函数.</p>
+    <h3>JavaScript显示数据</h3>
+    <p>JavaScript显示数据
+        <ul>
+            <li>使用<b>window.alert()</b>弹出警告框</li>
+            <li>使用<b>document.write()</b>方法将内容写到HTML文档中</li>
+            <li>使用<b>innerHTML</b>写入HTML元素</li>
+            <li>使用<b>console.log()</b>写入到浏览器的控制台</li>
+        </ul>
+    </p>
+    <hr>
+    <h2 onclick="h2showAlert()">使用window.alert()</h2>
+    <script>
+        function h2showAlert()
+        {
+            window.alert(22 + "22");
+        }
+    </script>
+    <hr>
+    <h2>操作HTML元素</h2>
+    <p>如果需要JavaScript访问某个HTML元素，可以使用document.getElementById(id)方法. <br>
+        请使用"id"属性来标识HTML元素，并innerHTML来获取或插入元素内容:
+    </p>
+    <p>以上JavaScript语句(在&lt;script&gt;标签中)可以在web浏览器中执行：<br>
+        document.getElementById("demo");是使用id属性来查找HTML元素的JavaScript代码。 <br>
+        <b>innerHTML = "12345";是用于修改元素的HTML内容(innerHTML)的JavaScript代码</b>
+    </p>
+    <h2>写到HTML文档</h2>
+    <p>下面使用JS将字符串写入HTML文档中，而不是写入一个段落</p>
+    <script>
+        document.write(Date());
+    </script>
+    <i><b>注意：</b>请使用document.write仅仅向文档写入内容。<br>
+        如果在文档已经加载后执行document.write，整个HTML页面将被覆盖.
+    </i>
+    <br>
+    <button type="button" class="button" onclick="rewrite()">点我覆盖整个文档</button>
+    <script>
+        function rewrite()
+        {
+            document.write(Date());
+        }
+    </script>
+    <h2>写到控制台</h2>
+    <p>如果浏览器支持调试，可以使用console.log()方法显示JavaScript的值。<br>
+        浏览器中使用F12来启用调试模式，在调试窗口中点击"Console"菜单.
+    </p>
+    <script>
+        a = 5;
+        b = 6;
+        console.log(a + b);
+    </script>
+    <!--end JavaScript 输出-->
+
+    <!--JavaScript 语法-->
+    <h2>JavaScript语法</h2>
+    <p>JavaScript是一个程序语言。语法规则定义了语言结构.<br>
+        JavaScript是一个脚本语言。<br>
+        它是一个轻量级，但功能强大的编程语言。
+    </p>
+    <h2>JavaScript字面量</h2>
+    <p>在编程语言中，一般固定值称为字面量，如3.14 <br>
+       <b>数字(Number)字面量</b> 可以是整数或者小数，或者科学计数(e). 3.14 1002 50e6
+    </p>
+    <p><b>字符串(String)字面量</b>可以使用单引号或者双引号: "DuGu" 'dugu'</p>
+    <p>表达式字面量可以用于计算 5 + 6 3 * 10</p>
+    <p><b>数组(Array)字面量</b> 定义一个数组：[40,20,30,1,20,12]</p>
+    <p><b>对象(Object)字面量</b> 定义一个对象 <br>
+        {firstName:"DuGu",lastName:"Doe",age:20,color:"red"}
+    </p>
+    <p><b>函数(Function)字面量</b> 定义一个函数 <br>
+        function myFunc(a,b) { return a + b; }
+    </p>
+    <hr>
+    <h2>JavaScript变量</h2>
+    <p>在编程语言中，变量用于存储数据值。<br>
+        JavaScript使用关键字var来定义变量，使用等号来为变量赋值：<br>
+        var num = 1; <br>
+        x = 2; <br>
+        变量可以通过变量名访问。在指令式语言中，变量通常是可变的，
+        字面量是一个恒定的值。 <br>
+        <b>注意：</b><i>变量是一个<b>名称</b>。字面量是一个<b>值</b></i>
+    </p>    
+    <hr>
+    <h2><b>JavaScript操作符</b></h2>
+    <p>JS使用 <b>算数运算符</b> 来计算值 <br>
+        (6 + 2) * 10;
+    </p>
+    <p>JavaScript使用 <b>赋值运算符</b> 给变量赋值:</p>
+    <p>JavaScript语言有多种类型的运算符：</p>
+    <ul>
+        <li>赋值，算术和位运算符 = + * /,在JS运算符中描述</li>
+        <li>条件，比较及逻辑运算符 == != < >,在JS比较运算符中描述</li>
+    </ul>
+    <hr>
+    <h2>JavaScript语句</h2>
+    <p>在HTML中，JS语句向浏览器发出的命令。<br>
+        语句是用分号分隔：x = 5 + 6;y = x * 10;
+    </p>
+    <h2>JavaScript关键字</h2>
+    <p>JS关键字用于标识要执行的操作。<br>
+        和其他任何编程语言一样，JS保留了一些关键字为自己所有。<br>
+        var 关键字告诉浏览器创建一个新的变量：
+    </p>
+
+    <p>JS同样保留了一些关键字，这些关键字当前的语言版本中并没有使用，但在以后JS扩展中会用到。<br>
+        JS关键字必须以字母、下划线(_)或者美元符($)开始. <br>
+        后续的字符可以是字母、数字、下划线或美元符(数字是不允许作为首字符出现的，以便JS可以轻易区分
+        分开关键字和数字)。 <br>
+        以下是JS中最重要的保留字(按字母顺序):
+    </p>
+    <table class="reference">
+        <tbody><tr>
+        <td>abstract</td>
+        <td>else</td>
+        <td>instanceof</td>
+        <td>super</td>
+        </tr><tr>
+        </tr><tr>
+        <td>boolean</td>
+        <td>enum</td>
+        <td>int</td>
+        <td>switch</td>
+        </tr><tr>
+        </tr><tr>
+        <td>break</td>
+        <td>export</td>
+        <td>interface</td>
+        <td>synchronized</td>
+        </tr><tr>
+        </tr><tr>
+        <td>byte</td>
+        <td>extends</td>
+        <td>let</td>
+        <td>this</td>
+        </tr><tr>
+        </tr><tr>
+        <td>case</td>
+        <td>false</td>
+        <td>long</td>
+        <td>throw</td>
+        </tr><tr>
+        </tr><tr>
+        <td>catch</td>
+        <td>final</td>
+        <td>native</td>
+        <td>throws</td>
+        </tr><tr>
+        </tr><tr>
+        <td>char</td>
+        <td>finally</td>
+        <td>new</td>
+        <td>transient</td>
+        </tr><tr>
+        </tr><tr>
+        <td>class</td>
+        <td>float</td>
+        <td>null</td>
+        <td>true</td>
+        </tr><tr>
+        </tr><tr>
+        <td>const</td>
+        <td>for</td>
+        <td>package</td>
+        <td>try</td>
+        </tr><tr>
+        </tr><tr>
+        <td>continue</td>
+        <td>function</td>
+        <td>private</td>
+        <td>typeof</td>
+        </tr><tr>
+        </tr><tr>
+        <td>debugger</td>
+        <td>goto</td>
+        <td>protected</td>
+        <td>var</td>
+        </tr><tr>
+        </tr><tr>
+        <td>default</td>
+        <td>if</td>
+        <td>public</td>
+        <td>void</td>
+        </tr><tr>
+        </tr><tr>
+        <td>delete</td>
+        <td>implements</td>
+        <td>return</td>
+        <td>volatile</td>
+        </tr><tr>
+        </tr><tr>
+        <td>do</td>
+        <td>import</td>
+        <td>short</td>
+        <td>while</td>
+        </tr><tr>
+        </tr><tr>
+        <td>double</td>
+        <td>in</td>
+        <td>static</td>
+        <td>with</td>
+        </tr><tr>
+        </tr></tbody></table>
+
+    <p id="jsText"></p>
+    <h2>JavaScript注释</h2>
+    <p>不是所有的JS语句都是"命令"。双斜杠//后的内容将会被浏览器忽略.</p>
+    <hr>
+    <h2>JavaScript数据类型</h2>
+    <p>JavaScript有多种数据类型：数字，字符串，数组，对象等</p>
+    <ul>
+        <li>var length = 16;</li>
+        <li>var points = x * 10;</li>
+        <li>var lastname = "DuGu";</li>
+        <li>var cars = ["12","12","234"];</li>
+        <li>var person = {firstname:"dudu",lastname:"dugu"};</li>
+    </ul>
+    <hr>
+    <h2>数据类型的概念</h2>
+    <p>编程语言中，数据类型是一个非常重要的内容。<br>
+        为了可以操作变量，了解数据类型的概念非常重要。<br>
+        如果没有数据类型，以下实例将无法运行。<br>
+        16 + "DuGu" <br>
+        但是其计算的结果为"16DuGu"
+    </p>
+    <h2>JavaScript函数</h2>
+    <p>JS语句可以写在函数内，函数可以重复引用：<br>
+        <b>引用一个函数</b>=调用函数(执行函数内的语句)。<br>
+        function myFunction(a,b) {return a * b; }
+    </p>
+    <hr>
+    <h2>JavaScript字母大小写</h2>
+    <p>JS对大小写是敏感的。<br>
+        当编写JavaScript语句时，请留意是否关闭大小写切换键。<br>
+        函数getElementById与getElementbyId是不同的。<br>
+        同样，变量myVariable与MyVariable也是不同的。
+    </p>
+    <hr>
+    <h2>JavaScript字符集</h2>
+    <p>JavaScript使用Unicode字符集，<br>
+        Unicode覆盖了所有的字符，包含标点等字符。
+    </p>
+    <i>在JS中，常见的是驼峰法命名规则，如lastName，而不是lastname</i>
+    <p>JavaScript是弱类型编程语言，定义变量都使用var定义，与Java这种强类型语言
+        有区别.在定义后可以通过typeOf()来获取JavaScript中变量的数据类型
+    </p>
+
+    <!--JavaScript 语句-->
+    <!--end JavaScript 语句-->
+    <h2>JavaScript语句</h2>
+    <p>JS语句向浏览器发出的命令。语句的作用是告诉浏览器该做什么。</p>
+    <p>JS语句是发给浏览器的命令。<br>
+        这些命令的作用是告诉浏览器要做的事情。<br>
+        下面的JS语句向 id="demo"的HTML元素输出文本"你好 Dolly" <br>
+        document.getElementById("demo").innerHTML = "你好 Dolly"
+    </p>
+    <h2>分号;</h2>
+    <p>分号用于分隔JavaScript语句。<br>
+        通常我们在每条语句可执行的语句结尾添加分号。<br>
+        使用分号的另一用处是在一行中编写多条语句. <br>
+        <i>有时可能看到不带分号的案例；在JS中，用分号来结束语句时可选的</i>
+    </p>
+    <h2>JavaScript代码</h2>
+    <p>JavaScript代码是JS语句的序列。<br>
+        浏览器按照编写顺序依次执行每条语句。<br>     
+    </p>
+    <p id="myDemo"></p>
+    <div id="myDiv"></div>
+    <script>
+        document.getElementById("myDemo").innerHTML = "这是一个段落";
+        document.getElementById("myDiv").innerHTML = "这是一个div"
+    </script>
+    <h2>JavaScript代码块</h2>
+    <p>JS可以分批地组合起来。<br>
+        代码块以左花括号开始，以右花括号结束。<br>
+        代码块的作用是一并地执行语句序列。
+    </p>
+    <script>
+        function noneFunc()
+        {
+            document.getElementById("myDemo").style.color = "#f01234";
+        }
+    </script>
+    <h2>JavaScript语句标识符</h2>
+    <p>JavaScript语句通常以一个 <b>语句标识符</b> 为开始，并执行该语句。<br>
+        语句标识符是保留关键字不能作为变量名使用。<br>
+        <ul>
+            <li><b>break:</b>用于跳出循环</li>
+            <li><b>catch:</b>语句块，在try语句块执行出错后执行catch块</li>
+            <li><b>continue:</b>跳过循环中的语句块</li>
+            <li><b>do...while:</b>执行一个语句块，在条件语句为true时继续执行该语句块</li>
+            <li><b>for:</b>在条件语句为true时，可以将代码块执行指定的次数</li>
+            <li><b>for...in:</b>用于遍历数组或者对象的属性(对数组或者对象的属性进行循环操作)</li>
+            <li><b>function:</b>定义一个函数</li>
+            <li><b>if...else:</b>用于基于不同的条件来执行不同的动作</li>
+            <li><b>return:</b>退出函数</li>
+            <li><b>throw:</b>抛出(生成)错误</li>
+            <li><b>try:</b>实现错误处理，与catch一同使用</li>
+            <li><b>var:</b>声明一个变量</li>
+            <li><b>while:</b>当条件语句为true时，执行语句块</li>
+        </ul>
+    </p>
+    <h2>空格</h2>
+    <p>JavaScript会忽略多余的空格。可以向脚本添加空格，来提高其可读性。</p>
+    <h2>对代码进行拆行</h2>
+    <p>可以在文本字符串中使用反斜杠对代码进行拆行(同c语言的续行符)</p>
+    <i><b>提示：</b>JS是脚本语言。浏览器会在读取代码时，逐行地执行脚本代码。
+        而对于传统编程来说，会在执行前对所有代码进行编译.
+    </i>
+    <!--end JavaScript 语句-->
+
+    <!--JavaScript 注释-->
+    <h2>JavaScript注释</h2>
+    <p>JavaScript不会执行注释. <br>
+        可以添加注释来对JavaScript进行解释，或者提高代码的可读性。<br>
+        单行注释以//开头
+    </p>
+    <h2>JavaScript多行注释</h2>
+    <p>多行注释以/*开始 以*/结尾</p>
+    <h2>使用注释来阻止执行</h2>
+    <p>在行末添加注释来编写说明，提高代码可读性</p>
+    <!--end JavaScript 注释-->
+
+    <!--JavaScript 变量-->
+    <h2>JavaScript变量</h2>
+    <p>JavaScript变量是用于存储信息的"容器"</p>
+    <hr>
+    <h2>就像代数那样</h2>
+    <p>x=5 y=6 z=x+y. <br>
+        在代数中，我们使用字母(比如x)来保存值(比如5)。<br>
+        通过上面的表达式z=x+y，我们能计算出z的值为11. <br>
+        在JavaScript中，这些字母被称为变量。
+    </p>
+    <p>与代数一样，JavaScript变量可用于存放值(比如x=5)和表达式(比如z=x+y)。
+        变量可以使用短名称(比如x和y)，也可以使用描述性更好的名称(比如dugu，age). <br>
+        <ul>
+            <li>变量必须以字母开头</li>
+            <li>变量也能以$和_符号开头</li>
+            <li>变量名对大小写敏感</li>
+        </ul>
+    </p>
+    <h2>JavaScript数据类型</h2>
+    <p>JavaScript变量还能保存其他数据类型，比如文本值(name="Bill Gates")。<br>
+        在JavaScript中，类似双引号括住的文本被称为字符串。<br>
+        JavaScript变量有很多类型，当向变量分配文本值时，应该用双引号或者单引号
+        包围这个值。当向变量赋值数字时，不要使用引号。<br>
+        如果用引号包围数值，该值会被作为文本来处理。
+    </p>
+    <hr>
+    <h2>声明(创建)JavaScript变量</h2>
+    <p>在JavaScript中创建变量通常称为"声明变量"。<br>
+        使用var关键字来声明变量。<br>
+        如var carname;<br>
+        变量声明之后，该变量是空的(它没有值)。<br>
+        如果需要向变量赋值，请使用等号；
+    </p>
+    <h2>一条语句，多个变量</h2>
+    <p>可以在一条语句中声明很多变量。该语句以var开头，并使用逗号分隔变量即可。<br>
+        var lastName = "dugu",age = 30,job = "parter";
+    </p>
+    <hr>
+    <h2>Value = undifined</h2>
+    <p>在计算机程序中，经常会声明无值的信号。未使用值来声明的变量，其值实际上是undefined。<br>
+        在执行过以下语句后，变量carmame的值将是 undifined；
+    </p>
+    <h2>重新声明JavaScript变量</h2>
+    <p>如果重新声明JavaScript变量，该变量的值不会丢失：<br>
+        在以下两条语句执行后，变量carname的值依然是"Volvo";<br>
+        var carname="Volvo"; <br>
+        var carname; <br>
+    </p>
+    <hr>
+    <h2>JavaScript算数</h2>
+    <p>可以通过JavaScript变量来做算数，使用的是=和+这类运算符</p>
+    <!--end JavaScript 变量-->
+
+    <!--JavaScript 数据类型-->
+    <h2>JavaScript数据类型</h2>
+    <p>字符串(String),数字(Number),布尔(Boolean),数组(Array),对象(Object),
+        空(Null),未定义(Undefined).
+    </p>
+    <hr>
+    <h2>JavaScript拥有动态类型</h2>
+    <p>JavaScript拥有动态类型。意味着相同的变量可用作不同的类型，如：</p>
+    <p>
+        var x;//x为undefined;
+        var x=5;//现在x为数字;
+        var x="John";//现在x为字符串;
+    </p>
+    <hr>
+    <h2>JavaScript字符串</h2>
+    <p>字符串是存储字符(比如:"dugu")的变量。<br>
+        字符串可以是引号中的任意文本。您可以使用单引号或者双引号.
+    </p>
+    <p>可以在字符串中使用引号，只要不匹配包围字符串的引号即可。</p>
+    <hr>
+    <h2>JavaScript数字</h2>
+    <p>JavaScript只有一种数字类型。数字可以带小数点，也可以不带</p>
+    <p>极大或者极小可以通过科学计数(指数)计数法来书写：</p>
+    <h2>JavaScript布尔</h2>
+    <p>布尔(逻辑)只能有两个值:true或者false. <br>
+        var x = true;var y = false; <br>
+        布尔常用在条件测试中。
+    </p>
+    <hr>
+    <h2>JavaScript数组</h2>
+    <p>下面代码创建名为cars的数组：<br>
+        var cars=new Array(); <br>
+        cars[0] = "Saab"; <br>
+        cars[1] = "Volvo"; <br>
+        cars[2] = "BMW"; <br>
+        或者(condensed array): <br>
+        var cars = new Array("Saab","Volvo","BMW"); <br>
+        或者(literal array); <br>
+        var cars=["Saab","Volvo","BMW"]; <br>
+    </p>
+    <p>数组的小标是基于零的，所以第一个项目是[0],第二个是[1],第三个是[2] <br>        
+    </p>
+
+    <h2>JavaScript对象</h2>
+    <p>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式(name:value)来定义。<br>
+        属性由逗号分隔： <br>
+        var person={firstname:"John",lastname:"Doe",id:5566}; <br>
+        上面的例子中的对象(person)有三个属性，firstname,lastname以及id。 <br>
+        空格和拆行无关紧要。声明可横跨多行： <br>
+        var person={    <br>
+            firstname = "jone",   <br>
+            lastname = "Doe";   <br>
+            id : 5566;   <br>
+        }
+    </p>
+    <p>对象寻址有两种方式： <br>
+        name=person.lastname;   <br>
+        name=person["lastname"];   <br>
+    </p>
+    <h2>Undefined和Null</h2>
+    <p>Undefined这个值表示变量不含有值。<br>
+        可以通过将变量的值设置为Null来清空变量.  <br>
+        cars=null;  <br>
+        person=null;  
+    </p>
+    <hr>
+    <h2>声明变量类型</h2>
+    <p>当声明新变量时，可以使用关键字"new"来声明其类型.</p>
+    <ul>
+        <li>var carname=new String;</li>
+        <li>var x=new Number;</li>
+        <li>var y=new Boolean;</li>
+        <li>var cars=new Array;</li>
+        <li>var person=new Object</li>
+    </ul>
+    <i>JavaScript变量均为对象.当声明了一个变量，就创建了一个新的对象.</i>
+    <p>可先创建对象再追加属性和方法。 <br>
+        var people = new Object();  <br>
+        people.name = "Tom";   <br>
+        people.age = 21;  <br>
+        people.eat = function() {} <br>
+    </p>
+    <!--end JavaScript 数据类型-->
+
+    <!--JavaScript 对象-->
+    <h2>JavaScript对象</h2>
+    <p>JavaScript对象是拥有属性和方法的数据。</p>
+    <p>在JS中，几乎所有的事物都是对象。</p>
+    <i>JavaScript对象是变量的容器</i>
+    <h2>对象定义</h2>
+    <p>可以利用字符来定义和创建JavaScript对象。<br>
+        var person = {firstname:"dugu",lastname:"DuGu",age = 18};
+    </p>
+    <p id="jsTextObject" onclick="createObject()">创建JavaScript对象</p>
+    <script>
+        function createObject()
+        {
+            var person = {firstname:"dugu",lastname:"dugu",age:19};
+            document.getElementById("jsTextObject").innerHTML = person.firstname + " "
+                person.lastname + " " + person.age;
+        }
+    </script>
+    <hr>
+    <h2>对象属性</h2>
+    <p>可以说"JavaScript"对象是变量的容器。<br>
+        但是，通常认为"JavaScript"对象为键值对的容器。 <br>
+        键值对通常写法为那name:value(键与值用冒号分割)。 <br>
+        键值对在JavaScript对象通常称为 <b>对象属性</b>
+    </p>
+    <p>键值对的写法类似于：
+        <ul>
+            <li>PHP中的关联数组</li>
+            <li>Python中的字典</li>
+            <li>C语言中的哈希表</li>
+            <li>Java中的哈希映射</li>
+            <li>Ruby和Perl中的哈希表</li>
+        </ul>
+    </p>
+    <h2>访问对象属性</h2>
+    <p>可以通过两种方式访问对象属性</p>
+    <ul>
+        <li>person.lastname</li>
+        <li>person["lastname"]</li>
+    </ul>
+    <hr>
+    <h2>对象方法</h2>
+    <p>对象的方法定义了一个函数，并作为对象的属性存储。<br>
+        对象方法通过添加()调用(作为一个函数).<br>
+        name = person.fullname();
+    </p>
+    <h2>访问对象方法</h2>
+    <p>可以使用以下语法创建对象方法：methodName:function(){ code lines}</p>
+    <p>可以使用以下语法访问对象方法：objectName.methodName()</p>
+    <p>通常fullName()是作为person对象的一个方法，fullName是作为一个属性。<br>
+        有许多方法可以创建，使用和修改JavaScript对象。
+    </p>
+    <!--end JavaScript 对象-->
+
+    <!--JavaScript 函数-->
+    <h2>JavaScript函数</h2>
+    <p>函数是由时间驱动的或者当它被调用时执行的可重复使用的代码块。</p>
+    <hr>
+    <h2>JavaScript函数语法</h2>
+    <p>函数就是包裹在花括号中的代码块，前面使用了关键字function。<br>
+        当调用该函数时，会执行函数内的代码。<br>
+        可以在某事件发生时直接调用函数(比如当用户点击按钮时)，
+        并且可由JavaScript在任何位置进行调用。
+    </p>
+    <h2>调用带参数的函数</h2>
+    <p>在调用函数时，可以向其传递值，这些值被称为参数。<br>
+        这些参数可以在函数中使用。<br>
+        可以发送任意多的参数，由(,)分隔:  <br>
+        myFunction(argument1,argument2); <br>
+        当声明函数时，把参数作为变量来声明.   <br>
+        变量和参数必须以一致的顺序出现。第一个变量就是第一个被传递参数
+        给定的值，以此类推。
+    </p>
+    <button type="button" class="button" onclick="multiFunc('Petter','DuGu')">多参数函数</button>
+    <script>
+        function multiFunc(name,job)
+        {
+            window.alert(name + " " +job);
+        }
+    </script>
+    <h2>带有返回值的函数</h2>
+    <p>通过return语句就可以实现。 <br>
+        在使用return语句时，函数会停止运行，并返回指定的值。<br>
+        <b>注意：</b><i>整个JS代码并不会停止，仅仅是函数。
+            JS将继续执行代码，从调用函数的地方</i> <br>
+        <i>并且JS函数的返回值是可选的，如：</i> <br>
+        function myFunc(a,b)   <br>
+        {   <br>
+            if(a > b)    <br>
+                return;   <br>
+            return a+b;   <br>
+        }  <br>
+        如果a大于b，则上面的代码将退出函数，并不会计算a和b的总和。
+    </p>
+    <hr>
+    <h2>局部JavaScript变量</h2>
+    <p>在JS内部函数声明的变量(使用var)是局部变量，所以只能在函数内部访问它。
+        (该变量的作用是域是局部的)。 <br>
+        可以在不同的函数中使用名称相同的局部变量，因为只有声明该变量的函数才能
+        识别出该变量。  <br>
+        只要该函数运行完毕，本地变量就会被删除。
+    </p>
+    <hr>
+    <h2>全局JavaScript变量</h2>
+    <p>在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它</p>
+    <hr>
+    <h2>JavaScript变量的生存期</h2>
+    <p>JavaScript变量的生命期从它们被声明的时间开始。<br>
+        局部变量会在函数运行以后被删除。  <br>
+        全局变量会在页面内关闭后被删除。
+    </p>
+    <hr>
+    <h2>尚未声明的JavaScript变量分配值</h2>
+    <p>如果把值赋给尚未声明的变量，该变量将被自动作为全局变量声明。</p>
+    <!--end JavaScript 函数-->
+
+    <!--JavaScript 作用域-->
+    <h2>JavaScript作用域</h2>
+    <p>作用域可访问变量的集合。<br>
+        在JS中，对象和函数同样是变量。<b>作用域为可访问变量，对象，函数的集合，</b><br>
+        JS函数作用域：作用域在函数内修改。
+    </p>
+    <hr>
+    <h2>JS局部作用域</h2>
+    <p>变量在函数内声明，变量为局部作用域。<br>
+        局部变量：只能在函数内部访问。<br>
+        因为局部变量只作用于函数内，所以不同的函数可以使用相同的变量名。<br>
+        局部变量在函数开始执行时创建，函数执行完毕后局部变量会自动销毁。
+    </p>
+    <hr>
+    <h2>JavaScript全局变量</h2>
+    <p>变量在函数外定义，即为全局变量。<br>
+        全局变量有 <b>全局作用域</b>网页中所有脚本和函数均可使用。
+    </p>
+    <p>如果变量在函数内没有声明(没有使用var关键字)，该变量为全局变量。<br>
+    </p>
+    <hr>
+    <h2>JavaScript变量的生命周期</h2>
+    <p>JavaScript变量生命周期在它声明函数时初始化。<br>
+        局部变量在函数执行完毕后销毁。<br>
+        全局变量在页面关闭后销毁。
+    </p>
+    <hr>
+    <h2>函数参数</h2>
+    <p>函数参数只在函数内起作用，是局部变量</p>
+    <hr>
+    <h2>HTML中的全局变量</h2>
+    <p>在HTML中，全局变量是window对象，所有的数据变量都属于window对象</p>
+    <ul>
+        <li><b>局部变量：</b>在函数中通过var声明的变量</li>
+        <li><b>全局变量：</b>在函数外通过var声明的变量</li>
+        <li><b>没有声明：</b>使用后默认为全局变量，无论这个变量在哪里被使用</li>
+    </ul>
+    <hr>
+    <p>在ES6标准中，提供了let和const关键字。<br>
+        let的声明方式与var相同。用let来代替var声明变量，就可以把变量限制在当前代码块中。<br>
+        使用const声明的是常量，其值一旦被设定便不可改变。
+    </p>
+    <!--end JavaScript 作用域-->
+
+    <!--JavaScript 事件-->
+    <h2>JavaScript事件</h2>
+    <p>HTML事件是发生在HTML元素上的事情。<br>
+        当在HTML页面中使用JavaScript时，JS可以触发这些事件。
+    </p>
+    <hr>
+    <h2><b>HTML事件</b></h2>
+    <p>HTML事件可以是浏览器的行为，也可以是用户行为。<br>
+        以下是HTML事件的实例：
+        <ul>
+            <li>HTML页面加载完成</li>
+            <li>HTML input字段改变时</li>
+            <li>HTML 按钮被点击</li>
+        </ul>
+    </p>
+    <p>通常，当事件发生时，可以做一些事情。<br>
+        在事件触发时JavaScript可以执行一些代码。<br>
+        HTML元素中可以添加事件属性，使用JS代码来添加HTML元素。如<br>
+    </p>
+    <button type="button" class="button" id="btn_this" 
+        onclick="getElementById('btn_this').innerHTML=Date()"></button>
+    <hr>
+    <h2>常见的HTML事件</h2>
+    <ul>
+        <li><b>onchange</b>：<i>HTML元素改变</i></li>
+        <li><b>onclick</b>：<i>用户点击HTML元素</i></li>
+        <li><b>onmouseover</b>：<i>用户在一个HTML元素上移动鼠标</i></li>
+        <li><b>onmouseout</b>：<i>用户从一个HTML元素上移开鼠标</i></li>
+        <li><b>onkeydown</b>：<i>用户按下键盘按键</i></li>
+        <li><b>onload</b>：<i>浏览器已经完成页面的加载</i></li>
+    </ul>
+    <hr>
+    <h2>JavaScript可以做什么</h2>
+    <p>事件可以用于处理表单验证，用户输入，用户行为及浏览器操作：
+        <ul>
+            <li>页面加载时触发事件</li>
+            <li>页面关闭时触发事件</li>
+            <li>用户点击按钮执行动作</li>
+            <li>验证用户输入内容的合法性</li>
+            <li>等等...</li>
+        </ul>
+    </p>
+    <p>可以使用多种方法来执行JavaScript事件代码：
+        <ul>
+            <li>HTML事件属性可以直接执行JS代码</li>
+            <li>HTML事件属性可以调用JS函数</li>
+            <li>可以为HTML元素指定自己的事件处理程序</li>
+            <li>可以阻止事件的发生</li>
+            <li>等等...</li>
+        </ul>
+    </p>
+    <!--end JavaScript 事件-->
+
+    <!--JavaScript 字符串-->
+    <h2>JavaScript字符串</h2>
+    <p>JavaScript字符串用于存储和处理文本。<br>
+        字符串可以存储一系列字符，如"DuGu" <br>
+        字符串可以插入到引号中的任何字符。可以使用单引号或者双引号：<br>
+        JS字符串也存在转义字符 如\"
+    </p>
+    <hr>
+    <h2>字符串长度</h2>
+    <p>可以使用内置属性length来计算字符串的长度</p>
+    <hr>
+    <h2>特殊字符</h2>
+    <p>在JS中，字符串写在单引号或双引号来中。 <br>
+        因为这样，以下实例JS无法解析。<br>
+        "dugu  "sadasd" as" 双引号中不能有双引号 <br>
+        引入转义字符，使用反斜杠(\)
+    </p>
+    <p>下标列举了在字符串中可以使用转义字符转义的特殊字符：
+        <ul>
+            <li>\' 单引号</li>
+            <li>\" 双引号</li>
+            <li>\\ 反斜杠</li>
+            <li>\n 换行</li>
+            <li>\r 回车</li>
+            <li>\t tab(制表符)</li>
+            <li>\b 退格符</li>
+            <li>\f 换页符</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>字符串可以是对象</h2>
+    <p>通常，JS字符串是原始值，可以使用字符创建：var firstName = "John" <br>
+        但可以使用new关键字将字符串定义为一个对象：var firstNmae = new String("John")
+    </p>
+    <p>var x = "John"; <br>
+        var y = new String("John");  <br>
+        typeof x // 返回 String  <br>
+        typeof y // 返回 Object <br>
+        <i>不要创建String对象，他会拖慢执行速度，并可能产生其他副作用</i>
+    </p>
+    <b>===为绝对相等号，即数据类型和值都必须相等</b>
+    <hr>
+    <h2>字符串属性和方法</h2>
+    <p>原始值字符串，如"John",没有属性和方法(因为他们不是对象) <br>
+        原始值可以使用JS的属性和方法，因为JS在执行方法和属性时可以把原始值
+        当做对象。
+    </p>
+    <hr>
+    <h2>字符串属性</h2>
+    <ul>
+        <li><b>constructor</b>:<i>返回创建字符串属性的函数</i></li>
+        <li><b>length</b>:<i>返回字符串的长度</i></li>
+        <li><b>prototype</b>:<i>允许想向对象添加属性和方法</i></li>
+    </ul>
+    <hr>
+    <h2>字符串方法</h2>
+    <table class="reference">
+    <tbody><tr>
+    <th style="width:24%">方法</th>
+        <th>描述</th>
+      </tr>
+    <tr>
+    <td>charAt()</td>
+        <td>返回指定索引位置的字符</td>
+      </tr>
+    <tr>
+    <td>charCodeAt()</td>
+        <td>返回指定索引位置字符的 Unicode 值</td>
+      </tr>
+    <tr>
+    <td>concat()</td>
+        <td>连接两个或多个字符串，返回连接后的字符串</td>
+      </tr>
+    <tr>
+    <td>fromCharCode()</td>
+        <td>将 Unicode 转换为字符串</td>
+      </tr>
+    <tr>
+    <td>indexOf()</td>
+        <td>返回字符串中检索指定字符第一次出现的位置</td>
+      </tr>
+    <tr>
+    <td>lastIndexOf()</td>
+        <td>返回字符串中检索指定字符最后一次出现的位置</td>
+      </tr>
+    <tr>
+    <td>localeCompare()</td>
+        <td>用本地特定的顺序来比较两个字符串</td>
+      </tr>
+    <tr>
+    <td>match()</td>
+        <td>找到一个或多个正则表达式的匹配</td>
+      </tr>
+    <tr>
+    <td>replace()</td>
+        <td>替换与正则表达式匹配的子串</td>
+      </tr>
+    <tr>
+    <td>search()</td>
+        <td>检索与正则表达式相匹配的值</td>
+      </tr>
+    <tr>
+    <td>slice()</td>
+        <td>提取字符串的片断，并在新的字符串中返回被提取的部分</td>
+      </tr>
+    <tr>
+    <td>split()</td>
+        <td>把字符串分割为子字符串数组</td>
+      </tr>
+    <tr>
+    <td>substr()</td>
+        <td>从起始索引号提取字符串中指定数目的字符</td>
+      </tr>
+    <tr>
+    <td>substring()</td>
+        <td>提取字符串中两个指定的索引号之间的字符</td>
+      </tr>
+    <tr>
+    <td>toLocaleLowerCase()</td>
+        <td>根据主机的语言环境把字符串转换为小写，只有几种语言（如土耳其语）具有地方特有的大小写映射</td>
+      </tr>
+    <tr>
+    <td>toLocaleUpperCase()</td>
+        <td>根据主机的语言环境把字符串转换为大写，只有几种语言（如土耳其语）具有地方特有的大小写映射</td>
+      </tr>
+    <tr>
+    <td>toLowerCase()</td>
+        <td>把字符串转换为小写</td>
+      </tr>
+    <tr>
+    <td>toString()</td>
+        <td>返回字符串对象值</td>
+      </tr>
+    <tr>
+    <td>toUpperCase()</td>
+        <td>把字符串转换为大写</td>
+      </tr>
+    <tr>
+    <td>trim()</td>
+        <td>移除字符串首尾空白</td>
+      </tr>
+    <tr>
+    <td>valueOf()</td>
+        <td>返回某个字符串对象的原始值</td>
+      </tr>
+    </tbody></table>	
+    <!--end JavaScript 字符串-->
+
+    <!--JavaScript 运算符-->
+    <h2>JavaScript 运算符</h2>
+    <hr>
+    <p><b>运算符=用于赋值</b><br>
+        <b>运算符+用于加值</b>
+    </p>
+    <hr>
+    <table class="reference">
+        <tr>
+            <td>运算符</td>
+            <td>描述</td>
+            <td>例子</td>
+            <td>x运算结果</td>
+            <td>y运算结果</td>
+        </tr>
+        <tr>
+            <td>+</td>
+            <td>加法</td>
+            <td>x=y+2</td>
+            <td>7</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>减法</td>
+            <td>x=y-2</td>
+            <td>3</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>*</td>
+            <td>乘法</td>
+            <td>x=y*2</td>
+            <td>10</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>/</td>
+            <td>除法</td>
+            <td>x=y/2</td>
+            <td>2.5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>%</td>
+            <td>取模(余数)</td>
+            <td>x=y%2</td>
+            <td>1</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>++</td>
+            <td>自增</td>
+            <td>x=y++</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>--</td>
+            <td>自减</td>
+            <td>x=--y</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>JavaScript赋值运算符</h2>
+    <p>赋值运算符用于给JavaScript变量赋值。 <br>
+        给点<b>x=10</b>和<b>y=5</b>,下面的表格解释了赋值运算符：<br>
+        = += -= *= /= %= <br>
+        运算符同c语言一致
+    </p>
+    <hr>
+    <h2>用于字符串的+运算符</h2>
+    <p>+运算符可用于字符串连接</p>
+    <h2>对字符串和数字进行相加运算</h2>
+    <p>会把数字toString()后再和字符串相加，相加结果是一个字符串</p>
+    <p>数字和布尔值相加，布尔值false转换成0，true转化为1</p>
+    <p>字符串与布尔值相加，布尔值转换为字符串</p>
+    <p>取模运算的结果符号只与左边值的符号有关</p>
+    <p>数字与null(空值)相加，null转化为数字0；<br>
+        字符串与null(空值)相加，null转化为字符串
+    </p>
+    <!--end JavaScript 运算符-->
+
+    <!--JavaScript 比较和逻辑运算符-->
+    <h2>JavaScript <b>比较</b>和<b>逻辑运算符</b></h2>
+    <p>比较和逻辑运算符用于测试true和false</p>
+    <hr>
+    <h2>比较运算符</h2>
+    <p>比较运算符在逻辑语句中使用，以测定变量或值是否相等。<br>
+        x=5;
+    </p>
+    <table class="reference ">
+        <tbody><tr>
+        <th width="15%" align="left">运算符</th>
+        <th width="40%" align="left">描述</th>
+        <th width="18%" align="left">比较</th>
+        <th width="17%" align="left">返回值</th>
+        <th width="10%" align="left">实例</th>
+        </tr>
+        <tr style="background-color:#ffffff">
+        <td rowspan="2" valign="top">==</td>
+        <td rowspan="2" valign="top">等于</td>
+        <td valign="top">x==8</td>
+        <td valign="top"><em>false</em></td>
+        </tr>
+        <tr style="background-color:#ffffff">
+        <td valign="top">x==5</td>
+        <td valign="top"><em>true</em></td>
+        </tr>
+        <tr class="fixzebra">
+        <td rowspan="2" valign="top">===</td>
+        <td rowspan="2" valign="top">绝对等于（值和类型均相等）</td>
+        <td valign="top">x==="5"</td>
+        <td valign="top"><em>false</em></td>
+        </tr>
+        <tr class="fixzebra">
+        <td valign="top">x===5</td>
+        <td valign="top"><em>true</em></td>
+       
+        </tr>
+        <tr>
+        <td valign="top">!=</td>
+        <td valign="top">&nbsp;不等于</td>
+        <td valign="top">x!=8</td>
+        <td valign="top"><em>true</em></td>
+       
+        </tr>
+        <tr>
+        <td rowspan="2" valign="top">!==</td>
+        <td rowspan="2" valign="top">&nbsp;不绝对等于（值和类型有一个不相等，或两个都不相等）</td>
+        <td valign="top">x!=="5"</td>
+        <td valign="top"><em>true</em></td>
+      
+        </tr>
+        <tr class="fixzebra">
+        <td valign="top">x!==5</td>
+        <td valign="top"><em>false</em></td>
+        
+        </tr>
+        <tr style="background-color:#ffffff">
+        <td valign="top">&gt;</td>
+        <td valign="top">&nbsp;大于</td>
+        <td valign="top">x&gt;8</td>
+        <td valign="top"><em>false</em></td>
+        
+        </tr>
+        <tr class="fixzebra">
+        <td valign="top">&lt;</td>
+        <td valign="top">&nbsp;小于</td>
+        <td valign="top">x&lt;8</td>
+        <td valign="top"><em>true</em></td>
+       
+        <tr style="background-color:#ffffff">
+        <td valign="top">&gt;=</td>
+        <td valign="top">&nbsp;大于或等于</td>
+        <td valign="top">x&gt;=8</td>
+        <td valign="top"><em>false</em></td>
+       
+        </tr>
+        <tr class="fixzebra">
+        <td valign="top">&lt;=</td>
+        <td valign="top">&nbsp;小于或等于</td>
+        <td valign="top">x&lt;=8</td>
+        <td valign="top"><em>true</em></td>
+       
+        </tr>
+        </tbody></table>
+        <br><hr>
+        <h2>逻辑运算符</h2>
+        <p>逻辑运算符用于测定变量或值之间的逻辑。<br>
+            给定x=6以及y=3，下标解释了逻辑运算符。
+        </p>
+        <table class="reference notranslate">
+            <tbody><tr>
+            <th width="15%" align="left">运算符</th>
+            <th width="45%" align="left">描述</th>
+            <th width="40%" align="left">例子</th>
+            </tr>
+            <tr>
+            <td valign="top">&amp;&amp;</td>
+            <td valign="top">and</td>
+            <td valign="top"> (x &lt; 10 &amp;&amp; y &gt; 1) 为 true</td>
+            </tr>
+            <tr>
+            <td valign="top">||</td>
+            <td valign="top">or</td>
+            <td valign="top">(x==5 || y==5) 为 false</td>
+            </tr>
+            <tr>
+            <td valign="top">!</td>
+            <td valign="top">not</td>
+            <td valign="top"> !(x==y) 为 true</td>
+            </tr>
+            </tbody></table>
+        <hr>
+        <h2>条件运算符</h2>
+        <p>JS还包含了基于某些条件对变量进行赋值的条件运算符。</p>
+        <h3>语法</h3>
+        <p><b>variablename=(condition)?value1:value2</b></p>
+        <script>
+            function aTip()
+            {
+                document.write(1 && 2);  //这个语句输出2
+            }
+        </script>
+    <!--end JavaScript 比较和逻辑运算符-->
+
+    <!--JavaScript If...Else语句-->
+    <h2>JavaScript If...Else语句</h2>
+    <hr>
+    <p>条件语句用于基于不同的条件来执行不同的动作。</p>
+    <hr>
+    <h2>条件语句</h2>
+    <p>通常写代码时，总是需要为不同的决定来执行不同的动作。可以在代码中使用条件语句
+        来完成该任务。 <br>
+        在JS中，我们可以使用以下条件语句：
+        <ul>
+            <li><b>if语句</b>:<i>只有当指定条件为true时，使用该语句来执行代码</i></li>
+            <li><b>if...else语句</b>:<i>当条件为true时执行代码，当条件为false时执行其他代码</i></li>
+            <li><b>if...else if...else</b>:<i>使用该语句来选择多个代码块之一来执行</i></li>
+            <li><b>switch语句</b>:<i>使用该语句来选择多个代码块之一来执行</i></li>
+        </ul>
+    </p>
+    <hr>
+    <h2>if语句</h2>
+    <p>只有当指定条件为true时，该语句才会执行代码</p>
+    <p id="pTime"></p>
+    <button type="button" class="button" onclick="getTime()">获得时间</button>
+    <button type="button" class="button" onclick="getTimeHello()" id="btnTime">获得时间</button>
+    <script>
+        function getTime()
+        {
+            var pTime = document.getElementById("pTime");
+            var hour = new Date().getHours();
+            if(hour < 20)
+                pTime.innerHTML = hour.toString();
+        }
+        function getTimeHello()
+        {
+            var btnTime = document.getElementById("btnTime");
+            var hour = new Date().getHours();
+            if(hour < 10)
+            {
+                btnTime.innerHTML = "早上好";
+            } 
+            else if(hour >= 10 && hour <= 16)
+            {
+                btnTime.innerHTML = "今天好";
+            }
+            else 
+            {
+                btnTime.innerHTML = "晚上好";
+            }
+        }
+    </script>
+    <!--end JavaScript If...Else语句-->
+
+    <!--JavaScript switch语句-->
+    <h2>JavaScript switch语句</h2>
+    <p>switch语句用于基于不同条件来执行不同的动作。用法同c#语言</p>
+    <p></p>
+    <button type="button" class="button" onclick="getDay()" id="btnDay">获得星期几</button>
+    <script>
+        function getDay()
+        {
+            var x = "";
+            var day = new Date().getDay();
+            switch(day)
+            {
+                case 0:x="今天星期日";break;
+                case 1:x="今天星期一";break;
+                case 2:x="今天星期二";break;
+                case 3:x="今天星期三";break;
+                case 4:x="今天星期四";break;
+                case 5:x="今天星期五";break;
+                case 6:x="今天星期六";break;
+                default:break;
+            }
+            document.getElementById("btnDay").innerHTML = x;
+        }
+    </script>
+    <!--end JavaScript switch语句-->
+
+    <!--JavaScript for循环-->
+    <h2>JavaScript for循环</h2>
+    <p>循环可以将代码块执行指定的次数</p>
+    <button type="button" class="button" onclick="getList()" id="btnList">Show List</button>
+    <p id="pList"></p>
+    <script>
+        function getList()
+        {
+            var pList = document.getElementById("pList");
+            var cars = ["DuGu","DUGU","dugu","1234"];
+            for(var i = 0;i < cars.length ;++i)
+            {
+                pList.innerHTML += cars[i] + " ";
+            }
+        }
+    </script>
+    <hr>
+    <h2>不同类型的循环</h2>
+    <p>JavaScript支持不同类型的循环</p>
+    <ul>
+        <li><b>for</b>- <i>循环代码块一定的次数</i></li>
+        <li><b>for/in</b>- <i>循环遍历对象的属性</i></li>
+        <li><b>while</b>- <i>当指定的条件为true时循环指定的代码块</i></li>
+        <li><b>do/while</b>- <i>同样当指定的条件为true时循环指定的代码块</i></li>
+    </ul>
+    <hr>
+    <h2>For循环</h2>
+    <p>for循环是希望创建循环时常会用到的工具，其用法与c语言一致</p>
+    <hr>
+    <h2>For/in循环</h2>
+    <p>JavaScript for/in 语句循环遍历对象的属性，还可以遍历数组</p>
+    <button onclick="btnForIn()">点击这里</button>
+    <p id="pForIn"></p>
+    <script>
+        function btnForIn()
+        {
+            var x;
+            var txt = "";
+            var t = ""
+            var person = {fname : "Biull" , lname : "sadasd",age : 22};
+            for(x in person)
+            {
+                txt += x + " ";
+                t += person[x] + " ";
+            }
+            document.getElementById("pForIn").innerHTML = txt + "<br>" + t;
+        }
+    </script>
+    <!--end JavaScript for循环-->
+
+    <!--JavaScript while循环-->
+    <h2>JavaScript while循环</h2>
+    <p>只要指定条件为true，循环就可以一致执行代码块</p>
+    <p>while循环会在指定条件为真时循环执行代码块</p>
+    <p>do/while循环是while循环的变体。该循环会在检查条件是否为真之前执行一次代码块，
+        然后条件为真的话就会重复这个循环。
+    </p>
+    <button onclick="myNums()">点击演示while循环</button>
+    <p id="pNums"></p>
+    <script>
+        function myNums()
+        {
+            var pNums = document.getElementById("pNums");
+            var i = 0;
+            while(i < 5)
+            {
+                pNums.innerHTML += "The number is " + i + "<br>";
+                ++i;
+            }
+            do
+            {
+                pNums.innerHTML += "The number is " + i + "<br>";
+                i++;
+            }
+            while (i<10)
+        }
+    </script>
+    <p>while和do/while的区别：do/while至少会执行一遍</p>
+    <!--end JavaScript while循环-->
+
+    <!--JavaScript break和continue语句-->
+    <h2>JavaScript break和continue语句</h2>
+    <p>break语句用于跳出循环。<br>
+        continue用于跳过循环中的一个迭代
+    </p>
+    <hr><h2>Break语句</h2>
+    <p>break语句可用于跳出循环。<br>
+        continue语句跳出循环后，会执行该循环之后的代码(如果有的话)
+    </p>
+    <button onclick="myBreakAndContinue()">点击演示continue和break循环</button>
+    <p id="pBreakAndContinue"></p>
+    <script>
+        function myBreakAndContinue()
+        {
+            var pNums = document.getElementById("pBreakAndContinue");
+            var i = 0;
+            for(; i < 10;++i)
+            {
+                if(i == 3)
+                    break;
+                pNums.innerHTML += "this num is " + i + "<br>";
+            }
+            pNums.innerHTML += "<br>";
+            for(i = 0;i < 10;++i)
+            {
+                if(i == 3)
+                    continue;
+                pNums.innerHTML += "this num is " + i + "<br>";
+            }
+        }
+    </script>
+    <hr><h2>JavaScript标签</h2>
+    <p>可以对JavaScript语句进行标记。<br>
+        如果需要标记JS，请在语句前加上冒号；<br>
+        continue语句(带或者不带标签引用)只能用在循环中。<br>
+        break语句(不带标签引用)，只能用在循环或者switch中。<br>
+        通过标签引用，break语句可用于跳出任何JS代码块
+    </p>
+    <button onclick="myTagAndBreak()">点击演示标签和break循环</button>
+    <p id="pTagAndBreak"></p>
+    <script>
+        function myTagAndBreak()
+        {
+            var pTagAndBreak = document.getElementById("pTagAndBreak");
+            outerloop:
+            for (var i = 0; i < 10; i++)
+            {
+                innerloop:
+                for (var j = 0; j < 10; j++)
+                {
+                    if (j > 3)
+                    {
+                        break;
+                    }
+                    if (i == 2)
+                    {
+                        break innerloop;
+                    }
+                    if (i == 4)
+                    {
+                        break outerloop;
+                    }
+                    pTagAndBreak.innerHTML += ("i=" + i + " j=" + j + "<br>");
+                }
+            }
+        }
+    </script>
+    <!--end JavaScript break和continue语句-->
+
+    <!--JavaScript typeof-->
+    <h2>JavaScript typeof,null,undefined,valueOf()</h2>
+    <h3>typeof操作符</h3>
+    <p>可以用typeof操作符来检测变量的数据类型。
+        <ul>
+            <li><b>typeof "DuGu" </b>：<i>返回string</i></li>
+            <li><b>typeof 3.14 </b>：<i>返回number</i></li>
+            <li><b>typeof false </b>：<i>返回boolean</i></li>
+            <li><b>typeof [1,2,3,4] </b>：<i>返回object</i></li>
+            <li><b>typeof {name : "dugu" , age:12} </b>：<i>返回object</i></li>
+        </ul>
+        <b>注意：</b><i>在JS中，数组是一种特殊的对象类型</i>
+    </p>
+    <hr>
+    <h2>null</h2>
+    <p>在JS中null表示什么都没有。<br>
+        null是一个只有一个值的特殊类型，表示一个空对象引用。<br>
+        <b>用typeof检测null返回的是object</b> <br>
+        可以用null来清空对象。清空后对象的类型是object。<br>
+        可以用undefined来清空对象。清空对象的类型是undefined
+    </p>
+    <hr>
+    <h3>undefined</h3>
+    <p>在JavaScript中,<b>undefined</b>是一个没有设置值的变量。<br>
+        <b>typeof</b>一个没有值的变量会返回<b>Undefined</b>
+    </p>
+    <hr>
+    <h3>undefined和null的区别</h3>
+    <p> typeof undefined   // undefined  <br>
+        typeof null        // object    <br>
+        null === undefined // false    <br>
+        null == undefined  // true     <br>
+    </p>
+    <!--end JavaScript typeof-->
+
+    <!--JavaScript 类型转换-->
+    <h2>JavaScript 类型转换</h2>
+    <p>Number()转换为数字，String()转换为字符串，Boolean()转换为布尔值</p>
+    <hr>
+    <h2>JavaScript数据类型</h2>
+    <p>在JavaScript中有5中数据类型：
+        <ul>
+            <li>string</li>
+            <li>number</li>
+            <li>boolean</li>
+            <li>object</li>
+            <li>function</li>
+        </ul>
+        3种对象类型:
+        <ul>
+            <li>Object</li>
+            <li>Date</li>
+            <li>Array</li>
+        </ul>
+        2个不包含任何值的数据类型：
+        <ul>
+            <li>null</li>
+            <li>undefined</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>typeof操作符</h2>
+    <p>
+            typeof "John"                 // 返回 string   <br>
+            typeof 3.14                   // 返回 number   <br>
+            typeof NaN                    // 返回 number   <br>
+            typeof false                  // 返回 boolean   <br>
+            typeof [1,2,3,4]              // 返回 object   <br>
+            typeof {name:'John', age:34}  // 返回 object<br>
+            typeof new Date()             // 返回 object<br>
+            typeof function () {}         // 返回 function<br>
+            typeof myCar                  // 返回 undefined (如果 myCar 没有声明)<br>
+            typeof null                   // 返回 object <br>
+    </p>
+    <p><b>注意：</b><br>
+        <ul>
+            <li>NaN的类型</li>
+            <li>数组(Array)的数据类型是object</li>
+            <li>日期(Date)的数据类型为object</li>
+            <li>null的数据类型是object</li>
+            <li>未定义变量的数据类型为undefined</li>
+        </ul>
+        <i>如果对象是JS的Array或者JS的Date，就无法通过<b>typeof</b>来判断
+            他们的类型，因为都是返回Object.
+        </i>
+    </p>
+    <hr><h2>constructor属性</h2>
+    <p>constructor属性返回所有JS变量的构造函数.</p>
+    <p>
+            "John".constructor                 // 返回函数 String()  { [native code] } <br>
+            (3.14).constructor                 // 返回函数 Number()  { [native code] } <br>
+            false.constructor                  // 返回函数 Boolean() { [native code] } <br>
+            [1,2,3,4].constructor              // 返回函数 Array()   { [native code] } <br>
+            {name:'John', age:34}.constructor  // 返回函数 Object()  { [native code] } <br>
+            new Date().constructor             // 返回函数 Date()    { [native code] } <br>
+            function () {}.constructor         // 返回函数 Function(){ [native code] } <br>
+    </p>
+    <p>可以使用constructor属性来查看对象是否为数组(包含字符串Array) <br>
+        function isArray(myArray)  <br>
+        {  <br>
+           return myArray.constructor.toString().indexOf("Array") > -1        <br>
+        } <br>
+    </p>
+    <p>可以使用constructor属性来查看对象是否为日期(包含字符串Date) <br>
+        function isArray(myDate)  <br>
+        {  <br>
+           return myDate.constructor.toString().indexOf("Date") > -1        <br>
+        } <br>
+    </p>
+    <hr>
+    <h2>JavaScript类型转换</h2>
+    <p>JavaScript变量可以转换为新变量或者其他数据类型：
+        <ul>
+            <li>通过使用JavaScript函数</li>
+            <li>通过JS自身的自动转换</li>
+        </ul>
+    </p>
+    <hr><h2>将数字转换为字符串</h2>
+    <p>全局方法String()可以将数字转换字符串。<br>
+        该方法可用于任何类型的数字，字母，变量，表达式：<br>
+        <ul>
+            <li>String(x);  //将变量x转换为字符串并返回；</li>
+            <li>String(123); //将数字123转换为字符串并返回</li>
+            <li>String(100 + 23); //将数字表达式转换为字符串并返回</li>
+        </ul>
+        Number方法toString()也是有同样的效果。
+        <ul>
+            <li>x.toString()</li>
+            <li>(123).toString()</li>
+            <li>(100 + 23).toString()</li>
+        </ul>
+    </p>
+    <table class="reference">
+        <tr>
+            <td>方法</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>toExponential()</td>
+            <td>把对象的值转换为指数计数法</td>
+        </tr>
+        <tr>
+            <td>toFixed()</td>
+            <td>把数字转换为字符串，结果的小数点后有指定位数的数字</td>
+        </tr>
+        <tr>
+            <td>toPrecision()</td>
+            <td>把数字格式化为指定的长度</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>将布尔值转换为字符串</h2>
+    <p>全局方法String()可以将布尔值转换为字符串。<br>
+        String(false); //返回false; <br>
+        String(true);  //返回true; <br>
+        true.toString()和false.toString()也有同样效果
+    </p>
+    <hr><h2>将日期转化为字符串</h2>
+    <p>Date();返回字符串。<br>
+        String(new Date()); <br>
+        obj = new Date();obj.toString();
+    </p>
+    <p>Date对象的方法如下：
+        <ul>
+            <li><b>getDate()</b>:<i>从Date对象返回一个月中的某一天(1~31)</i></li>
+            <li><b>getDay()</b>:<i>从Date对象返回一周中的某一天(0~6)</i></li>
+            <li><b>getFullYear()</b>:<i>从Date对象以4位数字返回年份</i></li>
+            <li><b>getHours()</b>:<i>返回Date对象的小时(0~23)</i></li>
+            <li><b>getMilliseconds()</b>:<i>返回Date对象的毫秒(0~999)</i></li>
+            <li><b>getMinutes()</b>:<i>返回Date对象的分钟(0~59)</i></li>
+            <li><b>getMonth()</b>:<i>返回Date对象返回月份(0~11)</i></li>
+            <li><b>getSeconds()</b>:<i>返回Date对象的秒数(0~59)</i></li>
+            <li><b>getTime()</b>:<i>返回1970年1月1日至今的毫秒数</i></li>
+        </ul>
+    </p>
+    <hr><h2>将字符串转换为数字</h2>
+    <p>全局方法<b>Number()</b>可以将字符串转换为数字。<br>
+        字符串包含数字(如"3.14")转换为数字(如3.14)。<br>
+        空字符串转换为0.<br>
+        其他的字符串会转换为NaN(不是个数字); <br>
+        praseFloat();//解析一个字符串，并返回一个浮点数。<br>
+        praseInt();//解析一个字符串，并返回一个整数。<br>
+    </p>
+    <hr><h2>一元运算符+</h2>
+    <p><b>Operator+</b>可用于将变量转换为数字：<br>
+        var y = "5";  <br>
+        var x = +y;//y是字符串，x是数字
+    </p>
+    <hr><h2>将布尔值转换为数字</h2>
+    <p>全局方法 <b>Number()可将true转换为1，将false转换为0。</b>
+    </p>
+    <hr><h2>将日期转换为数字</h2>
+    <p>全局方法 <b>Number()</b>可将日期转换为数字。<br>
+        var d = new Date();Number(d);//返回140456802739 距离1970年的那个长时间
+    </p>
+    <hr><h2>自动转换为类型</h2>
+    <p>当JavaScrip尝试操作一个"错误"的数据类型时，会自动转换为"正确"的数据类型。<br>
+        以下输出结果不是所期望的。<br>        
+        5 + null    // 返回 5         null 转换为 0  <br>
+        "5" + null  // 返回"5null"   null 转换为 "null"  <br>
+        "5" + 1     // 返回 "51"      1 转换为 "1"   <br>
+        "5" - 1     // 返回 4         "5" 转换为 5  <br>
+    </p>
+    <hr><h2>自动转换为字符串</h2>
+    <p>当尝试输出一个对象或者一个变量时JavaScript会自动调用变量的toString()方法。<br>
+        document.getElementById("demo").innerHTML = myVar;  <br>
+        // if myVar = {name:"Fjohn"}  // toString 转换为 "[object Object]"  <br>
+        // if myVar = [1,2,3,4]       // toString 转换为 "1,2,3,4"  <br>
+        // if myVar = new Date()      // toString 转换为 "Fri Jul 18 2014 09:08:55 GMT+0200" <br>
+        数字和布尔值也经常相互转换：  <br>
+        // if myVar = 123             // toString 转换为 "123"  <br>
+        // if myVar = true            // toString 转换为 "true"  <br>
+        // if myVar = false           // toString 转换为 "false"  <br>
+    </p>
+    <!--end JavaScript 类型转换-->
+
+    <!--JavaScript 正则表达式-->
+    <h2>JavaScript 正则表达式</h2>
+    <p>正则表达式(英语:Regular Expression),在代码中常常简写为regex，regexp或者RE，
+        使用单个字符串来描述、匹配一系列符合某个语法规则的字符串搜索模式。<br>
+        搜索模式可以用于文本搜索和文本替换。
+    </p>
+    <hr><h2>什么是正则表达式</h2>
+    <p>正则表达式是由一个字符序列形成的搜索模式。<br>
+        当在文本中搜索数据时，可以用搜索模式描述要查询的内容。<br>
+        正则表达式可以是一个简单的字符，或是一个更复杂的模式。
+    </p>
+    <h3>语法</h3>
+    <p>/正则表达式主体/修饰符(可选)。<br>
+        var patt = /runoob/i <br>
+        runoob是一个<b>正则表达式主体</b>(用于检索). <br>
+        i 是一个<b>修饰符</b>(搜索不区分大小写)。
+    </p>
+    <hr><h2>使用字符串方法</h2>
+    <p>在JS中，正则表达式通常用于两个字符串方法：search()和replace()<br>
+        <b>search()方法</b>用于检索字符串中指定的子字符串，或检索与正则表达式相匹配
+        的子字符串，并返回子串的起始位置。<br>
+        <b>replace()方法</b>用于在字符串中用一些字符，或替换一个与正则表达式匹配的子串。
+    </p>
+    <hr><h2>search()方法使用正则表达式</h2>
+    <p>搜索字符串iamduguDuaa中dugu子串，并显示匹配的起始位置。</p>
+    
+    <hr><h2>relace()方法使用字符串</h2>
+    <button onclick="stringSearch()">开始搜索</button>
+    <p id="pSearch"></p>
+    <script>
+        function stringSearch()
+        {
+            var str = "iamduguDuaa";
+            document.getElementById("pSearch").innerHTML = str.search(/dugu/i);
+            var txt = document.getElementById("pSearch").innerHTML;
+            txt = txt.concat(" ",str.replace(/aa/i,"独孤"));
+            document.getElementById("pSearch").innerHTML = txt;
+        }
+    </script>
+    <hr>
+    <i>正则表达式参数可用在以上方法中(替代字符串参数)。<br>
+        正则表达式使得搜索功能更加强大(如实例中不区分大小写)。
+    </i>
+    <hr><h2>正则表达式修饰符</h2>
+    <p><b>修饰符</b>可以在全局搜索中不区分大小写</p>
+    <table class="reference">
+        <tr>
+            <td>修饰符</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>i</td>
+            <td>执行对大小写不敏感的匹配</td>
+        </tr>
+        <tr>
+            <td>g</td>
+            <td>执行全局匹配(查找所有匹配而非在知道第一个匹配后停止)</td>
+        </tr>
+        <tr>
+            <td>m</td>
+            <td>执行多行匹配</td>
+        </tr>
+    </table>
+    <hr><h2>正则表达式模式</h2>
+    <p>方括号用于查找某个范围内的字符：</p>
+    <table class="reference">
+            <tr>
+                <td>表达式</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>[abc]</td>
+                <td>查找方括号之间的任何字符</td>
+            </tr>
+            <tr>
+                <td>[0-9]</td>
+                <td>查找任何从0到9的数字</td>
+            </tr>
+            <tr>
+                <td>x|y</td>
+                <td>查找任何以|分隔的选项</td>
+            </tr>
+        </table>
+    <p>元字符是拥有特殊含义的字符</p>
+    <table class="reference">
+            <tr>
+                <td>元字符</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>\d</td>
+                <td>查找数字</td>
+            </tr>
+            <tr>
+                <td>\s</td>
+                <td>查找空白字符</td>
+            </tr>
+            <tr>
+                <td>\b</td>
+                <td>匹配单词边界</td>
+            </tr>
+            <tr>
+                    <td>\uxxxx</td>
+                    <td>查找以十六进制数xxxx规定的Unicode字符</td>
+                </tr>
+    </table>
+    <p>量词</p>
+    <table class="reference">
+            <tr>
+                <td>量词</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>n+</td>
+                <td>匹配任何包含至少一个n的字符串</td>
+            </tr>
+            <tr>
+                <td>n*</td>
+                <td>匹配任何包含零个或多个n的字符串</td>
+            </tr>
+            <tr>
+                <td>n?</td>
+                <td>匹配任何一个包含零个或一个n的字符串</td>
+            </tr>
+        </table>   
+    <p>正则表达式所有的元字符
+        <table>
+            <tr>
+                <td>元字符</td>
+                <td>描述</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>找到写一个字符标记符、或一个向后引用、或一个八进制转义符。例如，"\\n"匹配\n,
+                    "\n"匹配换行符。序列"\\"匹配"\"而"\("则匹配"("。即相当于多种编程语言中都有
+                    的"转义字符"的概念.
+                </td>
+            </tr>
+            <tr>
+                <td>^</td>
+                <td>匹配输入字符串的开始位置。如果设置了RegExp对象的multiline属性，^也匹配"\n"
+                    或者"\n"或"\r"之后的位置。
+                </td>
+            </tr>
+            <tr>
+                <td>$</td>
+                <td>匹配输入字符串的结束位置。如果设置了RegExp对象的multiline属性，$也匹配"\n"
+                        或者"\n"或"\r"之后的位置。</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>匹配前面的子表达式任意次。例如，zo*能匹配"z",也能匹配"zo"以及"zoo".
+                    *等价于o{0,}
+                </td>
+            </tr>
+            <tr>
+                <td>+</td>
+                <td>匹配前面的子表达式一次或者多次(大于等于1次)。例如,"zo+"能匹配"zo"以及
+                    "zoo",但不能匹配"z"。等价于{1,}。
+                </td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>匹配前面的子表达式零次或一次。例如，"do(es)?"可以匹配"do"或者"does"
+                    中的"do"。?等价于{0,1}。
+                </td>
+            </tr>
+            <tr>
+                <td>{n}</td>
+                <td>n是一个非负整数。匹配确定的n次。例如，"o{2}"不能匹配"Bob"中的"o",
+                    但是能匹配"food"中的两个o。
+                </td>
+            </tr>
+            <tr>
+                <td>{n,}</td>
+                <td>n是一个非负整数。至少匹配n次。例如，"o{2}"不能匹配"Bob"中的"o",
+                    但是能匹配"fooooood"中所有的o，"o{1,}"等价于"o+"。
+                    "o{0,}"则等价于"o*"</td>
+            </tr>
+            <tr>
+                <td>{n,m}</td>
+                <td>m和n均为非负整数，其中n&lt;=m。最少匹配n次，最多匹配m次。例如，"o{1,3}"将匹配
+                    "foooooood"中前三个"o"为一组,后三个o为一组."o{0,1}"等价于"o?".注意在逗号
+                    和两个数之间不能有空格。
+                </td>
+            </tr>
+            <tr>
+                <td>?</td>
+                <td>当该字符紧跟在任何一个其他限制符(*,+,?,{n},{n,},{n,m})后面时，匹配模式是
+                    非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能
+                    多的匹配所搜索的字符串。例如，对于字符串"oooo","o+"将尽可能多的匹配"o",
+                    得到结果["oooo"],而"o+?",得到结果['o','o','o','o']
+                </td>
+            </tr>
+            <tr>
+                <td>.</td>
+                <td>匹配除"\r\n"之外的任何单个字符.要匹配包括"\r\n"在内的任何字符，
+                    请使用像"[\s\S]"的模式
+                </td>
+            </tr>
+            <tr>
+                <td>(pattern)</td>
+                <td>匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matchers集合
+                    得到，在VBScript中使用SubMatches集合，在JSCript中则使用$0...$9
+                    属性。要匹配圆括号字符，请使用转义字符"\("或者"\)"。
+                </td>
+            </tr>
+            <tr>
+                <td>(?:pattern)</td>
+                <td>非获取匹配，匹配pattern但不获取匹配结果，不进行存储供以后提供以后使用。
+                    这在使用或字符"(|)"来组合一个模式的各个部分时很有用。例如"industr(?:yiles)"
+                    就是一个比"industry|industries"更简略的表达式
+                </td>
+            </tr>
+            <tr>
+                <td>(?=pattern)</td>
+                <td>非获取匹配，正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串，
+                    该匹配不需要获取供以后使用。例如："Windows(?="95|98|NT|2000")"能匹配
+                    "Windows2000"中的"Windows",但不能匹配"Windows3.1"中的"Windows"。
+                    预查不消耗字符，也就是说，在一个匹配发生后，在最后一次匹配之后立即开始下一次
+                    匹配搜索，而不是从包含预查的字符之后开始。
+                </td>
+            </tr>
+            <tr>
+                <td>(?!pattern)</td>
+                <td>非获取匹配，正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串，
+                    该匹配不需要获取供以后使用。例如“Windows(?!95|98|NT|2000)”能匹配“Windows3.1”中
+                    的“Windows”，但不能匹配“Windows2000”中的“Windows”。
+                </td>
+            </tr>
+            <tr>
+                <td>(?&lt;=pattern)</td>
+                <td>非获取匹配，反向肯定预查，与正向肯定预查类似，只是方向相反。例如，
+                    "(?&lt;=95|98|NT|2000)Windows"能匹配"2000Windows"中的"Windows",
+                    但不能匹配"3.1Windows"中的"Windows".
+                </td>
+            </tr>
+            <tr>
+                <td>(?&lt;!pattern)</td>
+                <td>非获取匹配，反向否定预查，与正向否定预查类似，只是方向相反。例如，
+                        “(?&lt;!95|98|NT|2000)Windows”能匹配“3.1Windows”中的“Windows”，但不能匹配“2000Windows”中的“Windows”。这个地方不正确，有问题
+                        此处用或任意一项都不能超过2位，如“(?&lt;!95|98|NT|20)Windows正确，
+                        “(?&lt;!95|980|NT|20)Windows 报错，若是单独使用则无限制，
+                        如(?&lt;!2000)Windows 正确匹配
+                </td>
+            </tr>
+            <tr>
+                <td>x|y</td>
+                <td>匹配x或者y。例如，"z|food"能匹配"z"或"food"(此处请谨慎)。
+                    "[zf]ood"则匹配"zood"或"food"
+                </td>
+            </tr>
+            <tr>
+                <td>[xyz]</td>
+                <td>字符集合。匹配所包含的任意一个字符。例如，"[abc]"可以匹配"plain"
+                    中的"a"。
+                </td>
+            </tr>
+            <tr>
+                <td>[^xyz]</td>
+                <td>负值字符集合。匹配未包含的任意字符。例如，
+                    [^abc]可以匹配"plain"中的"plin"
+                </td>
+            </tr>
+            <tr>
+                <td>[a-z]</td>
+                <td>字符范围。匹配指定范围内的任意字符。例如，"[a-z]"可以匹配
+                    "a"到"z"范围内的任意小写字母字符。注意：只有连字符在字符组内
+                    内部时，并且出现在两个字符之间时，才能表示字符的范围：如果字符
+                    组的开头，则只能表示连字符本身。
+                </td>
+            </tr>
+            <tr>
+                <td>[^a-z]</td>
+                <td>负值字符范围。匹配任何不在指定范围内的任意字符。</td>
+            </tr>
+            <tr>
+                <td>\b</td>
+                <td>匹配一个单词边界，也就是指单词和空格间的位置(即正则表达式的匹配有两种概念，
+                    一种是匹配字符，一种是匹配位置)，这里的\b就是匹配位置的)。例如，
+                    "er\b"可以匹配"never"中的"er",但不能匹配"verb"中的"er"。
+                </td>
+            </tr>
+            <tr>
+                <td>\B</td>
+                <td>匹配非单词边界。"er\B"能匹配"verb"中的"er"，但不能匹配"never"
+                    中的"er"
+                </td>
+            </tr>
+            <tr>
+                <td>\cx</td>
+                <td>匹配由x指明的控制字符。例如，\cM匹配一个Control-M或回车符。
+                    x的值必须为A-Z或a-z之一。否则，将c视为一个原义的"c"字符.
+                </td>
+            </tr>
+            <tr>
+                <td>\d</td>
+                <td>匹配一个数字字符。等价于[0-9]。
+                    grep要加上-P，perl正则支持
+                </td>
+            </tr>
+            <tr>
+                <td>\D</td>
+                <td>匹配一个非数字字符。等价于[^0-9/]。
+                    grep要加上-P，perl正则支持
+                </td>
+            </tr>
+            <tr>
+                <td>\f</td>
+                <td>匹配一个换页符。等价于\x0c和\cL</td>
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>匹配一个换行符。等价于"\x0a和\cJ</td>
+            </tr>
+            <tr>
+                <td>\r</td>
+                <td>匹配一个回车符。等价于"\x0d和\cM</td>
+            </tr>
+            <tr>
+                <td>\s</td>
+                <td>匹配任何不可见字符，包括空格、制表符、换页符等等。等价于[\f\n\t\t\v]</td>
+            </tr>
+            <tr>
+                <td>\S</td>
+                <td>匹配任何可见字符,等价于[^\f\n\t\t\v]</td>
+            </tr>
+            <tr>
+                <td>\t</td>
+                <td>匹配一个制表符。等价于\x09和\cl</td>
+            </tr>
+            <tr>
+                <td>\v</td>
+                <td>匹配一个垂直制表符</td>
+            </tr>
+            <tr>
+                <td>\w</td>
+                <td>匹配包括下划线的任何单词字符。类似但不等价与"[A-Za-z0-9_]",
+                    这里的"单词"字符使用Unicode字符集.
+                </td>
+            </tr>
+            <tr>
+                <td>\W</td>
+                <td>匹配热河非单词字符。等价于"[^A-Za-z0-9_]"</td>
+            </tr>
+            <tr>
+                <td>\xn</td>
+                <td>匹配n，其中n为十六进制制转义值。十六进制转义值必须为确定的两个
+                    数字长。例如："\x41"匹配"A",正则表达式可以使用ASCII编码。
+                </td>
+            </tr>
+            <tr>
+                <td>\num</td>
+                <td>匹配num，其中num是一个正整数。对获所获取的匹配的引用。例如，
+                    "(.)\1"匹配两个连续的相同字符。
+                </td>
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>标识一个八进制转义值或一个向后引用。如果\n之前至少n个获取的子表达式，
+                    则n为向后引用。否则，如果n为八进制数字(0-7),则n为一个八进制转义值。
+                </td>
+            </tr>
+            <tr>
+                <td>\nm</td>
+                <td>标识一个八进制转义值或一个向后引用。如果\nm之前至少有nm个获得子表达式，
+                    则nm为向后引用。如果\nm之前至少有n个获取，则n为一个后跟文字m的向后引用。
+                    如果前面的条件都不满足，若n和m均为八进制数字(0-7),则\nm将匹配八进制
+                    转义值nm
+                </td>
+            </tr>
+            <tr>
+                <td>\nml</td>
+                <td>如果n为八进制数字(0-7),且m和l均为八进制转义值nml
+                </td>
+            </tr>
+            <tr>
+                <td>\un</td>
+                <td>匹配n，其中n是一个用四个十六进制数字表示的Unicode字符。
+                    例如，\u00A9匹配版权符号(copy);
+                </td>
+            </tr>
+            <tr>
+                <td>\p{P}</td>
+                <td>小写p是property的意思，表示Unicode属性，用于unicode正则表达式的前缀。中括号
+                    内的P表示Unicode字符集七个字符属性之一：标点符号。<br>
+                    其他六个属性：<br>
+                    L：字母 <br>
+                    M：标记符号 <br>
+                    Z：分隔符 <br>
+                    S: 符号 <br>
+                    N：数字 <br>
+                    C: 其他字符 <br>
+                    <i>此语法部分语言不支持，例如JavaScript</i>
+                </td>
+            </tr>
+            <tr>
+                <td>\&lt; \&gt;</td>
+                <td>
+                    匹配词（word）的开始（\&lt;）和结束（\&gt;）。例如正则表达式能够匹配字符串"for the wise"
+                    中的"the",但是不能匹配字符串"otherwise"中的"the".注意：这个元字符不是所有软件都支持的。
+                </td>
+            </tr>
+            <tr>
+                <td>()</td>
+                <td>将(和)之间的表达式定义为组"组"(group),并且将匹配这个表达式的字符保存到一个临时区域
+                    (一个正则表达式中最多可以保存9个)，它们可以用\1到\9的符号来引用。
+                </td>
+            </tr>
+            <tr>
+                <td>|</td>
+                <td>将两个匹配条件进行逻辑或(Or)运算。例如正则表达式(him|her)匹配"it belongs to him"和
+                    "it belongs to her",但是不能匹配"it belongs to them"。注意：这个元字符不是所有软件
+                    都支持的。
+                </td>
+            </tr>
+        </table>
+    </p>
+    <hr><h2>使用RegExp对象</h2>
+    <p>在JS中，RegExp对象是一个预定义了属性和方法的正则表达式对象。</p>
+    <hr>
+    <h2>使用test()</h2>
+    <p>test()方法是一个正则表达式方法。<br>
+        test()方法用于检测一个字符串是否匹配某个模式，
+        如果字符串中含有匹配的文本，则返回true，否则返回false。<br>
+        var patt = /e/;  <br>
+        patt.test("the best body is mue nua"); <br>
+        或者 /e/.test("The best things in life are free!") <br>
+        输出 true
+    </p>
+    <hr><h2>使用exec()</h2>
+    <p><b>exec()</b>方法是一个<b>正则表达式</b>方法。<br>
+        exec()方法用于检索字符串中的正则表达式的匹配。<br>
+        该函数返回一个数组，其中存放匹配的元素。如果未找到匹配，则返回null。<br>
+        /e/.exec("The best things in life are free!"); <br>
+        输出 e
+    </p>
+    <script>
+        /*是否带有小数*/
+        function    isDecimal(strValue )  {  
+            var  objRegExp= /^\d+\.\d+$/;
+            return  objRegExp.test(strValue);  
+        }  
+
+        /*校验是否中文名称组成 */
+        function ischina(str) {
+            var reg=/^[\u4E00-\u9FA5]{2,4}$/;   /*定义验证表达式*/
+            return reg.test(str);               /*进行验证*/
+        }
+
+        /*校验是否全由8位数字组成 */
+        function isStudentNo(str) {
+            var reg=/^[0-9]{8}$/;     /*定义验证表达式*/
+            return reg.test(str);     /*进行验证*/
+        }
+
+        /*校验电话码格式 */
+        function isTelCode(str) {
+            var reg= /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/;
+            var i;
+            return reg.test(str);
+        }
+
+        /*校验邮件地址是否合法 */
+        function IsEmail(str) {
+            var reg=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+            return reg.test(str);
+        }
+    </script>
+    <!--end JavaScript 正则表达式-->
+
+    <!--JavaScript  错误 - throw、try 和 catch-->
+    <h2>JavaScript  错误 - throw、try 和 catch</h2>
+    <hr>
+    <p><b>try</b>语句测试代码块的错误。<br>
+        <b>catch</b>语句处理错误。<br>
+        <b>throw</b>语句创建自定义错误
+    </p>
+    <hr>
+    <h2>JavaScript错误</h2>
+    <p>当JS执行JS代码时，会发生各种错误. <br>
+        可能是语法错误，通常是程序员编码错误或者错别字 <br>
+        可能是拼写错误或语言中缺少的功能（可能由于浏览器差异） <br>
+        可能是由于服务器或用户的错误输出而导致的错误。 <br>
+        当然，也可能是由于许多其他不可预知的因素。
+        <br>
+    </p>
+    <hr>
+    <h2>
+        JavaScript抛出错误(throw)错误
+    </h2>
+    <p>
+        当错误发生时，当事情出现问题时，JavaScript引擎通常会停止，并生成一个
+        错误消息。<br>
+        描述这种情况的技术术语是：JavaScript将抛出一个错误。
+    </p>
+    <h2>JavaScript try和catch</h2>
+    <p>
+        <b>try</b>语句允许我们定义在执行时进行错误测试的代码块。<br>
+        <b>catch</b>语句允许我们定义当try代码块发生错误是，所执行的代码块。 <br>
+        JavaScript的try和catch是成对出现的。
+    </p>
+    <p>
+        <b>语法</b> <br>
+        try <br>
+        {  <br>
+                <br>
+        }   <br>
+        catch(err)  <br>
+        {   <br>
+            <br>
+        }   <br>
+    </p>
+    <script>
+        function myMessage()
+        {
+            try
+            {
+                addalead("123");
+            }
+            catch(err)
+            {
+                window.alert(err);
+            }
+        }
+    </script>
+    <button class="button" type="button" onclick="myMessage()"></button>
+    <hr>
+    <h2>throw 语句</h2>
+    <p>throw语句允许我们创建自定义错误。 <br>
+        正确的技术术语是：创建或<b>抛出异常(exception)。</b> <br>
+        如果把throw与try和catch一起使用，那么能够控制程序流，并生成自定义
+        的错误消息。  <br>
+        <b>语法</b> <br>
+        throw exception
+    </p>
+    <input id="demoInput" type="text">
+    <button type="button" class="button" onclick="myFunctionThrow()">测试输入</button>
+    <p id="message"></p>
+    <script>
+        function myFunctionThrow()
+        {
+            var message,x;
+            message = document.getElementById("massage");
+            message.innerHTML = "";
+            x = document.getElementById("demoInput").value;
+            try {
+                if(x == "") throw "value is null";
+                if(isNaN(x)) throw "is not numeric";
+                x = Number(x);
+                if(x < 5) throw "small";
+                if(x > 5) throw "big";
+            } catch (err) {
+                message.innerHTML = "error:" + err;
+            }
+        }
+    </script>
+    <!--end JavaScript 错误 - throw、try 和 catch-->
+
+    <!--JavaScript 调试-->
+    <h2>JavaScript 调试</h2>
+    <p>代码可能包含语法错误，逻辑错误，没有调试工具，这些错误比较难于发现。<br>
+        通常，如果JavaScript出现错误，是不会有提示信息的，这样就无法找到代码
+        错误的位置
+    </p>
+    <h2>JavaScript调试工具</h2>
+    <p>在程序中寻找错误叫做代码调试。<br>
+        调试很难，但幸运的是，很多浏览器都内置了调试工具。 <br>
+        内置的调试工具可以开始或者关闭，严重的错误信息会发送给用户。 <br>
+        有了调试工具，就可以设置断点(代码停止执行的位置)，且可以在代码执行时检测变量。
+        浏览器启用调试工具一般都是按下F12键，并在调试菜单中选择"Console".
+    </p>
+    <h2>console.log()方法</h2>
+    <script>
+    a = 5;
+    b = 6;
+    console.log(a + b);
+    </script>
+    <hr>
+    <h2>设置断点</h2>
+    <p>在调试窗口中，可以设置JavaScript代码的断点。<br>
+        在每个断点上，都会停止执行JS代码，以便于我们检查JS变量的值。<br>
+        在检查完毕后，可以重新执行代码（如播放按钮）
+    </p>
+    <hr>
+    <h2>debugger关键字</h2>
+    <p>debugger关键字用于停止执行JS，并调用调试函数。<br>
+        这个关键字与在调试工具中设置断点的效果是一样的。<br>
+        如果没有调试可用，debugger语句将无法工作。<br>
+        开启debugger，各浏览器的步骤如下。 
+    </p>
+    <p><b>Chrome浏览器</b>
+        <ul>
+            <li>打开浏览器</li>
+            <li>在菜单中选择工具</li>
+            <li>在工具中选择开发者工具</li>
+            <li>最后，选择console</li>
+        </ul>
+        <b>Firefox浏览器</b>
+        <ul>
+            <li>打开浏览器</li>
+            <li>访问页面http://www.getfirebug.com。</li>
+            <li>按照说明 : 安装 Firebug。</li>
+        </ul>
+        <b>IE</b>
+        <ul>
+            <li>打开浏览器</li>
+            <li>在菜单中选择工具</li>
+            <li>在工具中选择开发者工具</li>
+            <li>最后，选择Console</li>
+        </ul>
+        <b>Opera</b>
+        <ul>
+            <li>打开浏览器</li>
+            <li>Opera 的内置调试工具为 Dragonfly，详细说明可访问页面:
+                    http://www.opera.com/dragonfly/。</li>
+        </ul>
+        <b>Safari</b>
+        <ul>
+            <li>打开浏览器</li>
+            <li>右击鼠标，选择检查元素</li>
+            <li>在底部弹出的窗口中选择控制台</li>
+        </ul>
+    </p>
+    <!--end JavaScript 调试-->
+
+    <!--JavaScript 变量提升-->
+    <h2>JavaScript 变量提升</h2>
+    <p>JavaScript中，函数及变量的声明都将被提升到函数的最顶部。<br>
+        JavaScript中，变量可以在使用后声明，也就是变量可以先使用再声明。<br>
+        <b>例子：</b> <br>
+        x = 2;  <br>
+        ele = doucument.getElementById("demo");  <br>
+        ele.innerHTML = x;   <br>
+        var x;
+    </p>
+    <p>要理解以上实例就需要理解"hosting(变量提升)" <br>
+        变量提升：函数声明和变量声明总是会被解释器悄悄地被"提升"到
+        方法体的最顶部。
+    </p>
+    <hr>
+    <h2>JavaScript初始化不会提升</h2>
+    <p>JavaScript只有声明的变量会提升，初始化的不会。<br>
+        一下两个实例结果结果不相同：
+    </p>
+    <h2>在头部声明你的变量</h2>
+    <p>对于大多数程序员来说并不知道JavaScript变量提升。 <br>
+        如果程序员不能很好的理解变量提升，他们写的程序就容易出现一些问题。<br>
+        为了避免这些问题，通常我们在每个作用域开始前声明这些变量，这也是正常的
+        JavaScript解析步骤，易于我们理解。
+    </p>
+    <!--end JavaScript 变量提升-->
+
+    <!--JavaScript 严格模式-->
+    <h2>JavaScript严格模式(use strict)</h2>
+    <p>JavaScript严格模式(strict mode)即在严格的条件下运行</p>
+    <hr>
+    <h2>使用"use strict"指令</h2>
+    <p>"use strict"指令在JavaScript1.8.5(ECMAScript5)中新增。<br>
+        他不是一条语句，但是是一个字面量表达式，在JS旧版本中会被忽略。<br>
+        "use strict"的目的是制定代码在严格条件下执行。<br>
+        严格模式下不能使用未声明的变量。
+    </p>
+    <hr>
+    <h2>严格模式声明</h2>
+    <p>严格模式通过在脚本或者函数的头部添加"use strict";表达式来声明。<br>
+    </p>
+    <hr>
+    <h2>为什么使用严格模式</h2>
+    <p>消除JavaScript语法的一些不合理处，不严谨之处，减少一些怪异行为；<br>
+        <ul>
+            <li>消除代码的一些不安全之处，保证代码运行的安全；</li>
+            <li>提高编译器效率，增加运行速度；</li>
+            <li>为未来新版本的JavaScript做好铺垫。</li>
+        </ul>
+        严格模式体现了JS更合理、更安全、更严谨的发展方向，包括IE10在内的主流浏览器，
+        都已经支持它，许多大项目已经开始全面拥抱它。<br>
+        另一方面，同样的代码，在严格模式中，可能会有不一样的运行结果，一些在正常
+        模式下可以运行的语句，在严格模式下将不能运行。掌握这些内容，有助于更细致地深入
+        理解JS。
+    </p>
+    <hr>
+    <h3>严格模式的限制</h3>
+    <ul>
+        <li>不允许使用未声明的变量，<i>对象也是一个变量</i></li>
+        <li>不允许删除变量或者对象</li>
+        <li>不允许变量重名</li>
+        <li>不允许使用八进制</li>
+        <li>不允许使用转义字符</li>
+        <li>不允许对只读属性赋值</li>
+        <li>不允许对一个使用getter方法读取的属性进行赋值</li>
+        <li>不允许删除一个不允许删除的属性</li>
+        <li>变量名不能使用"eval"字符串</li>
+        <li>变量名不能使用"arguments"字符串</li>
+        <li>不允许使用以下这种语句  <br>
+            with(Math){x = cos(2)};
+        </li>
+        <li>由于一些安全原因，在作用域eval()创建的变量不能被调用</li>
+        <li>禁止this关键字指向全局对象。因此，使用构造函数时，如果忘了加new，this
+            不再指向全局对象，而是报错。
+        </li>
+    </ul>
+    <hr>
+    <h3>保留关键字</h3>
+    <p>为了向将来JavaScript的新版本过度，严格模式新增了一些保留关键字：
+        <ul>
+            <li>implements</li>
+            <li>interface</li>
+            <li>let</li>
+            <li>package</li>
+            <li>private</li>
+            <li>protected</li>
+            <li>public</li>
+            <li>static</li>
+            <li>yield</li>
+        </ul>
+        <i><b>"use strict"指令只运行出现在脚本或者函数的开头</b></i>
+    </p>
+    <!--end JavaScript 严格模式-->
+
+    <!--JavaScript 使用误区-->
+    <h2>JavaScript 使用误区</h2>
+    <h3>赋值运算符应用错误</h3>
+    <p>在JS程序中如果你在if条件语句中使用赋值运算符的等号(=)将会产生一个
+        错误结果。正确方法是使用比较运算符的两个等号(==)。<br>
+        var x = 10; if(x = 10)应该使用比较运算符==.
+    </p>
+    <h3>比较运算符常见错误</h3>
+    <p>在常规的比较中，数据类型是被忽略的，以下if条件语句返回true <br>
+        var x = 10; var y = "10";if(x == y) <br>
+        以下语句返回false <br>
+        var x = 10; var y = "10";if(x === y) <br>
+        <i>注意：switch语句进行匹配的时候执行模式匹配，使用===运算符</i>
+    </p>
+    <h3>加法与连接注意事项</h3>
+    <p>加法是两个数字相加。<br>
+        连接是两个字符串连接。<br>
+        JS的加法和连接都使用+运算符。 <br>
+        var x = 10;var y = x + "5"; 运算结果y为"105"
+    </p>
+    <h3>浮点型数据使用注意事项</h3>
+    <p>JS中所有数据都是以64位浮点型数据(float)来存储。<br>
+        所有的编程语言，包括JS，对浮点型数据的精确度都很难确定。<br>
+        解决问题可以用整数的乘除法来解决。
+    </p>
+    <h3>JavaScript字符串分行</h3>
+    <p>JS允许我们在字符串中使用断行语句。<br>
+        但是，在字符串中直接使用回车换行是会报错的。<br>
+        字符串断行需要使用反斜杠(\)，如下所示： <br>
+        var x = "Hello \  <br>
+        World!";        
+    </p>
+    <h3>错误地使用分号</h3>
+    <p>以下实例中，if语句失去方法体，原if语句的方法体作为独立的代码
+        块被执行，导致错误的输出结果。<br>
+        由于分号使用错误，if语句中的代码块就一定会执行。
+    </p>
+    <h3>return语句使用注意事项</h3>
+    <p>JS默认实在代码的最后一行自动结束。所以return代码段不要分行写。
+        因为单独的return语句是一个完整语句，所以JS讲关闭return语句。
+    </p>
+    <h3>数组中使用名字来索引</h3>
+    <p>许多程序语音都允许使用名字来作为数组的索引。<br>
+        使用名字来作为索引的数组成为关联数组(或哈希)。<br>
+        JS不支持使用名字来索引数组，只允许使用数字索引
+    </p>
+    <p>在JS中，<b>对象</b>使用<b>名字作为索引</b>。<br>
+        如果使用名字作为索引，当访问数组时，JS会把数组重新定义为标准
+        对象。<br>
+        执行这样的操作后，数组的方法及属性将不能再使用，否则会产生错误。
+    </p>
+    <h3>定义数组元素，最后不能添加逗号</h3>
+    <p>var points = [12,34,56,];</p>
+    <h3>定义对象，最后不能添加逗号</h3>
+    <p>var person = {name:dugu,age:18,}</p>
+    <h3>undefined不是null</h3>
+    <p>在JS中，null用于对象，undefined用于变量，属性和方法。<br>
+        对象只有被定义才有可能为null，否则为undefined。<br>
+        如果想检测对象是否存在，在对象还没定义时将会抛出一个错误。<br>
+        错误的使用方式：<br>
+        if (myObj !== null 且 typeof myObj !== "undefined") <br>
+        正确的使用方式是先需要使用typeof来检测对象是否已经定义： <br>
+        if (typeof myObj !== "undefined" 且 myObj !== null) 
+    </p>
+    <hr>
+    <h3>程序块作用域</h3>
+    <p>在每个代码块中JS不会创建一个新的作用域，一般各个代码块的作用域都是全局的。<br>
+        以下代码的变量i返回10，而不是undefined；<br>
+        for(var i = 0;i &lt; 10;++i){} <br>
+        return i; //返回10;
+    </p>
+    <!--end JavaScript 使用误区-->
+
+    <!--JavaScript 表单-->
+    <h2>JavaScript表单验证</h2>
+    <p>HTML表单验证可以通过JavaScript来完成。<br>
+        以下实例代码用于判断表单字段(fname)的值是否存在，如果存在，则弹出消息，
+        否则阻止表单提交。
+    </p>
+    <script>
+        function validateForm()
+        {
+            var x = document.forms["myForm"]["fname"].value;
+            if(x == null || x == "")
+            {
+                alert("需要输入名字");
+                return false;
+            }
+        }
+    </script>
+    <form action="" name="myForm" onsubmit="return validateForm()">
+        <input type="text" name="fname">
+        <input type="submit" value="提交">
+    </form>
+    <hr>
+    <h2>JavaScript验证输入的数字</h2>
+    <p>JavaScript常用语对输入数字的验证</p>
+    <p>请输入1到10的数字</p>
+    <input id="numb">
+    <button type="button" class="button" onclick="numMyFunc()"></button>
+    <p id="ppDemo"></p>
+    <script>
+        function numMyFunc()
+        {
+            var x,text;
+            x = document.getElementById("numb").value;
+            if(isNaN(x) || x < 1 || x > 10)
+            {
+                text = "输入错误";
+            }
+            else
+            {
+                text = "输入正确";
+            }
+            document.getElementById("ppDemo").innerHTML = text;
+        }
+    </script>   \
+    <h2>HTML表单自动验证</h2>
+    <p>HTNL表单验证也可以通过浏览器来自动完成。<br>
+        如果表单字段(fname)的值为空，<b>required</b>属性会阻止表单提交：
+    </p>
+    <form action="">
+        <input type="text" required="required">
+        <input type="submit" value="提交">
+    </form>
+
+    <p>点击提交按钮，如果输入框是空的，浏览器会提示错误信息</p>
+
+    <h2>数据验证</h2>
+    <p>数据验证用于确保用户输入的数据是有效的、<br>
+        典型的数据验证有：
+        <ul>
+            <li>必须字段是否有输入</li>
+            <li>用户是否输入了合法的数据</li>
+            <li>在数字字段是否输入了文本</li>
+        </ul>
+        大多数情况下，数据验证用于确保用户正确输入数据。<br>
+        数据验证可以使用不同的方法来定义，并通过多种方式来调用。<br>
+        <b>服务端数据验证</b>是在数据提交到服务器上后再验证。<br>
+        <b>客户端数据验证 side validation</b>是在数据发送到服务器前，
+        在浏览器上完成验证。
+    </p>
+    <hr>
+    <h2>HTML约束验证</h2>
+    <p>HTML5新增了HTML表单的验证方式：约束验证(constraint validation).</p>
+    <p>
+        约束验证是表单被提交时浏览器用来实现验证的一种算法。<br>
+        HTML约束验证基于：<br>
+        <ul>
+            <li><b>HTML输入属性</b></li>
+            <li><b>CSS伪类选择器</b></li>
+            <li><b>DOM属性和方法</b></li>
+        </ul>
+    </p>
+    <h3>约束验证HTML输入属性</h3>
+    <table>
+        <tr>
+            <td>属性</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>disabled</td>
+            <td>规定输入的元素不可用</td>
+        </tr>
+        <tr>
+            <td>max</td>
+            <td>规定输入元素的最大值</td>
+        </tr>
+        <tr>
+            <td>min</td>
+            <td>规定输入元素的最小值</td>
+        </tr>
+        <tr>
+            <td>pattern</td>
+            <td>规定元素输入值的模式</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>规定输入元素字段是必须的</td>
+        </tr>
+        <tr>
+            <td>type</td>
+            <td>规则输入元素的类型</td>
+        </tr>
+    </table>
+    <h3>约束验证CSS伪类选择器</h3>
+    <table>
+        <tr>
+            <td>选择器</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>:disabled</td>
+            <td>选取属性为"disabled"属性的input元素</td>
+        </tr>
+        <tr>
+            <td>:invalid</td>
+            <td>选取无效的input元素</td>
+        </tr>
+        <tr>
+            <td>:optional</td>
+            <td>选择没有"required"属性的input元素</td>
+        </tr>
+        <tr>
+            <td>:required</td>
+            <td>选择有"required"属性的input元素</td>
+        </tr>
+        <tr>
+            <td>:valid</td>
+            <td>选取有效值的input元素</td>
+        </tr>
+    </table>
+    <!--end JavaScript 表单-->
+
+    <!--JavaScript 表单验证-->
+    <h2>JavaScript表单验证</h2>
+    <p>JavaScript可用来在数据被送往服务器前对HTML表单中的
+        这些输入数据进行验证。<br>
+        表单数据经常需要使用JavaScript来验证其正确性：
+        <ul>
+            <li>验证表单数据是否为空</li>
+            <li>验证输入是否是一个正确的email地址</li>
+            <li>验证日期是否输入正确</li>
+            <li>验证表单输入内容是否为数字型</li>
+        </ul>
+    </p>
+    <h2>Email验证</h2>
+    <p>下面的函数检查输入的数据是否符合电子邮件地址的基本语法。<br>
+        意思就是说，输入的数据必须包含@符号和点号(.)。同时，@字符不可以是
+        邮件地址的首字符，并且@之后需有至少一个点号：
+    </p>
+    <form action="" name="duguForm" onsubmit="onValidationEmail()">
+        Email: <input type="text" name="email">
+        <input type="submit" class="button" value="提交">
+    </form>
+    <script>
+        function onValidationEmail()
+        {
+            var x = document.forms["duguForm"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.indexOf(".");
+            if(atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length)
+            {
+                window.alert("不是一个有效的e-mail地址");
+                return false;
+            }
+        }
+    </script>
+    <!--end JavaScript 表单验证-->
+
+    <!--JavaScript 验证API-->
+    <h2>约束验证DOM方法</h2>
+    <table>
+        <tr>
+            <td>属性</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>checkValidity()</td>
+            <td>如果input元素中的数据是合法的返回true，否则返回false</td>
+        </tr>
+        <tr>
+            <td>setCustomValidty()</td>
+            <td>设置input元素的validationMessage属性，用于自定义错误提示信息的方法。<br>
+                使用setCustomValidity设置了自定义提示后，validity.customError就会变成true,
+                则checkValidity总是会返回false。如果要重新判断需要取消自定义提示，方法如下<br>
+                setCustomValidity(''); <br>
+                setCustomValidity(null);  <br>
+                setCustomValidity(undefined);   <br>
+            </td>
+        </tr>
+    </table>
+    <input type="number" min="100" max="300" id="inputNumber" required>
+    <button type="button" class="button" 
+        onclick="validateNumber()">验证数字</button>
+    <p id="showResult"></p>
+    <script>
+        function validateNumber()
+        {
+            var inputNumber = document.getElementById("inputNumber");
+            if(inputNumber.checkValidity() == false)
+            {
+                document.getElementById("showResult").innerHTML = inputNumber.validationMessage;
+            }
+        }
+    </script>
+    <h2>约束验证DOM属性</h2>
+    <table>
+        <tr>
+            <td>属性</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>validity</td>
+            <td>布尔属性值，返回input输入值是否合法</td>
+        </tr>
+        <tr>
+            <td>validationMessage</td>
+            <td>浏览器错误提示信息</td>
+        </tr>
+        <tr>
+            <td>willValidate</td>
+            <td>指定input是否需要验证</td>
+        </tr>
+    </table>
+    <h2>Validity属性</h2>
+    <p>input元素的<b>Validity属性</b>包含一系列关于validity数据属性</p>
+    <table>
+        <tr>
+            <td>属性</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>customError</td>
+            <td>设置为true，如果设置了自定义的validity信息</td>
+        </tr>
+        <tr>
+            <td>patternMismatch</td>
+            <td>设置为true，如果元素的值不匹配它的模式属性</td>
+        </tr>
+        <tr>
+            <td>rangeOverflow</td>
+            <td>设置为true，如果元素的值大于设置的最大值</td>
+        </tr>
+        <tr>
+            <td>rangeUnderflow</td>
+            <td>设置为true，如果元素的值小于它的最小值</td>
+        </tr>
+        <tr>
+            <td>stepMismatch</td>
+            <td>设置为true，如果元素的值不是按照规定的step属性设置</td>
+        </tr>
+        <tr>
+            <td>tooLong</td>
+            <td>设置为true，如果元素的值超过了maxLength属性设置的长度</td>
+        </tr>
+        <tr>
+            <td>typeMismatch</td>
+            <td>设置为true，如果元素的值不是预期相匹配的类型</td>
+        </tr>
+        <tr>
+            <td>valueMissing</td>
+            <td>设置为true，如果元素(required属性)没有值</td>
+        </tr>
+        <tr>
+            <td>valid</td>
+            <td>设置为true，如果元素的值是合法的</td>
+        </tr>
+    </table>
+    <input type="number" id="validityRange" max="100">
+    <button class="button" type="button" onclick="validityRange()">
+        验证输入的值是否太大
+    </button>
+    <p id="validityRangeShow"></p>
+    <script>
+        function validityRange()
+        {
+            var txt = "";
+            if(document.getElementById("validityRange").validity.rangeOverflow)
+            {
+                txt = "输入的值太大了";
+            }
+            document.getElementById("validityRangeShow").innerHTML = txt;
+        }
+    </script>
+    <!--end JavaScript 验证API-->
+
+    <!--JavaScript 保留关键字-->
+    <h2>JavaScript标准</h2>
+    <p>在JavaScript中，一些标示符是保留关键字，不能用作变量名或者函数名。<br>
+        所有的现代浏览器完全支持ECMAScript 3(ES3,JavaScript的第三版，从1999年开始)。<br>
+        ECMAScript 4(ES4)未通过。<br>
+        ECMAScript 5(ES5,2009年发布)，是JavaScript最新的官方版本。<br>
+        随着时间的推移，所有的现代浏览器已经完全支持ES5。
+    </p>
+    <hr>
+    <h2>JavaScript保留关键字</h2>
+    <table>
+            
+            <tbody><tr>
+            <td>abstract</td>
+            <td>arguments</td>
+            <td>boolean</td>
+            <td>break</td>
+            <td>byte</td>
+            </tr>
+            <tr>
+            <td>case</td>
+            <td>catch</td>
+            <td>char</td>
+            <td>class*</td>
+            <td>const</td>
+            </tr>
+            <tr>
+            <td>continue</td>
+            <td>debugger</td>
+            <td>default</td>
+            <td>delete</td>
+            <td>do</td>
+            </tr>
+            <tr>
+            <td>double</td>
+            <td>else</td>
+            <td>enum*</td>
+            <td>eval</td>
+            <td>export*</td>
+            </tr>
+            <tr>
+            <td>extends*</td>
+            <td>false</td>
+            <td>final</td>
+            <td>finally</td>
+            <td>float</td>
+            </tr>
+            <tr>
+            <td>for</td>
+            <td>function</td>
+            <td>goto</td>
+            <td>if</td>
+            <td>implements</td>
+            </tr>
+            <tr>
+            <td>import*</td>
+            <td>in</td>
+            <td>instanceof</td>
+            <td>int</td>
+            <td>interface</td>
+            </tr>
+            <tr>
+            <td>let</td>
+            <td>long</td>
+            <td>native</td>
+            <td>new</td>
+            <td>null</td>
+            </tr>
+            <tr>
+            <td>package</td>
+            <td>private</td>
+            <td>protected</td>
+            <td>public</td>
+            <td>return</td>
+            </tr>
+            <tr>
+            <td>short</td>
+            <td>static</td>
+            <td>super*</td>
+            <td>switch</td>
+            <td>synchronized</td>
+            </tr>
+            <tr>
+            <td>this</td>
+            <td>throw</td>
+            <td>throws</td>
+            <td>transient</td>
+            <td>true</td>
+            </tr>
+            <tr>
+            <td>try</td>
+            <td>typeof</td>
+            <td>var</td>
+            <td>void</td>
+            <td>volatile</td>
+            </tr>
+            <tr>
+            <td>while</td>
+            <td>with</td>
+            <td>yield</td>
+            <td></td>
+            <td></td>
+            </tr>
+            </tbody></table>
+    <p>* 标记的关键字是 ECMAScript5 中新添加的。</p>
+    <hr>
+    <h2>JavaScript对象、属性和方法</h2>
+    <p>避免使用JS内置的对象、属性和方法的名称作为JS的变量或者函数名</p>
+    <table>
+            <tbody><tr>
+            <td>Array</td>
+            <td>Date</td>
+            <td>eval</td>
+            <td>function</td>
+            <td>hasOwnProperty</td>
+            </tr>
+            <tr>
+            <td>Infinity</td>
+            <td>isFinite</td>
+            <td>isNaN</td>
+            <td>isPrototypeOf</td>
+            <td>length</td>
+            </tr>
+            <tr>
+            <td>Math</td>
+            <td>NaN</td>
+            <td>name</td>
+            <td>Number</td>
+            <td>Object</td>
+            </tr>
+            <tr>
+            <td>prototype</td>
+            <td>String</td>
+            <td>toString</td>
+            <td>undefined</td>
+            <td>valueOf</td>
+            </tr>
+    </tbody></table>
+    <hr>
+    <h2>Java保留关键字</h2>
+    <p>JS经常与Java一起使用。应该避免使用一些Java对象和属性作为JS标示符</p>
+    <table>
+        <tr>
+            <td>getClass</td>
+            <td>java</td>
+            <td>JavaArray</td>
+            <td>javaClass</td>
+            <td>JavaObject</td>
+            <td>JavaPackage</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>Windows保留关键字</h2>
+    <p>JavaScript可以在HTML外部使用。他可以在许多其他应用程序中
+        作为编程语言使用。<br>
+        在HTML中，必须(为了可移植性)避免使用HTML和Windows对象和属性的
+        名称作为JS的变量以及函数名
+    </p>
+    <table class="reference">
+            <tbody><tr>
+            <td>alert</td>
+            <td>all</td>
+            <td>anchor</td>
+            <td>anchors</td>
+            <td>area</td>
+            </tr>
+            <tr>
+            <td>assign</td>
+            <td>blur</td>
+            <td>button</td>
+            <td>checkbox</td>
+            <td>clearInterval</td>
+            </tr>
+            <tr>
+            <td>clearTimeout</td>
+            <td>clientInformation</td>
+            <td>close</td>
+            <td>closed</td>
+            <td>confirm</td>
+            </tr>
+            <tr>
+            <td>constructor</td>
+            <td>crypto</td>
+            <td>decodeURI</td>
+            <td>decodeURIComponent</td>
+            <td>defaultStatus</td>
+            </tr>
+            <tr>
+            <td>document</td>
+            <td>element</td>
+            <td>elements</td>
+            <td>embed</td>
+            <td>embeds</td>
+            </tr>
+            <tr>
+            <td>encodeURI</td>
+            <td>encodeURIComponent</td>
+            <td>escape</td>
+            <td>event</td>
+            <td>fileUpload</td>
+            </tr>
+            <tr>
+            <td>focus</td>
+            <td>form</td>
+            <td>forms</td>
+            <td>frame</td>
+            <td>innerHeight</td>
+            </tr>
+            <tr>
+            <td>innerWidth</td>
+            <td>layer</td>
+            <td>layers</td>
+            <td>link</td>
+            <td>location</td>
+            </tr>
+            <tr>
+            <td>mimeTypes</td>
+            <td>navigate</td>
+            <td>navigator</td>
+            <td>frames</td>
+            <td>frameRate</td>
+            </tr>
+            <tr>
+            <td>hidden</td>
+            <td>history</td>
+            <td>image</td>
+            <td>images</td>
+            <td>offscreenBuffering</td>
+            </tr>
+            <tr>
+            <td>open</td>
+            <td>opener</td>
+            <td>option</td>
+            <td>outerHeight</td>
+            <td>outerWidth</td>
+            </tr>
+            <tr>
+            <td>packages</td>
+            <td>pageXOffset</td>
+            <td>pageYOffset</td>
+            <td>parent</td>
+            <td>parseFloat</td>
+            </tr>
+            <tr>
+            <td>parseInt</td>
+            <td>password</td>
+            <td>pkcs11</td>
+            <td>plugin</td>
+            <td>prompt</td>
+            </tr>
+            <tr>
+            <td>propertyIsEnum</td>
+            <td>radio</td>
+            <td>reset</td>
+            <td>screenX</td>
+            <td>screenY</td>
+            </tr>
+            <tr>
+            <td>scroll</td>
+            <td>secure</td>
+            <td>select</td>
+            <td>self</td>
+            <td>setInterval</td>
+            </tr>
+            <tr>
+            <td>setTimeout</td>
+            <td>status</td>
+            <td>submit</td>
+            <td>taint</td>
+            <td>text</td>
+            </tr>
+            <tr>
+            <td>textarea</td>
+            <td>top</td>
+            <td>unescape</td>
+            <td>untaint</td>
+            <td>window</td>
+            </tr>
+            </tbody></table>
+            <br>
+            
+            <hr>
+            <h2>HTML 事件句柄</h2>
+            <p>除此之外，您还应该避免使用 HTML 事件句柄的名称作为 Javascript 的变量及函数名。</p>
+            <p>实例：</p>
+            <table class="reference">
+            <tbody><tr>
+            <td>onblur</td>
+            <td>onclick</td>
+            <td>onerror</td>
+            <td>onfocus</td>
+            </tr>
+            <tr>
+            <td>onkeydown</td>
+            <td>onkeypress</td>
+            <td>onkeyup</td>
+            <td>onmouseover</td>
+            </tr>
+            <tr>
+            <td>onload</td>
+            <td>onmouseup</td>
+            <td>onmousedown</td>
+            <td>onsubmit</td>
+            </tr><tr>
+            </tr></tbody></table>
+            <br>
+    <hr>
+    <h2>非标准的JavaScript</h2>
+    <p>除了保留关键字，在JS实现中也有一些非标准的关键字。<br>
+        一个实例是const关键字，用于定义变量。一些JS引擎把const当做var
+        的同义词。另一些引擎则把const当做只读变量的定义。<br>
+        Const是JS的扩展。JS引擎支持它用在Firefox和Chrome中。但是它并不是
+        JS的标准ES3或ES3的组成部分。<b>建议不使用</b>
+    </p>
+    <!--end JavaScript 保留关键字-->
+    
+    <!--JavaScript JSON-->
+    <h2>Javascript JSON</h2>
+    <p>
+        JSON适用于存储和传输数据的格式。<br>
+        JSON通常用于服务端向网页传递数据。
+    </p>
+    <h2>什么是JSON</h2>
+    <ul>
+        <li>JSON全称是JavaScript Object Notation</li>
+        <li>JSON是一种轻量级的数据交换格式</li>
+        <li>JSON是独立的语言</li>
+        <li>JSON易于理解</li>
+    </ul>
+    <b><i>JSON使用JS的语法，但是JSON格式仅仅是一个文本。<br>
+        文本可以被任何编程语言读取及作为数据格式传递。
+    </i></b>
+    <hr>
+    <h2>JSON实例</h2>
+    <p>以下JSON语法定义了sites对象：3条网站信息(对象)的数组</p>
+    <script>
+    var duguJsonObject = 
+    {
+        sites:
+        [
+            {"name":"dugu1","age":23},
+            {"name":"dugu2","age":33},
+            {"name":"dugu3","age":43},
+        ]
+    }
+    </script>
+    <hr>
+    <h2>JSON格式化后为JavaScript对象</h2>
+    <p>JSON格式在语法上与创建JavaScript对象代码是相同的。<br>
+        由于他们很相似，
+        所以JavaScript程序可以很容易的将JSON数据转换为JS对象
+    </p>
+    <hr>
+    <h2>JSON语法规则</h2>
+    <ul>
+        <li>数据为 键/值 对</li>
+        <li>数据由逗号分隔</li>
+        <li>大括号保存对象</li>
+        <li>方括号保存数组</li>
+    </ul>
+    <hr>
+    <h2>JSON数据:一个名称对应一个值</h2>
+    <p>JSON数据格式为键值对，就像JS对象属性。<br>
+        键值对包括对字段名称(在双引号中)，
+        后面一个冒号，然后是值。 <br>
+        "name":"DuGu"
+    </p>
+    <hr>
+    <h2>JSON对象</h2>
+    <p>JSON对象保存在大括号内。<br>
+        就像在JS中，对象可以保存多个键值对。<br>
+        {"name":"dugu","ageString":"12"};
+    </p>
+    <hr>
+    <h2>JSON数组</h2>
+    <p>JSON数组保存在中括号中。<br>
+        就像在JS中，数组可以包含对象：
+    </p>
+    <hr>
+    <h2>JSON字符串转换为JavaScript对象</h2>
+    <p>通常我们从服务器中读取JSON数据，并在网页中显示数据。<br>
+        简单起见，我们从网页中直接设置JSON字符串。<br>
+        首先，创建JS对象，字符串为JSON格式的数据。
+    </p>
+    <button class="button" type="button" onclick="myJSONTest()" id="btnTextJson">测试JSON</button>
+    <script>
+    function myJSONTest()
+    {
+        var text = '{ "sites" : [' +
+            '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+            '{ "name":"Google" , "url":"www.google.com" },' +
+            '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+        var obj = JSON.parse(text);
+        var txt = "";
+        for(var index in obj)
+        {
+            txt += obj[index].toString() + " ";
+        }
+        document.getElementById("btnTextJson").innerHTML = txt;
+    }
+    </script>
+    <hr>
+    <h2>JSON相关函数</h2>
+    <table>
+        <tr>
+            <td>函数</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td>JSON.prase()</td>
+            <td>用于将一个JSON字符串转换为JS对象</td>
+        </tr>
+        <tr>
+            <td>JSON.stringify()</td>
+            <td>用于将JS值转换为JSON字符串</td>
+        </tr>
+    </table>
+    <!--end JavaScript JSON-->
+
+    <!--JavaScript void-->
+    <h2>Javascript:void(0)含义</h2>
+    <p>经常会使用到javascript:void(0)这样的代码，void是JS中
+        非常重要的关键字，该操作符指定要计算一个表达式但是不返回值。
+    </p>
+    <script>
+    //<!--
+    void func()
+    void(func())
+    javascript:void func()
+    javascript:void(func())
+    //-->
+    </script>
+    <a href="javascript:void(0)">单击此处什么也不会发生</a>
+    <p>以下实例中参数a将返回undefined</p>
+    <script>
+        function voidGetValue()
+        {
+            var a,b,c;
+            a = void(b = 1, c = 2);
+            document.write("a:" + a.toString());
+        }
+    </script>
+    <h3>href="#"与href="javascript:void(0)"的区别</h3>
+    <p>
+        # 包含了一个位置的信息，默认的锚是<b>#top</b>也就是网页的上端。<br>
+        而javascript:void(0),仅仅表示一个死链接。<br>
+        在页面很长的时候会使用 # 来定位页面的具体位置，格式为# + id。<br>
+        如果要定义一个死链接请使用javascript:void(0)
+    </p>
+    <b><i>注意：</i>void()仅仅是代表不返回任何值，但是括号内的表达式还是要运行<br>
+        如：void(alert("Woring!"))
+    </b>
+    <!--end JavaScript void-->
+
+    <!--JavaScript 代码规范-->
+    <h2>JavaScript代码规范</h2>
+    <p>代码规范通常包括以下几个方面</p>
+    <ul>
+        <li>变量和函数的命名规则</li>
+        <li>空格，缩进，注释的使用规则</li>
+        <li>其他常用规范......</li>
+    </ul>
+    <p>规范的代码可以更易于阅读与维护。<br>
+        代码规范一般在开发前规定，跟团队成员来协商设置
+    </p>
+    <h2>变量名</h2>
+    <p>变量名推荐使用驼峰法来命名(camelCase),如：<br>
+        var firstName = "dugu"; <br>
+        var lastName = "dugu"; <br>
+        price = 12.12; <br>
+        tax = 1.2; <br>
+        fullName = firstName + lastName;
+    </p>
+    <hr>
+    <h2>空格和运算符</h2>
+    <p>通常运算符(= + - * /)前后需要添加空格. <br>
+        var z = x + y;   <br>
+        var values = ["12",12,23];   <br>
+        var obj = {"sites":"123"};  <br>
+    </p>
+    <h2>代码缩进</h2>
+    <p>通常使用4个空格符号来缩进代码块</p>
+    <hr>
+    <h2>语句规则</h2>
+    <p>简单语句的通用规则：一条语句通常以分号作为结束符</p>
+    <p>复杂语句的通用规则：
+        <ul>
+            <li>将左花括号放在第一行的结尾</li>
+            <li>左花括号前添加一空格</li>
+            <li>将右花括号独立放在一行</li>
+            <li>不要以分号结束一个复杂的声明</li>
+        </ul>
+    </p>
+    <h2>对象规则</h2>
+    <p>定义对象的规则：
+        <ul>
+            <li>将左花括号与类名放在同一行(DuGu不喜欢)</li>
+            <li>冒号与属性值间有个空格</li>
+            <li>字符串使用双引号，数字不需要</li>
+            <li>最后一个属性值对后面不要添加逗号</li>
+            <li>将右花括号独立放在一行，并以分号作为结束符号</li>
+        </ul>
+    </p>
+    <h2>每行代码字符小于80</h2>
+    <p>为了便于阅读每行字符建议小于数80个。<br>
+        如果一个JS语句超过了80个字符，建议在运算符或者逗号后换行。
+    </p>
+    <h2>命令规则</h2>
+    <p>一般很多代码语言的命名规则都是类似的，例如：
+        <ul>
+            <li>变量和函数为驼峰法(camelCase)</li>
+            <li>全局变量为大写(UpperCase)</li>
+            <li>常量(如PI)为大写(UpperCase)</li>
+        </ul>
+    </p>
+    <p>
+        变量命名你是否使用这几种规则：
+        <b>hyp-hens,camelCase,或under_scores</b> <br>
+        <b>HTML和CSS的横杠(.)字符：</b> <br>
+        HTML5属性可以以data- (如：data-quantity,data-price),作为前缀。<br>
+        CSS的使用 - 来连接属性名(font-size)。 <br>
+        <i>-通常在JS中被认为是减法，所以不允许使用。</i>
+    </p>
+    <p>
+        <b>下划线:</b> <br>
+        PHP语言通常都使用下划线。 <br>
+        <b>帕斯卡拼写法(PascalCase):</b> <br>
+        帕斯卡拼写法在C语言中使用较多。  <br>
+        驼峰法:  <br>
+        JS中通常推荐使用驼峰法，jQuery以及其他JS库都使用驼峰法。<br>        
+    </p>
+    <h2>HTML载入外部JS文件</h2>
+    <p>使用简洁的格式载入JS文件(type属性不是必须的)。<br>
+        &gt;script src="myscripts.js" &lt;
+    </p>
+    <h2>使用JS访问HTML元素</h2>
+    <p>一个糟糕的HTML格式可能会导致JS执行错误。<br>
+        HTML与JS尽量保持使用相同的命名规则。
+    </p>
+    <hr>
+    <h2>文件扩展名</h2>
+    <p>HTML文件后缀可以是<b>.html</b>或者<b>.htm</b> <br>
+        CSS文件后缀<b>.css</b> <br>
+        JavaScript文件后缀是<b>.js</b>
+    </p>
+    <hr>
+    <h2>使用小写文件名</h2>
+    <p>大多数Web服务器(Apache,Unix)对大小写敏感：<br>
+        其他Web服务器(Microsoft.IIS)对大小写不敏感 <br>
+        必须保持统一的风格，建议统一使用小写的文件名
+    </p>
+    <!--end JavaScript 代码规范-->
+
+    <!--JavaScript 函数定义-->、
+    <h2>JavaScript函数定义</h2>
+    <p>JavaScript使用关键字<b>function</b>定义函数。<br>
+        函数可以通过声明定义，也可以是一个表达式。
+    </p>
+    <hr>
+    <h2>函数声明</h2>
+    <p>函数声明后不会立即执行，需要的时候才调用</p>
+    <b><i>分号是用来分隔可执行的JS语句。<br>
+        由于函数声明不是一个可执行语句，所以不以分号结束。
+    </i></b>
+    <hr>
+    <h2>函数表达式</h2>
+    <p>JavaScript函数可以通过一个表达式定义。<br>
+        函数表达式可以存储在变量中： <br>
+        var x = function(a,b) {return a + b; }; <br>
+        在函数表达式存储变量后，变量也可以作为一个函数使用。<br>
+        var x = function(a,b) {return a + b; }; <br>
+        var z = x(3,4);  <br>
+    </p>
+    <p>以上函数实际上是一个<b>匿名函数</b>(函数没有名称)。<br>
+        函数存储在变量中，不需要函数名称，通常通过变量名来调用。<br>
+        上述函数以分号结尾，因为它是一个执行语句。
+    </p>
+    <hr>
+    <h2>Function()构造函数</h2>
+    <p>函数同样可以通过内置的JS函数构造器(Function())定义。<br>
+        var myFunc = new Function("a","b","return a * b"); <br>
+        var x = myFunc(3,1);  
+    </p>
+    <p><b><i>在JavaScript中，要尽量避免使用new关键字</i></b></p>
+    <hr>
+    <h2>函数提升(Hosting)</h2>
+    <p>提升(Hosting)是JS默认将当前作用域提升到前面去的行为。<br>
+        提升(Hosting)应用在变量的声明与函数的声明。<br>
+        因此，函数可以在声明之前调用。<br>
+        myFunc(2);  <br>
+        <br>
+        function myFunc(y){  <br>
+            return y * y;  <br>
+        }  <br>
+        <i>使用表达式定义函数时无法提升</i>
+    </p>
+    <hr>
+    <h2>自调用函数</h2>
+    <p>函数表达式可以"自调用"。 <br>
+        自调用表达式会自动调用。 <br>
+        如果表达式后面紧跟()，则会自动调用。<br>
+        不能自调用声明的函数。 <br>
+        通过添加括号，来说明它是一个函数表达式：<br>
+        (function(){return "hello"})();  <br>
+        以上函数实际上是一个<b>匿名自我调用的函数</b>(没有函数名)
+    </p>
+    <hr>
+    <h2>函数可作为一个值使用</h2>
+    <p>var x = myFunc(4,6) * 2;</p>
+    <h2>函数是对象</h2>
+    <p>在JS中使用<b>typeof</b>操作符判断函数类型将返回"function"。<br>
+        但是JS函数描述为一个对象更加准确。<br>
+        JS函数有属性和方法。 <br>
+        arguments.length属性返回函数调用过程接收到
+        的参数个数。<br>
+        toString()方法将函数作为一个字符串返回.
+    </p>
+    <b><i>函数定义作为对象的属性，称之为对象方法。<br>
+        函数如果用于创建新的对象，称之为对象的构造函数。
+    </i></b>
+    <!--end JavaScript 函数定义-->
+
+    <!--JavaScript 函数参数-->
+    <h2>JavaScript 函数参数</h2>
+    <p>JavaScript函数对参数的值没有进行任何的检查</p>
+    <hr><h2>函数显式参数(Parameters)与隐式参数(Arguments)</h2>
+    <p>函数的显示参数：<br>
+        funcName(parameter1,parameter2,parameter3){...} <br>
+        函数显示参数在函数定义时列出。 <br>
+        函数隐式参数在函数调用时传递给函数真正的值。 <br>
+    </p>
+    <hr>
+    <h2>参数规则</h2>
+    <p>JavaScript函数定义时显式参数没有指定的数据类型。<br>
+        JavaScript函数对隐式参数没有进行类型检测。  <br>
+        JavaScript函数对隐式参数的个数没有进行检测。
+    </p>
+    <hr>
+    <h2>默认参数</h2>
+    <p>如果函数在迪欧用时未提供隐式参数，参数会默认设置为：<b>undefined</b> 
+        有时这是可以接受的，但是建议最好为参数设置一个默认值：  <br>
+        function myFunc(x,y){      <br>
+            if(y === undefined){   <br>
+                y = 0;   <br>
+            }   <br>
+        }  <br>
+        或者，更简单的方式：  <br>
+        function myFunc(x,y){   <br>
+            y = y || 0;    <br>
+        }    <br>
+        <i>如果y已经定义，y||返回y，因为y是true，否则返回0，
+            因为undefined为false
+        </i>  <br>
+        <b>如果函数调用时设置了过多的参数，参数将无法被引用，因为无法找到
+            对应的参数名，只能使用arguments对象来调用。
+        </b>
+    </p>
+    <hr>
+    <h2>Arguments对象</h2>
+    <p>JavaScript函数有个内置的对象arguments对象。<br>
+        argument对象包含了函数调用的参数数组。 <br>
+        通过这种方式可以很方便的找到最大的一个参数值。
+        如下面的例子
+    </p>
+    <button id="btnMax" class="button" type="button" onclick="btnFindMax()">找出最大值</button>
+    <script>
+
+        function btnFindMax(){
+            var maxNum = findMax(1.2,23,77,88,12,45);
+            document.getElementById("btnMax").innerHTML = maxNum;
+        }
+
+        function findMax(){
+            var i,max = arguments[0];
+            if(arguments.length < 2) return max;
+
+            for(var i = 0;i < arguments.length;++i){
+                if(arguments[i] > max){
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+    </script>
+    <hr>
+    <h2>通过值传递参数</h2>
+    <p>在函数中调用的参数是函数的隐式参数。<br>
+        JavaScript隐式参数通过值来传递：函数仅仅只是获取zhi。 <br>
+        如果函数修改参数的值，不会修改显示参数的初始值(在函数外定义)。  <br>
+        隐式参数的改变在函数外是不可见。
+    </p>
+    <hr>
+    <h2>通过对象传递参数</h2>
+    <p>在JavaScript中，可以引用对象的值。<br>
+        因此在函数内部修改对象的属性就会修改其初始的值。<br>
+        修改对象属性可作用于函数外部(全局变量)。 <br>
+        修改对象属性在函数外是可见的。
+    </p>
+    <!--end JavaScript 函数参数-->
+
+    <!--JavaScript 函数调用-->
+    <h2>JavaScript函数调用</h2>
+    <p>JavaScript函数有4种调用方式。<br>
+        每种方式的不同方式在于this的初始化
+    </p>
+    <hr><h2>this关键字</h2>
+    <p>在JavaScript中，this指向函数执行时的当前对象。<br>
+        注意this是保留关键字，不能修改this的值.
+    </p>
+    <hr><h2>调用JavaScript函数</h2>
+    <p>函数中的代码在函数被调用后执行。</p>
+    <h3>作为一个函数调用</h3>
+    <p>
+        function myFunc(a,b){  <br>
+            return a * b;   <br>
+        }   <br>
+        myFunc(10,2);  <br>
+    </p>
+    <p>在以上函数中不属于任何对象。但是在JS中它始终是默认的全局对象。<br>
+        在HTML中默认的全局对象是HTML页面本身，所以函数是属于HTML页面。<br>
+        在浏览器中的页面对象是浏览器窗口(window对象)。
+        以上函数会自动变为window对象的函数。  <br>
+        myFunc()和window.myFunc()是一样的。 <br>
+        <i>这是调用JS函数常用的方法，但不是良好的编程习惯。<br>
+            全局变量，方法或函数容易造成命名冲突的bug。
+        </i>
+    </p>
+    <hr><h2>全局对象</h2>
+    <p>当函数没有被自身的对象调用时，this的值就会变成全局对象。<br>
+        在web浏览器中全局对象是浏览器窗口(window对象)。<br>
+        该实例返回this的值window对象。  <br>
+        function myFunc(){    <br>
+            return this;    <br>
+        }    <br>
+        myFunc();  //返回window对象  <br>
+        <i>函数作为全局对象调用，会使this的值成为全局对象。<br>
+            使用window对象作为一个变量容易造成程序崩溃。
+        </i>
+    </p>
+    <hr><h2>函数作为方法调用</h2>
+    <p>在JavaScript中可以将函数定义为对象的方法。</p>
+    <button type="button" class="button" id="btnObjFunc" onclick="testObjFunc()"></button>
+    <script>
+        function testObjFunc(){
+            var obj = {
+                firstName : "dugu",
+                laasName : "DuGu",
+                fullName : function(){
+                    return this.firstName + " " + this.laasName;
+                }
+            }
+            document.getElementById("btnObjFunc").innerHTML = obj.fullName;
+        }
+    </script>
+    <p><b>fullName</b>方法是一个函数。函数属于对象。<b>obj</b>是函数的所有者。<br>
+        this对象，拥有JS代码。实例中this的值为obj对象。<br>
+        <i>函数作为对象方法调用，会使得<b>this</b>的值成为对象本身</i>
+    </p>
+    <h2>使用构造函数调用函数</h2>
+    <p>如果函数调用前使用了new关键字，则是调用了构造函数。<br>
+        这看起来就像创建了新的函数，但实际上JS函数是重新创建的对象。
+    </p>
+    <hr><h2>作为函数方法调用函数</h2>
+    <p>在JS中，函数是对象。JS函数有它的属性和方法。<br>
+        <b>call()</b>和<b>apply()</b>是预定义的函数方法。两个方法可用于函数调用，
+        两个方法的第一个参数必须是对象本身。 
+    </p>
+    <button type="button" class="button" id="btnFuncObj" onclick="testFuncObj()">
+        测试函数方法
+    </button>
+    <script>
+        function myCallAndApplyFunc(a,b){
+            return a * b;
+        }
+        function testFuncObj(){
+            var fucnObj = myCallAndApplyFunc.call(fucnObj,10,3);
+            var myFuncObj = myCallAndApplyFunc.apply(myFuncObj,[11,2]);
+            document.getElementById("btnFuncObj").innerHTML = 
+                fucnObj.toString() + " "  + myFuncObj.toString();
+        }
+    </script>
+    <p> 两个方法都使用了对象本身作为第一个参数。 
+        两者的区别在于第二个参数： apply传入的是一个参数数组，
+        也就是将多个参数组合成为一个数组传入，而call则作为call的参数传入
+        （从第二个参数开始）。在 JavaScript 严格模式(strict mode)下, 
+        在调用函数时第一个参数会成为 this 的值， 
+        即使该参数不是一个对象。在 JavaScript 非严格模式
+        (non-strict mode)下, 如果第一个参数的值是 
+        null 或 undefined, 它将使用全局对象替代。 <br>
+        <i>通过<b>call()</b>或<b>apply()</b>方法可以设置this的值，且作为已经存在对象
+        的新方法使用。<br>
+        随着函数使用的场合不同，this的值会发生变化。但是有一个总的原则，那就是this指的是，
+        调用函数的那个对象。
+    </i>
+    </p>
+    <!--end JavaScript 函数调用-->
+
+    <!--JavaScript 闭包-->
+    <h2>JavaScript 闭包</h2>
+    <hr>
+    <p>JavaScript变量可以是局部变量或者全局变量。<br>
+        私有变量可以用到闭包。
+    </p>
+    <hr><h2>全局变量</h2>
+    <p>函数可以访问由函数内部定义的变量，
+        也可以访问函数外部定义的变量。<br>
+        <i>变量声明时如果不使用var关键字，那么它就是一个全局变量，
+            即便它在函数内定义。
+        </i>
+    </p>
+    <hr><h2>变量生命周期</h2>
+    <p>全局变量的作用域是全局性的，即在整个JS程序中，全局变量处处都在。<br>
+        而在函数内部声明的变量，只在函数内部起作用。这些变量是局部变量，作用域是
+        局部性的;函数的参数也是局部性的。只在函数内部起作用。<br>
+    </p>
+    <hr><h2>JavaScript内嵌函数</h2>
+    <p>
+        所有函数都能访问全局变量。<br>
+        实际上，在JS中，所有函数都能访问他们上一层的作用域。<br>
+        JavaScript支持嵌套函数，嵌套函数可以访问上一层的函数变量。 <br>
+    </p>
+    <script>
+        function add(){
+            var count = 0;
+            function plus(){
+                count++;
+            }
+            plus();
+            return count;
+        }
+    </script>
+    <hr><h2>JavaScript闭包</h2>
+    <button class="button" type="button" id="btnCounter" onclick="testCounter()">
+        测试闭包函数自我调用计数器
+    </button>
+    <script>
+        function testCounter()
+        {
+            var add = function(){
+                var count = 0;
+                return function(){return count + 1;}
+            }();
+            add();
+            add();
+            document.getElementById("btnCounter").innerHTML = add();
+            add();
+        }
+    </script>
+    <p><i>
+        闭包是可访问上一层函数作用域里变量的函数，
+        即便上一层函数已经关闭. <br>
+        闭包就是子函数可以使用父函数的局部变量，还有父函数的参数。
+    </i></p>
+    <!--end JavaScript 闭包-->
+
+    <!--JavaScript HTML DOM-->
+    <h2>JavaScript HTML DOM(文档对象模型)</h2>
+    <p>通过HTML DOM,可访问JS HTML文档所有元素。<br>
+        当网页被加载时，浏览器会创建页面的文档对象模型(Document Object Model). <br>
+        <b>HTML DOM</b>模型被构造为对象的树
+    </p>
+    <p>通过可编程的对象模型，JS获得了足够的能力来创建动态的HTML。 <br>
+        <ul>
+            <li>JavaScript能够改变页面中所有HTML元素</li>
+            <li>JavaScript能够改变页面中所有HTML属性</li>
+            <li>JavaScript能够改变页面中所有CSS样式</li>
+            <li>JavaScript能够改变页面中所有事件做出反应</li>
+        </ul>
+    </p>
+    <hr><h2>查找HTML元素</h2>
+    <p>通常，通过JS，需要操作HTML元素。<br>
+        JS找到HTML元素的三种方式。
+        <ul>
+            <li>通过id找到HTML元素</li>
+            <li>通过标签名找到HTML元素</li>
+            <li>通过类名找到HTML元素</li>
+        </ul>
+    </p>
+    <hr><h2>通过id查找HTML元素</h2>
+    <p>在DOM中查找HTML元素的最简单的方法，是通过使用元素的id。  <br>
+        var x = doucument.getElementById("eleId");   <br>
+        如果未找到该元素，则x将包含null
+    </p>
+    <hr><h2>通过标签名查找HTML元素</h2>
+    <p>本例子查找id="main"的元素，然后查找id='main"元素中的所有p元素：<br>
+        var x = doucument.getElementById("main");  <br>
+        var y = x.getElementByTagName("p");
+    </p>
+    <hr><h2>通过类名找到HTML元素</h2>
+    <p>本例通过getElementByClassName函数来查找class="intro"的元素. <br>
+        var x = document.getElementByClassName("intro");
+    </p>
+    <hr><h2>HTML DOM教程</h2>
+    <ul>
+        <li>如何改变HTML元素的内容(innerHTML)</li>
+        <li>如何改变HTML元素的样式(CSS)</li>
+        <li>如何对HTML DOM事件做出反应</li>
+        <li>如何添加或删除HTML元素</li>
+    </ul>
+    <!--end JavaScript HTML DOM-->
+
+    <!--JavaScript HTML DOM-改变HTML-->
+    <h2>改变HTML输出流</h2>
+    <p>JavaScript能够创建动态HTML内容。  <br>
+        document.write(Date())可用于直接向HTML输出流写内容 <br>
+        <i>不要在文档中加载完成后使用document.write()。
+            这会覆盖该文档
+        </i>
+    </p>
+    <hr><h2>改变HTML内容和属性</h2>
+    <p>修改HTML内容的最简单的方法时使用innerHTML属性。<br>
+        改变属性，如：document.getElementById("image").scr = "new.jpg"
+    </p>
+    <!--end JavaScript HTML DOM-改变HTML-->
+
+    <!--JavaScript HTML DOM 改变CSS-->  
+    <h2>改变HTML样式</h2>
+    <p>document.getElementById(id).style.property=新样式</p>
+    <h2>使用事件</h2>
+    <p>HTML DOM允许我们通过触发事件来执行代码。  <br>
+        <ul>
+            <li>元素被点击</li>
+            <li>页面加载完成</li>
+            <li>输入框被修改</li>
+        </ul>
+    </p>
+    <h1 id="id1">我的标题 1</h1>
+    <button type="button"
+    onclick="document.getElementById('id1').style.color='red'">
+    点我!</button>
+    <!--end JavaScript HTML DOM改变CSS-->
+
+    <!--JavaScript HTML DOM-->
+    <h2>JavaScript HTML DOM</h2>
+    <p>HTML DOM 使JavaScript有能力对HTML事件做出反应。</p>
+    <h3>对事件做出反应</h3>
+    <p>可以在事件发生时执行JS代码，比如当用户在HTML元素上点击。<br>
+        如需在用户点击某个元素时执行代码，请向一个HTML事件属性添加JS代码：<br>
+        如onclick=JavaScript,HTML事件的例子：
+        <ul>
+            <li>当用户点击鼠标时</li>
+            <li>当网页已加载时</li>
+            <li>当图像已加载时</li>
+            <li>当鼠标移动到元素上时</li>
+            <li>当输入字段被改变时</li>
+            <li>当提交HTML表单时</li>
+            <li>当用户触发按键时</li>
+        </ul>
+    </p>
+    <h2>onload和onunload事件</h2>
+    <p>onload和onunload事件会在用户进入或离开页面时被触发。 <br>
+        onload事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些
+        信息来加载网页的正确版本。 <br>
+        onload和onunload事件可用于处理cookie
+    </p>
+    <h2>onchange事件</h2>
+    <p>onchange事件常结合对输入字段的验证来使用。 </p>
+    <input type="text" id="fname" onchange="upperCase()">
+    <script>
+        function upperCase(){
+            var x = document.getElementById("fname");
+            var str = String(x.value);
+            x.value = str.toUpperCase();
+        }
+    </script>
+    <h2>onmouseover和onmouseout事件</h2>
+    <p>onmouseover和onmouseout事件可用于在用户的鼠标移至HTML元素
+        上方或移出元素时触发函数。
+    </p>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+    style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse Over Me
+    </div>
+    <script>
+            function mOver(obj){
+                obj.innerHTML="Thank You"
+            }
+            function mOut(obj){
+                obj.innerHTML="Mouse Over Me"
+            }
+    </script>
+    <h2>onmousedown、onmouseup 以及 onclick 事件</h2>
+    <p>onmousedown, onmouseup 以及 onclick 构成了鼠标点击事件的所有部分。
+        首先当点击鼠标按钮时，会触发 onmousedown 事件，
+        当释放鼠标按钮时，会触发 onmouseup 事件，
+        最后，当完成鼠标点击时，会触发 onclick 事件。</p>
+    <!--end JavaScript HTML DOM-->
+
+    <!--JavaScript HTML DOM EventListener-->
+    <h2>addEventListener</h2>
+    <p>document.getElementById("myBtn").addEventListener("click",displayDate);
+        //注意没有on前缀
+    </p>
+    <p>
+        addEventListener() 方法用于向指定元素添加事件句柄。           
+        addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。
+        你可以向一个元素添加多个事件句柄。
+        你可以向同个元素添加多个同类型的事件句柄，如：两个 "click" 事件。
+        你可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。
+        addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。
+        当你使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 
+        在没有控制HTML标记时也可以添加事件监听。
+        你可以使用 removeEventListener() 方法来移除事件的监听。
+    </p>
+    <hr><h2>语法</h2>
+    <p>element.addEventListener(event,function,useCapture)</p>
+    <p>
+        第一个参数是事件的类型(如"click"或"mousedown").  <br>
+        第二个参数是事件触发后调用的函数。  <br>
+        第三个参数是个布尔值用于描述事件是冒泡还是捕获。该参数是可选的  <br>
+        <i>注意不要使用on前缀。例如,使用"click",而不是使用"onclick"</i>
+    </p>
+    <h2>向原元素添加事件句柄</h2>
+    <p>例如当用户点击元素时弹出"Hello World!"  <br>
+        element.addEventListener("click",myFunction);  <br>
+        function myFunction(){   <br>
+            alert("Hello World!");  <br>
+        }
+    </p>
+    <hr><h2>向同一个元素中添加多个事件句柄</h2>
+    <p>addEventListener()方法允许向同个元素添加多个事件，且不会覆盖已
+        存在的事件：  <br>
+        element.addEventListener("click",myFunction);  <br>
+        element.addEventListener("click",mySecondFunction); <br>
+        也可以向同个元素添加不同类型的事件：
+    </p>
+    <hr><h2>向window对象添加事件句柄</h2>
+    <p>addEventListener() 方法允许你在 HTML DOM 对象添加事件监听， HTML DOM 对象如： 
+        HTML 元素, HTML 文档, window 对象。或者其他支出的事件对象如: xmlHttpRequest 对象。
+    </p>
+    <hr><h2>传递参数</h2>
+    <p>当传递参数值时，使用"匿名函数"调用带参数的函数</p>
+    <hr><h2>事件冒泡或事件捕获</h2>
+    <p>事件传递有两种方式：冒泡与捕获。<br>
+        事件传递定义了元素事件触发的顺序。如果将p元素插入到div元素中，用户点击p元素，
+        哪个元素的click事件先被触发呢？  <br>
+        在<i>冒泡</i>中，内部元素的事件先被触发，然后再被触发外部元素，即：p元素的点击事件
+        先被触发，然后会触发div元素的点击事件。 <br>
+        在<i>捕获</i>中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即div元素的
+        点击事件先触发，然后再触发p元素的点击事件。 <br>
+        addEventListener()方法可以指定"useCapture"参数来设置传递类型：
+    </p>
+    <hr><h2>removeEventListener()方法</h2>
+    <p>removeEventListener()方法移除由addEventListener()方法添加的事件句柄</p>
+    <!--end JavaScript HTML DOM EventListener-->
+
+    <!--JavaScript HTML DOM元素(节点)-->
+    <h2>JavaScript HTML DOM元素(节点)</h2>
+    <p>创建新的HTML元素</p>
+    <h2>创建新的HTML元素</h2>
+    <p>如需向HTML DOM添加新元素，必须首先创建该元素(元素节点)，
+        然后向一个已存在的元素追加该元素。
+    </p>
+    <button class="button" type="button" 
+        id="btnAddChild" onclick="testAddChild()">
+        添加元素
+    </button>
+    <div id="divAdd"></div>
+    <script>
+        function testAddChild(){
+            //创建新的p元素
+            var para = document.createElement("p");
+            //必须向p元素追加这个文本节点
+            var node = document.createTextNode("这是一个新段落");
+            //向一个已有元素追加这个新元素
+            para.appendChild(node);
+            //找到一个已有的div元素
+            var element = document.getElementById("divAdd");
+            //div元素添加新元素
+            element.appendChild(para);
+        }
+    </script>
+    <hr><h2>删除已有的HTML元素</h2>
+    <div id="divRemove">
+        <p id="pRemove">这是一个段落。</p>
+        <p>这是另一个段落。</p>
+    </div>
+    <script>
+        var parent = document.getElementById("divRemove");
+        var child = document.getElementById("pRemove");
+        parent.removeChild(child);
+    </script>
+    <p><i>
+        如果能够在在不引用父元素的情况下删除某个元素，就太好了。 <br>
+        DOM需要清除需要删除的元素，以及它的父元素
+    </i></p>
+    <hr><h2>HTML DOM教程</h2>
+    
+    <!--end JavaScript HTML DOM元素(节点)-->
+
+    <!--JavaScript 对象-->
+    <h2>JavaScript 对象</h2>
+    <p>JavaScript中的所有事物都是对象：字符串、数值、数组、函数...  <br>
+        此外，JS允许自定义对象。
+    </p>
+    <hr><h2>所有事物都是对象</h2>
+    <p>JavaScript提供多个内建对象，比如String、Date、Array等等。
+        对象只是带有属性和方法的特殊数据类型。  <br>
+        <ul>
+            <li>布尔型可以是一个对象</li>
+            <li>数字型可以是一个对象</li>
+            <li>字符串也可以是一个对象</li>
+            <li>日期是一个对象</li>
+            <li>数字和正则表达式也是对象</li>
+            <li>数组也是一个对象</li>
+            <li>甚至函数也可以是对象</li>
+        </ul>
+    </p>
+    <p>对象只是一种特殊的数据，对象拥有<b>属性和方法</b></p>
+    <hr><h2>访问对象的属性</h2>
+    <p>属性是与对象相关的值。<br>
+        访问对象属性的语法是：objectName.propertyName 
+    </p>
+    <hr><h2>访问对象的方法</h2>
+    <p>方法是能够在对象上执行的动作。<br>
+        可以通过以下语法来调用方法
+    </p>
+    <hr><h2>创建JavaScript对象</h2>
+    <p>通过JS，能够定义并创建自己的对象。<br>
+        创建新对象的两种方法：
+        <ul>
+            <li>定义并创建对象的实例</li>
+            <li>使用函数来定义对象，然后创建新的对象实例</li>
+        </ul>
+    </p>\
+    <hr><h2>创建直接的实例</h2>
+    <p>下面的例子创建了对象的一个新实例，并向其添加了四个属性：<br>
+        person = new Object();  <br>
+        person.firstname = "dugu";  <br>
+        person.lastname = "dugu";   <br>
+        person.age = 50;  <br>
+        person.eyecolor = "blue";   <br>
+        替代语法(使用对象Literals):  <br>
+        person = {firstname = "dugu",lastname = "dugu",age:50,eyecolor:"blue"};
+    </p>
+    <hr><h2>使用对象构造器</h2>
+    <p>在JS中，this通常指向的是我们正在执行的函数本身，
+        或者是指向该函数所属的对象(运行时)
+    </p>
+    <script>
+        function person(firstname,lastname,age,eyecolor){
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.age = age;
+            this.eyecolor = eyecolor;
+            this.changeName = changeName;
+            function changeName(name){
+                this.lastname = name;
+            }
+        }
+        var me = new person("dugu","dugu",23,"red");
+        me.changeName("DuGu");
+        document.write(me.firstname + " " + me.lastname);
+    </script>
+    <hr><h2>JavaScript类</h2>
+    <P>JavaScript是面向对象的语言，但JS不使用类。<br>
+        在JS中，不会创建类，也不会通过类来创建对象(
+            就像在其他面向对象的语言中那样
+        )。  <br>
+        JavaScript基于prototype,而不是基于类的.
+    </P>
+    <hr><h2>JavaScript for..in循环</h2>
+    <p>JavaScript fo..in语句循环遍历对象的属性</p>
+    <h3>语法</h3>
+    <p>for(variable in obj)   <br>{
+            执行的代码...   <br>
+        }    <br>
+        <b>注意：for..in循环中的代码块将针对每个属性执行一次。</b>
+    </p>
+    <!--end JavaScript 对象-->
+
+    <!--JavaScript Number对象-->
+    <h2>JavaScript</h2>
+    <p>JavaScript只有一种数字类型。<br>
+        可以使用也可以不适用小数点来书写数字。
+    </p> 
+    <hr><h2>JavaScript数字</h2>
+    <p>JavaScript数字可以使用也可以不使用小数点来书写。<br>
+        极大或极小的数字可通过科学计数法来写：var x = 23e4;
+    </p>
+    <hr><h2>所有JavaScript数字均为64位</h2>
+    <p>JavaScript不是类型语言。与许多其他编程语言不同，
+        JS不定义不同类型的数字，比如整数、短、长、浮点等等。<br>
+        在JS中，数字不分为整数类型和浮点类型，所有的数字都是由浮点型
+        类型。JS采用IEEE754标准定义的64位浮点格式表示数字，他能表示
+        的最大值为±1.7976931348623157 x 10308，最小值为±5 x 10 -324 
+    </p>
+    <hr><h2>精度</h2>
+    <p>整数(不适用小数点或指数计数法)最多为15位 <br>
+        小数的最大位数是17，但是浮点运算并不总是100%准确
+    </p>
+    <hr><h2>八进制和十六进制</h2>
+    <p>如果前缀为0，则JS会把数值常量解释为八进制数，
+        如果前缀为0和x，则解释为十六进制数。  <br>
+        <i>绝对不要在数字前面写0，除非需要进行八进制转换</i>
+    </p>
+    <p>默认情况下，JS数字为十进制显示。<br>
+        可以使用toString()方法输出16进制、8进制、2进制。<br>
+        var myNumber = 128;  <br>
+        myNumber.toString(16);myNumber.toString(8);myNumber.toString(2);
+    </p>
+    <hr><h2>无穷大(Infinity)</h2>
+    <p>当数字运算结果超过了JS所能表示的数字上限(溢出)，结果为一个特殊的无穷大值，
+        在JS中以Infinity表示。同样地，当负数的值超过了JS所能表示ide负数范围，结果为
+        负无穷大，在JS中以-Infinity表示。无穷大的值的行为特性和我们所期望的是一致的；
+        基于他们的加减乘除运算还是无穷大(当然还保留他们的正负号)
+    </p>
+    <hr><h2>NaN - 非数字值</h2>
+    <p>NaN属性是代表非数字值的特殊值。该属性用于指示某个值不是数字。
+        可以把Number对象设置为该值，来指示其不是数字值。<br>
+        <b>一个数字除以一个字符串结果不是一个数字。<br>
+            一个数字除以一个字符串数字结果是一个数字。  <br>
+            除以0是无穷大，无穷大是一个数字
+        </b>
+    </p>
+    <hr><h2>数字可以是数字或者对象</h2>
+    <p>数字可以私有数据进行初始化，就像x=123；<br>
+        JS数字对象初始化数据，var y = new Number(123);  <br>
+        var x = 123;   <br>
+        var y = new Number(123);   <br>
+        typeof(x) // 返回 Number    <br>
+        typeof(y) // 返回 Object    <br>
+        <br>
+        var x = 123;              <br>
+        var y = new Number(123);   <br>
+        (x === y) // 为 false，因为 x 是一个数字，y 是一个对象
+    </p>
+    <h2>数字属性</h2>
+    <ul>
+        <li>MAX_VALUE</li>
+        <li>MIN_VALUE</li>
+        <li>NEGATIVE_INFINITY</li>
+        <li>POSITIVE_INFINITY</li>
+        <li>NaN</li>
+        <li>prototype</li>
+        <li>constructor</li>
+    </ul>
+    <h2>数字方法</h2>
+    <ul>
+        <li>toExponential()</li>
+        <li>toFixed()</li>
+        <li>toPrecision()</li>
+        <li>toString()</li>
+        <li>valueOf()</li>
+    </ul>
+    <!--end JavaScript Number对象-->
+
+    <!--JavaScript 字符串(String)对象-->
+    <p>String对象用于处理已有的字符块。<br>
+        一个字符串用于存储一系列字符。<br>
+        一个字符串可以使用单引号或双引号。  <br>
+        使用位置(索引)可以访问字符串中的任何字符：  <br>
+        var character = carname[4];   <br>
+        字符串的索引从零开始，所以字符串的第一字符为[0],
+        第二字符为[1],等等。  <br>
+        可以在字符串中使用引号：  <br>
+        var str = "it is alright";  <br>
+        var str = "he is'dugu''";  <br>
+        var str = 'he is called "dugu"'  <br>
+        或者可以在字符串中使用转义字符(\)使用引号
+        var str = "He is called \"dugu\""  <br>
+    </p>
+    <h2>字符串(String)</h2>
+    <p>字符串(String)使用长度属性<b>length</b>来计算字符串的长度</p>
+    <ul>
+        <li>在字符串中查找字符串indexOf(),
+            没找到返回-1;当然还有lastIndexOf()
+        </li>
+        <li>
+            内容匹配：match()函数用来查找字符串中特定的字符，如果找到的话，
+            则返回这个字符。
+        </li>
+        <li>
+            替换内容：replace()方法在字符串中用某些字符替换另一些字符。
+        </li>
+        <li>
+            字符串大小写转换：字符串大小写转换
+            使用函数toUpperCase() / toLowerCase();
+        </li>
+        <li>
+            字符串转为数组：字符串使用<b>split()</b>函数转为数组。
+        </li>
+        <li>
+            特殊字符：JS可以使用反斜杠(\)插入特殊符号，如引号等特殊字符。
+        </li>
+    </ul>
+    <h2>字符串属性和方法</h2>
+    <p>属性:
+        <ul>
+            <li>length</li>
+            <li>prototype</li>
+            <li>constructor</li>
+        </ul>
+    </p>
+    <p>方法:
+        <ul>
+            <li>charAt()</li>
+            <li>charCodeAt()</li>
+            <li>concat()</li>
+            <li>fromCharCode()</li>
+            <li>indexOf()</li>
+            <li>lastIndexOf()</li>
+            <li>match()</li>
+            <li>replace()</li>
+            <li>search()</li>
+            <li>slice()</li>
+            <li>split()</li>
+            <li>substr()</li>
+            <li>substring()</li>
+            <li>toLowerCase()</li>
+            <li>toUpperCase()</li>
+            <li>valueOf()</li>
+        </ul>
+    </p>
+    <!--end JavaScript 字符串(String)对象-->
+
+    <!--JavaScript Date(日期)对象-->
+    <h2>创建日期</h2>
+    <p>Date对象用于处理日期和时间。<br>
+        可以通过new关键字来定义Date对象。 <br>
+        有四种方式初始化日期:  <br>
+        new Date() // 当前日期和时间   <br>
+        new Date(milliseconds) //返回从 1970 年 
+            1 月 1 日至今的毫秒数   <br>
+        new Date(dateString)    <br>
+        new Date(year, month, day, hours, 
+            minutes, seconds, milliseconds)  <br>
+    </p>
+    <hr><h2>设置日期</h2>
+    <p>通过使用针对日期对象的方法，可以很容易地对日期进行操作。<br>
+        下面的例子中，将日期对象设置为5天后的日期： <br>
+        var myDate = new Date();  <br>
+        myDate.setDate(myDate.getDate() + 5);  <br>
+        <b>注意：</b><i>如果增加天数会改变月份或者
+            年份，那么日期对象会自动地完成这种转换。
+        </i>
+    </p>
+    <hr><h2>两个日期比较</h2>
+    <p>日期对象也可以用于比较两个日期。</p>
+    <script>
+        var x = new Date();
+        x.setFullYear(2100,0,14);
+        var today = new Date();
+        if(x > today)
+            window.alert("今天是2100年以前");
+        else
+            window.alert("今天是2100年之后");
+    </script>
+    <!--end JavaScript Date(日期)对象-->
+
+    <!--JavaScript Array(数组)对象-->
+    <h2>什么是数组</h2>
+    <p>数组对象是使用单独的变量名来存储一系列的值。 <br>
+        如果有一组数据,存在单独变量如下所示：  <br>
+        数组可以用一个变量名存储所有的值，
+        并且可以用变量名访问任何一个值。  <br>
+        数组中的每个元素都有自己的ID，以便它可以很容易地被访问到。
+    </p>
+    <hr><h2>创建一个数组</h2>
+    <p>创建一个数组，三种方式：
+        <ul>
+            <li>常规方式：var arr = new Array(); arr[0] = "aa";</li>
+            <li>简洁方式：
+                var arrs = new Array("12","23","34");
+            </li>
+            <li>字面:
+                var cars = ["baoma","aodi"];
+            </li>
+        </ul>
+    </p>
+    <hr><h2>访问数组</h2>
+    <p>通过指定数组名以及索引号码，可以访问某个特定元素。<br>
+        cars[0] = ...; ... = cars[0];  <br>
+        <i>[0]是数组的第一个元素。[1]是数组的第二个元素</i>
+    </p>
+    <hr><h2>在一个数组中可以有不同的对象</h2>
+    <p>所有的JS变量都是对象。数组元素是对象。函数是对象。<br>
+        可以在一个数组中包含对象元素、函数、数组：
+    </p>
+    <hr><h2>数组方法和属性</h2>
+    <p>使用数组对象预定义属性和方法：如length和indexOf</p>
+    <hr><h2>创建新方法</h2>
+    <p>原型是JS全局构造函数，可以构建新的JS对象的属性和方法。</p>
+    <p id="pShowMyArrayFun">单机按钮创建一个数组，调用ucase()方法，并显示结果。</p>
+    <button class="button" type="button" onclick="btnTestMyArrFun()">测试</button>
+    <script>
+        Array.prototype.myUcase = function(){
+            for(i = 0;i < this.length;++i){
+                this[i] = this[i].toUpperCase();
+            }
+        }
+        function btnTestMyArrFun(){
+            var cars = ["one","two","three"];
+            cars.myUcase();
+            var x = document.getElementById("pShowMyArrayFun");
+            x.innerHTML = cars;
+        }
+    </script>
+    <!--end JavaScript Array(数组)对象-->
+
+    <!--JavaScript Boolean(布尔)对象-->
+    <h2>JavaScript Boolean(布尔)对象</h2>
+    <p>Boolean（布尔）对象用于将非
+        布尔值转换为布尔值（true 或者 false）。
+    </p>
+    <hr><h2>创建Boolean对象</h2>
+    <p>Boolean对象代表两个值："true"或者"false"
+        下面的代码定义了一个名为myBool的布尔对象： <br>
+        var myBool = new Boolean();  <br>
+        如果布尔对象无初值或者其值为：
+        <ul>
+            <li>0</li>
+            <li>-0</li>
+            <li>null</li>
+            <li>""</li>
+            <li>false</li>
+            <li>undefined</li>
+            <li>isNaN</li>
+        </ul>
+        那么对象的值为false。否则，其值为true(即使当变量值为字符串为false时)
+    </p>
+    <!--end JavaScript Boolean(布尔)对象-->
+
+    <!--JavaScript Math(算数)对象-->
+    <h2>JavaScript Math(算数)对象</h2>
+    <p>Math(算数)对象的作用是：执行常见的算数任务。<br>
+        Math对象提供多种算数数值类型和函数。
+        无需再使用这个对象之前对他进行定义。 <br>
+        <b>注意：</b>Math对象无需再使用这个对象之前对他进行定义
+    </p>
+    <h2>算数值</h2>
+    <p>JavaScript提供8中可被Math对象访问的算数值：
+        <ul>
+            <li>Math.E</li>
+            <li>Math.PI</li>
+            <li>Math.SQRT2</li>
+            <li>Math.SQRT1_2</li>
+            <li>Math.LN2</li>
+            <li>Math.LN10</li>
+            <li>Math.LOG2E</li>
+            <li>Math.LOG10E</li>
+        </ul>
+    </p>
+    <hr><h2>算数方法</h2>
+    <ul>
+        <li>Math.round()</li>
+        <li>Math.random()</li>
+        <li>Math.floor()</li>
+    </ul>
+    <!--end JavaScript Math(算数)对象-->
+
+    <!--JavaScript RegExp对象-->
+    <h2>JavaScript RegExp对象</h2>
+    <p>RegExp:是正则表达式(regular expressiong)的简写</p>
+    <hr><h2>什么是RegExp</h2>
+    <p>正则表达式描述了字符的模式对象。<br>
+        简单的模式可以是一个单独的字符。 <br>
+        更复杂的模式包括了更多的字符，并可用于解析、格式检查、替换等等。<br>
+        可以规定字符串中的检索位置，以及要检索的字符类型，等等。
+    </p>
+    <h2>语法</h2>
+    <ul>
+        <li>模式描述了一个表达式类型</li>
+        <li>修饰符(modifiers)描述了检索是否全局，区分大小写</li>
+    </ul>
+    <p>注意：当使用构造函数创造正则对象时，需要常规的字符转义规则(在前面加反斜杠\).
+        比如以下是等价的：  <br>
+        var re = new RegExp("\\w+");  <br>
+        var re = /\w+/;   <br>
+        var str = "Visit RUnoob";   <br>
+        var patt1 = /runoob/i;    <br>
+        document.write(str.match(patt1));  <br>
+    </p>
+    <h2>test()方法</h2>
+    <p>test()方法搜索字符串指定的值，根据结果并返回真假。</p>
+    <script>
+        var pat1 = new RegExp("s");
+        document.write(pat1.test("the best thing in life are free")); 
+        //返回true
+    </script>
+    <hr><h2>exec()</h2>
+    <p>exec()方法检索字符串中的指定值。返回值是被找到的值。
+        如果没有发现匹配，则返回null
+    </p>
+    <script>
+        var patt1=new RegExp("e");
+        document.write(patt1.exec("The best things in life are free"));
+        //找到了返回e,没找到返回null
+    </script>
+    <!--end JavaScript RegExp对象-->
+
+    <!--JavaScript JavaScript Window-->
+    <h2>浏览器对象模型(BOM)</h2>
+    <p>浏览器对象模型(Browser Object Model)尚无正式标准。<br>
+        由于现代浏览器几乎实现了JS交互性方面的相同方法和属性，因此常被
+        认为是BOM的方法和属性。
+    </p>
+    <hr><h2>Window对象</h2>
+    <p>所有的浏览器都支持window对象，表示浏览器窗口。<br>
+        所有JS全局对象、函数以及变量均自动成为window对象的成员。<br>
+        全局变量时window对象的属性。 <br>
+        全局函数是window对象的方法。 <br>
+        甚至HTML DOM的document也是window对象的属性之一：
+    </p>
+    <hr><h2>window尺寸</h2>
+    <ul>
+        <li>window.innerHeight-浏览器窗口的内部高度</li>
+        <li>window.innerWidth-浏览器窗口的内部宽度</li>
+    </ul>
+    <p id="pWindowSize"></p>
+    <script>
+        var w = window.innerWidth 
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+        var h = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+        document.getElementById("pWindowSize").innerHTML = 
+            "浏览器window的宽度：" + w + ",高度：" + h;
+    </script>
+    <hr><h2>其他window方法</h2>
+    <ul>
+        <li>window.open()-打开新窗口</li>
+        <li>window.close()-关闭当前窗口</li>
+        <li>window.moveTo()-移动当前窗口</li>
+        <li>window-resizeTo()-调整当前窗口的尺寸</li>
+    </ul>
+    <!--end JavaScript JavaScript Window-->
+
+    <!--JavaScript Window Screen-->
+    <h2>Window Screen</h2>
+    <p>window.screen对象包含有关用户屏幕的信息。<br>
+        <b>window.screen</b>对象在编写时可以不使用window这个前缀。 <br>
+        <ul>
+            <li>window.availWidth:可用屏幕宽度</li>
+            <li>window.awailHeight:可用的屏幕高度</li>
+        </ul>
+    </p>
+    <script>
+        document.write("可用宽度：" + screen.availWidth);
+        document.write("可用高度：" + screen.availHeight);
+    </script>
+    <!--end JavaScript Window Screen-->
+
+    <!--JavaScript Window Location-->
+    <h2>JavaScript Window Location</h2>
+    <p>window.location对象用于获得当前页面的地址(URL),
+        并把浏览器重定向到新的页面。
+    </p>
+    <hr><h2>Window Location</h2>
+    <p>
+        <b>window.location</b>对象在编写可不使用window这个前缀 <br>
+        <ul>
+            <li>location.hostname返回web主机的域名</li>
+            <li>location.pathname返回当前页面的路径和文件名</li>
+            <li>location.port返回web主机的端口(80或443)</li>
+            <li>location.protocol返回所使用的web协议(http://或https://)</li>
+            <li>location.href属性返回当前页面的URL</li>
+        </ul>
+    </p>
+    <script>
+        document.write(location.hostname);
+        document.write(location.pathname);
+        document.write(location.port);
+        document.write(location.protocol);
+        document.write(location.href);
+        document.write(location.hash);
+    </script>
+    <!--end JavaScript Window Location-->
+
+    <!--JavaScript Window History-->
+    <h2>JavaScript Window History</h2>
+    <p>window.history对象包含浏览器的历史</p>
+    <h3>Window History</h3>
+    <p><b>window.history</b>对象在编写时可不适用window这个前缀。<br>
+        为了保护用户隐私，对JS访问该对象的方法做出了限制。  <br>
+        <ul>
+            <li>history.back():与在浏览器点击后退按钮相同</li>
+            <li>history.forward():与在浏览器中点击按钮向前相同</li>
+        </ul>
+    </p>
+    <!--end JavaScript Window History-->
+
+    <!--JavaScript Window Navigator-->
+    <h2>JavaScript Window Navigator</h2>
+    <p>window.navigator对象在编写时可不使用window这个前缀</p>
+    <div id="divNavigator"></div>
+    <script>
+        var txt = "<p>浏览器代号:" + navigator.appCodeName + "</p>";
+        txt += "<p>浏览器名称:" + navigator.appName + "</p>";
+        txt += "<p>浏览器版本:" + navigator.appVersion + "</p>";
+        txt += "<p>启用Cookies:" + navigator.cookieEnabled + "</p>";
+        txt += "<p>硬件平台:" + navigator.platform + "</p>";
+        txt += "<p>用户代理:" + navigator.userAgent + "</p>";
+        txt += "<p>用户代理语言:" + navigator.language + "</p>";
+        document.getElementById("divNavigator").innerHTML = txt;
+    </script>
+    <h2>警告</h2>
+    <p>来自navigator对象的信息具有误导性，不应该被用于检测浏览器的版本
+        <ul>
+            <li>navigator数据可被浏览器使用者更改</li>
+            <li>一些浏览器对测试站点会识别错误</li>
+            <li>浏览器无法报告晚于浏览器发布的新操作系统</li>
+        </ul>
+    </p>
+    <hr><h2>浏览器检测</h2>
+    <p>由于navigator可误导浏览器检测，
+        使用对象检测可用来诡探不同的浏览器。
+    </p>
+    <!--end JavaScript Window Navigator-->
+
+    <!--JavaScript 弹窗-->
+    <h2>JavaScript 弹窗</h2>
+    <p>可以在JavaScript中创建三种消息框：警告框，确认框，提示框</p>
+    <ul>
+        <li><b>警告框</b>: <i>window.alert()</i></li>
+        <li><b>确认框</b>: <i>window.confirm()</i></li>
+        <li><b>提示框</b>: <i>window.prompt("sometext","defaultvalue");</i></li>
+    </ul>
+    <hr><h3>换行</h3>
+    <p>弹窗使用反斜杠"\n"来设置换行</p>
+    <!--end JavaScript 弹窗-->
+
+    <!--JavaScript 计时事件-->
+    <h2>JavaScript 计时事件</h2>
+    <p>在JS中设置计时的方法
+        <ul>
+            <li><b>setInterval()</b>: <i>
+                间隔指定的毫秒数不停地执行指定的代码。    
+            </i></li>
+            <li><b>setTimeout()</b>: <i>
+                暂停指定的毫秒数后执行指定的代码    
+            </i></li>
+        </ul>
+        <b>Note:</b><i>这两个方法都是HTML DOM Window对象的方法</i>
+    </p>
+    <p id="pTime"></p>
+    <script>
+        var myVar=setInterval(function(){myTimer()},1000);
+        function myTimer(){
+            var d=new Date();
+            var t=d.toLocaleTimeString();
+            document.getElementById("pTime").innerHTML=t;
+        }
+    </script>
+    <!--end JavaScript 计时事件-->
+
+    <!--JavaScript Cookie-->
+    <h2>JavaScript Cookie</h2>
+    <p>Cookie用于存储web页面的用户信息</p>
+    <hr><h2>什么是Cookie</h2>
+    <p>Cookie是一些数据，存储于电脑的文本文件中。<br>
+        当web服务器向浏览器发送web页面时，在连接关闭后，服务端不会记录用户的信息。<br>
+        Cookie的作用就是用于结局"如何记录客户端的用户信息"
+        <ul>
+            <li>当用户访问web页面时，他的名字可以记录在cookie中。<br>
+                当用户下一次访问该页面时，可以在cookie中读取用户访问记录。
+            </li>
+        </ul>
+    </p>
+    <hr><h2>使用JavaScript创建、读取和删除Cookie</h2>
+    <p>JavaScript可以使用document.cookie属性来创建、读取、以及删除cookie。 <br>
+        JavaScript中，创建cookie如下所示： <br>
+        document.cookie="username=John Doe"; <br>
+        JavaScript 中, 可以使用以下代码来读取 cookie： <br>
+        var x = document.cookie; <br>
+        JavaScript 中，修改 cookie 类似于创建 cookie，如下所示： <br>
+        document.cookie="username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 GMT; path=/"; <br>
+        JavaScript中，删除cookie如下所示： <br>
+    </p>
+    <script>
+        document.body.onload = function(){
+            checkCookie();
+        }
+        function setCookie(cname,cvalue,exdays){
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.tos
+        }
+        function getCookie(cname){
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i = 0;i < ca.length ;++i){
+                var c = ca[i].trim();
+                if(c.indexOf(name) == 0)
+                    return c.substring(name.length,c.length);
+            }
+            return "";
+        }
+        function checkCookie(){
+            var user = getCookie("username");
+            if(user != ""){
+                alert("welcome again " + user);
+            }
+            else {
+                user = prompt("请输入用户名" ,"")
+                if(user != "" && user != null){
+                    setCookie("username",user,5);
+                }
+            }
+        }
+    </script>
+    <h1 id="h01"></h1>
+    <script>
+        $("#h01").attr("style","color:red").html("hello jQuery");
+    </script>
+    <!--end JavaScript Cookie-->
+
+</body>
+</html>

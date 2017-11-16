@@ -1,0 +1,5677 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta http-equiv="refresh" content="5"/> <!--每1秒中刷新当前页面 方便更新-->
+
+    <link rel="stylesheet" href="../css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../css/my_study_css3.css"/>
+    
+     <script type="text/javascript" src="../js/jquery-3.1.1.slim.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <!--CSS 教程-->
+    <h1>CSS 实例</h1>
+    <p>这是一个段落</p>
+    <style>
+    body
+    {
+        background-color: #d0e4fe
+    }
+    h1,h2
+    {
+        color: orange;
+        text-align: center
+    }
+    p
+    {
+        font-family: "Times New Roman";
+        font-size: 20px
+    }
+    </style>
+    <!--end CSS 教程-->
+
+    <!--CSS 简介-->
+    <hr>
+    <h2>什么是 CSS?</h2>
+    <ul>
+    <li>CSS 指层叠样式表 (<strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets)</li>
+    <li>样式定义<strong>如何显示</strong> HTML 元素</li>
+    <li>样式通常存储在<strong>样式表</strong>中</li>
+    <li>把样式添加到 HTML 4.0 中，是为了<strong>解决内容与表现分离的问题</strong></li>
+    <li><strong>外部样式表</strong>可以极大提高工作效率</li>
+    <li>外部样式表通常存储在 <strong>CSS 文件</strong>中</li>
+    <li>多个样式定义可<strong>层叠</strong>为一</li>
+    </ul>
+    <hr>
+    <h2>样式解决了一个很大的问题</h2>
+    <p>Hmtl标签原本被设计为用于定义文档内容，如下实例</p>
+    <p>样式表定义如何显示HTML元素，样式通常保存在外部的.css文件中。
+        通过仅仅编辑一个简单的CSS文档，外部样式表使你有能力同时改变
+        站点中所有页面的布局和外观。当代浏览器都支持CSS
+    </p>
+    <h2>CCS样式表极大地提高了工作效率</h2>
+    <p>通过仅仅编辑一个简单的CSS文档，外部样式表使你有能力
+        同时改变站点中所有页面的布局和外观</p>
+    <!--end CSS 简介-->
+
+    <!--CSS 语法-->
+    <p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明:</p>
+    <p><img width="300px" height="70px" 
+        src="http://www.runoob.com/images/selector.gif" style="margin:0px"></p>
+    <p>选择器通常是您需要改变样式的 HTML 元素。</p>
+    <p>每条声明由一个属性和一个值组成。</p>
+    <p>属性（property）是您希望设置的样式属性（style attribute）。
+        每个属性有一个值。属性和值被冒号分开。</p>
+    <h2>CSS实例</h2>
+    <p>CSS声明总是以分号(;)结束，声明组以大括号({})括起来</p>
+    <p>为了让CSS可读性更强，你可以每行只描述一个属性</p>
+    <h2>CSS注释</h2>
+    <p>注释是用来解释你的代码，并且可以随意编辑它，浏览器会忽略它。  
+            CSS注释以 "/*" 开始, 以 "*/" 结束, 实例如下:</p>
+            <style>
+            /*这是一个CSS的注释*/
+            p
+            {
+                font-family: Arial, Helvetica, sans-serif
+            }
+            </style>
+    <!--end CSS 语法-->
+
+    <!--CSS id和class选择器-->
+    <h2>CSS<b>Id</b>和<b>和Class</b></h2>
+    <hr>    
+    <h3>id和class选择器</h3>
+    <p>如果你要在HTML元素中设置CSS样式，你需要在元素中设置id和class选择器</p>
+    <hr>
+    <h3>id选择器</h3>
+    <p>
+        id选择器可以标有特定id的HTML元素指定特定的样式<br>
+        HTML元素以id属性来设置id选择器，CSS中id选择器以#来定义<br>
+        以下的样式规则应用于元素属性id=“para1”
+    </p>
+    <div style="background-color:aqua;text-align:center" >
+            #para1<br>
+            {<br>
+            text-align:center;<br>
+            color:red;<br>
+            }
+    </div>
+    <style>
+    #para1
+    {
+        text-align: center;
+        color: red
+    }
+    </style>
+    <p id="para1">Hello World</p>
+    <p>这个段落不受该样式的影响</p>
+    <hr>
+    <p>id属性不要以数字开头，数字开头的id在Mozilla/Firefox浏览器中不起作用</p>
+    <hr>
+    <h3>class选择器</h3>
+    <p>
+        class选择器用于描述一组元素的样式，class选择器有别于id选择器，class可以在多个元素中使用
+        class选择器在HTML中以class属性表示，在CSS中，类选择器以一个点“.”表示：
+        在以下例子中，所有拥有center类的HTML元素均居中
+    </p>
+    <style>
+        .center1
+        {
+            text-align: center;
+        }
+    </style>
+    <h2 class="center1">标题居中</h2>
+    <p class="center1">段落居中</p>
+    <hr>
+    <p>
+        你也可以指定特定的HTML元素使用class。<br>
+        在以下实例中，所有的p元素使用class=“center”让该元素的文本居中
+    </p>
+    <style>
+        p.center2
+        {
+            text-align: center;
+        }
+    </style>
+    <h1 class="center2">这个标题不受影响</h1>
+    <p class="center2">这个段落居中对齐。</p>
+    <hr>
+    <p><b>需注意：</b>类名的第一个字符不能使用数字！他无法在Mozilla
+        或者Firefox浏览器中使用
+    </p> 
+    <!--end CSS id和class选择器-->
+
+    <!--CSS 创建-->
+    <h2>CSS<b>创建</b></h2>
+    <hr>
+    <p>当读到一个样式时，浏览器会根据它来格式化HTML文档</p>
+    <hr>
+    <h2>如何插入样式表</h2>
+    <p>插入样式表的方法有三种</p>
+    <ul>
+        <li>外部样式表</li>
+        <li>内部样式表</li>
+        <li>内联样式</li>
+    </ul>
+    <hr>
+    <h2>外部样式表</h2>
+    <p>当样式需要应用于很多页面时，外部样式表将是理想的选择。在外部样式表的
+        情况下，你可以通过改变一个文件来改变整个站点的外观。每个页面使用  
+        &lt;link&gt; 标签链接到样式表。 &lt;link&gt; 标签在（文档的）头部：<br>
+        比如如下代码:<br>
+        &lt;head&gt;<br>
+        link mystyle.css <br>
+        浏览器会从文件mystyle.css中读到样式声明，并根据它来格式文档。<br>
+        外部样式表可以在任何文本编辑器中进行编辑。文件不能包含任何的html标签。<br>
+        样式表应该以.css扩展名进行保存。下面是一个样式表文件的名字
+
+    </p>
+    <p><b>注意：</b>不要在属性值和单位值之间留有空格</p>
+    <hr>
+    <h2>内部样式表</h2>
+    <p>当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用
+        &lt;style&gt;标签在文档头部定义内部样式表
+    </p>
+    <hr>
+    <h2>内联样式</h2>
+    <p>由于要将表现的内容混杂在一起，内联样式会损失掉样式表的许多优势。
+        请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。<br>
+        要使用内联样式，需要在相关的标签内使用样式（style）属性。Style属性
+        可以包含任何CSS属性。本例展示如何改变段落的颜色和左外边距
+    </p>
+    <style>
+        .colorAndMargin
+        {
+            color: sienna;
+            margin-left: 50px;
+        }
+    </style>
+    <p class="colorAndMargin">这是一个段落</p>
+    <hr>
+    <h2>多重样式</h2>
+    <p>如果某些属性在不同的样式表中被同样的选择器定义，那么属性值
+        将从更具体的样式中继承过来。<br>
+        例如：外部样式拥有针对h3选择器的三个属性color:red、
+        text-align:left、font-size:8pt;<br>
+        而内部样式表拥有针对h3选择器两个属性text-align:right;font-size:20pt;
+        <br>
+        假如拥有内部样式的这个页面同时与外部样式表链接，那么h3得到的样式是：
+        color:red;text-align:right;font-size:20pt;<br>
+          即颜色属性将被继承于外部样式表，而文字排列(text-alignment)和字体尺寸
+          (font-size)会被内部样式表中的规则取代
+    </p>
+    <hr>
+    <h2>多重样式优先级</h2>
+    <p>样式表中允许以多种方式规定样式信息。样式可以规定在单个的HTML元素中
+        ，在HTML页的头元素中，或在一个外部的CSS文件中。甚至可以在同一个HTML
+        文档内部引用多个外部样式表。<br>
+        一般情况下，优先级如下：<br>
+        内联样式&gt;内部样式&gt;外部样式&gt;浏览器默认样式
+    </p>
+    <p><b>注意：</b><i>如果外部样式放内部样式的后面，
+        则外部样式将覆盖内部样式</i></p>
+    <h3>多重样式优先级深入概念</h3>
+    <p>优先级是浏览器通过判断哪些属性值与元素最相关以决定并应用到该元素上的。
+        优先级仅有选择器组成的匹配规则决定的。<br>
+        优先级就是分配给指定的CSS声明的一个权重，它由匹配的选择器中的每一种
+        选择器类型的数值决定。<br>
+        <b>优先级顺序</b><br>
+        下列是一份优先级逐级增加的选择器列表：
+    </p>
+    <ul>
+        <li>通用选择器</li>
+        <li>元素（类型）选择器</li>
+        <li>类选择器</li>
+        <li>属性选择器</li>
+        <li>伪类</li>
+        <li>ID选择器</li>
+        <li>内联样式</li>
+    </ul>
+    <p>一些经验法则</p>
+    <ul>
+        <li><b>Always:</b>要优化考虑使用样式规则的优先级</li>
+        <li><b>Only:</b>只在需要覆盖全站或外部CSS（例如引用的ExtJs或者YUI）的特定
+            页面中使用</li>
+        <li><b>Never:永远不要在全站范围的css上使用...</b></li>
+        <li><b>Never:永远不要在你的插件中使用...</b></li>
+    </ul>
+    <!--end CSS 创建-->
+
+    <!--CSS 背景-->
+    <h2>CSS背景</h2>
+    <p>CSS背景属性用于定义HTML元素的背景。<br>
+        CSS属性定义背景效果：<br>
+        <ul>
+            <li>background-color</li>
+            <li>background-image</li>
+            <li>background-repeat</li>
+            <li>background-attachment</li>
+            <li>background-position</li>
+        </ul>
+    </p>
+    <h2>背景颜色</h2>
+    <p>background-color属性定义了元素的背景颜色<br>
+        页面的背景颜色使用在body的选择器中
+    </p>
+    <hr>
+    <p>CSS中，颜色值通常以一下方式定义：<br>
+        <ul>
+            <li>十六进制-如：#ff0000</li>
+            <li>RGB-如：rgb(255,0,0)</li>
+            <li>颜色名称-如：red</li>
+        </ul>
+        以下实例中，h1,p和div元素拥有不同的背景颜色
+    </p>
+    <style>
+            h1.colorStyle
+            {
+                background-color:#6495ed;
+            }
+            p.colorStyle
+            {
+                background-color:#e0ffff;
+            }
+            div.colorStyle
+            {
+                background-color:#b0c4de;
+            }
+            </style>
+       
+       <h1 class="colorStyle">CSS background-color 实例!</h1>
+       <div class="colorStyle">
+       该文本插入在 div 元素中。
+       <p class="colorStyle">该段落有自己的背景颜色。</p>
+       我们仍然在同一个 div 中。
+       </div>
+       <hr>
+       <h2>背景图像</h2>
+       <p>background-image属性描述元素的背景图像.默认情况下，背景图像进行
+           平铺重复显示，以覆盖整个元素实体.页面背景图片设置实例
+       </p>
+
+       <style>
+           #backBody
+           {
+               background-image: url('../res/1.jpg');
+           }
+       </style>
+        <p>如果图像只在水平方向平铺(repeat-x)，页面背景会更好一点</p>
+       <hr>
+       <h2>背景图像-设置定位与不平铺</h2>
+       <p>让背景图像不影响文本的排版<br>
+          如果你不想让图像平铺，你可以使用background-repeat属性
+       </p>
+       <hr>
+       <h2>背景-简写属性</h2>
+       <p>在以上实例中我们可以看到页面的背景颜色通过了很多的属性
+           来控制。为了简化这些属性的代码，我们可以将这些属性合并
+           在同一个属性中.背景颜色的简写属性为"background":
+       </p>
+       <hr>
+       <p>当使用简写属性时，属性值的顺序为：<br>
+            <ul>
+                <li>background-color：设置元素的背景颜色</li>
+                <li>background-image：把图像设置为背景</li>
+                <li>background-repeat：设置背景图像是否以及如何重复</li>
+                <li>background-attachment：背景图像是否固定或者随着页面的其余部分滚动</li>
+                <li>background-position：设置背景图像的起始位置</li>
+            </ul>
+            以上元素无需全部使用，你可以按照页面的实际需要使用<br>
+       </p>
+    <!--end CSS 背景-->
+
+    <!--CSS 文本-->
+    <style>
+    h1.text
+    {
+        text-align: center;
+        text-transform: uppercase;
+        color: #a7c942;
+    }
+    p.text
+    {
+        text-indent: 50px;
+        text-align: justify;
+        letter-spacing: 3px;
+    }
+    a.text
+    {
+        text-decoration: none;
+    }
+    </style>
+    <h1 class="text">text formatting</h1>
+    <p class="text">This text is styled with some of the text formatting properties. 
+        The heading uses the text-align, text-transform, and color properties.
+    The paragraph is indented, aligned, and the space between characters is specified. 
+    The underline is removed from the</p>
+    <hr>
+    <h2>文本颜色</h2>
+    <p>颜色属性被用来设置文字的颜色<br>
+       颜色是通过CSS最经常的指定：
+       <ul>
+           <li>十六进制-如：#ff0000</li>
+           <li>一个RGB值-如:RGB(255,0,0)</li>
+           <li>颜色的名称-如：red</li>
+       </ul>
+       <b>注意：</b><i>如果你定义了颜色属性，你还必须定义背景颜色值.</i>
+    </p>
+    <hr>
+    <h2>文本的对齐方式</h2>
+    <p>文本排列属性是用来设置文本的水平对齐方式。<br>
+       文本可居中或对齐到左或右，两端对齐<br>
+       当text-align设置为“justify”，每一行被展开为宽度相等
+       ，左、右外边距是对齐（如杂志和报纸）
+    </p>
+    <hr>
+    <h2>文本修饰</h2>
+    <p>text-decoration属性用来设置或删除文本的装饰。<br>
+       从设计者的角度看text-decoration属性主要是用来
+       删除链接的下划线：也可以设置为如下形式
+    </p>
+    <style>
+            h1.line {text-decoration:overline;}
+            h2.line {text-decoration:line-through;}
+            h3.line {text-decoration:underline;}
+    </style>
+    <h1 class="line">This is heading 1</h1>
+    <h2 class="line">This is heading 2</h2>
+    <h2 class="line">This is another heading 2</h2>
+    <b>注意：</b><i>不建议强调指出不是链接的文本，因为这常常混淆用户</i>
+    <hr>
+    <h2>文本转换</h2>
+    <p>文本转换属性是用来指定在一个文本中的大写和小写字母。<br>
+       可用于所有自居编程大写或小写字母，或每个单词的首字母大写。 
+    </p>
+    <style>
+            p.uppercase {text-transform:uppercase;}
+            p.lowercase {text-transform:lowercase;}
+            p.capitalize {text-transform:capitalize;}
+    </style>
+    <p class="uppercase">This is some text.</p>
+    <p class="lowercase">This is some text.</p>
+    <p class="capitalize">This is some text.</p>
+    <hr>
+    <h2>文本缩进</h2>
+    <p>文本缩进属性时用来指定文本的第一行缩进</p>
+    <style>
+    p.intent{text-indent: 50px}
+    </style>
+    <p class="intent">这一行用来展示文本缩进</p>
+    <hr>
+    <h2>所有CSS文本属性。</h2>
+    
+    <table class="am-table am-table-bordered am-table-radius">
+    <tbody><tr>
+    <th width="20%" align="left">属性</th>
+        <th width="80%" align="left">描述</th>
+      </tr>
+    <tr>
+    <td>color</td>
+        <td>设置文本颜色</td>
+      </tr>
+    <tr>
+    <td>direction</td>
+        <td>设置文本方向。</td>
+      </tr>
+    <tr>
+    <td>letter-spacing</td>
+        <td>设置字符间距</td>
+      </tr>
+    <tr>
+    <td>line-height</td>
+        <td>设置行高</td>
+      </tr>
+    <tr>
+    <td>text-align</td>
+        <td>对齐元素中的文本</td>
+      </tr>
+    <tr>
+    <td>text-decoration</td>
+        <td>向文本添加修饰</td>
+      </tr>
+    <tr>
+    <td>text-indent</td>
+        <td>缩进元素中文本的首行</td>
+      </tr>
+    <tr>
+    <td>text-shadow</td>
+        <td>设置文本阴影</td>
+      </tr>
+    <tr>
+    <td>text-transform</td>
+        <td>控制元素中的字母</td>
+      </tr>
+    <tr>
+    <td>unicode-bidi</td>
+        <td>设置或返回文本是否被重写&nbsp;</td>
+      </tr>
+    <tr>
+    <td>vertical-align</td>
+        <td>设置元素的垂直对齐</td>
+      </tr>
+    <tr>
+    <td>white-space</td>
+        <td>设置元素中空白的处理方式</td>
+      </tr>
+    <tr>
+    <td>word-spacing</td>
+        <td>设置字间距</td>
+    </tr>
+    </tbody>
+    </table>		
+    <!--end CSS 文本-->
+
+    <!--CSS 字体-->
+    <h2>CSS字体</h2>
+    <hr>
+    CSS字体属性定义字体，加粗，大小，文字样式。
+    <hr>
+    <h2>serif和sans-serif字体之间的区别</h2>
+    <b>注意：</b><i>在计算机屏幕上，sans-serif字体被认为是比serif字体容易阅读</i>
+    <hr>
+    <h2>CSS字型</h2>
+    <p>在CSS中，有两种类型对的字体系列名称：<br>
+       <ul>
+           <li><b>通用字体系列-</b>拥有相似外观的字体系统组合(如“Serif”或“Monospace”)</li>
+           <li><b>特定字体系列-</b>一个特定的字体系列(如“Times”或“Courier”)</li>
+       </ul>
+    </p>
+    <hr>
+    <h2>字体系列</h2>
+    <p>font-family属性设置文本的字体系列。<br>
+       font-family属性应该设置几个字体名称作为一种后备“机制”，如果浏览器不支持第一种字体
+       ，他将尝试下一种字体。<br>
+       <b>注意：</b><i>如果字体系列的名称超过一个字，它必须用引号，如 Font Family：“宋体”。</i>
+       <br>多个字体系列是用一个逗号分隔指明：
+       <style>
+            p.serif{font-family:"Times New Roman",Times,serif;}
+            p.sansserif{font-family:Arial,Helvetica,sans-serif;}
+        </style>
+        <p class="serif">这一段的字体是 Times New Roman </p>
+        <p class="sansserif">这一段的字体是 Arial.</p>
+    </p>
+    <hr>
+    <h2>字体样式</h2>
+    <p>主要是用于指定斜体文字的字体样式属性。<br>
+       这个属性有三个值：
+       <ul>
+           <li>正常：正常显示文本</li>
+           <li>斜体：以斜体字显示文本</li>
+           <li>倾斜的文字 - 文字向一边倾斜(和斜体非常类似，但不太支持)</li>
+       </ul>
+    </p>
+    <style>
+            p.normal {font-style:normal;}
+            p.italic {font-style:italic;}
+            p.oblique {font-style:oblique;}
+    </style>
+    <p class="normal">这是一个段落,正常。</p>
+    <p class="italic">这是一个段落,斜体。</p>
+    <p class="oblique">这是一个段落,斜体。</p>
+    <hr>
+    <h2>字体大小</h2>
+    <p>font-size属性设置文本的大小。<br>
+       能否管理文字的大小，在网页设计中是非常重要的。但是，你不能通过调整字体大小
+       使段落看上去像标题，或者使标题看上去像段落。<br>
+       请务必使用正确的HTML标签，就&lt;h1&gt;到&lt;h1&gt;表示标题
+       &lt;p&gt;表示段落: <br>
+       字体大小的值可以使绝对或相对的大小。 <br>
+       绝对大小：
+       <ul>
+           <li>设置一个指定大小的文本</li>
+           <li>不允许用户在所有浏览器中改变文本大小</li>
+           <li>确定了输出的物理尺寸时绝对大小很有用</li>
+       </ul>
+       相对大小：
+       <ul>
+           <li>相对于周围的元素来设置大小</li>
+           <li>允许用户在浏览器中改变字体大小</li>
+       </ul>
+       <b>如果你不能指定一个字体的大小，默认大小和普通文本段落一样，
+           是16像素（16px=1em）
+       </b>
+       <hr>
+       <h2>设置字体大小像素</h2>
+       <p>设置文字的大小与像素，完全控制文字大小</p>
+       <style>
+            h1.myfontsize {font-size:40px;}
+            h2.myfontsize {font-size:30px;}
+            p.myfontsize {font-size:14px;}
+        </style>
+        <h1 class="myfontsize">This is heading 1</h1>
+        <h2 class="myfontsize">This is heading 2</h2>
+        <p class="myfontsize">This is a paragraph.</p>
+        <p class="myfontsize">允许在 Internet Explorer 9, Firefox, Chrome, Opera, 和 Safari 中通过缩放浏览器调整文本大小。</p>
+        <p><b>注意:</b>这个例子在 IE9之前的版本不工作, prior version 9.</p>
+    </p>
+    <hr>
+    <h2>用em来设置字体大小</h2>
+    <p>为了避免IE中无法调整文本的问题，许多开发者使用em单位代替像素。<br>
+       em的尺寸单位由W3C建议。<br>
+       1em和当前字体大小相等。在浏览器中默认的文字大小是16px。<br>
+       因此，1em的默认大小是16px。可以通过下面这个公式将像素转换为em。
+       px除以16等于em。
+    </p>
+    <style>
+        h1.emfontsize {font-size:2.5em;} /* 40px/16=2.5em */
+        h2.emfontsize {font-size:1.875em;} /* 30px/16=1.875em */
+        p.emfontsize {font-size:0.875em;} /* 14px/16=0.875em */
+    </style>
+    <h1 class="emfontsize">This is heading 1</h1>
+    <h2 class="emfontsize">This is heading 2</h2>
+    <p class="emfontsize">This is a paragraph.</p>
+    <p>使用 em 单位，允许在所有浏览器中调整文本大小。
+    不幸的是，仍然是IE浏览器的问题。调整文本的大小时，会比正常的尺寸更大或更小。
+    </p>
+    <hr>
+    <p>上面的例子，em的文字大小是与前面的例子中像素一样。不过，如果使用em单位，则可以在所有
+        浏览器中调整文本大小；不幸的是，仍然是IE浏览器的问题。调整文本的大小时，会比正常的尺寸
+        更大或者更小。
+    </p>
+    <hr>
+    <h2>使用百分比和EM组合</h2>
+    <p>在所有浏览器的解决方案中，设置&lt;body&gt;元素的默认字体大小的是百分比：</p>
+    <hr>
+    <h2>所有CSS字体的属性</h2>
+    
+<table class="am-table am-table-bordered am-table-radius">
+        <tbody><tr>
+        <th width="25%" align="left">Property</th>
+            <th width="75%" align="left">描述</th>
+          </tr>
+        <tr>
+        <td>font</td>
+            <td>在一个声明中设置所有的字体属性</td>
+          </tr>
+        <tr>
+        <td>font-family</td>
+            <td>指定文本的字体系列</td>
+          </tr>
+        <tr>
+        <td>font-size</td>
+            <td>指定文本的字体大小</td>
+          </tr>
+        <tr>
+        <td>font-style</td>
+            <td>指定文本的字体样式</td>
+          </tr>
+        <tr>
+        <td>font-variant</td>
+            <td>以小型大写字体或者正常字体显示文本。</td>
+          </tr>
+        <tr>
+        <td>font-weight</td>
+            <td>指定字体的粗细。</td>
+          </tr>
+        </tbody></table>		
+    <!--end CSS 字体-->
+
+    <!--CSS 链接-->
+    <h2>CSS链接</h2>
+    <hr>
+    <p>不同的链接可以有不同的样式</p>
+    <hr>
+    <h2>链接样式</h2>
+    <p>链接的样式，可以用任何CSS属性（如颜色，字体，背景等） <br>
+        特别的链接，可以有不同的样式，这取决于他们是什么状态。
+        这四个链接状态是：
+        <ul>
+            <li>a:link-正常，未访问过链接</li>
+            <li>a:visited-用户已访问过的链接</li>
+            <li>a:hover-当用户鼠标放在链接上时</li>
+            <li>a:active-链接被点击的那一刻</li>
+        </ul>
+        <style>
+                a:link {color:#000000;}      /* 未访问链接*/
+                a:visited {color:#00FF00;}  /* 已访问链接 */
+                a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+                a:active {color:#0000FF;}  /* 鼠标点击时 */
+        </style>
+        <p><b><a href="/css/" target="_blank">这是一个链接</a></b></p>
+        <p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+        <p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+    </p>
+    <hr>
+    <p>当设置为若干链路状态的样式，也有一些顺序规则：
+        <ul>
+            <li>a:hover必须跟在a:link和a:visited后面</li>
+            <li>a:active必须跟在a:hover后面</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>常见的链接样式</h2>
+    <p>根据上述链接的颜色变化的例子，看它是在什么状态。<br>
+       让我们通过一些其他常见的方式转到链接样式：
+    </p>
+    <h2>文本修饰</h2>
+    <p>text-decoration属性主要用于删除链接中的下划线：</p>
+    <style>
+            a:link {text-decoration:none;}    /* unvisited link */
+            a:visited {text-decoration:none;} /* visited link */
+            a:hover {text-decoration:underline;}   /* mouse over link */
+            a:active {text-decoration:underline;}  /* selected link */
+    </style>
+    <p><b><a href="/css/" target="_blank">This is a link</a></b></p>
+    <p><b>注意:</b> hover必须在:link和 a:visited之后定义才有效.</p>
+    <p><b>注意:</b>active必须在hover之后定义是有效的.</p>
+    <hr>
+    <h2>背景颜色</h2>
+    <p>背景颜色属性指定链接背景色</p>
+    <style>
+            a:link {background-color:#B2FF99;}    /* 未访问链接 */
+            a:visited {background-color:#FFFF85;} /* 已访问链接 */
+            a:hover {background-color:#FF704D;}   /* 鼠标移动到链接上 */
+            a:active {background-color:#FF704D;}  /* 鼠标点击时 */
+    </style>
+    <p><b><a href="/css/" target="_blank">这是一个链接</a></b></p>
+    <p><b>注意:</b> hover必须在:link和 a:visited之后定义才有效.</p>
+    <p><b>注意:</b>active必须在hover之后定义是有效的.</p>
+
+    <!--end CSS 链接-->
+
+    <!--CSS 列表样式-->
+    <h2>CSS列表</h2>
+    <hr>
+    <p>CSS列表属性作用如下：
+        <ul>
+            <li>设置不同的列表项标记为有序列表</li>
+            <li>设置不同的列表项标记为无序列表</li>
+            <li>设置列表项标记为图像</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>列表</h2>
+    <p>在HTML中，有两种类型的列表：
+        <ul>
+            <li>无序列表-列表项标记用特殊图形（如小黑点、小方框等）</li>
+            <li>有序列表-列表项的标记有数字或字母</li>
+        </ul>
+        使用CSS，可以列出进一步的样式，并可用图像作列表项标记。
+    </p>
+    <hr>
+    <h2>不同的列表项标记</h2>
+    <p>list-style-type属性指定列表项标记的类型是：</p>
+    <style>
+            ul.a {list-style-type:circle;}
+            ul.b {list-style-type:square;}
+            ol.c {list-style-type:upper-roman;}
+            ol.d {list-style-type:lower-alpha;}
+    </style>
+    <p>无序列表实例:</p>
+    
+    <ul class="a">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ul>
+    
+    <ul class="b">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ul>
+    
+    <p>有序列表实例:</p>
+    
+    <ol class="c">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+    
+    <ol class="d">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Coca Cola</li>
+    </ol>
+    <hr>
+    <h2>作为列表项标记的图像</h2>
+    <p>要指定列表项标记的图像，使用列表样式图像属性：</p>
+    <style>
+        ul.imglist 
+        {
+            list-style-image:url('../res/1.jpg');
+        }
+    </style>
+    <ul class="imglist">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <p>上面的例子在所有浏览器中显示并不相同，IE和Opera显示图像标记比火狐，Chrome和Safari
+        更高一点点。<br>
+        如果你想在所有浏览器放置同样的形象标志，就应使用浏览器兼容性解决方案，过程如下：
+    </p>
+    <h2>浏览器兼容性解决方案</h2>
+    <p>同样在所有的浏览器，下面的例子会显示的图像标记：</p>
+    <hr>
+    <h2>列表-缩写属性</h2>
+    <p>在单个属性中可以指定所有的列表属性。这就是所谓的缩写属性。<br>
+       为列表使用缩写属性，列表样式属性设置如下：
+    </p>
+    <p>
+        如果使用缩写属性值的顺序是：
+        <ul>
+            <li>list-style-type</li>
+            <li>list-style-position（有关说明，请参见下面的CSS属性表）</li>
+            <li>list-style-image</li>
+        </ul>
+        如果上述值丢失一个，其余仍在指定的顺序，就没关系。
+    </p>
+    <hr>
+    <h2>所有的CSS列表属性</h2>
+    
+<table class="am-table am-table-bordered am-table-radius">
+        <tbody><tr>
+        <th width="20%" align="left">属性</th>
+            <th width="80%" align="left">描述</th>
+          </tr>
+        <tr>
+        <td>list-style</td>
+            <td>简写属性。用于把所有用于列表的属性设置于一个声明中</td>
+          </tr>
+        <tr>
+        <td>list-style-image</td>
+            <td>将图象设置为列表项标志。</td>
+          </tr>
+        <tr>
+        <td>list-style-position</td>
+            <td>设置列表中列表项标志的位置。</td>
+          </tr>
+        <tr>
+        <td>list-style-type</td>
+            <td>设置列表项标志的类型。</td>
+          </tr>
+        </tbody></table>		
+    <!--end CSS 列表样式-->
+
+    <!--CSS 表格-->
+    <h2>CSS表格</h2>
+    <hr>
+    <p>使用CSS可以使HTML表格更美观</p>
+    <table class="am-table am-table-bordered am-table-radius">
+            <tbody><tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+            </tr>
+            <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+            </tr>
+            <tr class="alt">
+            <td>Berglunds snabbköp</td>
+            <td>Christina Berglund</td>
+            <td>Sweden</td>
+            </tr>
+            <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+            </tr>
+            <tr class="alt">
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
+            <td>Austria</td>
+            </tr>
+            <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+            </tr>
+            <tr class="alt">
+            <td>Königlich Essen</td>
+            <td>Philip Cramer</td>
+            <td>Germany</td>
+            </tr>
+            <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
+            <td>Canada</td>
+            </tr>
+            <tr class="alt">
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
+            <td>Italy</td>
+            </tr>
+            <tr>
+            <td>North/South</td>
+            <td>Simon Crowther</td>
+            <td>UK</td>
+            </tr>
+            <tr class="alt">
+            <td>Paris spécialités</td>
+            <td>Marie Bertrand</td>
+            <td>France</td>
+            </tr>
+            <tr>
+            <td>The Big Cheese</td>
+            <td>Liz Nixon</td>
+            <td>USA</td>
+            </tr>
+            <tr class="alt">
+            <td>Vaffeljernet</td>
+            <td>Palle Ibsen</td>
+            <td>Denmark</td>
+            </tr>
+            </tbody></table>
+            <hr>
+            <h2>表格边框</h2>
+            <p>指定CSS表格边框，使用border属性。<br>
+               下面的例子指定了一个表格的th和td元素的黑色边框：
+            </p>
+            <style>
+                    table.b,th.b,td.b
+                    {
+                        border:1px solid black;
+                    }
+            </style>
+            <table class="b">
+                    <tr class="b">
+                    <th class="b">Firstname</th>
+                    <th>Lastname</th>
+                    </tr>
+                    <tr>
+                    <td class="b">Peter</td>
+                    <td>Griffin</td>
+                    </tr>
+                    <tr>
+                    <td>Lois</td>
+                    <td class="b">Griffin</td>
+                    </tr>
+                    </table>
+            <p><b>请注意:</b><i>在上面的例子中的表格有双边框。<br>
+                这是因为表和th td元素有独立的边界。<br>
+                为了显示一个表的单个边框，使用border-collapse属性 
+            </i></p>        
+            <h2>折叠边框</h2>
+            <p>border-collapse属性设置表格的边框是否被折叠成一个单一的边框或隔开：</p>
+    <hr>
+    <h2>表格宽度和高度</h2>
+    <p>Width和height属性定义表格的宽度和高度。<br>
+       下面的的例子是设置100%的宽度，50像素的th元素的高度的表格：
+    </p>        
+    <hr>
+    <h2>表格的文字对齐</h2>
+    <p>表格中的文本对齐和垂直对齐属性。<br>
+    text-align属性设置水平对齐方式，像左，右，或中心：<br>
+    td{text-align:right;} <br>
+    垂直对齐属性设置垂直对齐，比如顶部，底部或中间： <br>
+    td{height:50px;vertical-align:bottom;}
+    </p>
+    <hr>
+    <h2>表格填充</h2>
+    <p>如果在表的内容中控制空格之间的边框，应使用th和td元素的填充属性： <br>
+       td{padding:15px;}
+    </p>
+    <hr>
+    <h2>表格颜色</h2>
+    <p>下面的例子指定边框的颜色，和th元素的文本和背景颜色</p>
+
+    <style>
+            table.colorGreen, td.colorGreen, th.colorGreen
+            {
+                border:1px solid green;
+            }
+            th.colorGreen
+            {
+                background-color:green;
+                color:white;
+            }
+    </style>
+    <table class="colorGreen">
+            <tr>
+            <th class="colorGreen">Firstname</th>
+            <th class="colorGreen">Lastname</th>
+            <th class="colorGreen">Savings</th>
+            </tr>
+            <tr>
+            <td class="colorGreen">Peter</td>
+            <td class="colorGreen">Griffin</td>
+            <td class="colorGreen">$100</td>
+            </tr>
+            <tr>
+            <td class="colorGreen">Lois</td>
+            <td class="colorGreen">Griffin</td>
+            <td class="colorGreen">$150</td>
+            </tr>
+            <tr>
+            <td class="colorGreen">Joe</td>
+            <td class="colorGreen">Swanson</td>
+            <td class="colorGreen">$300</td>
+            </tr>
+            <tr>
+            <td class="colorGreen">Cleveland</td>
+            <td class="colorGreen">Brown</td>
+            <td class="colorGreen">$250</td>
+            </tr>
+            </table>
+    <!--end CSS 表格-->    
+
+    <!--CSS 盒子模型-->
+    <h2>CSS <span style="color:#FF00FF">盒子模型</span></h2>
+    <hr>
+    <h3>CSS 盒子模型(Box Model)</h3>
+    <p>所有HTML元素可以看做盒子，在CSS中，“box model”这一术语是用来设计
+        和布局时使用。<br>
+        CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边框，
+        填充，和实际内容。<br>
+        盒模型允许我们在其他元素和周围元素边框之间的空间放置元素。<br>
+        下面的图片说明了盒子模型
+    </p>
+    <br><img src="http://www.runoob.com/images/box-model.gif" alt="CSS box-model" width="536" height="289"><p>不同部分的说明：</p>
+    <ul>
+    <li><b>Margin(外边距)</b> - 清除边框外的区域，外边距是透明的。</li>
+    <li><b>Border(边框)</b> - 围绕在内边距和内容外的边框。</li>
+    <li><b>Padding(内边距)</b> - 清除内容周围的区域，内边距是透明的。</li>
+    <li><b>Content(内容)</b> - 盒子的内容，显示文本和图像。</li>
+    </ul>
+    <hr>
+    <h2>元素的宽度和高度</h2>
+    <p><b>重要：</b>当您指定一个CSS元素的宽度和高度属性时，你只是设置内容区域的宽度和
+        高度。要知道，完全大小的元素，你还必须添加填充，边框和边距。<br>
+        下面的例子中元素的总宽度为300px：
+    </p>
+    <style>
+            div.ex
+            {
+            width:250px;
+            padding:10px;
+            border:5px solid gray;
+            margin:0px;
+            }
+    </style>
+    <img src="../res/1.jpg" width="250px" height="180px">
+    <div class="ex">上面的图片是250 px宽。
+            这个元素的总宽度也是250 px。</div>
+    <p>
+        最终元素的总宽度计算公式是这样子的：<br>
+        总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距<br>
+        元素的总高度最终计算公式是这个样子的：<br>
+        总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距
+    </p>
+    <hr>
+    <h2>浏览器的兼容性问题</h2>
+    <p>一旦为了页面设置了恰当的DTD，大多数浏览器都会按照上面的图来呈现内容。然而
+        IE5和6的呈现却不是正确的。根据W3C的规范，元素内容占据的空间是由width属性设置
+        的，而内容周围的padding和border值都是另外计算的。不幸的是，IE5.X和6在怪异模式中
+        使用自己的非标准模型。这些浏览器的width属性不是内容的宽度，而是内容、内边距和边框的
+        宽度的总和<br>
+        虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。也就是，不要给元素添加
+        具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。<br>
+        IE8及更早版本不支持填充的宽度和边框的宽度属性。<br>
+        解决IE8及更早版本不兼容问题可以在HTML页面声明&lt;!DOCTYPE html&gt;即可。
+    </p>
+    <!--end CSS 盒子模型-->
+
+    <!--CSS 边框-->
+    <h2>CSS边框属性</h2>
+    <p>CSS边框属性允许你指定一个元素边框的样式和颜色</p>
+    <p>如在四边都有边框，红色底部边框，圆角边框，左侧边框带宽度，颜色为蓝色</p>
+    <hr>
+    <h2>边框样式</h2>
+    <p>边框样式属性指定要显示什么样的边界<br>
+        <b>border-style</b>属性用来定义边框的样式
+    </p>
+    <h2>border-style值</h2>
+    <ul>
+        <li>none：默认无边框</li>
+        <li>dotted：定义一个点线边框</li>
+        <li>dashed：定义一个虚线边框</li>
+        <li>solid：定义实现边框</li>
+        <li>double：定义两个边框。两个边框的宽度和border-width的值相同</li>
+        <li>groove：定义3D沟槽边框。效果取决于边框的颜色值</li>
+        <li>ridge：定义3D脊边框。效果取决于边框的颜色值</li>
+        <li>inset：定义一个3D的嵌入边框。效果取决于边框的颜色值</li>
+        <li>outset：定义一个3D突出边框。效果取决于边框的颜色值</li>
+    </ul>
+    <style>
+        p.none {border-style:none;}
+        p.dotted {border-style:dotted;}
+        p.dashed {border-style:dashed;}
+        p.solid {border-style:solid;}
+        p.double {border-style:double;}
+        p.groove {border-style:groove;}
+        p.ridge {border-style:ridge;}
+        p.inset {border-style:inset;}
+        p.outset {border-style:outset;}
+        p.hidden {border-style:hidden;}
+    </style>
+    <p class="none">无边框。</p>
+    <p class="dotted">虚线边框。</p>
+    <p class="dashed">虚线边框。</p>
+    <p class="solid">实线边框。</p>
+    <p class="double">双边框。</p>
+    <p class="groove"> 凹槽边框。</p>
+    <p class="ridge">垄状边框。</p>
+    <p class="inset">嵌入边框。</p>
+    <p class="outset">外凸边框。</p>
+    <p class="hidden">隐藏边框。</p>
+    <hr>
+    <h2>边框宽度</h2>
+    <p>可以通过border-width属性为边框指定宽度。<br>
+       为边框指定宽度有两种方法：可以指定长度值，比如2px或者0.1em
+       (单位为px,pt,cm,em等)，或者使用3个关键字之一，它们分别是thick，
+       medium(默认值)和thin。
+       <b>注意：</b>CSS没有定义3个关键字的具体宽度，所以一个用户可能把
+       thick,medium和thin分别设置为等于5px，3px，2px，而另一个用户则分别设置
+       为3px，2px和1px.
+    </p>
+    <hr>
+    <h2>边框颜色</h2>
+    <p>border-color属性用于设置边框的颜色。可以设置的颜色：
+        <ul>
+            <li><b>name-</b>指定颜色的名称，如“red”</li>
+            <li><b>RGB-</b>指定RGB值，如rgb(255,0,0)</li>
+            <li><b>Hex-</b>指定16进制值，如“#ff0000”</li>
+        </ul>
+        还可以设置边框的颜色为“transparent”。<br>
+        <b>注意：</b>border-color单独使用时不起作用的，必须
+        得先使用border-style来设置边框样式。
+    </p>
+    <hr>
+    <h2>边框-单独设置各边</h2>
+    <p>在CSS中，可以指定不同的侧面不用的边框</p>
+    <style>
+        p.fourborder
+        {
+            border-top-style:dotted;
+            border-right-style:dotted;
+            border-bottom-style:solid;
+            border-left-style:solid;
+        }
+    </style>
+    <p class="fourborder">两个不同的边界样式。</p>
+    <p>border-style属性可以有1-4个值：</p>
+    <ul>
+        <li><b>border-style：dotted solid double dashed;</b>
+            <ul>
+                <li>上边框是dotted</li>
+                <li>右边框是solid</li>
+                <li>底边框是double</li>
+                <li>左边框是dashed</li>
+            </ul>
+        </li>
+        <li><b>border-style:dotted solid double;</b>
+            <ul>
+                <li>上边框是dotted</li>
+                <li>左、右边框是solid</li>
+                <li>底边框是double</li>
+            </ul>
+        </li>
+        <li><b>border-style:dotted solid;</b>
+            <ul>
+                <li>上、底边框是dotted</li>
+                <li>右、左边框是solid</li>
+            </ul>
+        </li>
+        <li><b>border-style:dotted;</b>
+            <ul>
+                <li>四面边框是dotted</li>
+            </ul>
+        </li>
+    </ul>
+    <p>上面的例子用了border-style。然而，它也可以和border-width、border-color一起使用。</p>
+    <hr>
+    <h2>边框-简写属性</h2>
+    <p>上面的例子用了很多属性来设置边框<br>
+       你也可以在一个属性中设置边框。<br>
+       可以在“border”属性中设置：
+       <ul>
+           <li>border-width</li>
+           <li>border-style(required)</li>
+           <li>border-color</li>
+       </ul>
+    </p>
+    <style>
+        p.redborder
+        {
+            border:5px solid red;
+        }
+    </style>
+    <p class="redborder">段落中的一些文本。</p>
+    <hr>
+    <h2>CSS 边框属性</h2>
+    
+    <table class="am-table am-table-bordered am-table-radius">
+      <tbody><tr>
+        <th>属性</th>
+        <th>描述</th>
+      </tr>
+      <tr>
+        <td>border</td>
+        <td>简写属性，用于把针对四个边的属性设置在一个声明。</td>
+      </tr>
+      <tr>
+        <td>border-style</td>
+        <td>用于设置元素所有边框的样式，或者单独地为各边设置边框样式。</td>
+      </tr>
+      <tr>
+        <td>border-width</td>
+        <td>简写属性，用于为元素的所有边框设置宽度，或者单独地为各边边框设置宽度。</td>
+      </tr>
+      <tr>
+        <td>border-color</td>
+        <td>简写属性，设置元素的所有边框中可见部分的颜色，或为 4 个边分别设置颜色。</td>
+      </tr>
+      <tr>
+        <td>border-bottom</td>
+        <td>简写属性，用于把下边框的所有属性设置到一个声明中。</td>
+      </tr>
+      <tr>
+        <td>border-bottom-color</td>
+        <td>设置元素的下边框的颜色。</td>
+      </tr>
+      <tr>
+        <td>border-bottom-style</td>
+        <td>设置元素的下边框的样式。</td>
+      </tr>
+      <tr>
+        <td>border-bottom-width</td>
+        <td>设置元素的下边框的宽度。</td>
+      </tr>
+      <tr>
+        <td>border-left</td>
+        <td>简写属性，用于把左边框的所有属性设置到一个声明中。</td>
+      </tr>
+      <tr>
+        <td>border-left-color</td>
+        <td>设置元素的左边框的颜色。</td>
+      </tr>
+      <tr>
+        <td>border-left-style</td>
+        <td>设置元素的左边框的样式。</td>
+      </tr>
+      <tr>
+        <td>border-left-width</td>
+        <td>设置元素的左边框的宽度。</td>
+      </tr>
+      <tr>
+        <td>border-right</td>
+        <td>简写属性，用于把右边框的所有属性设置到一个声明中。</td>
+      </tr>
+      <tr>
+        <td>border-right-color</td>
+        <td>设置元素的右边框的颜色。</td>
+      </tr>
+      <tr>
+        <td>border-right-style</td>
+        <td>设置元素的右边框的样式。</td>
+      </tr>
+      <tr>
+        <td>border-right-width</td>
+        <td>设置元素的右边框的宽度。</td>
+      </tr>
+      <tr>
+        <td>border-top</td>
+        <td>简写属性，用于把上边框的所有属性设置到一个声明中。</td>
+      </tr>
+      <tr>
+        <td>border-top-color</td>
+        <td>设置元素的上边框的颜色。</td>
+      </tr>
+      <tr>
+        <td>border-top-style</td>
+        <td>设置元素的上边框的样式。</td>
+      </tr>
+      <tr>
+        <td>border-top-width</td>
+        <td>设置元素的上边框的宽度。</td>
+      </tr>
+    </tbody></table>		
+    <!--end CSS 边框-->
+
+    <!--CSS 轮廓属性-->
+    
+    <h2>CSS轮廓属性</h2>
+    <hr>
+    <p>轮廓(outline)是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。<br>
+       轮廓(outline)属性指定元素轮廓的样式、颜色和宽度。
+    </p>
+    <hr>
+    <h2>轮廓(outline)实例</h2>
+    <style>
+        p.outlineGreen 
+        {
+            border:1px solid red;
+            outline:green dotted thick;
+        }
+    </style>
+    <div>
+        <p class="outlineGreen"><b>注意:</b> 如果只有一个 !DOCTYP E指定 IE8 支持 outline 属性。</p>
+    </div>
+    <hr>
+    <style>
+        p.border {border:1px solid red;}
+        p.dotted {outline-style:dotted;}
+        p.dashed {outline-style:dashed;}
+        p.solid {outline-style:solid;}
+        p.double {outline-style:double;}
+        p.groove {outline-style:groove;}
+        p.ridge {outline-style:ridge;}
+        p.inset {outline-style:inset;}
+        p.outset {outline-style:outset;}
+    </style>
+    <p class="dotted border">点线轮廓</p>
+    <p class="dashed border">虚线轮廓</p>
+    <p class="solid border">实线轮廓</p>
+    <p class="double border">双线轮廓</p>
+    <p class="groove border">凹槽轮廓</p>
+    <p class="ridge border">垄状轮廓</p>
+    <p class="inset border">嵌入轮廓</p>
+    <p class="outset border">外凸轮廓</p>
+    <p><b>注意:</b> 如果只有一个 !DOCTYPE 指定 IE 8 支持 outline 属性。</p>
+    <hr>
+    <style>
+    p.outlineColor 
+    {
+	    border:1px solid red;
+	    outline-style:dotted;
+	    outline-color:#00ff00;
+    }
+    </style>
+    <p class="outlineColor"><b>注意:</b> 如果只有一个 !DOCTYPE 指定 IE 8 支持 outline 属性。</p>
+    <hr>
+    <style>
+        p.one
+        {
+            border:1px solid red;
+            outline-style:solid;
+            outline-width:thin;
+        }
+        p.two
+        {
+            border:1px solid red;
+            outline-style:dotted;
+            outline-width:3px;
+        }
+    </style>
+    <p class="one">This is some text in a paragraph.</p>
+    <p class="two">This is some text in a paragraph.</p>
+    
+    <p><b>注意:</b> 如果只有一个 !DOCTYPE 指定 IE8 支持 outline 属性。</p>
+    <hr>
+    <h2>CSS轮廓(outline)</h2>
+    <p>
+        轮廓(outline)是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。<br>
+        CSS outline属性规定元素轮廓的样式、颜色和宽度。
+    </p>
+    <img src="http://www.runoob.com/images/box_outline.gif">
+    <hr>
+    <h2>所有CSS轮廓(outline)属性</h2>
+    <p>CSS 列中的数字表示哪个CSS版本定义了该属性(CSS1或者CSS2)。</p>
+    <table class="am-table am-table-bordered am-table-radius">
+        <tbody><tr>
+          <th width="20%" align="left">属性</th>
+          <th width="53%" align="left">说明</th>
+          <th width="20%" align="left">值</th>
+          <th width="7%" align="left">CSS</th>
+        </tr>
+        <tr>
+          <td>outline
+          </td>
+          <td>在一个声明中设置所有的轮廓属性</td>
+          <td><i>outline-color<br>
+            outline-style<br>
+            outline-width<br>
+          </i>inherit</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>
+            outline-color
+          </td>
+          <td>设置轮廓的颜色</td>
+          <td><i>color-name<br>
+          hex-number<br>
+          rgb-number<br>
+            </i>invert<br>
+          inherit</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>
+            outline-style
+          </td>
+          <td>设置轮廓的样式</td>
+          <td>none<br>
+            dotted<br>
+            dashed<br>
+            solid<br>
+            double<br>
+            groove<br>
+            ridge<br>
+            inset<br>
+            outset<br>
+          inherit</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>
+            outline-width
+          </td>
+          <td>设置轮廓的宽度</td>
+          <td>thin<br>
+            medium<br>
+            thick<br>
+            <i>length<br>
+          </i>inherit</td>
+          <td>2</td>
+        </tr>
+      </tbody></table>	
+    <!--end CSS 轮廓属性-->
+
+    <!--CSS Margin(外边距)-->
+    <h2>CSS Margin(外边距)</h2>
+    <hr>
+    <p>CSS Margin(外边距)属性定义元素周围的空间。</p>
+    <hr>
+    <h2>Margin</h2>
+    <p>margin清除周围的元素(外边距)的区域。margin没有背景颜色，是完全透明的<br>
+       margin可以单独改变元素的上、下、左、右边距。也可以一次改变所有的属性。
+    </p>
+    <h2>可能的值</h2>
+    <table class="am-table am-table-bordered am-table-radius">
+        <tr>
+            <td>值</td>
+            <td>说明</td>
+        </tr>
+        <tr>
+            <td><i>auto</i></td>
+            <td>设置浏览器边距<br>这样做的结果会依赖于浏览器</td>
+        </tr>
+        <tr>
+            <td><i>length</i></td>
+            <td>定义一个固定的margin(使用像素，pt，em等)</td>
+        </tr>
+        <tr>
+            <td><i>%</i></td>
+            <td>定义一个使用百分比的边距</td>
+        </tr>
+    </table>
+    <p><b>Margin可以使用负值，重叠的内容</b></p>
+    <hr>
+    <h2>Margin - 单边外边距属性</h2>
+    <p>在CSS中，它可以指定不同的侧面不同的边距</p>
+    <style>
+       p.yellow
+       {
+           background-color: yellow;
+       }
+       p.margin
+       {
+           margin-top: 100px;
+           margin-bottom: 100px;
+           margin-right: 50px;
+           margin-left: 50px;
+       }
+    </style>
+    <p class="yellow">这是一个没有指定边距大小的段落</p>
+    <p class="yellow margin">这是一个指定边距大小的段落</p>
+    <hr>
+    <h2>Margin - 简写属性</h2>
+    <p>为了缩短代码，有可能使用一个属性中margin指定的所有边距属性，这就是
+        所谓的缩写属性。<br>
+        所有边距属性的缩写属性是margin.
+    </p>
+    <hr>
+    <p>margin属性可以有一到四个值<br>
+        <ul>
+            <li>margin:25px 50px 75px 100px
+                <ul>
+                    <li>上边距为25px</li>
+                    <li>右边距为50px</li>
+                    <li>下边距为75px</li>
+                    <li>左边距为100px</li>
+                </ul>
+            </li>
+            <li>margin:25px 50px 75px
+                <ul>
+                    <li>上边距为25px</li>
+                    <li>左右边距为50px</li>
+                    <li>下边距为75px</li>
+                </ul>
+            </li>
+
+            <li>margin:25px 50px
+                <ul>
+                    <li>上下边距为25px</li>
+                    <li>左右边距为50px</li>
+                </ul>
+            </li>
+
+            <li>margin:25px
+                <ul>
+                    <li>所有边距为25px</li>
+                </ul>
+            </li>
+            
+        </ul>
+    </p>
+    <!--end CSS Margin(外边距)-->
+
+    <!--CSS Padding(填充)-->
+    <h2>CSS Padding（填充）</h2>
+    <hr>
+    <p>CSS Padding（填充）属性定义元素边框与元素内容之间的空间</p>
+    <hr>
+    <h2>Padding（填充）</h2>
+    <p>当元素的Padding（填充）（内边距）被清除时，所释放的区域将会受到元素背景
+        颜色的填充。<br>
+        单独使用填充属性可以改变上下左右的填充。缩写填充属性也可以使用，一旦改变一切都改变
+    </p>
+    <table class="am-table am-table-bordered am-table-radius">
+        <tr>
+            <td>值</td>
+            <td>说明</td>
+        </tr>
+        <tr>
+            <td><i>length</i></td>
+            <td>定义一个固定的填充(像素，pt，em)</td>
+        </tr>
+        <tr>
+            <td><i>%</i></td>
+            <td>使用百分比值定义一个填充</td>
+        </tr>
+    </table>
+    <hr>
+    <h2>填充 - 单边内边距属性</h2>
+    <p>在CSS中，它可以指定不同的侧面不同的填充</p>
+    <style>
+            p.red
+            {
+                background-color:red;
+            }
+            p.padding
+            {
+                padding-top:25px;
+                padding-bottom:25px;
+                padding-right:50px;
+                padding-left:50px;
+            }
+    </style>
+    <p class="red">这是一个没有指定填充边距的段落。</p>
+    <p class="red padding">这是一个指定填充边距的段落。</p>
+    <hr>
+    <h2>填充 - 简写属性</h2>
+    <p>为了缩短代码，它可以在一个属性中指定的所有填充属性。<br>
+       这就是所谓的缩写属性。所有的填充属性的缩写属性是“padding”
+    </p>
+    <hr>
+    <p>Padding属性，可以有一到四个值。</p>
+    <p><b>&nbsp;&nbsp;padding:25px 50px 75px 100px;</b></p>
+    <ul>
+    <li>上填充为25px</li>
+    <li>右填充为50px</li>
+    <li>下填充为75px</li>
+    <li>左填充为100px</li>
+    </ul>
+    <p><b>&nbsp;&nbsp;padding:25px 50px 75px;</b></p>
+    <ul>
+    <li>上填充为25px</li>
+    <li>左右填充为50px</li>
+    <li>下填充为75px</li>
+    </ul>
+    <p><b>&nbsp;&nbsp;padding:25px 50px;</b></p>
+    <ul>
+    <li>上下填充为25px</li>
+    <li>左右填充为50px</li>
+    </ul>
+    <p><b>&nbsp;&nbsp;padding:25px;</b></p>
+    <ul>
+    <li>所有的填充都是25px</li>
+    </ul>
+    <!--end CSS Padding(填充)-->
+
+    <!--CSS 分组和嵌套-->
+    <h2>CSS 分组 和 嵌套 选择器</h2>
+    <hr>
+    <h3>Group Selectors</h3>
+    <p>在样式表中有很多具有相同样式的元素</p>
+    <p>为了尽量减少代码，可以使用分组选择器。<br>
+       每个选择器用逗号分隔 <br>
+       在下面的例子中，我们可以对以上代码使用分组选择器：
+    </p>
+    <style>
+    h1.greenText,h2.greenText,h3.greenText,p.greenText
+    {
+	    color:green;
+        background-color: black
+    }
+    </style>
+    <h1 class="greenText">Hello World!</h1>
+    <h2 class="greenText">Smaller heading!</h2>
+    <h3 class="greenText">h3 green</h3>
+    <p class="greenText">This is a paragraph.</p>
+    <hr>
+    <h2>嵌套选择器</h2>
+    <p>它可能适用于选择器内部的选择器样式<br>
+       在下面的例子设置了三个样式：
+       <ul>
+           <li>为所有p元素指定一个样式</li>
+           <li>为所有class="marked"的元素指定一个样式</li>
+           <li>为所有class="marked"元素内的p元素指定一个样式</li>
+       </ul>
+    </p>
+    <style>
+            p.blue
+            {
+                color:blue;
+                text-align:center;
+            }
+            .marked
+            {
+                background-color:red;
+            }
+            .marked p
+            {
+                color:white;
+            }
+    </style>
+    <p class="blue">这个段落是蓝色文本，居中对齐</p>
+    <div class="marked">
+        <p class="blue">这个段落不是蓝色文本</p>
+    </div>
+    <p class="blue">所有 class="marked"元素内的&lt;p&gt;元素指定一个
+        样式，但有不同的文本颜色。
+    </p>
+    <!--end CSS 分组和嵌套-->
+
+    <!--CSS 尺寸(Dimension)-->
+    <h2>CSS 尺寸(Dimension)</h2>
+    <hr>
+    CSS尺寸属性允许控制元素的高度和宽度。
+    同样，它允许你增加行间距.
+    <hr>
+    <h2>所有CSS尺寸(Dimension)属性</h2>
+    <table class="am-table am-table-bordered am-table-radius">
+        <tr>
+            <td>属性</td>
+            <td>描述</td>
+        </tr>
+        <tr>
+            <td><i>height</i></td>
+            <td>设置元素的高度</td>
+        </tr>
+        <tr>
+            <td><i>line-height</i></td>
+            <td>设置行高</td>
+        </tr>
+        <tr>
+            <td><i>max-height</i></td>
+            <td>设置元素的最大高度</td>
+        </tr>
+        <tr>
+            <td><i>max-width</i></td>
+            <td>设置元素的最大宽度</td>
+        </tr>
+        <tr>
+            <td><i>min-height</i></td>
+            <td>设置元素的最小高度</td>
+        </tr>
+        <tr>
+            <td><i>min-width</i></td>
+            <td>设置元素的最小宽度</td>
+        </tr>
+        <tr>
+            <td><i>width</i></td>
+            <td>设置元素的宽度</td>
+        </tr>
+    </table>
+    <!--end CSS 尺寸(Dimension)-->
+
+    <!--CSS Display(显示)与Visibility(可见性)-->
+    <h2>CSS Display(显示)与Visibility(可见性)</h2>
+    <hr>
+    <p>display属性设置一个元素应如何显示，visibility属性指定一个元素应可见还是隐藏。</p>
+    <hr>
+    <h2>隐藏元素 - display:none或visibility:hidden</h2>
+    <p>隐藏一个元素可以通过把display属性设置为"none"，或把visibility属性设置为"hidden".
+        但是请注意，这两种方法会产生不同的结果。<br>
+        visibility:none可以隐藏某个元素，但隐藏的元素仍需占用与未隐藏之前一样的空间。也就是说,
+        该元素虽然被隐藏了，但仍然会影响布局。<br>
+        display:none可以隐藏某个元素，且隐藏的元素不会占用任何空间。也就是说该元素不但被隐藏了，而且该元素
+        原本占用的控件也会从页面布局中消失。
+    </p>
+    <hr>
+    <h2>CSS Display- 块和内联元素</h2>
+    <p>块元素是一个元素，占用了全部宽度，在前后都是换行符。<br>
+       块元素的例子：
+       <ul>
+           <li>&lt;h1&gt;~&lt;h6&gt;</li>
+           <li>&lt;p&gt;</li>
+           <li>&lt;div&gt;</li>
+       </ul>
+       内联元素只需要要必要的宽度，不强制换行<br>
+       内联元素的例子：
+       <ul>
+            <li>&lt;span&gt;</li>
+            <li>&lt;a&gt;</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>如何改变一个元素显示</h2>
+    <p>可以更改内联元素和块元素，反之亦然，可以使页面看起来以一种特定的方式组合，
+        并仍然遵循web标准。<br>
+        下面的示例把列表项显示为内联元素：
+    </p>
+    <style>
+        li.inline
+        {
+            display:inline;
+            color: red
+        }
+    </style>
+    <p>链接列表水平显示：</p>
+    
+    <ul>
+    <li class="inline">one</li>
+    <li class="inline">two</li>
+    <li class="inline">three</li>
+    <li class="inline">four</li>
+    </ul>
+    <hr>
+    <p>下面的示例把span元素作为块元素</p>
+    <style>
+        span.block
+        {
+            display:block;
+        }
+    </style>
+    <h3>Nirvana</h3>
+    <span class="block">Record: MTV Unplugged in New York</span>
+    <span class="block">Year: 1993</span>
+    <h3>Radiohead</h3>
+    <span class="block">Record: OK Computer</span>
+    <span class="block">Year: 1997</span>
+    <p><b>注意：</b>变更元素的显示类型看该元素是如何显示，它是什么样的元素。例如：
+        一个内联元素设置为display:none是不允许有它内部的嵌套块元素.
+    </p>
+    <!--end CSS Display(显示)与Visibility(可见性)-->
+
+    <!--CSS Positioning(定位)-->
+    <h2>CSS Positioning(定位)</h2>
+    <hr>
+    <p>position属性指定了元素的定位类型<br>
+       position属性的四个值
+       <ul>
+           <li>static</li>
+           <li>relative</li>
+           <li>fixed</li>
+           <li>absolute</li>
+       </ul>
+       元素可以使用的顶部，底部，左侧和右侧属性定位。然而，这些属性无法工作，除非是先设定
+       position属性。他们也有不同的工作方式，这取决于定位方法。
+    </p>
+    <hr>
+    <h2>static定位</h2>
+    <p>HTML元素的默认值，即没有定位，元素出现在正常的流中<br>
+       静态定位的元素不会受到top、bottom、left、right影响.
+    </p>
+    <hr>
+    <h2>fixed定位</h2>
+    <p>元素的位置相对于浏览器窗口是固定位置。<br>
+       即使窗口是滚动的它也不会移动：
+    </p>
+    <style>
+    div.pos_fixed
+    {
+        position: fixed;
+        top: 30px;
+        right:30px;
+        background-color: yellow;
+    }
+    </style>
+    <div class="pos_fixed">
+        <p><b>注意:</b> IE7 和 IE8 支持只有一个 !DOCTYPE 指定固定值.</p>
+    </div>
+    <p><b>注意：</b><i>Fixed定位在IE7和IE8下需要描述!DOCTYPE才能支持</i><br>
+       Fixed定位使元素的位置与文档流无关，因此不占据空间。<br>
+       Fixed定位的元素和其他元素重叠。
+    </p>
+    <hr>
+    <h2>relative定位</h2>
+    <p>相对定位元素的定位是相对其正常位置。</p>
+    <style>
+    h2.pos_left
+    {
+        position:relative;
+        left:-80px;
+    }
+    
+    h2.pos_right
+    {
+        position:relative;
+        left:80px;
+    }
+    </style>
+    <h2>这是位于正常位置的标题</h2>
+    <h2 class="pos_left">这个标题相对于其正常位置向左移动</h2>
+    <h2 class="pos_right">这个标题相对于其正常位置向右移动</h2>
+    <p>相对定位会按照元素的原始位置对该元素进行移动。</p>
+    <p>样式 "left:-80px" 从元素的原始左侧位置减去 80 像素。</p>
+    <p>样式 "left:80px" 向元素的原始左侧位置增加 80 像素。</p>
+    <style>
+            h2.pos_top
+            {
+                position:relative;
+                top:-50px;
+            }
+    </style>
+    <h2>这是一个没有定位的标题</h2>
+    <h2 class="pos_top">这个标题是根据其正常位置向上移动</h2>
+    <p><b>注意:</b> 即使相对定位元素的内容是移动,预留空间的元素仍保存在正常流动。</p>
+    <p><i><b>相对定位元素经常被用来作为绝对定位元素的容器块</b></i></p>
+    <hr>
+    <h2>absolute定位</h2>
+    <p>绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，
+        那么它的位置相对于&lt;html&gt;
+    </p>
+    <style>
+            h2.pos_abs
+            {
+                background-color: blueviolet;
+                position:absolute;
+                left:100px;
+                top:150px;
+            }
+    </style>
+    <h2 class="pos_abs">这是一个绝对定位了的标题</h2>
+    <p>用绝对定位,一个元素可以放在页面上的任何位置。
+        标题下面放置距离左边的页面100 px和距离页面的顶部150 px的元素。.</p>
+    <p><i>absolute定位使元素的位置与文档流无关，所以它们可以覆盖页面上的其他元素<br>
+          absolute定位的元素和其他元素重叠.
+    </i></p>
+    <hr>
+    <h2>重叠的元素</h2>
+    <p>元素的定位与文档流无关，所以它们可以覆盖页面上的其他元素<br>
+        z-index属性指定了一个元素的堆叠顺序（哪个元素应该放在前面，或后面）<br>
+        一个元素可以有正数或者负数的堆叠顺序；
+    </p>
+    <style>
+            img.abs
+            {
+                position:absolute;
+                left:50px;
+                top:50px;
+                z-index:-1;
+            }
+    </style>
+    <h1>This is a heading</h1>
+    <div>
+        <img class="abs" src="../res/1.jpg" width="100" height="140" />
+        <p>因为图像元素设置了 z-index 属性值为 -1, 所以它会显示在文字之后。</p>
+    </div>
+    <p>具有更高堆叠顺序的元素总是在较低的堆叠顺序元素的前面。<br>
+        <b>注意：</b><i>如果两个定位元素重叠，没有指定z-index，
+            最后定位在HTML代码中的元素将被显示在最前面.
+        </i>
+    </p>
+    <hr>
+    <h3>更过实例</h3>
+    <hr>
+    <style>
+    img.clip 
+    {
+        position:absolute;
+        clip:rect(0px,60px,200px,0px);
+    }
+    </style>
+    <h3>图片裁剪</h3>
+    <img class="clip" src="../res/1.jpg" width="100" height="140" />
+    <hr>
+    <h3>用滚动条显示溢出的元素</h3>
+    <style>
+    div.scroll
+    {
+        background-color:#00FFFF;
+        width:100px;
+        height:100px;
+        overflow:scroll;
+    }
+    
+    div.hidden 
+    {
+        background-color:#00FF00;
+        width:100px;
+        height:100px;
+        overflow:hidden;
+    }
+    </style>
+    <p>overflow 属性规定当内容溢出元素框时发生的事情。.</p>
+    
+    <p>overflow:scroll</p>
+    <div class="scroll">You can use the overflow property when 
+        you want to have better control of the layout. 
+        The default value is visible.</div>
+    
+    <p>overflow:hidden</p>
+    <div class="hidden">You can use the overflow property when 
+        you want to have better control of the layout. 
+        The default value is visible.</div>
+    <hr>
+    <h3>更改光标</h3>
+    <p>请把鼠标移动到单词上，可以看到鼠标指针发生变化：</p>
+    <span style="cursor:auto">auto</span><br>
+    <span style="cursor:crosshair">crosshair</span><br>
+    <span style="cursor:default">default</span><br>
+    <span style="cursor:e-resize">e-resize</span><br>
+    <span style="cursor:help">help</span><br>
+    <span style="cursor:move">move</span><br>
+    <span style="cursor:n-resize">n-resize</span><br>
+    <span style="cursor:ne-resize">ne-resize</span><br>
+    <span style="cursor:nw-resize">nw-resize</span><br>
+    <span style="cursor:pointer">pointer</span><br>
+    <span style="cursor:progress">progress</span><br>
+    <span style="cursor:s-resize">s-resize</span><br>
+    <span style="cursor:se-resize">se-resize</span><br>
+    <span style="cursor:sw-resize">sw-resize</span><br>
+    <span style="cursor:text">text</span><br>
+    <span style="cursor:w-resize">w-resize</span><br>
+    <span style="cursor:wait">wait</span><br>
+    <!--end CSS Positioning(定位)-->
+
+    <!--CSS FLoat浮动-->
+    <h2>什么是CSS浮动</h2>
+    <p>CSS的Float(浮动)，会使元素向左或者向右移动，其周围的元素也会重新排列<br>
+       Float(浮动)，往往用于图像，但它在布局时一样非常有用。
+    </p>
+    <hr>
+    <h2>元素怎样浮动</h2>
+    <p>元素的水平方向浮动，意味着元素只能左右移动而不能上下移动<br>
+        一个浮动元素会尽量向左移动或向右移动，直到它的外边缘碰到包含
+        框或另一个浮动框的边框为止。<br>
+        浮动元素之后的元素将围绕它<br>
+        浮动元素之前的元素将不会受到影响<br>
+        如果图像是右浮动，下面的文本流将环绕在它左边：
+    </p>
+    <style>
+    img.float_right{
+        float: right;
+    }
+    </style>
+    <p>在下面的段落中添加了一个<b>float:right</b>的图片。
+        导致图片将会浮动在段落的右边
+    </p>
+    <p>
+        <img class="float_right" src="../res/1.jpg" alt="img"/>
+        这是一大段文字呢这是一大段文字呢这是一大段文字呢
+        这是一大段文字呢这是一大段文字呢这是一大段文字呢
+        这是一大段文字呢这是一大段文字呢这是一大段文字呢
+        这是一大段文字呢这是一大段文字呢这是一大段文字呢
+        这是一大段文字呢这是一大段文字呢这是一大段文字呢
+        这是一大段文字呢这是一大段文字呢这是一大段文字呢
+    </p>
+    <hr>
+    <h2>彼此相邻的浮动元素</h2>
+    <p>如果你把几个浮动元素放到一起，如果有空间的话，
+        它们将彼此相邻。<br>
+        在这里，我们对图片廓使用float属性。
+    </p>
+    <style>
+    img.thumbnail
+    {
+        float: left;
+        width: 100px;
+        height: 70px;
+        margin: 4px;
+    }
+    </style>
+    <h3>图片库</h3>
+    <p>试着调整窗口,看看当图片没有足够的空间会发生什么。</p>
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <img class="thumbnail" src="../res/1.jpg" width="107" height="90">
+    <hr>
+    <h2>清除浮动-使用clear</h2>
+    <p>元素浮动以后，周围的元素会重新排列，为了避免这种情况，使用clear属性<br>
+        clear属性指定元素两侧不能出现浮动效果。<br>
+        使用clear属性往文本中添加图片廓，clear:both;
+    </p>
+    <h2>使用 float 创建一个网页页眉、页脚、左边的内容和主要内容。</h2>
+    <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+            }
+            .header {
+                background-color: #2196F3;
+                color: white;
+                text-align: center;
+                padding: 15px;
+            }
+            .footer {
+                background-color: #444;
+                color: white;
+                padding: 15px;
+            }
+            .topmenu {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #777;
+            }
+            .topmenu li {
+                float: left;
+            }
+            .topmenu li a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+            .topmenu li a:hover {
+                background-color: #222;
+            }
+            .topmenu li a.active {
+                color: white;
+                background-color: #4CAF50;
+            }
+            .column {
+                float: left;
+                padding: 15px;
+            }
+            .clearfix::after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+            .sidemenu {
+                width: 25%;
+            }
+            .content {
+                width: 75%;
+            }
+            .sidemenu ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+            }
+            .sidemenu li a {
+                margin-bottom: 4px;
+                display: block;
+                padding: 8px;
+                background-color: #eee;
+                text-decoration: none;
+                color: #666;
+            }
+            .sidemenu li a:hover {
+                background-color: #555;
+                color: white;
+            }
+            .sidemenu li a.active {
+                background-color: #008CBA;
+                color: white;
+            }
+            </style>
+    <ul class="topmenu">
+        <li><a href="#" class="active">主页</a></li>
+        <li><a href="#">新闻</a></li>
+        <li><a href="#">联系我们</a></li>
+        <li><a href="#">关于我们</a></li>
+    </ul>
+    <div class="clearfix">
+            <div class="column sidemenu">
+              <ul>
+                <li><a href="#flight">The Flight</a></li>
+                <li><a href="#city" class="active">The City</a></li>
+                <li><a href="#island">The Island</a></li>
+                <li><a href="#food">The Food</a></li>
+                <li><a href="#people">The People</a></li>
+                <li><a href="#history">The History</a></li>
+                <li><a href="#oceans">The Oceans</a></li>
+              </ul>
+            </div>
+    <div class="column content">
+        <div class="header">
+          <h1>The City</h1>
+        </div>
+        <h1>Chania</h1>
+        <p>Chania is the capital of the Chania region on the island 
+            of Crete. The city can be divided in two parts, 
+            the old town and the modern city.</p>
+        <p>You will learn more about responsive web pages in a later chapter.</p>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>底部文本</p>
+    </div>
+    <!--end CSS FLoat浮动-->
+
+    <!--CSS 布局-水平&垂直对齐-->
+    <h2>CSS 布局-水平&垂直对齐</h2>
+    <hr>
+    <h3>元素居中对齐</h3>
+    <p>要水平居中对齐一个元素如div，可以使用margin:auto; <br>
+        设置到元素的宽度将防止它溢出到容器的边缘。<br>
+        元素通过指定宽度，并将两边的空外边距平均分配。
+    </p>
+    <style>
+    .center
+    {
+        margin: auto;
+        width: 60%;
+        border:3px solid #222;
+        padding: 10px;
+    }
+    </style>
+    <h3>元素居中对齐</h3>
+    <p>水平居中的块级元素（如div），可以使用margin:auto;</p>
+    <div class="center">
+        <p><b>注意：</b><i>使用margin:auto 无法兼容IE8，除非！DOCTYPE已经声明。</i></p>
+    </div>
+    <p><b>注意：</b><i>如果没有设置width属性(或者设置100%)，居中对齐将不起作用。</i></p>
+    <hr>
+    <h3>文本居中对齐</h3>
+    <p>如果仅仅是为了文本在元素内居中对齐，可以使用text-align:center;</p>
+    <style>
+            .center {
+                text-align: center;
+                border: 3px solid green;
+            }
+    </style>
+    <div class="center">
+            <p>文本居中对齐。</p>
+    </div>
+    <hr>
+    <h3>图片居中对齐</h3>
+    <p>要让图片居中对齐，可以使用margin:auto;并将它放到块div元素中。</p>
+    <style>
+    img.center
+    {
+        display: block;
+        margin: 0 auto;
+    }
+    </style>
+    <img width="200" height="160" class="center" src="../res/1.jpg" alt="img"/>]
+    <hr>
+    <h3>左右对齐-使用定位方式</h3>
+    <p>我们可以使用position:absolute;属性来对齐元素</p>
+    <style>
+    .right
+    {
+        position: absolute;
+        right: 0px;
+        width: 200px;
+        border: 3px solid #73ad21;
+        padding: 10px;
+    }
+    </style>
+    <div class="right">
+        <p>这是一个使用position属性来右对齐的段落</p>
+    </div>
+    <p><i>注释：绝对定位元素会被从正常流中删除，并且能够交叠元素。</i><br>
+        <b>提示：</b>当使用<span style="background-color:#555">positon</span>来
+        对齐元素时，通常&lt;body&gt;元素会设置margin和paddding。这样可以避免在不同的浏览器
+        中出现可见的差异。<br>
+        当使用position属性时,IE8以及更早的版本存在一个问题。如果容器元素设置了指定的宽度，
+        并且省略了!DOCTYPE声明，那么IE8以及更早的版本会在右侧增加17px的外边距，这似乎是为
+        滚动条预留的空间。当使用position属性时，请始终设置!DOCTYPE声明。
+    </p>
+    <style>
+    .container
+    {
+	    position:relative;
+	    width:100%;
+    }
+    .right
+    {
+	    position:absolute;
+	    right:0px;
+	    width:300px;
+	    background-color:#b0e0e6;
+    }
+    </style>
+    <div class="container">
+        <div class="right">
+            <p><b>注意：</b><i>当使用浮动属性对齐，总是包括!DOCTYPE声明，如果丢失，
+                它将会在IE浏览器产生奇怪的效果。</i></p>
+        </div>
+    </div>
+    <hr>
+    <h3>左右对齐-使用float方式</h3>
+    <p>也可以使用float属性来对齐元素<br>
+        float:right; float:left;
+    </p>
+    <hr>
+    <h3>垂直居中对齐-使用padding</h3>
+    <p>CSS中有很多方式可以实现垂直居中对齐。一个简单的方式就是
+        头部顶部使用padding.
+    </p>
+    <style>
+    .centerPadding 
+    {
+        padding: 70px 0;
+        border : 3px solid purple;
+    }
+    .centerPadding p
+    {
+        text-align: center;
+    }
+    </style>
+    <div class="centerPadding">
+        <p>垂直居中的段落</p>
+        <i>如果要水平和垂直都居中，可以使用padding和text-align:center;</i>
+    </div>
+    <hr>
+    <h3>垂直居中-使用line-height</h3>
+    <h3>垂直居中-使用position和transform</h3>
+    <p>除了使用padding和line-height属性外，
+        我们还可以使用transform属性来设置垂直居中</p>
+    <style>
+    .centerTrans
+    {
+        height: 200px;
+        position: relative;
+        border: 3px solid greenyellow;
+    }
+    .centerTrans p
+    {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+    </style>
+    <div class="centerTrans">
+        <p>我是水平和垂直居中的。</p>
+    </div>
+    <!--end CSS 布局-水平&垂直对齐-->
+
+    <!--CSS 组合选择符-->
+    <h2>CSS组合选择符</h2>
+    <p>CSS组合选择符包括各种简单选择符的组合方式。<br>
+        在CSS3中包含了四种组合方式
+        <ul>
+            <li><i>后代选择器(以空格分隔)</i></li>
+            <li><i>子元素选择器(以大于号分隔)</i></li>
+            <li><i>相邻兄弟选择器(以加号分隔)</i></li>
+            <li><i>普通兄弟选择器(以破折号分隔)</i></li>
+        </ul>
+    </p>
+    <hr>
+    <h3>后代选择器</h3>
+    <p>后代选取器匹配所有值得元素的后代元素。<br>
+        一下实例选取所有&lt;p&gt;元素插入到div元素中:
+    </p>
+    <style>
+        div.selector p
+        {
+            background-color:yellow;
+        }
+    </style>
+    <div class="selector">
+        <p>段落 1。 在 div 中。</p>
+        <p>段落 2。 在 div 中。</p>
+    </div>       
+    <p>段落 3。不在 div 中。</p>
+    <p>段落 4。不在 div 中。</p>
+    <hr>
+    <h3>子元素选择器</h3>
+    <p>与后代选择器相比，子元素选择器(Child selectors)只能选择作为某元素子元素的元素。
+    </p>
+    <style>
+    div.inOnly>p
+    {
+        background-color: slateblue;
+    }
+    div.in
+    {
+        background-color:#6495ed;
+    }
+    </style>
+    <h1>Welcome to My Homepage</h1>
+    <div class="inOnly">
+    <h2>My name is Donald</h2>
+    <p>I live in Duckburg.</p>
+    </div>
+    <div class="in">
+            <h2>My name is Donald</h2>
+            <p>I live in Duckburg.</p>
+    </div>
+    <div>
+    <span><p>I will not be styled.</p></span>
+    </div>
+    <hr>
+    <h3>相邻兄弟选择器</h3>
+    <p>相邻兄弟选择器(Adjacent sibling selector)可选择紧接在另一元素后的元素，
+        且二者有相同父元素。<br>
+        如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器
+    </p>
+    <style>
+    div.add+p
+    {
+        background-color: yellow;
+    }
+    </style>
+    <div class="add">
+        <h2>My name is Donald</h2>
+        <p>I live in Duckburg.</p>
+    </div>
+    <p>My best friend is Mickey.</p>
+    <hr>
+    <h3>后续兄弟选择器</h3>
+    <p>后续兄弟选择器选取所有指定元素之后的相邻兄弟元素。
+    </p>
+    <style>
+    /*div.addall~p*/
+    div.addall
+    {
+        background-color: red;
+    }
+    </style>
+    <p>之前段落，不会添加背景颜色。</p>
+    <div class="addall">
+    <p>段落 1。 在 div 中。但是没有color</p>
+    <p>段落 2。 在 div 中。但是没有color</p>
+    </div>    
+    <p>段落 3。不在 div 中。但是会有颜色啦</p>
+    <p>段落 4。不在 div 中。但是会有颜色啦</p>
+    <!--end CSS 组合选择符-->
+
+    <!--CSS 伪类(Pseudo-classes)-->
+    <h2>伪类(Pseudo-classes)</h2>
+    <hr><p>CSS伪类用来添加一些选择器的效果</p><hr>
+    <h3>语法</h3>
+    <p>伪类的语法：<br>
+    <span style="background-color:gray">
+        selector:pseudo-class{property:value;}
+    </span><br>
+    CSS类也可以使用伪类<br>
+    <span style="background-color:gray">
+        selector.class:pseudo-class {property:value;}
+    </span><br>
+    </p>
+    <hr>
+    <h3>anchor伪类</h3>
+    <p>在支持CSS的浏览器中，链接的不同状态都可以以不同的方式显示。</p>
+    <style>
+        a.next:link {color:#000000;}      /* 未访问链接*/
+        a.next:visited {color:#00FF00;}  /* 已访问链接 */
+        a.next:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+        a.next:active {color:#0000FF;}  /* 鼠标点击时 */
+        a
+        {
+            display: inline;
+        }
+    </style>
+    <p><b><a class="next" href="#" target="_blank">这是一个链接</a></b></p>
+    <p><b>注意：</b> a:hover 必须在 a:link 和 a:visited 之后，需要严格按顺序才能看到效果。</p>
+    <p><b>注意：</b> a:active 必须在 a:hover 之后。</p>
+    <p><b>注意：</b><i>在CSS定义中，a:hover必须被置于a:link和a:visited之后才有效</i><br>
+        <b>注意：</b><i>在CSS定义中，a:active必须被置于a:hover之后才有效</i><br>
+        <b>注意：</b><i>伪类的名称不区分大小写</i>
+    </p>
+    <hr>
+    <h2>伪类和CSS类</h2>
+    <p>伪类可以与CSS类配合使用</p>
+    <hr>
+    <h2>CSS - :first - child伪类</h2>
+    <p>您可以使用:first-child伪类来选择元素的第一个子元素<br>
+        <b>注意：</b>在IE8之前版本必须声明!&lt;DOCTYPE&gt;，这样:first-child才能生效。
+    </p>
+    <h2>匹配第一个&lt;p&gt;元素</h2>
+    <p>在下面的例子中，选择器匹配作为任何元素的第一个子元素的&lt;p&gt;元素：</p>
+    <style>
+    p:first-child
+    {
+        color: blue;
+    }
+    </style>
+    <p>This is a text</p>
+    <p>This is a text</p>
+    <p><b>注意：</b><i>对于:first-child工作于IE8以及更早版本的浏览器，
+        !DOCTYPE必须已经声明。
+    </i></p>
+    <hr>
+    <h2>匹配所有作为第一个子元素的&lt;p&gt;元素中的所有&lt;i&gt;元素</h2>
+    <style>
+    p:first-child i
+    {
+        color: red;
+    }
+    </style>
+    <p>I am a <i>strong</i> man.This is a <i>text</i></p>
+    <p>I am a <i>strong</i> man.This is a <i>text</i></p>
+    <p><b>注意:</b> 当:first-child 作用于 IE8 
+        及更早版本的浏览器, DOCTYPE 必须已经定义.
+    </p>  
+    <hr>
+    <h2>CSS- :lang伪类</h2>
+    <p>:lang伪类使你有能力为不同的语言定义特殊的规则.<br>
+        <b>注意:</b>IE8必须声明!DOCTYPE才能支持:lang伪类。<br>
+        在下面的例子中，:lang类为属性值为no的p元素定义引号的类型:
+    </p>
+    <style>
+    q.next:lang(no)
+    {
+        quotes: '~' '~';
+    }
+    </style>
+    <p>Some text <q class="next" lang="no">A quote in a p</q>SomeText</p>
+    <p>在这个例子中,lang定义了q元素的值为lang=“no”</p>
+    <p><b>注意：</b><i>仅当 !DOCTYPE 已经声明时 IE8支持 :lang</i></p>
+    <h2>CSS- :focus伪类</h2>
+    <style>
+    input.next:focus
+    {
+        background-color: yellow
+    }
+    </style>
+    <form action="">
+        <input type="text" class="next">
+        <input type="text">
+    </form>
+    <p><b>注意:</b>仅当 !DOCTYPE 已经声明时 IE8 支持 :focus.</p>
+    <h2>所有的CSS伪类</h2>
+    <ul>
+        <li><b>x:checked</b>:
+            <i>选择所有选中的x元素</i></li>
+        <li><b>x:disanled</b>:
+            <i>选择所有禁用的x元素</i></li>
+        <li><b>x:empty</b>:
+            <i>选择所有没有子元素的x元素</i></li>
+        <li><b>x:enabled</b>:
+            <i>选择所有允许交互的x元素</i></li>
+        <li><b>x:first-of-type</b>:
+            <i>选择每个父元素是x元素的第一个x子元素</i></li>
+        <li><b>x:in-range</b>:
+            <i>选择元素指定范围内的值</i></li>
+        <li><b>x:invalid</b>:
+            <i>选择所有无效元素</i></li>
+        <li><b>x:last-child</b>:
+            <i>选择所有x元素的最后一个子元素</i></li>
+        <li><b>x:last-of-type</b>:
+            <i>选择每个x元素是其父元素的最后一个x子元素</i></li>
+        <li><b>x:not(selector)</b>:
+            <i>选择所有selector元素以外的元素</i></li>
+        <li><b>x:nth-child(n)</b>:
+            <i>选择所有x元素的第n个子元素</i></li>
+        <li><b>x:nth-last-child(n)</b>:
+            <i>选择所有x元素倒数第n个子元素</i></li>
+        <li><b>x:nth-last-of-type(n)</b>:
+            <i>选择所有x元素倒数第n个为x元素的子元素</i></li>
+        <li><b>x:nth-of-type(n)</b>:
+            <i>选择所有x元素第n个为x元素的子元素</i></li>
+        <li><b>x:only-of-type</b>:
+            <i>选择所有仅有一个子元素为x元素的元素</i></li>
+        <li><b>x:only-child</b>:
+            <i>选择所有仅有一个子元素的x元素</i></li>
+        <li><b>x:optional</b>:
+            <i>选择没有“required”的元素属性</i></li>
+        <li><b>x:out-of-range</b>:
+            <i>选择指定范围以外的值的元素属性</i></li>
+        <li><b>x:read-only</b>:
+            <i>选择只读属性的元素属性</i></li>
+        <li><b>x:read-write</b>:
+            <i>选择没有只读属性的元素属性</i></li>
+        <li><b>x:required</b>:
+            <i>选择有"required"属性指定的元素属性</i></li>
+        <li><b>x:root</b>:
+            <i>选择文档的根元素</i></li>
+        <li><b>#news:target</b>:
+            <i>选择当前活动#news元素(点击URL包含锚的名字)</i></li>
+        <li><b>x:valid</b>:
+            <i>选择所有有效值的属性</i></li>
+        <li><b>x:link</b>:
+            <i>选择所有未访问链接</i></li>
+        <li><b>x:visited</b>:
+            <i>选择所有访问过得链接</i></li>
+        <li><b>x:active</b>:
+            <i>选择正在活动的链接</i></li>
+        <li><b>x:hover</b>:
+            <i>把鼠标放在链接上的状态</i></li>
+        <li><b>x:focus</b>:
+            <i>元素元素输入后具有焦点</i></li>
+        <li><b>x:first-letter</b>:
+            <i>选择x元素的第一个字母</i></li>
+        <li><b>x:first-line</b>:
+            <i>选择x元素的第一行</i></li>
+        <li><b>x:first-child</b>:
+            <i>选择器匹配属于任意元素的第一个子元素的所有x元素</i></li>
+        <li><b>x:before</b>:
+            <i>在每个x元素之前插入内容</i></li>
+        <li><b>x:after</b>:
+            <i>在每个x元素之后插入内容</i></li>
+        <li><b>x:lang(language)</b>:
+            <i>为x元素的lang属性选择一个开始值</i></li>
+    </ul>
+    <!--end CSS 伪类(Pseudo-classes)-->
+
+    <!--CSS 伪元素-->
+    <h2>CSS伪元素</h2>
+    <hr>
+    <p>CSS伪元素是用来添加一些选择器的特殊效果</p>
+    <hr>
+    <h2>语法</h2>
+    <p>伪元素的语法：<br>
+        <span style="background-color:gray">
+        selector"pseudo-element {property:value;}    
+        </span><br>
+        CSS类也可以使用伪元素：<br>
+        <span style="background-color:gray">
+        selector.class:pseudo-element {property:value;}
+        </span><br>
+    </p>
+    <hr>
+    <h2>:first-line伪元素</h2>
+    <p>“first-line”伪元素用于向文本的首行设置特殊样式。<br>
+        在下面的例子中，浏览器会根据“first-line”伪元素中的样式
+        对p元素的第一行进行文本格式化：
+    </p>
+    <style>
+    p.fake::first-line
+    {
+        color: red;
+        font-variant: small-caps;
+    }
+    </style>
+    <p class="fake">你可以使用 <b>"first-line"</b>伪元素向文本的首行设置特殊样式。<br>
+        <b>这是第2行。</b><br>
+        <b>这是第3行。</b>
+    </p>
+    <p><b>注意：</b><i>"first-line"伪元素只能用于块级元素.</i><br>
+        <b>注意：</b><i>下面的属性可应用于"first-line"伪元素.</i>
+    </p>
+    <ul>
+        <li><b>font properties</b></li>
+        <li><b>color properties</b></li>
+        <li><b>background properties</b></li>
+        <li><b>word-spacing</b></li>
+        <li><b>letter-spacing</b></li>
+        <li><b>text-decoration</b></li>
+        <li><b>vertical-align</b></li>
+        <li><b>text-transform</b></li>
+        <li><b>line-height</b></li>
+        <li><b>clear</b></li>
+    </ul>
+    <hr>
+    <h2>:first-letter伪元素</h2>
+    <p>“first-letter”伪元素用于向文本的首字母设置特殊样式：</p>
+    <style>
+    p.first::first-letter
+    {
+        color: purple;
+        font-size: xx-large;
+    }
+    </style>
+    <p class="first">你可以使用 "first-letter" 伪元素向文本的首字母设置特殊样式：</p>
+    <p>
+        <b>注意：</b><i>"first-letter"伪元素只能用于块级元素</i><br>
+        <b>注意：</b><i>下面的属性可应用于“first-letter”伪元素：</i>
+        <ul>
+            <li>font properties</li>
+            <li>color properties</li>
+            <li>background properties</li>
+            <li>margin properties</li>
+            <li>padding properties</li>
+            <li>border properties</li>
+            <li>text -decoration</li>
+            <li>vertical-align (only if "float" is "none")</li>
+            <li>text-transform</li>
+            <li>line-height</li>
+            <li>float</li>
+            <li>clear</li>
+        </ul>
+        <hr>
+        <h2>伪元素和CSS类</h2>
+        <p>伪元素可以结合CSS伪类</p>
+        <style>
+        p.article::first-letter
+        {
+            color: red;
+        }
+        </style>
+        <p class="article">文章段落</p>
+        <hr>
+        <h2>多个伪元素</h2>
+        <p>可以结合多个伪元素来使用。<br>
+            在下面的例子中，段落的第一个字母将显示为红色，其字体大小为xx-large。
+            第一行中的其余文本将为蓝色，并以小型大写字母显示。<br>
+            段落中的其余文本将以默认字体大小和颜色来显示。
+        </p>
+        <style>
+        p.mdzz::first-letter
+        {
+            color: red;
+            font-size: xx-large;
+        }
+        p.mdzz::first-line
+        {
+            color: blue;
+            font-variant: small-caps;
+        }
+        </style>
+        <p class="mdzz">你可以结合使用"first-line"和"first-letter"伪元素向文本的首行和首字母
+            设置特殊样式。
+        </p>
+    </p>
+    <hr>
+    <h2>CSS- :before伪元素</h2>
+    <p>":before"伪元素可以在元素的内容前面插入新内容。</p>
+    <p><b>注意:</b>仅当 !DOCTYPE 已经声明 IE8 支持这个内容属性</p>
+    <h2>CSS- :after伪元素</h2>
+    <p>":after"伪元素可以在元素的内容之后插入新内容.</p>
+    <hr>
+    <h2>所有的CSS伪类/元素</h2>
+    <table class="am-table am-table-bordered am-table-radius">
+            <tbody><tr>
+              <th width="20%" align="left">选择器</th>
+              <th width="17%" align="left">示例</th>
+              <th width="63%" align="left">示例说明</th>
+            </tr>
+            <tr>
+              <td>:link</td>
+              <td class="notranslate">a:link</td>
+              <td>选择所有未访问链接</td>
+            </tr>
+              <tr>
+              <td>:visited</td>
+              <td class="notranslate">a:visited</td>
+              <td>选择所有访问过的链接</td>
+            </tr>
+              <tr>
+              <td>:active</td>
+              <td class="notranslate">a:active</td>
+              <td>选择正在活动链接</td>
+            </tr>
+              <tr>
+              <td>:hover</td>
+              <td class="notranslate">a:hover</td>
+              <td>把鼠标放在链接上的状态</td>
+            </tr>
+              <tr>
+              <td>:focus</td>
+              <td class="notranslate">input:focus</td>
+              <td>选择元素输入后具有焦点</td>
+            </tr>
+              <tr>
+              <td>:first-letter</td>
+              <td class="notranslate">p:first-letter</td>
+              <td>选择每个&lt;p&gt; 元素的第一个字母</td>
+            </tr>
+              <tr>
+              <td>:first-line</td>
+              <td class="notranslate">p:first-line</td>
+              <td>选择每个&lt;p&gt; 元素的第一行</td>
+            </tr>
+            <tr>
+              <td>:first-child</td>
+              <td class="notranslate">p:first-child</td>
+              <td>选择器匹配属于任意元素的第一个子元素的 &lt;]p&gt; 元素</td>
+            </tr>
+              <tr>
+              <td>:before</td>
+              <td class="notranslate">p:before</td>
+              <td>在每个&lt;p&gt;元素之前插入内容</td>
+            </tr>
+              <tr>
+              <td>:after</td>
+              <td class="notranslate">p:after</td>
+              <td>在每个&lt;p&gt;元素之后插入内容</td>
+            </tr>
+              <tr>
+              <td>:lang(<i>language</i>)</td>
+              <td class="notranslate">p:lang(it)</td>
+              <td>为&lt;p&gt;元素的lang属性选择一个开始值</td>
+            </tr>
+    </tbody></table>		
+    <!--end CSS 伪元素-->
+    
+    <!--CSS 导航栏-->
+    <h2>导航栏</h2>
+    <p>熟练使用导航栏，对于任何网站都非常重要。<br>
+        使用CSS你可以转换成好看的导航栏而不是枯燥的HTML菜单.
+    </p>
+    <hr>
+    <h2>导航栏-链接列表</h2>
+    <p>作为标准的HTML基础一个导航栏是必须的。<br>
+        在我们的例子中我们将建立一个标准的HTML列表导航栏。<br>
+        导航栏基本上是一个链接列表，所以使用&lt;ul&gt;和&lt;li&gt;
+        元素非常有意义：
+    </p>
+    <p>从列表中删除边距和填充</p>
+    <style>
+    #ulid
+    {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    </style>
+    <ul id="ulid">
+        <li><a href="">主页</a></li>
+        <li><a href="">消息</a></li>
+        <li><a href="">我的</a></li>
+    </ul>
+    <p>例子解析：</p>
+    <ul>
+        <li>list-style-type:none-移除列表前的小标志。
+            一个导航栏并不需要列表标记
+        </li>
+        <li>
+            移除浏览器的默认设置将边距和填充设置为0
+        </li>
+    </ul>
+    <p>上面的例子中的代码是垂直和水水平导航栏使用的标准代码。</p>
+    <hr>
+    <h2>垂直导航栏</h2>
+    <p>上面的代码，只需要&lt;a&gt;元素的样式，建立一个垂直导航栏. <br>
+        a{display:block;width:60px;}
+    </p>
+    <p>实例说明：
+        <ul>
+            <li>display:block-显示块元素的链接，让整体变为可点击链接区域(不只是文本)，
+                它允许我们指定宽度</li>
+            <li>width:60px-块元素默认情况下是最大宽度。
+                我们要指定一个60像素的宽度
+            </li>
+        </ul>
+    </p>
+    <hr>
+    <h2>垂直导航条实例</h2>
+    <p>创建一个简单的垂直导航条实例，在鼠标移动到选项时，修改背景颜色:</p>
+    <hr>
+    <h2>激活/当前导航条实例</h2>
+    <p>在点击了选项后，我们可以添加"active"类来标准那个选项被选中.</p>
+    <hr>
+    <h2>创建链接并添加边框</h2>
+    <p>可以在 li 或者 a 元素上添加text-align:center样式来让链接居中。<br>
+        可以在border ul上添加border属性来让导航栏有边框。
+        如果要在每个选项上添加边框，可以在每个 li 元素上添加border-bottom:
+    </p>
+    <hr>
+    <h2>全屏高度的固定导航条</h2>
+            <ul>
+                    <li><a class="active" href="#home">主页</a></li>
+                    <li><a href="#news">新闻</a></li>
+                    <li><a href="#contact">联系</a></li>
+                    <li><a href="#about">关于</a></li>
+                  </ul>
+                  
+                  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+                    <h2>Fixed Full-height Side Nav</h2>
+                    <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+                    <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+                    <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                    <p>Some text..</p>
+                  </div>
+    <p><b>注意：</b>该实例可以在移动设备上使用</p>
+    <hr>
+    <h2>水平导航栏</h2>
+    <p>有两种方法创建横向导航栏。使用或<b>浮动</b>的列表项。<br>
+        这两种方法都很好，但如果你想链接到具有相同大小，你必须使用的浮动的方法。
+    </p>
+    <h2>内嵌列表项</h2>
+    <p>建立一个横向导航栏的方法之一是指定元素，上述代码是标准的内嵌.</p>
+    <ul>
+        <li>display:inline; 默认情况下，&lt;li&gt;元素是快元素。在这里，我们删除换行符
+            之前和之后的每个列表项，以显示一行。</li>
+    </ul>
+    <hr>
+    <h2>浮动列表项</h2>
+    <p>在上面的例子中链接有不同的宽度。<br>
+        对于所有的链接宽度相等，浮动&lt;li&gt;元素，并制定为&lt;a&gt;元素的宽度;
+    </p>
+    <ul>
+        <li><b>float-left:</b>使用浮动块元素的幻灯片彼此相邻</li>
+        <li><b>display:block:</b>显示块元素的链接，让整体变为可点击链接区域(不只是文本)，
+            它允许我们制定宽度.
+        </li>
+        <li><b>width:60px:</b>块元素默认情况下是最大宽度。我们要制定一个60像素的宽度</li>
+    </ul>
+    <div>
+        <h3>激活/当前导航条实例</h3>
+        <p>在点击了选项后，我们可以添加"active"类来标准哪个选项被选中.</p>
+        <h3>链接右对齐</h3>
+        <p>将导航条最右边的选项设置右对齐(float:right;)</p>
+        <h3>添加分隔线</h3>
+        <p>&lt;li&gt;通过<b>border-right</b>样式来添加分隔分隔线</p>
+        <h3>固定导航条</h3>
+        <p>可以设置页面的导航条固定在头部或者底部：<br>
+            <b>注意：</b><i>可以在移动设备上使用</i>
+        </p>
+    </div>
+    <h3>CSS响应式导航栏实例</h3>
+    <style>
+    body {margin: 0;}
+
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px){
+    ul.topnav li.right, 
+    ul.topnav li {float: none;}
+}
+
+    </style>
+    <ul class="topnav">
+            <li><a class="active" href="#home">主页</a></li>
+            <li><a href="#news">新闻</a></li>
+            <li><a href="#contact">联系</a></li>
+            <li class="right"><a href="#about">关于</a></li>
+          </ul>
+          
+          <div style="padding:0 16px;">
+            <h2>响应式导航栏实例</h2>
+            <p>在屏幕宽度小于 600px 会重置导航栏。</p>
+          </div>
+    <!--end CSS 导航栏-->
+
+    <!--CSS 下拉菜单-->
+    <h2>使用CSS创建一个鼠标移动上去后显示下拉菜单的效果</h2>
+    <hr>
+    <style>
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    }
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+    </style>
+    <h3>鼠标移动后出现下拉菜单</h3>
+    <p>将鼠标移动到指定元素上就能看见下拉菜单。</p>
+    <div class="dropdown">
+            <span>鼠标移动到我这！</span>
+            <div class="dropdown-content">
+              <p>HTML</p>
+              <p>CSS</p>
+              <p>javascript</p>
+            </div>
+    </div>
+    <h3>实例解析</h3>
+    <p><b>HTML部分：</b><br>
+        可以使用任何的HTML元素来打开下拉菜单，如span元素或者button元素。<br>
+        使用的容器元素（如div）来创建下拉菜单的内容，并放在任何想放的位置上。<br>
+        使用div元素来包裹这些元素，并使用CSS来设置下拉内容的样式。<br>
+        <b>CSS部分：</b><br>
+        .dropdown类使用position:relative,这将设置下拉菜单的内容放置在下拉按钮(使用
+        position:absolute)的右下角位置。.dropdown-content类中是实际的下拉菜单。默认
+        是隐藏的，在鼠标移动到指定元素后会显示。注意min-width的值设置为160px。可以随意
+        修改它。<b>注意：</b><i>如果想设置下拉内容与下拉按钮的宽度一致，可设置width为
+            100%(overflow:auto设置可以在小尺寸屏幕上滚动)。<br>
+            使用box-shadow属性让下拉菜单看起来像一个"卡片" <br>
+            :hover选择器用于在用户将鼠标移动到下拉按钮上时显示下拉菜单.
+        </i>
+    </p>
+    <hr>
+    <h2>下拉菜单</h2>
+    <style>
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+            
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+            
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+            
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+            
+            .dropdown-content a:hover {background-color: #f1f1f1}
+            
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+            
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+    </style>
+    <h2>下拉菜单</h2>
+    <p>鼠标移动到按钮上打开下拉菜单。</p>
+
+    <div class="dropdown">
+        <button class="dropbtn">下拉菜单</button>
+        <div class="dropdown-content">
+            <a href="">H5</a>
+            <a href="">CSS3</a>
+            <a href="">JS</a>
+        </div>
+    </div>
+    <!--end CSS 下拉菜单-->
+
+    <!--CSS 提示工具(ToolTip)-->
+    <h2>基础提示框</h2>
+    <style>
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+            
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+            
+                /* 定位 */
+                position: absolute;
+                z-index: 1;
+            }
+            
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+    </style>
+    <div class="tooltip">鼠标移动到这
+        <span class="tooltiptext">提示文本</span>
+    </div>
+    <h3>实例解析</h3>
+    <p>HTML使用容器元素(如div)并添加"tooltip"类。在鼠标移动到&lt;div&gt;
+        上时显示提示信息。<br>
+        提示文本放在内联函数上(如&lt;spangt;)并使用="tooltiptext" <br>
+        CSS tooltip类使用position:relative.提示文本需要设置定位值position:absolute. <br>
+        <b>tooltiptext</b><i>类用于实际的提示文本。</i>
+        模式是隐藏的，在鼠标移动到元素显示。设置了一些宽度、背景色、字体色附近等样式。<br>
+        CSS3 <b>border-radius</b>属性用于为提示框添加圆角。<br>
+        <b>:hover</b>选择器用于在鼠标移动到指定元素&lt;div&gt;上时显示的提示.
+    </p>
+    <hr>
+    <h2>定位提示工具</h2>
+    <p><b>注意：</b><i>top:-5px同于定位在容器元素的中间。使用数字 <b>5</b> 因为
+        提示文本的顶部和底部的内边距(padding)是5px。<br>
+        如果修改padding的值，top值也要对用修改，这样才可以确保它是居中对齐的。<br>
+        在提示框显示在左边的情况也是这个原理。
+    </i></p>
+    <p>如果你想要提示工具显示在头部和底部。我们需要使用<b>margin-left</b>属性，
+        并设置为-60px。这个数字计算来源是使用宽度的一半来居中对齐，即：width/2
+        (120/2 = 60).
+    </p>
+    <hr>
+    <h2>添加箭头</h2>
+    <p>可以用CSS伪元素::after及content属性为提示工具创建一个小箭头标志，
+        箭头是由边框组成的，但组合起来后提示工具像个语音提示框。
+    </p>
+    <style>
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+            
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                bottom: 150%;
+                left: 50%;
+                margin-left: -60px;
+            }
+            
+            .tooltip .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: black transparent transparent transparent;
+
+            }
+            
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+            }
+    </style>
+    <div class="tooltip">鼠标移动到我这
+        <span class="tooltiptext">提示文本</span>
+    </div>
+    <h3>实例解析</h3>
+    <p>在提示工具内定位箭头：top:100%,箭头将显示在提示工具的底部。left:50%
+        用于对齐箭头。<br>
+        <b>注意：border-width</b><i>属性指定了箭头的大小。如果修改它，也要
+            修改margin-left的值。这样箭头才能居中显示。<br>
+            border-color用于将内容转换为箭头。设置顶部边框为黑色，其他是透明的。
+            如果设置了其他的也是黑色则会显示为一个黑色的四边形。
+        </i>
+    </p>
+    <h2>漂亮的提示框</h2>
+    <style>
+    .wrapper {
+        text-transform: uppercase;
+        background: #ececec;
+        color: #555;
+        cursor: help;
+        font-family: "Gill Sans", Impact, sans-serif;
+        font-size: 20px;
+        margin: 100px 75px 10px 75px;
+        padding: 15px 20px;
+        position: relative;
+        text-align: center;
+        width: 200px;
+        -webkit-transform: translateZ(0); /* webkit flicker fix */
+        -webkit-font-smoothing: antialiased; /* webkit text rendering fix */
+    }
+
+    .wrapper .tooltip {
+        background: #1496bb;
+        bottom: 100%;
+        color: #fff;
+        display: block;
+        left: -25px;
+        margin-bottom: 15px;
+        opacity: 0;
+        padding: 20px;
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+  -webkit-transform: translateY(10px);
+     -moz-transform: translateY(10px);
+      -ms-transform: translateY(10px);
+       -o-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: all .25s ease-out;
+     -moz-transition: all .25s ease-out;
+      -ms-transition: all .25s ease-out;
+       -o-transition: all .25s ease-out;
+          transition: all .25s ease-out;
+  -webkit-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+     -moz-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+      -ms-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+       -o-box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.28);
+}
+
+/* This bridges the gap so you can mouse into the tooltip without it disappearing */
+.wrapper .tooltip:before {
+  bottom: -20px;
+  content: " ";
+  display: block;
+  height: 20px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}  
+
+/* CSS Triangles - see Trevor's post */
+.wrapper .tooltip:after {
+  border-left: solid transparent 10px;
+  border-right: solid transparent 10px;
+  border-top: solid #1496bb 10px;
+  bottom: -10px;
+  content: " ";
+  height: 0;
+  left: 50%;
+  margin-left: -13px;
+  position: absolute;
+  width: 0;
+}
+  
+.wrapper:hover .tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+     -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+       -o-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+/* IE can just show/hide with no transition */
+.lte8 .wrapper .tooltip {
+  display: none;
+}
+
+.lte8 .wrapper:hover .tooltip {
+  display: block;
+}
+    </style>
+    <h2>提示工具淡入效果</h2>
+    <p>鼠标移动到以下元素，提示工具会再一秒内从 0% 到 100% 完全显示。</p>
+    
+    <div class="tooltip">鼠标移动到我这
+      <span class="tooltiptext">提示文本</span>
+    </div>
+    <div class="wrapper">
+            I have a tooltip.
+            <div class="tooltip">I am a tooltip!</div>
+          </div>
+    <!--end CSS 提示工具(ToolTip)-->
+
+    <!--CSS 图片廓-->
+    <style>
+            div.img {
+                border: 1px solid #ccc;
+            }
+            
+            div.img:hover {
+                border: 1px solid #777;
+            }
+            
+            div.img img {
+                width: 100%;
+                height: auto;
+            }
+            
+            div.desc {
+                padding: 15px;
+                text-align: center;
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            
+            .responsive {
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
+            }
+            
+            @media only screen and (max-width: 700px){
+                .responsive {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
+            
+            @media only screen and (max-width: 500px){
+                .responsive {
+                    width: 100%;
+                }
+            }
+            
+            .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+    </style>
+
+<h2 style="text-align:center">响应式图片相册</h2>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_fjords.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+    <!--end CSS 图片廓-->
+
+    <!--CSS 图像透明/不透明-->
+
+    <h2>CSS 图像透明/不透明</h2>
+    <p>使用CSS3很容器创建透明的图像。<br>
+        <b>注意：</b><i>CSS Opacity属性时W3C的CSS3建议的一部分</i>
+    </p>
+    <hr>
+    <p>IE9，Firefox，Chrome，Opera，和Safari浏览器使用透明度属性可以
+        将图像变的不透明。 Opacity属性值从0.0 - 1.0。值越小，使得元素更加透明。        
+        IE8和早期版本使用滤镜：alpha（opacity= x）。 
+        x可以采取的值是从0 - 100。较低的值，使得元素更加透明。
+    </p>
+
+    <style>
+            div.background
+            {
+              width:500px;
+              height:250px;
+              background:url(klematis.jpg) repeat;
+              border:2px solid black;
+            }
+            div.transbox
+            {
+              width:400px;
+              height:180px;
+              margin:30px 50px;
+              background-color:#ffffff;
+              border:1px solid black;
+              opacity:0.6;
+              filter:alpha(opacity=60); /* IE8 及更早版本 */
+            }
+            div.transbox p
+            {
+              margin:30px 40px;
+              font-weight:bold;
+              color:#000000;
+            }
+    </style>
+    <div class="background">
+        <div class="transbox">
+        <p>这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。
+            这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。
+            这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。
+            这些文本在透明框里。这些文本在透明框里。这些文本在透明框里。
+            这些文本在透明框里。
+        </p>
+    </div>
+    </div>
+
+    <!--end CSS 图像透明/不透明-->
+
+    <!--CSS 图片拼接技术-->
+    <h2>图像拼合</h2>
+    <p>图像拼合就是单个图像的集合。<br>
+        有许多图像的网页可能需要很长的时间来加载和生成
+        多个服务器的请求。<br>
+        使用图像拼合会降低服务器的请求数量，并节省带宽。
+    </p>
+    <h2>图像拼合-简单实例</h2>
+    <style>
+    img.home
+    {
+        width: 46px;
+        height: 44px;
+        background: url(http://www.runoob.com/images/img_navsprites.gif) 0 0;
+    }
+    img.next
+    {
+        width:43px;
+        height:44px;
+        background: url(http://www.runoob.com/images/img_navsprites.gif) -91px 0;
+    }
+    </style>
+    <img class="home" src="transparent.gif"><br><br>
+    <img class="next" src="transparent.gif">
+    <style>
+            #navlist{position:relative;}
+            #navlist li{margin:0;padding:0;list-style:none;position:absolute;top:0;}
+            #navlist li, #navlist a{height:44px;display:block;}
+            
+            #home{left:0px;width:46px;}
+            #home{background:url(http://www.runoob.com/images/img_navsprites.gif) 0 0;}
+            #home a:hover{background: url(http://www.runoob.com/images/img_navsprites_hover.gif) 0 -45px;}
+            
+            #prev{left:63px;width:43px;}
+            #prev{background:url(http://www.runoob.com/images/img_navsprites.gif) -47px 0;}
+            #prev a:hover{background: url(http://www.runoob.com/images/img_navsprites_hover.gif) -47px -45px;}
+            
+            #next{left:129px;width:43px;}
+            #next{background:url(http://www.runoob.com/images/img_navsprites.gif) -91px 0;}
+            #next a:hover{background: url(http://www.runoob.com/images/img_navsprites_hover.gif) -91px -45px;}
+    </style>
+    <ul id="navlist">
+        <li id="home"><a href="default.asp"></a></li>
+        <li id="prev"><a href="css_intro.asp"></a></li>
+        <li id="next"><a href="css_syntax.asp"></a></li>
+    </ul>
+    <b>实例解析:</b>
+    <ul>
+        <li>由于该列表项包含一个链接，我们可以使用：hover伪类</li>
+    </ul>
+    <!--end CSS 拖片拼接技术-->
+
+    <!--CSS 媒体类型-->
+    <h2>CSS媒体类型</h2>
+    <hr>
+    <p>媒体类型允许你指定文件将如何在不同媒体呈现。该文件可以以不同方式显示在屏幕上，
+        在纸张上，或听觉浏览器等等。
+    </p>
+    <hr>
+    <h2>媒体类型</h2>
+    <p>一些CSS属性只设计了某些媒体。例如"voice-family"属性是专为听觉用户代理。其他
+        一些属性可用于不同的媒体类型。例如："font-size"属性可用于屏幕和印刷媒体，但
+        有不同的值。屏幕和纸上的文件不同，通常需要一个更大的字体，sans-serif字体比较
+        适合在屏幕上阅读，而serif字体更容易在纸上阅读。
+    </p>
+    <hr>
+    <h2>@media规则</h2>
+    <p>@media规则允许在相同样式表为不同媒体设置不同的样式。<br>
+        在下面的例子告诉我们浏览器屏幕上显示一个14像素的Verdana字体样式。
+        但是如果页面打印，将是10个像素的Times字体。<br>
+        <i>请注意：font-weight在屏幕上和纸上设置为粗体：</i>
+    </p>
+    <style>
+            @media screen
+            {
+                p.test {font-family:verdana,sans-serif;font-size:14px;}
+            }
+            @media print
+            {
+                p.test {font-family:times,serif;font-size:10px;}
+            }
+            @media screen,print
+            {
+                p.test {font-weight:bold;}
+            }
+    </style>
+    <h2>其他显示类型</h2>
+    <ul>
+        <li><b>all</b>：<i>用于所有的媒体设备</i></li>
+        <li><b>aural</b>：<i>用于语言和音频合成器</i></li>
+        <li><b>braille</b>：<i>用于盲人用点字法触觉回馈设备</i></li>
+        <li><b>embossed</b>：<i>用于分页的盲人用点字法打印机</i></li>
+        <li><b>handheld</b>：<i>用于小的手持的设备</i></li>
+        <li><b>print</b>：<i>用于打印机</i></li>
+        <li><b>projection</b>：<i>用于方案展示，比如幻灯片</i></li>
+        <li><b>screen</b>：<i>用于电脑显示器</i></li>
+        <li><b>tty</b>：<i>用于使用固定密度字母栅格的媒体，比如电传打字机和终端</i></li>
+        <li><b>tv</b>：<i>用于电视机类型的设备</i></li>
+    </ul>
+    <!--end CSS 媒体类型-->
+
+    <!--CSS 属性选择器-->
+    <h2>CSS属性选择器</h2>
+    <hr>
+    <h2>具有特定属性的HTML元素样式</h2>
+    <p>具有特定属性HTML元素样式不仅仅是class和id。<br>
+        <b>注意：</b><i>IE7和IE8需要声明!DOCTYPE才支持属性选择器
+            IE6和更低的版本不支持属性选择器。
+        </i>
+    </p>
+    <hr>
+    <h2>属性选择器</h2>
+    <style>
+    [title]
+    {
+        color: blue;
+    }
+    </style>
+    <h1 title="">Hello WORLD</h1>
+    <p title="dugu">this is a pragragh</p>
+    <p>this is another p</p>
+    <hr>
+    <h2>属性和值的选择器 - 多值</h2>
+    <p>下面是包含指定值的title属性的元素样式的例子，使用(~)分隔属性和值</p>
+    <style>
+            [title~=hello]
+            {
+                color:red;
+            } 
+    </style>
+    <h2>将适用:</h2>
+    <h1 title="hello world">Hello world</h1>
+    <p title="student hello">Hello CSS students!</p>
+    <hr>
+    <h2>将不适用:</h2>
+    <p title="student">Hi CSS students!</p>
+    <hr>
+    <p>下面是包含指定值的lang属性的元素样式的例子，使用(|)分隔属性和值</p>
+    <style>
+            [lang|=en]
+            {
+                color:blue;
+            }
+    </style>
+    <h2>将适用:</h2>
+    <p lang="en">Hello!</p>
+    <p lang="en-us">Hi!</p>
+    <p lang="en-gb">Ello!</p>
+    <hr>
+    <h2>将不适用:</h2>
+    <p lang="us">Hi!</p>
+    <p lang="no">Hei!</p>
+    <hr>
+    <h2>表单样式</h2>
+    <p>属性选择器样式无需使用class或id的形式</p>
+    <style>
+            input.next[type="text"]
+            {
+                width:150px;
+                display:block;
+                margin-bottom:10px;
+                background-color:yellow;
+            }
+            input.next[type="button"]
+            {
+                width:120px;
+                margin-left:35px;
+                display:block;
+            }
+    </style>
+    <form name="input" action="demo-form.php" method="get">
+            Firstname:<input class="next" type="text" name="fname" value="Peter" size="20">
+            Lastname:<input type="text" name="lname" value="Griffin" size="20">
+    <input class="next" type="button" value="Example Button">
+    <style>
+    input.list[type=text],select, textarea
+    {
+        width: 100%;
+        padding: 12px;
+        border: 1px border-style #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input.list[type=submit] 
+    {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input.list[type=submit]:hover {
+    background-color: #45a049;
+    }
+
+    .container 
+    {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    }
+    </style>
+    <div class="container">
+        <form action="">
+                <label for="cname">联系人</label>
+                <input class="list" type="text" id="cname" name="cname" placeholder="请输入姓名..">
+            
+                <label for="email">邮箱</label>
+                <input class="list" type="text" id="email" name="email" placeholder="请输入邮箱..">
+            
+                <label for="country">城市</label>
+                <select id="country" name="country">
+                  <option value="australia">北京</option>
+                  <option value="canada">上海</option>
+                  <option value="usa">厦门</option>
+                </select>
+            
+                <label for="subject">反馈信息</label>
+                <textarea id="subject" name="subject" placeholder="反馈内容.." style="height:200px"></textarea>
+            
+                <input class="list" type="submit" value="提交">
+              </form>
+            </div>
+        </form>
+    </div>
+    <!--end CSS 属性选择器-->
+
+    <!--CSS3 简介-->
+    <h2>CSS3简介</h2>
+    <hr>
+    <p>对CSS3已完全向后兼容，所以就不必改变现有的设计。浏览器将永远支持CSS2</p>
+    <hr>
+    <h2>CSS3 模块</h2>
+    <p>CSS3被拆分为"模块"。旧规范已经拆分成小块，还增加了新的。<br>
+        一些最重要的CS3模块如下：
+        <ul>
+            <li>选择器</li>
+            <li>盒模型</li>
+            <li>背景和边框</li>
+            <li>文字特效</li>
+            <li>2D/3D转换</li>
+            <li>动画</li>
+            <li>多列布局</li>
+            <li>用户界面</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>CSS3建议</h2>
+    <p>W3C的CSS3规范仍在开发。<br>
+        但是，许多新的CSS3属性已在现代浏览器使用.
+    </p>
+    <!--end CSS3 简介-->
+
+    <!--CSS3 边框-->
+    <h2>CSS边框</h2>
+    <p>用CSS3，可以创建圆角边框，添加阴影框，并作为边界的形象而
+        不使用设计程序，如Photoshop。<br>
+        在本章中，将了解以下的边框属性：
+        <ul>
+            <li>border-radius</li>
+            <li>box-shadow</li>
+            <li>border-image</li>
+        </ul>
+    </p>
+    <hr>
+    <h2>CSS3圆角</h2>
+    <p>在CSS2中添加圆角。我们不得不在每个角度使用不同的图像。<br>
+        在CSS3中，很容易创建圆角。<br>
+        在CSS3中border-radius属性被用于创建圆角
+    </p>
+    <style>
+    div.radius
+    {
+        border: 2px border-style #a1a1a1;
+        padding: 10px 40px;
+        background: #ddd;
+        width: 300px;
+        border-radius: 25px;
+    }
+    </style>
+    <div class="radius">border-radius 属性允许为元素添加圆角边框！</div>
+    <hr>
+    <h2>CSS3盒阴影</h2>
+    <p>CSS3中的box-shadow属性用来被添加阴影:</p>
+    <style>
+    div.shadow
+    {
+        width: 300px;
+        height: 100px;
+        background-color: yellow;
+        box-shadow: 10px 10px 5px 0px #888;
+    }
+    </style>
+    <div class="shadow"></div>
+    <hr>
+    <h2>CSS3边界图片</h2>
+    <p>有了CSS3的border-image属性，你可以使用图像创建一个边框：<br>
+        border-image属性允许你指定一个图片作为边框！用于创建上文边框
+        的原始图像：<br>
+        在div中使用图片创建边框。
+    </p>
+    <style>
+    div.border-img
+    {
+	    border:15px solid transparent;
+	    width:250px;
+	    padding:10px 20px;
+    }
+    #round
+    {
+	    -webkit-border-image:url(http://www.runoob.com/images/border.png) 30 30 round; /* Safari 5 and older */
+	    -o-border-image:url(http://www.runoob.com/images/border.png) 30 30 round; /* Opera */
+	    border-image:url(http://www.runoob.com/images/border.png) 30 30 round;
+    }
+    #stretch
+    {   
+	    -webkit-border-image:url(http://www.runoob.com/images/border.png) 30 30 stretch; /* Safari 5 and older */
+	    -o-border-image:url(http://www.runoob.com/images/border.png) 30 30 stretch; /* Opera */
+	    border-image:url(http://www.runoob.com/images/border.png) 30 30 stretch;
+    }
+    </style>
+    <p><b>注意: </b> Internet Explorer 不支持 border-image 属性。</p>
+    <p> border-image 属性用于设置图片的边框。</p>
+    
+    <div id="round">这里，图像平铺（重复）来填充该区域。</div>
+    <br>
+    <div id="stretch">这里，图像被拉伸以填充该区域。</div>
+    
+    <p>这是我们使用的图片素材：</p>
+    <img src="http://www.runoob.com/images/border.png" />
+    <!--end CSS3 边框-->
+
+    <!--CSS3 圆角-->
+    <h2>CSS3 border-radius属性</h2>
+    <p>使用CSS3 border-radius属性，可以给任何元素制作圆角。<br>
+        以下为三个实例：<br>
+    </p>
+    <style>
+    #rcorners1
+    {
+        border-radius: 25px;
+        background: purple;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+    }
+    #rcorners2
+    {
+        border-radius: 25px;
+        border: 2px solid yellowgreen;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+    }
+    #rcorners3
+    {
+        border-radius: 25px;
+        background: url("../res/1.jpg");
+        background-position: left top;
+        background-repeat: repeat;
+        padding: 20px;
+        width: 200px;
+        height: 150px;
+    }
+    </style>
+    <p> border-radius 属性允许向元素添加圆角。</p>
+    <p>指定背景颜色元素的圆角:</p>
+    <p id="rcorners1">圆角</p>
+    <p>指定边框元素的圆角:</p>
+    <p id="rcorners2">圆角</p>
+    <p>指定背景图片元素的圆角:</p>
+    <p id="rcorners3">圆角</p>
+    <h2>CSS3 border-radius- 指定每个圆角</h2>
+    <p>如果你在border-radius属性中指定一个值，那么将生成4个圆角。<br>
+        但是，如果你要在四个角上一一指定，可以使用以下规则。
+        <ul>
+            <li><b>四个值</b>第一个值为左上角，第二个值为右上角，
+                第三个值为右下角，第四个值为左下角</li>
+            <li><b>三个值</b>第一个值为左上角，第二个值为右上角，
+                第三个值为右下角</li>
+            <li><b>两个值</b>第一个值为左上角与右下角，第二个值为右上角与左下角</li>
+            <li><b>一个值</b>四个圆角值相同</li>
+        </ul>
+    </p>
+    <h2>椭圆边角</h2>
+    <style> 
+            #rcorners7 {
+                border-radius: 50px/15px;
+                background: #8AC007;
+                padding: 20px; 
+                width: 200px;
+                height: 150px; 
+            }
+            #rcorners8 {
+                border-radius: 15px/50px;
+                background: #8AC007;
+                padding: 20px; 
+                width: 200px;
+                height: 150px; 
+            }
+            
+            #rcorners9 {
+                border-radius: 50%;
+                background: #8AC007;
+                padding: 20px; 
+                width: 200px;
+                height: 150px;
+            } 
+    </style>
+    <p>椭圆边框 - border-radius: 50px/15px:</p>
+    <p id="rcorners7"></p>
+    
+    <p> 椭圆边框 - border-radius: 15px/50px:</p>
+    <p id="rcorners8"></p>
+    
+    <p>椭圆边框 - border-radius: 50%:</p>
+    <p id="rcorners9"></p>
+    <!--end CSS3 圆角-->
+
+    <!--CSS3 背景-->
+    <h2>CSS3背景</h2>
+    <p>CSS3中包含几个新的背景属性，提供更大背景元素控制。<br>
+        在本章您将了解一下背景属性：
+        <ul>
+            <li>background-image</li>
+            <li>background-size</li>
+            <li>background-origin</li>
+            <li>background-clip</li>
+        </ul>
+    </p>
+    <h2>CSS3 background-image属性</h2>
+    <p>CSS3中可以通过background-image属性添加背景图片。<br>
+        不同的背景图片和图像用逗号隔开，所有的图片中显示在最顶端<br>
+        的为第一张。
+    </p>
+    <hr>
+    <h2>CSS3 background-size属性</h2>
+    <p>background-size指定背景图像的大小。CSS3以前，背景图像大小
+        由图像的实际大小决定。<br>
+        CSS3中可以指定背景图片，让我们重新在不同的环境中指定背景图片的大小。<br>
+        您可以指定像素或百分比大小。<br>
+        你指定的大小是相对于父元素的宽度和高度的百分比的大小。
+    </p>
+    <hr>
+    <h2>CSS3 background-origin属性</h2>
+    <p>background-origin属性指定了背景图像的位置区域。<br>
+        content-box，padding-box和border-box区域内可以放置背景图像。<br>
+        <img src="http://www.runoob.com/images/background-origin.gif" alt="">
+    </p>
+    <hr>
+    <h2>CSS3多个背景图像</h2>
+    <p>CSS3允许你在元素<br>
+        那个添加多个背景图像。
+    </p>
+    <h2>CSS3 background-clip属性</h2>
+    <p>CSS3中的background-clip背景裁剪属性是从指定位置开始绘制.</p>
+    <style>
+            #example1 {
+                border: 10px dotted black;
+                padding:35px;
+                background: yellow;
+            }
+            
+            #example2 {
+                border: 10px dotted black;
+                padding:35px;
+                background: yellow;
+                background-clip: padding-box;
+            }
+            
+            #example3 {
+                border: 10px dotted black;
+                padding:35px;
+                background: yellow;
+                background-clip: content-box;
+            }
+    </style>
+    <p>没有背景剪裁 (border-box没有定义):</p>
+    <div id="example1">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    
+    <p>background-clip: padding-box:</p>
+    <div id="example2">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    
+    <p>background-clip: content-box:</p>
+    <div id="example3">
+    <h2>Lorem Ipsum Dolor</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    <!--end CSS3 背景-->
+
+    <!--CSS3 渐变-->
+    <h2>CSS3 <i>渐变(Gradients)</i></h2>
+    <hr>
+    <img src="http://www.runoob.com/wp-content/uploads/2014/07/gradient_top.png" alt="">
+    <p>CSS3渐变(gradients)可以让你在两个或者多个指定颜色之间显示平稳的过度。<br>
+        以前，必须使用图像来实现这些效果。但是通过使用CSS3渐变(gradients)，你可以
+        减少下载的事件和带宽的使用。此外，渐变效果的元素在放大时看起来效果更好，因为
+        渐变(gradients)是由浏览器生成的。<br>
+        CSS3定义了两种类型的渐变(gradients):
+        <ul>
+            <li><b>线性渐变(Linear Gradients)-向下/向上/向左/向右/对角方向</b></li>
+            <li><b>径向渐变(Radial Gradients)-由它们的中心定义</b></li>
+        </ul>
+    </p>
+    <hr>
+    <h2>CSS3线性渐变</h2>
+    <p>为了创建一个线性渐变，必须至少定义两种颜色节点。颜色节点即是你想要呈现
+        平稳过渡的颜色。同时，也可以设置一个起点和一个方向(或一个角度)。
+    </p>
+    <style>
+    #grad1
+    {
+        height: 200px;
+        background: -webkit-linear-gradient(red,blue);
+        background: -o-linear-gradient(red,blue);
+        background: -moz-linear-gradient(red,blue);
+        background: linear-gradient(red,blue);
+    }
+    </style>
+    <h3>线性渐变，从上到下(默认情况下)</h3>
+    <p>从顶部开始的线性渐变。起点是红色，慢慢过渡到蓝色</p>
+    <div id="grad1"></div>
+    <p><strong>注意：</strong><i>IE9及之前的版本不支持渐变.</i></p>
+    <style>
+            #grad2 {
+                height: 200px;
+                background: -webkit-linear-gradient(left, red , blue); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(right, red, blue); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(right, red, blue); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to right, red , blue); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>线性渐变 - 从左到右</h3>
+    <p>从左边开始的线性渐变。起点是红色，慢慢过渡到蓝色：</p>
+    
+    <div id="grad2"></div>
+    <style>
+            #grad3 {
+                height: 200px;
+                background: -webkit-linear-gradient(left top, red , blue); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(bottom right, red, blue); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(bottom right, red, blue); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to bottom right, red , blue); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>线性渐变 - 对角</h3>
+    <p>从左上角开始（到右下角）的线性渐变。起点是红色，慢慢过渡到蓝色：</p>
+    
+    <div id="grad3"></div>
+    <hr>
+    <h2>使用角度</h2>
+    <p>如果想要在渐变的方向上做更多的控制，可以定义一个角度，而不用定义预定义方向(
+        to bottom,to top,to right,to bottom right,等等)。
+    </p>
+    <h2>语法</h2>
+    <p><span style="background-color:gray">
+        background: linear-gradient(angle,color-stop1,color-stop2);
+    </span><br>
+    <i>角度是指水平线和渐变线之间的角度，逆时针方向计算。换句话说，0deg将创建一个
+        从上到下的渐变，90deg将创建一个从左到右的渐变。
+    </i>
+    <img src="http://www.runoob.com/wp-content/uploads/2014/07/7B0CC41A-86DC-4E1B-8A69-A410E6764B91.jpg" alt="">
+    </p>
+    <p>
+        但是，请注意很多浏览器(Chrome,Safari,Firefox等)的使用了旧的标准，即0deg将创建
+        一个从左到右的渐变，90deg将创建一个从下到上的渐变。换算公式90 - x = y其中x为
+        标准角度，y为非标准角度。<br>
+        下面的实例演示了如何在线性渐变上使用角度：
+    </p>
+    <style>
+            #grad4 {
+                height: 100px;
+                background: -webkit-linear-gradient(0deg, red, blue); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(0deg, red, blue); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(0deg, red, blue); /* Firefox 3.6 - 15 */
+                background: linear-gradient(0deg, red, blue); /* 标准的语法（必须放在最后） */
+            }
+            
+            #grad5 {
+                height: 100px;
+                background: -webkit-linear-gradient(90deg, red, blue); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(90deg, red, blue); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(90deg, red, blue); /* Firefox 3.6 - 15 */
+                background: linear-gradient(90deg, red, blue); /* 标准的语法（必须放在最后） */
+            }
+            
+            #grad6 {
+                height: 100px;
+                background: -webkit-linear-gradient(180deg, red, blue); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(180deg, red, blue); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(180deg, red, blue); /* Firefox 3.6 - 15 */
+                background: linear-gradient(180deg, red, blue); /* 标准的语法（必须放在最后） */
+            }
+            
+            #grad7 {
+                height: 100px;
+                background: -webkit-linear-gradient(-90deg, red, blue); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(-90deg, red, blue); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(-90deg, red, blue); /* Firefox 3.6 - 15 */
+                background: linear-gradient(-90deg, red, blue); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>线性渐变 - 使用不同的角度</h3>
+    <div id="grad4" style="color:white;text-align:center;">0deg</div><br>
+    <div id="grad5" style="color:white;text-align:center;">90deg</div><br>
+    <div id="grad6" style="color:white;text-align:center;">180deg</div><br>
+    <div id="grad7" style="color:white;text-align:center;">-90deg</div>
+    <hr>
+    <h2>使用多个颜色结点</h2>
+    <p>下面的实例演示了如何设置多个颜色结点</p>
+    <style>
+            #grad-multi {
+                height: 55px;
+                background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <div id="grad-multi" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+            渐变背景
+    </div>
+    <hr>
+    <h2>使用透明度(transparent)</h2>
+    <p>CSS3渐变也支持透明度(transparent),可用于创建减弱变淡的效果。<br>
+        为了添加透明度，我们使用rgba()函数来定义颜色结点。rgba()函数中的最后
+        一个参数可以是从0到1的值，它定义了颜色的透明度：0表示完全透明；1表示
+        完全不透明。
+    </p>
+    <style>
+            #grad-trans {
+                height: 200px;
+                background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* Safari 5.1 - 6.0 */
+                background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Opera 11.1 - 12.0 */
+                background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Firefox 3.6 - 15 */
+                background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>线性渐变 - 透明度</h3>
+    <p>为了添加透明度，我们使用 rgba() 函数来定义颜色结点。
+        rgba() 函数中的最后一个参数可以是从 0 到 1 的值，它定义了颜色的透明度：0 表示完全透明，1 表示完全不透明。</p>
+    
+    <div id="grad-trans"></div>
+    <hr>
+    <h2>重复的线性渐变</h2>
+    <p>repeating-linear-gradient()函数用于重复线性渐变。</p>
+    <style>
+            #grad-repeat {
+                height: 200px;
+                background: -webkit-repeating-linear-gradient(red, yellow 10%, green 20%); /* Safari 5.1 - 6.0 */
+                background: -o-repeating-linear-gradient(red, yellow 10%, green 20%); /* Opera 11.1 - 12.0 */
+                background: -moz-repeating-linear-gradient(red, yellow 10%, green 20%); /* Firefox 3.6 - 15 */
+                background: repeating-linear-gradient(red, yellow 10%, green 20%); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>重复的线性渐变</h3>
+    
+    <div id="grad-repeat"></div>
+    <hr>
+    <h2>CSS径向渐变</h2>
+    <p>径向渐变由它的中心定义。</p>
+    <p>为了创建一个径向渐变，你也必须至少定义两种颜色结点。颜色结点即你想要呈现平稳
+        过度的颜色。同时，也可以指定渐变的中心，形状(圆形或者椭圆形),大小。默认情况下
+        ，渐变的中心是center(表示在中心点)，渐变的形状是ellipse(表示椭圆形)，渐变的
+        大小是farthest-corner(表示到最远的角度)。<br>
+        <b>语法：</b><br>
+        <span style="background-color:gray">
+            background: radial-gradient(center,shape,size,start-color,...,last-color);    
+        </span><br>
+    </p>
+    <style>
+            #grad-radial {
+                height: 150px;
+                width: 200px;
+                background: -webkit-radial-gradient(red, green, blue); /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(red, green, blue); /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(red, green, blue); /* Firefox 3.6 - 15 */
+                background: radial-gradient(red 5%, green 15%, blue 60%); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>径向渐变 - 颜色结点均匀分布</h3>
+    <div id="grad1"></div>
+    <hr>
+    <h2>设置形状</h2>
+    <p>shape参数定义了形状。它可以是值circle或ellipse。
+        其中，circle表示圆形，ellipse表示椭圆形。默认是ellipse.
+    </p>
+    <hr>
+    <h2>不同尺寸大小关键字的使用</h2>
+    <p>size参数定义了渐变的大小。它可以是一下四个值：
+        <ul>
+            <li><i>closest-side</i></li>
+            <li><i>farthest-side</i></li>
+            <li><i>closest-corner</i></li>
+            <li><i>farthest-corner</i></li>
+        </ul>
+    </p>
+    <style>
+            #grad-one {
+                height: 150px;
+                width: 150px;
+                background: -webkit-radial-gradient(60% 55%, closest-side,blue,green,yellow,black); /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(60% 55%, closest-side,blue,green,yellow,black); /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(60% 55%, closest-side,blue,green,yellow,black); /* Firefox 3.6 - 15 */
+                background: radial-gradient(60% 55%, closest-side,blue,green,yellow,black); /* 标准的语法（必须放在最后） */
+            }
+            
+            #grad-two {
+                height: 150px;
+                width: 150px;
+                background: -webkit-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black); /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black); /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(60% 55%, farthest-side,blue,green,yellow,black); /* Firefox 3.6 - 15 */
+                background: radial-gradient(60% 55%, farthest-side,blue,green,yellow,black); /* 标准的语法（必须放在最后） */
+            }
+            
+            #grad-three {
+                height: 150px;
+                width: 150px;
+                background: -webkit-radial-gradient(60% 55%, closest-corner,blue,green,yellow,black); /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(60% 55%, closest-corner,blue,green,yellow,black); /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(60% 55%, closest-corner,blue,green,yellow,black); /* Firefox 3.6 - 15 */
+                background: radial-gradient(60% 55%, closest-corner,blue,green,yellow,black); /* 标准的语法（必须放在最后） */
+            }
+            
+            #grad-four {
+                height: 150px;
+                width: 150px;
+                background: -webkit-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black); /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black); /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black); /* Firefox 3.6 - 15 */
+                background: radial-gradient(60% 55%, farthest-corner,blue,green,yellow,black); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>径向渐变 - 不同尺寸大小关键字的使用</h3>
+    
+    <p><strong>closest-side：</strong></p>
+    <div id="grad-one"></div>
+    
+    <p><strong>farthest-side：</strong></p>
+    <div id="grad-two"></div>
+    
+    <p><strong>closest-corner：</strong></p>
+    <div id="grad-three"></div>
+    
+    <p><strong>farthest-corner（默认）：</strong></p>
+    <div id="grad-four"></div>
+    <hr>
+    <h2>重复的径向渐变</h2>
+    <p>repeating-radial-gradient()函数用于重复径向渐变:</p>
+    <style>
+            #grad-repeat-radial {
+                height: 150px;
+                width: 200px;
+                background: -webkit-repeating-radial-gradient(red, yellow 10%, green 15%); /* Safari 5.1 - 6.0 */
+                background: -o-repeating-radial-gradient(red, yellow 10%, green 15%); /* Opera 11.6 - 12.0 */
+                background: -moz-repeating-radial-gradient(red, yellow 10%, green 15%); /* Firefox 3.6 - 15 */
+                background: repeating-radial-gradient(red, yellow 10%, green 15%); /* 标准的语法（必须放在最后） */
+            }
+    </style>
+    <h3>重复的径向渐变</h3>
+    
+    <div id="grad-repeat-radial"></div>
+    <!--end CSS3 渐变-->
+
+    <!--CSS3 文本效果-->
+    <h2>CSS3文本效果</h2>
+    <p>CSS3中包含了几个新的文本特性。<br>
+        在本章中将了解一下文本属性：
+        <ul>
+            <li><b>text-shadow</b></li>
+            <li><b>box-shadow</b></li>
+            <li><b>text-overflow</b></li>
+            <li><b>word-wrap</b></li>
+            <li><b>word-break</b></li>
+        </ul>
+    </p>
+    <hr>
+    <h2>CSS3的文本阴影</h2>
+    <style>
+        h3
+        {
+            text-shadow: 5px 5px 5px red;
+        }
+    </style>
+    <h3>Text-Shadow effect</h3>
+    <hr>
+    <h2>CSS3 box-shadow属性</h2>
+    <p>CSS3中CSS3 box-shadow属性适用于盒子阴影。</p>
+    <style> 
+            div.box-shadow
+            {
+                width:300px;
+                height:100px;
+                background-color:yellow;
+                box-shadow: 10px 10px 5px #888888;
+            }
+    </style>
+    <div class="box-shadow"></div>
+    <h2>可以在::before和::after两个伪元素中添加阴影效果</h2>
+    <style>
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    width: 70%;
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}
+    </style>
+    <div id="boxshadow">
+            <img src="../res/1.jpg" alt="Norway" width="600" height="400">
+    </div>
+    <h2>文字卡片效果</h2>
+    <style>
+    div.card {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+}
+
+div.container {
+    padding: 10px;
+}
+    </style>
+    <div class="card">
+            <div class="header">
+              <h1>1</h1>
+            </div>
+          
+            <div class="container">
+              <p>January 1, 2016</p>
+            </div>
+    </div>
+    <hr>
+    <h2>CSS3 Text Overflow属性</h2>
+    <p>CSS3文本溢出属性指定应向用户如何显示溢出内容。</p>
+    <style> 
+            div.test
+            {
+                white-space:nowrap; 
+                width:12em; 
+                overflow:hidden; 
+                border:1px solid #000000;
+            }
+    </style>
+    <p>以下 div 容器内的文本无法完全显示，可以看到它被裁剪了。</p>
+    <p>div 使用 &quot;text-overflow:ellipsis&quot;:</p>
+    
+    <div class="test" style="text-overflow:ellipsis;">
+        This is some long text that will not fit in the box</div>
+    <p>div 使用 &quot;text-overflow:clip&quot;:</p>
+    <div class="test" style="text-overflow:clip;">
+        This is some long text that will not fit in the box</div>
+    <p>div 使用自定义字符串 &quot;text-overflow: 
+        &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
+    <div class="test" style="text-overflow:'>>';">
+        This is some long text that will not fit in the box</div>
+    <hr>
+    <h2>CSS3的换行</h2>
+    <p>如果某个单词太长，不适合在一个区域内，它扩展到外面：<br>
+        CSS3中，自动换行属性允许你强制文本换行-即使这意味着分裂它中间
+        的一个字：<br>
+        CSS代码如下：
+    </p>
+    <style> 
+            p.test-break
+            {
+                width:11em; 
+                border:1px solid #000000;
+                word-wrap:break-word;
+            }
+    </style>
+    <p class="test-break"> This paragraph contains a very long word: 
+        thisisaveryveryveryveryveryverylongword. 
+        The long word will break and wrap to the next line.</p>
+    <hr>
+    <h2>CSS3单词拆分换行</h2>
+    <p>CSS3单词拆分换行属性指定换行规则：<br>
+        CSS代码如下：
+    </p>
+    <style> 
+            p.test1
+            {
+                width:9em; 
+                border:1px solid #000000;
+                word-break:keep-all;
+            }
+            
+            p.test2
+            {
+                width:9em; 
+                border:1px solid #000000;
+                word-break:break-all;
+            }
+    </style>
+    <p class="test1"> This paragraph contains some text. 
+        This line will-break-at-hyphenates.</p>
+    <p class="test2"> This paragraph contains some text: 
+        The lines will break at any character.</p>
+    <hr>
+    <h2>新文本属性</h2>
+    <ul>
+        <li><b>hanging-punctuation</b>：<i>规定标点字符是否位于线框之外</i></li>
+        <li><b>puctuation-trim</b>：<i>规定是否对标点字符进行修剪</i></li>
+        <li><b>text-align-last</b>：<i>设置如何让对齐最后一行或紧挨着强制换行符之前的行</i></li>
+        <li><b>text-emphasis</b>：<i>向元素的文本应用重点标记以及重点标记的前景色</i></li>
+        <li><b>text-justify</b>：<i>规定当text-align设置为"justify"时所使用的对齐方法</i></li>
+        <li><b>text-outline</b>：<i>规定文本的轮廓</i></li>
+        <li><b>text-overflow</b>：<i>规定当文本溢出包含元素时发生的事情</i></li>
+        <li><b>text-shadow</b>：<i>向文本添加阴影</i></li>
+        <li><b>text-wrap</b>：<i>规定文本的换行规则</i></li>
+        <li><b>word-break</b>：<i>规定非中日韩文本的换行规则</i></li>
+        <li><b>word-wrap</b>：<i>允许对长的不可分隔的单词进行分隔并换行到下一行</i></li>
+    </ul>
+    <!--end CSS3 文本效果-->
+
+    <!--CSS3 字体-->
+    <h2>CSS @font-face规则</h2>
+    <p>以前的CSS3版本，网页设计师不得不使用用户计算机已经安装的字体<br>
+        使用CSS3，网页设计师可以使用喜欢的任何字体。<br>
+        当你发现要使用的字体文件时，只需简单的将字体文件包含在网站中，它
+        会自动下载给需要的用户。<br>
+        所选择的字体在新的CSS3版本有关@font-face规则描述。<br>
+        "自己的"的字体在CSS3@font-face规则中定义。
+    </p>
+    <h2>使用您需要的字体</h2>
+    <p>在新的@font-face规则中，您必须首先定义字体的名称(比如myFirstFont),
+        然后指向改字体文件。
+        <b>提示:</b><i>URL请使用小写字母的字体，大写字母在IE中会产生意外的结果</i><br>
+        如需为HTML元素使用的字体，请通过font-family属性来引用字体的名称(myFirstFont).
+    </p>
+    <style> 
+            @font-face
+            {
+                font-family: myFirstFont;
+                src: url('Sansation_Light.ttf')
+                    ,url('Sansation_Light.eot'); /* IE9 */
+            }
+            
+            div.font
+            {
+                font-family:myFirstFont;
+            }
+            
+    </style>
+    <p><b>注意:</b> Internet Explorer 9 只支持 .eot 格式的字体.</p>
+    
+    <div class="font">
+    使用 CSS3,网站终于可以使用字体以外的预先选择“合法”字体
+    </div>
+    <h2>CSS字体描述</h2>
+    <p>下表列出了所有的字体描述和里面的@font-face规则定义：</p>
+    <table class="am-table am-table-bordered am-table-radius">
+            
+            <tbody><tr>
+            <th style="width:20%">描述符</th>
+            <th style="width:25%">值</th>
+            <th>描述</th>
+            </tr>
+            
+            <tr>
+            <td>font-family</td>
+            <td><i>name</i></td>
+            <td>必需。规定字体的名称。</td>
+            </tr>
+            
+            <tr>
+            <td>src</td>
+            <td><i>URL</i></td>
+            <td>必需。定义字体文件的 URL。</td>
+            </tr>
+            
+            <tr>
+            <td>font-stretch</td>
+            <td>
+                <ul>
+                <li>normal</li>
+                <li>condensed</li>
+                <li>ultra-condensed</li>
+                <li>extra-condensed</li>
+                <li>semi-condensed</li>
+                <li>expanded</li>
+                <li>semi-expanded</li>
+                <li>extra-expanded</li>
+                <li>ultra-expanded</li>
+                </ul>
+            </td>
+            <td>可选。定义如何拉伸字体。默认是 "normal"。</td>
+            </tr>
+            
+            <tr>
+            <td>font-style</td>
+            <td>
+                <ul>
+                <li>normal</li>
+                <li>italic</li>
+                <li>oblique</li>
+                </ul>
+            </td>
+            <td>可选。定义字体的样式。默认是 "normal"。</td>
+            </tr>
+            
+            <tr>
+            <td>font-weight</td>
+            <td>
+                <ul>
+                <li>normal</li>
+                <li>bold</li>
+                <li>100</li>
+                <li>200</li>
+                <li>300</li>
+                <li>400</li>
+                <li>500</li>
+                <li>600</li>
+                <li>700</li>
+                <li>800</li>
+                <li>900</li>
+                </ul>
+            </td>
+            <td>可选。定义字体的粗细。默认是 "normal"。</td>
+            </tr>
+            
+            <tr>
+            <td>unicode-range</td>
+            <td><i>unicode-range</i></td>
+            <td>可选。定义字体支持的 UNICODE 字符范围。默认是 "U+0-10FFFF"。</td>
+            </tr>
+    </tbody></table>	
+    <!--end CSS3 字体-->
+
+    <!--CSS3 2D转换-->
+    <h2>CSS3转换</h2>
+    <p>CSS3转换。我们可以移动，比例化反过来，旋转，和拉伸元素。</p>
+    <hr>
+    <h2>它是如何工作的？</h2>
+    <p>变换的效果，让某个元素改变形状，大小和位置。<br>
+        您可以转换您使用2D或3D元素。
+    </p>
+    <h2>2D转换</h2>
+    <p>在本章您将了解2D变换方法：</p>
+    <ul>
+        <li>translate()</li>
+        <li>rotate()</li>
+        <li>scale()</li>
+        <li>skew()</li>
+        <li>matrix()</li>
+    </ul>
+    <style> 
+    div.common
+    {
+        width:200px;
+                height:100px;
+                background-color:yellow;
+    }
+            div.rotate
+            {
+                /* Rotate div */
+                transform:rotate(30deg);
+                -ms-transform:rotate(30deg); /* IE 9 */
+                -webkit-transform:rotate(30deg); /* Safari and Chrome */
+            }
+            div.translate
+            {
+                transform: translate(50px,100px);
+                -ms-transform: translate(50px,100px); /* IE 9 */
+                -webkit-transform: translate(50px,100px); /* Safari and Chrome */
+            }
+            div.scale
+            {
+                
+                -ms-transform:scale(2,3); /* IE 9 */
+                -webkit-transform: scale(2,3); /* Safari */
+                transform: scale(2,3); /* 标准语法 */
+
+            }
+            div.skew
+            {
+                transform: skew(30deg,20deg);
+                -ms-transform: skew(30deg,20deg); /* IE 9 */
+                -webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
+            }
+            div.matrix
+            {
+                transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+                -ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+                -webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */
+            }
+    </style>
+    <div class="common rotate"><h3>Hello</h3></div>
+    <div class="common translate"><h3>Hello</h3></div>
+    <div class="common scale"><h3>Hello</h3></div>
+    <div class="common skew"><h3>Hello</h3></div>
+    <div class="common matrix"><h3>Hello</h3></div>
+    <hr>
+    <h2>新转换属性</h2>
+    <p>以下列出了所有的转换属性</p>
+    <ul>
+        <li><b>transform</b>：<i>适用于2D或3D转换的元素</i></li>
+        <li><b>transform-origin</b>：<i>允许您更改转化元素的位置</i></li>
+    </ul>
+    <h2>2D转换方法</h2>
+    <ul>
+        <li><b>martix(n,n,n,n,n,n)</b>：<i>定义2D转换，使用六个值的矩阵</i></li>
+        <li><b>translate(x,y)</b>：<i>定义2D转换，沿着X和Y轴移动元素</i></li>
+        <li><b>translateX(n)</b>：<i>定义2D转换，沿着X轴移动元素</i></li>
+        <li><b>translateY(n)</b>：<i>定义2D转换，沿着Y轴移动元素</i></li>
+        <li><b>scale(x,y)</b>：<i>定义2D缩放转换，改变元素的宽度和高度</i></li>
+        <li><b>scaleX(n)</b>：<i>定义缩放转换，改变元素的宽度</i></li>
+        <li><b>scaleY(n)</b>：<i>定义缩放转换，改变元素的高度</i></li>
+        <li><b>rotate(angle)</b>：<i>定义2D旋转，在参数中规定角度</i></li>
+        <li><b>skew(x-angle,y-angle)</b>：<i>定义2D倾斜转换，沿着X和Y轴。</i></li>
+        <li><b>skewX(angle)</b>：<i>定义2D倾斜转换，沿着X轴</i></li>
+        <li><b>skewY(angle)</b>：<i>定义2D倾斜转换，沿着Y轴</i></li>
+    </ul>
+    <!--end CSS3 2D转换-->
+
+    <!--CSS3 3D转换-->
+    <h2>3D转换</h2>
+    <p>CSS3中允许您使用3D转换来对元素进行格式化。<br>
+        在本章中，您将学到其中的一些3D转换方法：
+        <ul>
+            <li><i>rotateX()</i></li>
+            <li><i>rotateY()</i></li>
+        </ul>
+    </p>
+    <style> 
+            div.common
+            {
+                width:100px;
+                height:75px;
+                background-color:red;
+                border:1px solid black;
+            }
+            div.rotate-x
+            {
+                transform: rotateX(120deg);
+                -webkit-transform: rotateX(120deg);
+            }
+            div.rotate-y
+            {
+                transform:rotateY(130deg);
+                -webkit-transform:rotateY(130deg); /* Safari and Chrome */
+            }
+    </style>
+    <p><b>注意:</b> Internet Explorer 9 (以及更早版本的浏览器) 和 Opera 不支持 rotateY方法.</p>
+    
+    <div class="common">Hello. This is a DIV element.</div>
+    
+    <div class="common rotate-x">Hello. This is a DIV element.</div>
+    <div class="common rotate-y">Hello. This is a DIV element.</div>
+    <h2>转换属性</h2>
+    <p>下标列出了所有的转换属性</p>
+    <ul>
+        <li><b>transform</b>：<i>向元素应用2D或3D转换</i></li>
+        <li><b>transform-origin</b>：<i>允许你改变被转换元素的位置</i></li>
+        <li><b>transform-style</b>：<i>规定被嵌套元素如何在3D空间中显示</i></li>
+        <li><b>perspective</b>：<i>规定3D元素的透视效果</i></li>
+        <li><b>perspective-origin</b>：<i>规定3D元素的底部位置</i></li>
+        <li><b>backface-visibility</b>：<i>定义元素在不面对屏幕时是否可见</i></li>
+    </ul>
+    <h2>3D转换方法</h2>
+    <ul>
+        <li><b>martrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</b>：<i>定义3D转换，使用16个值的4*4矩阵</i></li>
+        <li><b>translate3d(x,y,z)</b>：<i>定义3D转化</i></li>
+        <li><b>translateX(x)</b>：<i>定义3D转化，仅使用用于X轴的值</i></li>
+        <li><b>translateY(y)</b>：<i>定义3D转化，仅使用用于Y轴的值</i></li>
+        <li><b>translateZ(z)</b>：<i>定义3D转化，仅使用用于Z轴的值</i></li>
+        <li><b>scale3d(x,y,z)</b>：<i>定义3D缩放转换</i></li>
+        <li><b>scaleX(x)</b>：<i>定义3D缩放转换，通过给定一个X轴的值</i></li>
+        <li><b>scaleY(y)</b>：<i>定义3D缩放转换，通过给定一个Y轴的值</i></li>
+        <li><b>scaleZ(z)</b>：<i>定义3D缩放转换，通过给定一个Z轴的值</i></li>
+        <li><b>rotate3d(x,y,z,angle)</b>：<i>定义3D旋转</i></li>
+        <li><b>rotateX(angle)</b>：<i>定义沿X轴的3D旋转</i></li>
+        <li><b>rotateY(angle)</b>：<i>定义沿Y轴的3D旋转</i></li>
+        <li><b>rotateZ(angle)</b>：<i>定义沿Z轴的3D旋转</i></li>
+        <li><b>perspective(n)</b>：<i>定义 3D 转换元素的透视视图。</i></li>
+    </ul>
+    <!--end CSS3 3D转换-->
+
+    <!--CSS3 过渡-->
+    <h2>CSS3过渡</h2>
+    <p>在CSS3中，为了添加某种效果可以从一种样式转变到另一个的时候，无需使用
+        Flash动画或者JavaScript。
+    </p>
+    <h2>过渡是如何工作的？</h2>
+    <p>CSS3过渡是元素从一种样式逐渐改变为另一种的效果。<br>
+        要实现这一点，必须规定两项内容：<br>
+        <ul>
+            <li><i>指定要添加的效果</i></li>
+            <li><i>指定效果的持续时间</i></li>
+        </ul>
+        <b>注意：</b><i>如果未指定的期限，transition将没有任何效果，因为默认值是0.<br>
+            指定的CSS属性的值更改时效果会发生变化。一个典型CSS属性的变化时用户鼠标
+            放在一个元素上时：
+        </i><br>
+        <b>注意：</b><i>当鼠标光标移动到该元素时，它逐渐改变它原有样式。</i>
+    </p>
+    <style>
+    div.transition
+    {
+        width: 100px;
+        height: 100px;
+        background: rebeccapurple;
+        transition: width 2s;
+        -webkit-transition: width 2s; /*Safari */
+    }
+    div.transition:hover
+    {
+        width: 300px;
+    }
+    </style>
+    <p><b>注意：</b><i>该实例无法再IE9及更早IE版本工作。</i></p>
+    <div class="transition"></div>
+    <p>鼠标移动到div元素上，查看过渡效果。</p>
+    <hr>
+    <h2>多项改变</h2>
+    <p>要添加多个样式的变换效果，添加的属性由逗号分隔：</p>
+    <style>
+    div.trans-rotate
+    {
+        width: 100px;
+        height: 100px;
+        background: red;
+        -webkit-transition: width 2s,height 2s,-webkit-transform 3s;
+        transition: width 2s,height 2s,transform 3s;
+    }
+    div.trans-rotate:hover
+    {
+        width: 200px;
+        height: 200px;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+    </style>
+    <div class="trans-rotate">查看多项动画效果</div>
+    <hr>
+    <h2>所有过渡属性</h2>
+    <ul>
+        <li><b>transition</b>:<i>简写属性，用于在一个属性中设置四个过渡属性</i></li>
+        <li><b>transition-property</b>:<i>规定应用过渡的CSS属性的名称</i></li>
+        <li><b>transition-duration</b>:<i>定义过渡效果花费的时间。默认是0</i></li>
+        <li><b>transition-timing-function</b>:<i>定义过渡效果的时间曲线。默认是“ease”</i></li>
+        <li><b>transition-delay</b>:<i>规定过渡效果何时开始。默认是0</i></li>
+    </ul>
+    <hr>
+    <h2>在一个例子中使用所有的过渡属性</h2>
+    <style>
+    div.all-trans
+    {
+        width: 100px;
+        height: 100px;
+        background: yellow;
+        transition-property: width ;
+        transition-delay: 1s;
+        transition-duration: 2s;
+        transition-timing-function: ease-in-out;
+        /*Safari*/
+        -webkit-transition-property: width ;
+        -webkit-transition-delay: 1s;
+        -webkit-transition-duration: 2s;
+        -webkit-transition-timing-function: ease-in-out;
+
+    }
+    div.all-trans:hover
+    {
+        width: 200px;
+    }
+    </style>
+    <div class="all-trans" >停留1秒钟开始过渡</div>
+    <!--end CSS3 过渡-->
+
+    <!--CSS3 动画-->
+    <h2>CSS3动画</h2>
+    <p>CSS3，可以创建动画，可以取代许多网页动画图像，Flash动画，和JAVAScript</p>
+    <hr>
+    <h2>CSS3 @keyframes规则</h2>
+    <p>@keyframes规则是创建动画。@keyframes规则内指定一个CSS样式和动画将逐步从目前
+        的样式更改为新的样式
+    </p>
+    <hr>
+    <p>当在<b>@keyframes</b>创建动画，把它绑定到一个选择器，否则动画不会有
+        任何效果。<br>
+        指定至少这两个CSS3的动画属性绑定向一个选择器:
+        <ul>
+            <li>规定动画的名称</li>
+            <li>规定动画的时长</li>
+        </ul>
+    </p>
+    <style>
+    div.from-to-color
+    {
+        width: 100px;
+        height: 100px;
+        box-shadow: 14px 12px 14px #dddddd;
+        background: purple;
+        animation: myfirst 4s;
+        -webkit-animation: myfirst 4s; /* Safari and Chrome */
+    }
+    div.from-to-color2
+    {
+        width: 50px;
+        height: 50px;
+        background: purple;
+        animation: mySecond 4s;
+        -webkit-animation: mySecond 4s; /* Safari and Chrome */
+    }
+    @keyframes myfirst
+    {
+        from{background:purple;}
+        to{background: yellow}
+    }
+    @-webkit-keyframes myfirst /* Safari and Chrome */
+    {
+        from{background:purple;}
+        to{background: yellow}
+    }
+    
+@keyframes mySecond
+{
+    0%   {background: red; left:0px; top:0px;}
+    25%  {background: yellow; left:200px; top:0px;}
+    50%  {background: blue; left:200px; top:200px;}
+    75%  {background: green; left:0px; top:200px;}
+    100% {background: red; left:0px; top:0px;}
+}
+ 
+@-webkit-keyframes mySecond /* Safari 与 Chrome */
+{
+    0%   {background: red; left:0px; top:0px;}
+    25%  {background: yellow; left:200px; top:0px;}
+    50%  {background: blue; left:200px; top:200px;}
+    75%  {background: green; left:0px; top:200px;}
+    100% {background: red; left:0px; top:0px;}
+}
+
+    </style>
+    <div class="from-to-color"></div>
+    <hr>
+    <div class="from-to-color2"></div>
+    <b>注意：</b><i>必须定义动画的名称和动画的时间。
+        如果省略的持续时间，动画将无法运行，因为默认值是0.
+    </i>
+    <hr>
+    <h2>CSS3动画是什么？</h2>
+    <p>动画是使元素从一种样式逐渐变化为另一种样式的效果。<br>
+        可以改变任意多的样式任意多的次数。<br>
+        请用百分比来规定变化发生的时间，或用关键字"from"和"to"，
+        等同于 0% 和 100%。<br>
+        0% 是动画的开始，100%是动画的完成。<br>
+        为了得到最佳的浏览器支持，应该始终定义0%和100%选择器。
+    </p>
+    <hr>
+    <h2>所有的CSS3的动画属性</h2>
+    <ul>
+        <li><b>@keyframes</b>：<i>规定动画</i></li>
+        <li><b>animation</b>：<i>所有动画属性的简写属性，除了animation-play-state属性</i></li>
+        <li><b>animation-name</b>：<i>规定@keyframes动画的名称</i></li>
+        <li><b>animation-duration</b>：<i>规定动画完成一个周期所花费的秒或者毫秒，默认是0</i></li>
+        <li><b>animation-timing-function</b>：<i>规定动画的速度曲线，默认是"ease"</i></li>
+        <li><b>animation-delay</b>：<i>规定动画何时开始。默认是0</i></li>
+        <li><b>animation-iteration-count</b>：<i>规定动画被播放的次数，默认是1</i></li>
+        <li><b>animation-direction</b>：<i>规定动画是否在下一周期逆向地播放。默认是"normal"</i></li>
+        <li><b>animation-play-state</b>：<i>规定动画是否正在运行或暂停。默认是"running"</i></li>
+    </ul>
+    <style>
+    div.all-animation-name
+    {
+        width:100px;
+        height:100px;
+        background:red;
+        position:relative;
+        animation-name:myall;
+        animation-duration:5s;
+        animation-timing-function:linear;
+        animation-delay:2s;
+        animation-iteration-count:infinite;
+        animation-direction:alternate;
+        animation-play-state:running;
+        /* Safari and Chrome: */
+        -webkit-animation-name:myfirst;
+        -webkit-animation-duration:5s;
+        -webkit-animation-timing-function:linear;
+        -webkit-animation-delay:2s;
+        -webkit-animation-iteration-count:infinite;
+        -webkit-animation-direction:alternate;
+        -webkit-animation-play-state:running;
+    }
+    
+    @keyframes myall
+    {
+        0%   {background:red; left:0px; top:0px;}
+        25%  {background:yellow; left:200px; top:0px;}
+        50%  {background:blue; left:200px; top:200px;}
+        75%  {background:green; left:0px; top:200px;}
+        100% {background:red; left:0px; top:0px;}
+    }
+    
+    @-webkit-keyframes myall /* Safari and Chrome */
+    {
+        0%   {background:red; left:0px; top:0px;}
+        25%  {background:yellow; left:200px; top:0px;}
+        50%  {background:blue; left:200px; top:200px;}
+        75%  {background:green; left:0px; top:200px;}
+        100% {background:red; left:0px; top:0px;}
+    }
+    </style>
+    <div class="all-animation-name"></div>
+    <!--end CSS3 动画-->
+
+    <!--CSS3 多列-->
+    <h2>CSS3 多列</h2>
+    <p>CSS3可以将文本内容设计成像报纸一样的多列布局</p>
+    <hr>    <h2>CSS3多列属性</h2>
+    <ul>
+        <li><i>column-count</i></li>
+        <li><i>column-gap</i></li>
+        <li><i>column-rule-style</i></li>
+        <li><i>column-rule-width</i></li>
+        <li><i>column-rule-color</i></li>
+        <li><i>column-rule</i></li>
+        <li><i>column-span</i></li>
+        <li><i>column-width</i></li>
+    </ul>
+    <hr>
+    <h2>CSS3创建多列</h2>
+    <p>column-count属性制定了需要分隔的列数</p>
+    <style>
+    .newspaper
+    {
+        column-count:3;
+        column-gap:40px;
+        column-rule-style:outset;
+        column-rule-color:#ff0000;
+    
+        /* Firefox */
+        -moz-column-count:3;
+        -moz-column-gap:40px;
+        -moz-column-rule-style:outset;
+        -moz-column-rule-color:#ff0000;
+    
+        /* Safari and Chrome */
+        -webkit-column-count:3;
+        -webkit-column-gap:40px;
+        -webkit-column-rule-style:outset;
+        -webkit-column-rule-color:#ff0000;
+
+    }
+    .newspaper h4
+    {
+	    column-span:all;
+        text-align: center;
+	    -webkit-column-span:all; /* Safari and Chrome */
+    }
+    </style>
+    <div class="newspaper">
+        <h4>这是一个标题跨越的</h4>
+        “当我年轻的时候，我梦想改变这个世界；当我成熟以后，我发现我不能够改变这个世界，
+        我将目光缩短了些，决定只改变我的国家；当我进入暮年以后，我发现我不能够改变
+        我们的国家，我的最后愿望仅仅是改变一下我的家庭，但是，这也不可能。
+        当我现在躺在床上，行将就木时，我突然意识到：如果一开始我仅仅去改变我自己，
+        然后，我可能改变我的家庭；在家人的帮助和鼓励下，我可能为国家做一些事情；
+        然后，谁知道呢?我甚至可能改变这个世界。”
+    </div>
+    <hr>
+    <h2>CSS3创建多列</h2>
+    <p>column-count属性指定了需要分隔的列数。</p>
+    <hr>
+    <h2>CSS3 列边框</h2>
+    <p>column-rule-style属性制定了列与列间的边框样式</p>
+    <p>column-rule-width属性指定了两列的边框厚度</p>
+    <p>column-rule-color属性指定了两列的边框颜色</p>
+    <p>column-rule属性是column-rule-*所有属性的简写。<br>
+        一些实例设置了烈直接的边框的厚度，样式及颜色：
+    </p>
+    <br>
+    <h2>指定元素跨越多少列</h2>
+    <p>以下实例指定&lt;h2&gt;元素跨越所有列</p>
+    <hr>
+    <h2>指定列的宽度</h2>
+    <p>column-width属性制定了列的宽度</p>
+    <h2>CSS3所有的多列属性</h2>
+    <ul>
+        <li><b>column-count</b>：<i>指定元素应该被分隔的列数</i></li>
+        <li><b>column-fill</b>：<i>指定如何填充列</i></li>
+        <li><b>column-gap</b>：<i>指定列与列之间的间隙</i></li>
+        <li><b>column-rule</b>：<i>所有column-rule-*的简写</i></li>
+        <li><b>column-rule-color</b>：<i>指定两列间边框的颜色</i></li>
+        <li><b>column-rule-style</b>：<i>指定两列间边框的样式</i></li>
+        <li><b>column-rule-width</b>：<i>指定两列间边框的厚度</i></li>
+        <li><b>column-span</b>：<i>指定元素要跨越多少列</i></li>
+        <li><b>column-width</b>：<i>指定列的宽度</i></li>
+        <li><b>columns</b>：<i>设置column-width和column-count的简写</i></li>
+    </ul>
+    <!--end CSS3 多列-->
+    
+    <!--CSS3 用户界面-->
+    <h2>CSS3用户界面</h2>
+    <p>在CSS3中，增加了一些新的用户界面特性来调整元素尺寸，框尺寸和外边框。<br>
+        <ul>
+            <li><i>resize</i></li>
+            <li><i>box-sizing</i></li>
+            <li><i>outline-offset</i></li>
+        </ul>
+    </p>
+    <hr>
+    <h2>CSS3调整尺寸(Resizing)</h2>
+    <p>
+        在CSS3中，resize属性指定一个元素是否应该由用户去调整大小。<br>
+        这个div元素由用户调整大小。
+    </p>
+    <style>
+    div.resize
+    {
+        border: 2px solid;
+        padding: 10px 40px;
+        width: 300px;
+        resize: both;
+        overflow: auto;
+    }
+    </style>
+    <div class="resize">调整属性指定一个元素是否由用户可调整大小的。</div>
+    <hr>
+    <h2>CSS3方框的大小调整(Box Sizing)</h2>
+    <p>box-sizing属性允许以确切的方式定义适应某个区域的具体内容。</p>
+    <style>
+    div.user-container
+    {
+        width: 30em;
+        border: 1em solid #666;
+    }
+    div.user-box
+    {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        width: 50%;
+        border: 1em solid red;
+        float: left;
+    }
+    </style>
+    <div class="user-container"></div>
+    <div class="user-box">这个div占据了左边的一半</div>
+    <div class="user-box">这个div占据了右边的一半</div>
+    <hr>
+    <h2>CSS3外形修饰(outline-offset)</h2>
+    <p>outline-offset属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。</p>
+    <p>轮廓与边框有两点不同：
+        <ul>
+            <li>轮廓不占用空间</li>
+            <li>轮廓可能使非矩形</li>
+        </ul>
+        这个div在边框之外15像素处有一个轮廓
+    </p>
+    <style>
+    div.outline-box
+    {
+        margin: 20px;
+        width: 150px;
+        padding: 10px;
+        height: 70px;
+        border: 2px solid black;
+        outline: 2px solid red;
+        outline-offset: 15px;
+    }
+    </style>
+    <div class="outline-box">这个div有一个轮廓边界15px边境外的边缘.</div>
+    <hr>
+    <h2>新的用户界面特性</h2>
+    <ul>
+        <li><b>appearance</b>：<i>允许您使一个元素的外观像一个标准的用户界面元素</i></li>
+        <li><b>box-sizing</b>：<i>允许你以适应区域而用某种方式定义某些元素</i></li>
+        <li><b>icon</b>：<i>为创作者提供了将元素设置为图标等价物的能力</i></li>
+        <li><b>nav-down</b>：<i>指定在何处使用箭头向下导航键时进行导航</i></li>
+        <li><b>nav-index</b>：<i>指定一个元素的Tab顺序</i></li>
+        <li><b>nav-left</b>：<i>指定在何处使用左侧的箭头导航键进行导航</i></li>
+        <li><b>nav-right</b>：<i>指定在何处使用右侧的箭头导航键进行导航</i></li>
+        <li><b>nav-up</b>：<i>指定在何处使用箭头向上导航键时进行导航</i></li>
+        <li><b>outline-offset</b>：<i>外轮廓修饰并绘制超出边框的边缘</i></li>
+        <li><b>resize</b>：<i>指定一个元素是否是用户调整大小。</i></li>
+    </ul>
+    <!--end CSS3 用户界面-->
+
+    <!--CSS3 图片-->
+    <h2>CSS圆角图片</h2>
+    <style>
+    img.radius-not-circle
+    {
+        border-radius: 8px;
+    }
+    img.radius-percent
+    {
+        border-radius: 50%;
+    }
+    img.border-padding
+    {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding:5px;
+    }
+    img.border-padding:hover
+    {
+        box-shadow: 0 0 2px 1px rgba(0,140,186,0.5);
+    }
+    </style>
+    <p>使用border-radius属性来创建圆角图片</p>
+    <img class="radius-not-circle" 
+    src="http://www.runoob.com/try/demo_source/paris.jpg" alt=""
+    width="200" height="150">
+    <img class="radius-percent" 
+    src="http://www.runoob.com/try/demo_source/paris.jpg" alt=""
+    width="200" height="150">
+    <img class="border-padding" 
+    src="http://www.runoob.com/try/demo_source/paris.jpg" alt=""
+    width="200" height="150">
+    <hr>
+    <h2>响应式图片</h2>
+    <p>响应式图片会自动适配各种尺寸的屏幕。<br>
+        实例中，可以通过重置浏览器大小查看效果
+    </p>
+    <style>
+    @media handheld
+    {
+        img
+        {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    </style>
+    <hr>
+    <h2>卡片式图片</h2>
+    <style>
+    div.polaroid
+    {
+        width: 200px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px rgba(0, 0, 0, 0.19);
+        margin-bottom: 25px;
+    }
+    div.card-container
+    {
+        text-align: center;
+        padding: 10px 20px;
+    }
+    </style>
+    <div class="polaroid">
+        <img src="http://www.runoob.com/try/demo_source/rock600x400.jpg" 
+            alt="Norway" style="width:100%">
+        <div class="container">
+          <p>The Troll's tongue in Hardanger, Norway</p>
+        </div>
+      </div>
+    <hr>
+    <h2>图片滤镜</h2>
+    <p>CSS filter 属性用为元素添加可视效果（例如：模糊与饱和度）。<br>
+        <b>注意：</b><i>IE或Safari不支持该属性</i>
+    </p>
+    <style>
+        img.next-img {
+            width: 33%;
+            height: auto;
+            float: left; 
+            max-width: 235px;
+        }
+        
+        .blur {-webkit-filter: blur(4px);filter: blur(4px);}
+        .brightness {-webkit-filter: brightness(250%);filter: brightness(250%);}
+        .contrast {-webkit-filter: contrast(180%);filter: contrast(180%);}
+        .grayscale {-webkit-filter: grayscale(100%);filter: grayscale(100%);}
+        .huerotate {-webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);}
+        .invert {-webkit-filter: invert(100%);filter: invert(100%);}
+        .opacity {-webkit-filter: opacity(50%);filter: opacity(50%);}
+        .saturate {-webkit-filter: saturate(7); filter: saturate(7);}
+        .sepia {-webkit-filter: sepia(100%);filter: sepia(100%);}
+        .shadow {-webkit-filter: drop-shadow(8px 8px 10px green);filter: drop-shadow(8px 8px 10px green);}
+    </style>
+    <img class="next-img" src="http://www.runoob.com/try/demo_source/pineapple.jpg" alt="Pineapple" 
+        width="300" height="300">
+    <img class="next-img blur" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img brightness" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img contrast" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img grayscale" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img huerotate" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img invert" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img opacity" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img saturate" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img sepia" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <img class="next-img shadow" src="http://www.runoob.com/try/demo_source/pineapple.jpg" 
+        alt="Pineapple" width="300" height="300">
+    <br><hr>
+    <h2>响应式图片相册</h2>
+    <hr>
+    <style>
+        div.img {
+            border: 1px solid #ccc;
+        }
+        
+        div.img:hover {
+            border: 1px solid #777;
+        }
+        
+        div.img img {
+            width: 100%;
+            height: auto;
+        }
+        
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+        
+        @media only screen and (max-width: 700px){
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+        
+        @media only screen and (max-width: 500px){
+            .responsive {
+                width: 100%;
+            }
+        }
+        
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+    
+<h2 style="text-align:center">响应式图片相册</h2>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_fjords.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_fjords.jpg" alt="Trolltunga Norway" width="300" height="200">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_forest.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="http://www.runoob.com/wp-content/uploads/2016/04/img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Add a description of the image here</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+  
+  <h4>重置浏览器大小查看效果</h4>
+</div>
+    <hr>
+    <h2>图片Model(模态)</h2>
+    <p>首先，使用CSS来创建Model窗口(对话框)，默认是隐藏的。<br>
+        然后，我们使用JavaScript来显示模态窗口，当我们点击图片时，
+        图片会在弹出的窗口显示。
+    </p>
+    <style>
+    #myImg
+    {
+        border-radius: 5px;
+        cursor:pointer;
+        transition: 0.3s;
+    }
+    #myImg:hover
+    {
+        opacity: 0.7;
+    }
+    .modal
+    {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .modal-content
+    {
+        margin: auto;
+        display:block;
+        width: 80%;
+        max-width: 700px;
+    }
+    #caption
+    {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+        text-align: center;
+        color: #ccc;
+        padding: 10px 0;
+        height: 150px;
+    }
+    .modal-content,#caption
+    {
+        animation-name: zoom;
+        animation-duration: 0.6s;
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+    }
+    @-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+    .close
+    {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color:#f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+    .close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+    </style>
+    <h2>图片模态框</h2>
+    <p>本实例演示了如何结合 CSS 和 JavaScript 来一起渲染图片。</p><p>
+    首先，我们使用 CSS 来创建 modal 窗口 (对话框), 默认是隐藏的。<p>
+    <p>然后，我们使用 JavaScript 来显示模态窗口，当我们点击图片时，图片会在弹出的窗口中显示：</p>
+    <img id="myImg" src="http://www.runoob.com/wp-content/uploads/2016/04/img_lights.jpg" 
+        alt="Northern Lights, Norway" width="300" height="200">
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">×</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    <script>
+        //获取模态窗口
+        var modal = document.getElementById('myModal');
+        // 获取图片模态框，alt 属性作为图片弹出中文本描述
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById('img01');
+        var captionText = document.getElementById('caption');
+        img.onclick = function()
+        {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            modalImg.alt = this.alt;
+            captionText.innerHTML = this.alt;
+        }
+
+        //获取<span>元素，设置关闭模态框按钮
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function()
+        {
+            modal.style.display = "none";
+        }
+
+    </script>
+    <!--end CSS3 图片-->
+
+    <!--CSS3 按钮-->
+    <h2>CSS3 按钮</h2>
+    <style>
+    .button
+    {
+        border: 1px solid black;
+        border-radius: 8px;
+        background-color: #4CAF50;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        opacity: 1;
+
+        transition-duration: 1s;        
+        transition-property: opacity;
+        -webkit-transition-duration: 0.2s;        
+        -webkit-transition-property: box-shadow;
+    }
+    .button:hover
+    {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    .disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    </style>
+    <button>默认按钮</button>
+    <a href="#" class="button">链接按钮</a>
+    <button class="button">按钮</button>
+    <input type="button" class="button disabled" value="输入框按钮">
+    <h2>带动画的按钮</h2>
+    <style>
+            .button-trans {
+              display: inline-block;
+              border-radius: 4px;
+              background-color: #f4511e;
+              border: none;
+              color: #FFFFFF;
+              text-align: center;
+              font-size: 28px;
+              padding: 20px;
+              width: 200px;
+              transition: all 0.5s;
+              cursor: pointer;
+              margin: 5px;
+            }
+            
+            .button-trans span {
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              transition: 0.5s;
+            }
+            
+            .button-trans span:after {
+              content: '»';
+              position: absolute;
+              opacity: 0;
+              top: 0;
+              right: -20px;
+              transition: 0.5s;
+            }
+            
+            .button-trans:hover span {
+              padding-right: 25px;
+            }
+            
+            .button-trans:hover span:after {
+              opacity: 1;
+              right: 0;
+            }
+            </style>
+            <h2>按钮动画</h2>
+            
+            <button class="button-trans" style="vertical-align:middle">
+                <span>Hover </span></button>
+                <style>
+                        .button-sha {
+                            position: relative;
+                            background-color: #4CAF50;
+                            border: none;
+                            font-size: 28px;
+                            color: #FFFFFF;
+                            padding: 20px;
+                            width: 200px;
+                            text-align: center;
+                            -webkit-transition-duration: 0.4s; /* Safari */
+                            transition-duration: 0.4s;
+                            text-decoration: none;
+                            overflow: hidden;
+                            cursor: pointer;
+                        }
+                        
+                        .button-sha:after {
+                            content: "";
+                            background: #90EE90;
+                            display: block;
+                            position: absolute;
+                            padding-top: 300%;
+                            padding-left: 350%;
+                            margin-left: -20px!important;
+                            margin-top: -120%;
+                            opacity: 0;
+                            transition: all 0.8s
+                        }
+                        
+                        .button-sha:active:after {
+                            padding: 0;
+                            margin: 0;
+                            opacity: 1;
+                            transition: 0s
+                        }
+            </style>
+            <h2>按钮动画 - 波纹效果</h2>
+            
+            <button class="button-sha">Click Me</button>
+            <style>
+                    .button-press {
+                      display: inline-block;
+                      padding: 15px 25px;
+                      font-size: 24px;
+                      cursor: pointer;
+                      text-align: center;   
+                      text-decoration: none;
+                      outline: none;
+                      color: #fff;
+                      background-color: #4CAF50;
+                      border: none;
+                      border-radius: 15px;
+                      box-shadow: 0 9px #999;
+                    }
+                    
+                    .button-press:hover {background-color: #3e8e41}
+                    
+                    .button-press:active {
+                      background-color: #3e8e41;
+                      box-shadow: 0 5px #666;
+                      transform: translateY(4px);
+                    }
+            </style>
+            <h2>按钮动画 - "按压效果"</h2>
+            
+            <button class="button-press">Click Me</button>
+            <button class="am-btn-default">am btn</button>
+    <!--end CSS3 按钮-->
+
+    <!--CSS3 分页实例-->
+    <h2>简单分页</h2>
+    <p>如果你的网站有很多个页面，就需要使用分页来为每个页面做导航。,</p>
+    <style>
+ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+</style>
+    <h2>点击及鼠标悬停分页样式</h2>
+    <p>移动鼠标的分页的数字上。</p>
+    <ul class="pagination">
+      <li><a href="#">«</a></li>
+      <li><a href="#">1</a></li>
+      <li><a class="active" href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">»</a></li>
+    </ul>
+    <hr>
+    <h2>面包屑导航</h2>
+    <style>
+            ul.breadcrumb {
+                padding: 8px 16px;
+                list-style: none;
+                background-color: #eee;
+            }
+            ul.breadcrumb li {display: inline;}
+            ul.breadcrumb li+li:before {
+                padding: 8px;
+                color: black;
+                content: "/\00a0";
+            }
+            ul.breadcrumb li a {color: green;}
+    </style>
+    <h2>面包屑导航</h2>
+    <ul class="breadcrumb">
+      <li><a href="#">首页 </a></li>
+      <li><a href="#">前端 </a></li>
+      <li><a href="#">HTML 教程 </a></li>
+      <li>HTML 段落</li>
+    </ul>
+    <!--end CSS3 分页实例-->
+
+    <!--CSS3 框大小-->
+    <h2>CSS3框大小</h2>
+    <p>CSS3 box-sizing属性可以设置width和height属性中
+        包含了padding(内边距)和border(边框)</p>
+    <style>
+    .div1
+    {
+        width: 200;
+        height: 100;
+        border: 1px solid red;
+        box-sizing: border-box;
+    }
+    .bigger
+    {
+        padding: 50px;
+    }
+    </style>
+    <div class="div1">这是一个小框</div>
+    <div class="div1 bigger">这是一个大框大框大框大框</div>
+    <hr>
+    <h2>使用CSS3 box-sizing 属性</h2>
+    <p>CSS3 box-sizing属性在一个元素的width和height中包含padding(内边距)和border(边框)。值越小，使得元素更加透明。
+        <br>如果在元素上设置了box-sizing:bodrer-box;则padding(内边距)和border(边框)也包含
+        在width和height中
+    </p>
+    <!--end CSS3 框大小-->
+
+    <!--CSS3 弹性盒子-->
+    <h2>CSS3 弹性盒子 (Flex Box)</h2>
+    <p>弹性盒子是CSS3的一种新的布局模式。<br>
+        CSS3 flexbox 是一种当页面需要适应不同的屏幕大小以及设备类型时确保元素拥有
+        恰当的行为的布局方式。<br>
+        引入弹性盒布局模型的目的是提供一种更加有效地方式来对一个容器中的子元素进行排列、
+        对齐和分配空白空间。
+    </p>
+    <hr>
+    <h2>CSS3 弹性盒子 (Flex Box) 内容</h2>
+    <p>弹性盒子由弹性容器(flex container)和弹性子元素(flex item)组成。<br>
+        弹性容器通过设置display属性的值为flex或者inline-flex将其定义为弹性容器。<br>
+        弹性容器内包含了一个或者多个弹性子元素。<br>
+        <b>注意：</b><i>弹性容器外及弹性子元素内是正常渲染的。弹性盒子只定义了弹性子
+            元素如何在弹性容器内布局。<br>
+            弹性子元素通常在弹性盒子内显示一行显示。默认情况每个容器只有一行。<br>
+            以下元素展示了弹性子元素在一行内显示，从左到右。
+        </i>
+    </p>
+    <style>
+    .flex-container
+    {
+        display: -webkit-flex;
+        display: flex;
+        width: 400px;
+        height: 140px;
+        background-color: lightgray;
+    }
+    .flex-item
+    {
+        background-color: purple;
+        width: 80px;
+        height: 90px;
+        margin: 6px;
+    }
+    .flex-dir
+    {
+        flex-direction: row-reverse;
+        -webkit-flex-direction:row-reverse;
+    }
+    .flex-around
+    {
+        justify-content: space-around;
+        
+    }
+    .flex-baseline
+    {
+        align-items: baseline;
+        
+    }
+    </style>
+    <div class="flex-container">
+        <div class="flex-item">item1</div>
+        <div class="flex-item">item2</div>
+        <div class="flex-item">item3</div>
+    </div>
+    <div class="flex-container flex-dir">
+            <div class="flex-item">item1</div>
+            <div class="flex-item">item2</div>
+            <div class="flex-item">item3</div>
+        </div>
+    <hr>
+    <div class="flex-container flex-around">
+            <div class="flex-item">item1</div>
+            <div class="flex-item">item2</div>
+            <div class="flex-item">item3</div>
+        </div>
+    <hr>
+    <div class="flex-container flex-baseline">
+            <div class="flex-item">item1</div>
+            <div class="flex-item">item2</div>
+            <div class="flex-item">item3</div>
+        </div>
+    <hr>
+    <p>flex-direction的值有</p>
+    <ul>
+        <li>row：从左到右横向排列</li>
+        <li>row-reverse：从右到左横向排列</li>
+        <li>column：纵向排列</li>
+        <li>column-reverse：反转纵向排列,从后向前排</li>
+    </ul>
+    <hr>
+    <p>justify-content的值有</p>
+    <ul>
+        <li>flex-start:</li>
+        <li>flex-end:</li>
+        <li>center:</li>
+        <li>space-between:</li>
+        <li>space-around:</li>
+    </ul>
+    <hr>
+    <p>align-items属性的值有：</p>
+    <ul>
+        <li>flex-start:</li>
+        <li>flex-end:</li>
+        <li>center:</li>
+        <li>baseline:</li>
+        <li>stretch:</li>
+    </ul>
+    <hr>
+    <p>flex-wrap属性的值有：</p>
+    <ul>
+        <li>nowrap</li>
+        <li>wrap</li>
+        <li>wrap-reverse</li>
+        <li>initial</li>
+        <li>inherit</li>
+    </ul>
+    <hr>
+    <p>align-content属性的值有：</p>
+    <ul>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>space-between</li>
+        <li>space-around</li>
+        <li>stretch</li>
+    </ul>
+    <hr>
+    <h2>弹性子元素属性</h2>
+    <ul>
+        <li>排序order:值为一个可以为负数的整数值，定义子元素排列顺序。</li>
+        <li>对齐margin:auto,自动获取弹性容器中剩余的空间 <br>
+            使用弹性盒子，居中变得很简单，只要设置margin:auto即可
+        </li>
+    </ul>
+    <hr>
+    <p>align-self属性用于设置弹性元素自身在侧轴（纵轴）方向上的对齐方式.其值可以取</p>
+    <ul>
+        <li>auto</li>
+        <li>flex-start</li>
+        <li>flex-end</li>
+        <li>center</li>
+        <li>baseline</li>
+        <li>stretch</li>
+    </ul>
+    <hr>
+    <p>flex属性用于指定弹性子元素如何分配空间，其值可取</p>
+    <ul>
+        <li>auto</li>
+        <li>initial</li>
+        <li>none</li>
+        <li>inherit</li>
+        <li>[flex-grow]</li>
+        <li>[flex-shrink]</li>
+        <li>[flex-basis]</li>
+    </ul>
+    <!--end CSS3 弹性盒子-->
+
+    <!--CSS3 多媒体查询-->
+    <h2>CSS3多媒体查询</h2>
+    <p>媒体查询可以用于检测很多事情，例如</p>
+    <ul>
+        <li>viewport(视窗)的宽度和高度</li>
+        <li>设备的宽度和高度</li>
+        <li>朝向(智能手机横屏，竖屏)</li>
+        <li>分辨率</li>
+    </ul>
+    <hr>
+    <h2>多媒体查询语法</h2>
+    <p>多媒体查询由多种媒体组成，可以包含一个或多个表达式，表达式根据条件
+        是否成立返回true或false。<br>
+        @media not|only mediatype and (expressions)<br>
+        { <br>
+            css代码; <br>
+        } <br>
+    </p>
+    <p>CSS3多媒体类型</p>
+    <ul>
+        <li>all:用于所有多媒体类型设备</li>
+        <li>print:用于打印机</li>
+        <li>screen:用于电脑屏幕，平板，智能手机</li>
+        <li>speech:用于屏幕阅读器</li>
+    </ul>
+    <style>
+    @media screen and (max-width : 480px) and (min-width : 100px)
+    {
+        body
+        {
+            background-color: lightgreen;
+        }
+    }
+    </style>
+    <p>例子表明了若媒体类型屏幕的可视窗口宽度小于480px并且大于100px,<br>
+        背景颜色将改变为lightgreen</p>
+    
+    <!--end CSS3 多媒体查询-->
+
+    <!--CSS3 Viewport-->
+    <h2>什么是Viewport</h2>
+    <p>viewport是用户网页的可视区域。<br>
+        手机浏览器是把页面放在一个虚拟的窗口中，通常这个虚拟窗口比屏幕宽，这样就不用把每个
+        网页挤到很小的窗口中(这样会破坏没有针对手机浏览器优化的网页的布局)，用户可以通过
+        平移和缩放来看网页的不同部分。
+    </p>
+    <hr>
+    <h2>设置viewport</h2>
+    <p>一个常用的针对移动网页优化过的页面的viewport meta标签大致如下：<br>
+        &lt;meta name="viewport" content="width=device-width,initial-scale=1.0" &gt;
+    </p>
+    <ul>
+        <li>width:一般设置为设备的宽度device-width</li>
+        <li>height:和width相对应，指定高度</li>
+        <li>initial-scale:初始缩放比例，也即是当网页第一次load的时候缩放比例</li>
+        <li>maximum-scale：允许用户缩放到的最大比例</li>
+        <li>minimum-scale：允许用户缩放到的最小比例</li>
+        <li>user-scalable：用户是否可以手动缩放</li>
+    </ul>
+    <!--end CSS3 Viewport-->
+
+</body>
+</html>

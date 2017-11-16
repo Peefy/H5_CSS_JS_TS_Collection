@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foundation 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
+  <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/foundation/5.5.3/js/foundation.min.js"></script>
+  <script src="https://cdn.bootcss.com/foundation/5.5.3/js/vendor/modernizr.js"></script>
+</head>
+<body style="padding-top:10px;">
+
+<button type="button" class="button success" data-reveal-id="myModal">点击打开模态框</button>
+
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>模态框标题。</h2>
+  <p>模态框文本。</p>
+  <p>模态框文本。</p>
+  <a class="close-reveal-modal">&times;</a>
+</div>
+<!-- 初始化 Foundation JS -->
+<script>
+$(document).ready(function() {
+    $(document).foundation();
+})
+</script>
+</body>
+</html>

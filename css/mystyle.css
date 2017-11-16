@@ -1,0 +1,37 @@
+body 
+{
+      background-color:#222222
+      
+}
+p,h1,h2,h3,h4,h5,h6 
+{
+    color:silver
+}
+div
+{
+    align-content: center;
+    align-self: center;
+}
+.table_s
+{
+    width: 100%;
+    font-weight: bold;
+    color: #255e95;
+    border-bottom-color: #569efd
+}
+.font-center{ text-align:center}
+.titfont {
+	font-family: 微软雅黑;
+    font-size: 30px;
+    height: 100;
+	font-weight: bold;
+	color: #255e95;
+	background-color:#e9faff;
+}
+.dugu-font
+{
+    font-family: 微软雅黑;
+    font-size: 20px;
+	font-weight: bold;
+	color: #208EB5;
+}

