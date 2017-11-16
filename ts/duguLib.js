@@ -1,7 +1,6 @@
-var DuGuConsole = /** @class */ (function () {
-    function DuGuConsole() {
+class DuGuConsole {
+    constructor() {
         this.messge = "message";
         this.dialog = "dugu";
     }
-    return DuGuConsole;
-}());
+}
