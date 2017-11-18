@@ -1,7 +1,9 @@
 
 //有bug
 //import {StringValidator} from "./Validation";
-//import  * as Zip from './ZipCodeValidator';
+//import Zip = require("./ZipCodeValidator");
+
+//import "reflect-metadata"
 
 class Student {
     fullName: string;
@@ -16,12 +18,6 @@ class Student {
 interface Person {
     firstName: string;
     lastName: string;
-}
-
-enum Color {
-    Red = 1,
-    Blue = 2,
-    Yellow = 3
 }
 
 function greeter(person: Person) {
@@ -55,7 +51,7 @@ function main() {
         let lists: number[] = [1, 2, 3];         //数组
         let nums: Array<number> = [1, 2, 3];     //泛型数组
         let xTuple = ["123", 123];               //元组
-        let color = Color.Red;          //枚举
+        //let color = Color.Red;          //枚举
         let arrs: any = [1, "2", false];
         var user = new Student("DuGu", "DuGu", "User"); //class类
 
@@ -728,6 +724,282 @@ function main() {
         */
         //#endregion
 
+        //#region 14.命名空间
+        writeh2("14.命名空间");
+        System.Console.WriteLine("DuGu");
+        System.Console.WriteLine("Hello World!"); //记得在h5文件中添加对dugulib.引用
+        System.Console.Write(`${1 + 2} ${1 * 2} ${1 / 2} ${1 - 2} ${1 % 2}`);
+        System.Console.WriteLine("");
+        //#endregion
+
+        //#region 15.命名空间和模块
+        writeh2("15.命名空间和模块");
+        
+        //#endregion
+
+        //#region 16.模块解析
+        writeh2("16.模块解析");
+
+        //#endregion
+
+        //#region 17.声明合并
+        writeh2("17.声明合并");
+        //合并接口
+        interface Box {
+            height : number;
+            width : number;
+        }
+        interface Box {
+            scale : number;
+        }
+
+        let box : Box = {
+            height : 5,
+            width : 6,
+            scale : 10
+        }
+        //合并用来扩展枚举类型
+        enum ColorA{
+            Red = 1,
+            Green = 2,
+            Blue = 3,
+        }
+
+        //#endregion
+
+        //#region 
+        writeh2("18.JSX")
+        //#endregion
+
+        //#region 19.装饰器
+        writeh2("19.装饰器");
+        //注意：装饰器是一项实验特性，在未来的版本中可能会发生改变
+        function sealed(target) {
+
+        }
+        function color(value : string) {
+            return function(target) {
+
+            }
+        }
+        function f() {
+            println("f(): evalueted");
+            return function(target , propertyKey : string, descripter: PropertyDescriptor) {
+                println("f() called");
+            }
+        } 
+        function g() {
+            println("g(): evalueted");
+            return function(target , propertyKey : string, descripter: PropertyDescriptor) {
+                println("g() called");
+            }
+        } 
+        class DuGuC {
+            @f()
+            @g()
+            method() {
+            }
+        }
+
+        let x = new DuGuC();
+
+        function classDecorator<T extends {new(...args:any[]):{}}>(constructor:T) {
+            return class extends constructor {
+                newProperty = "new property";
+                hello = "override";
+            }
+        }
+        //类装饰器
+        @classDecorator
+        class DecoratorGreeter {
+            property = "property";
+            hello: string;
+            constructor(m: string) {
+                this.hello = m;
+            }
+        }
+
+        println(new DecoratorGreeter("world"));
+        //方法装饰器
+        function enumerable(value : boolean) {
+            return function (target : any, propertyKey : string, descripter : PropertyDescriptor) {
+                descripter.enumerable = value;
+            }
+        }
+
+        class GreeterSecond {
+            greeting : string;
+            constructor(message : string) {
+                this.greeting = message;
+            }
+
+            @enumerable(false)
+            greet() {
+                return "Hello," + this.greeting;
+            }
+
+        }
+        let tmp = new GreeterSecond("???");
+        println(tmp.greet());
+
+        //访问器装饰器
+        function configurable(value : boolean) {
+            return function (target : any, propertyKey : string, descripter : PropertyDescriptor) {
+                descripter.configurable = value;
+            }
+        }
+
+        class Point {
+            private _x : number;
+            private _y : number;
+            constructor(x : number, y : number) {
+                this._x = x;
+                this._y = y;
+            }
+
+            @configurable(false)
+            get x() {return this._x}
+
+            @configurable(false)
+            get y() {return this._y}
+
+        }
+
+        let point = new Point(12,13);
+        println(`${point.x} ${point.y}`);
+        /*
+        const formatMetadataKey = Symbol("format");
+
+        function format(formatString : string) {
+            return Reflect.metadata(formatMetadataKey, formatString);
+        }
+
+        function getFormat(target : any, propertyKey : string) {
+            return Reflect.getMetadata(formatMetadataKey, target, propertyKey);
+        }
+
+        class FormatGreeter {
+            @format("Hello, %s")
+            greeting : string;
+
+            constructor(message : string) {
+                this.greeting = message;
+            }
+            greet() {
+                let formatString = getFormat(this, "greeting") as string;
+                return formatString.replace("s%", this.greeting);
+            }
+        }
+
+        const requiredMetadataKey = Symbol("required");
+        
+        function required(target: Object, propertyKey: string | symbol, parameterIndex: number) {
+            let existingRequiredParameters: number[] = Reflect.getOwnMetadata(requiredMetadataKey, target, propertyKey) || [];
+            existingRequiredParameters.push(parameterIndex);
+            Reflect.defineMetadata(requiredMetadataKey, existingRequiredParameters, target, propertyKey);
+        }
+        
+        function validate(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
+            let method = descriptor.value;
+            descriptor.value = function () {
+                let requiredParameters: number[] = Reflect.getOwnMetadata(requiredMetadataKey, target, propertyName);
+                if (requiredParameters) {
+                    for (let parameterIndex of requiredParameters) {
+                        if (parameterIndex >= arguments.length || arguments[parameterIndex] === undefined) {
+                            throw new Error("Missing required argument.");
+                        }
+                    }
+                }
+        
+                return method.apply(this, arguments);
+            }
+        }
+
+        class ValidateGreeter {
+            greeting : string;
+
+            constructor(message : string) {
+                this.greeting = message;
+            }
+
+            @validate
+            greet(@required name : string) {
+                return "Hello " + name + ", " + this.greeting;
+            }
+
+        }
+
+        println(new ValidateGreeter("DuGu").greet("dugu"));
+
+        class Line {
+            private _p0 : Point;
+            private _p1 : Point;
+
+            @Reflect.metadata("design:type", Point)
+            set p0(value : Point) { this._p0 = value; }
+            get p0() { return this._p0; }
+            
+            @Reflect.metadata("design:type", Point)
+            set p1(value : Point) { this._p1 = value; }
+            get p1() { return this._p1; }
+
+        }
+        */
+
+        //#endregion
+
+        //#region 20.Mixins
+        writeh2("20.Mixins")
+        // Disposable Mixin
+        class Disposable {
+            isDisposed : boolean;
+            dispose() {
+                this.isDisposed = true;
+            }
+        }
+        // Activatable Mixin
+        class Activatable {
+            isActive : boolean;
+            activate() {
+                this.isActive = true;
+            }
+            deactivate() {
+                this.isActive = false;
+            }
+         }
+         class SmartObject implements Disposable, Activatable {
+            constructor() {
+                setInterval(() => console.log(this.isActive + " : " + this.isDisposed), 500);
+            }
+            interact() {
+                this.activate();
+            }
+        
+            // Disposable
+            isDisposed: boolean = false;
+            dispose: () => void;
+            // Activatable
+            isActive: boolean = false;
+            activate: () => void;
+            deactivate: () => void;
+        }
+        applyMixins(SmartObject, [Disposable, Activatable]);
+        
+        let smartObj = new SmartObject();
+        setTimeout(() => smartObj.interact(), 1000);
+        
+        function applyMixins(derivedCtor: any, baseCtors: any[]) {
+            baseCtors.forEach(baseCtor => {
+                Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+                    derivedCtor.prototype[name] = baseCtor.prototype[name];
+                });
+            });
+        }
+        //#endregion
+
+        //#region 21.三斜线指令
+        console.log("21.三斜线指令")
+        //#endregion
     }
     catch (error) {
         window.alert(error);

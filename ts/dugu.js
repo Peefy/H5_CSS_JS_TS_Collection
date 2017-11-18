@@ -1,6 +1,15 @@
 //有bug
 //import {StringValidator} from "./Validation";
-//import  * as Zip from './ZipCodeValidator';
+//import Zip = require("./ZipCodeValidator");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -18,6 +27,7 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
+//import "reflect-metadata"
 class Student {
     constructor(firstName = "", middleInitial = "", lastName = "") {
         this.firstName = firstName;
@@ -29,12 +39,6 @@ class Student {
         return "DuGu";
     }
 }
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 1] = "Red";
-    Color[Color["Blue"] = 2] = "Blue";
-    Color[Color["Yellow"] = 3] = "Yellow";
-})(Color || (Color = {}));
 function greeter(person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
@@ -60,7 +64,7 @@ function main() {
         let lists = [1, 2, 3]; //数组
         let nums = [1, 2, 3]; //泛型数组
         let xTuple = ["123", 123]; //元组
-        let color = Color.Red; //枚举
+        //let color = Color.Red;          //枚举
         let arrs = [1, "2", false];
         var user = new Student("DuGu", "DuGu", "User"); //class类
         let u = undefined;
@@ -566,6 +570,261 @@ function main() {
         println(new CodeValidator().isAcceptable);
         println(Zip.reg.test("redread"));
         */
+        //#endregion
+        //#region 14.命名空间
+        writeh2("14.命名空间");
+        System.Console.WriteLine("DuGu");
+        System.Console.WriteLine("Hello World!"); //记得在h5文件中添加对dugulib.引用
+        System.Console.Write(`${1 + 2} ${1 * 2} ${1 / 2} ${1 - 2} ${1 % 2}`);
+        System.Console.WriteLine("");
+        //#endregion
+        //#region 15.命名空间和模块
+        writeh2("15.命名空间和模块");
+        //#endregion
+        //#region 16.模块解析
+        writeh2("16.模块解析");
+        //#endregion
+        //#region 17.声明合并
+        writeh2("17.声明合并");
+        let box = {
+            height: 5,
+            width: 6,
+            scale: 10
+        };
+        //合并用来扩展枚举类型
+        let ColorA;
+        (function (ColorA) {
+            ColorA[ColorA["Red"] = 1] = "Red";
+            ColorA[ColorA["Green"] = 2] = "Green";
+            ColorA[ColorA["Blue"] = 3] = "Blue";
+        })(ColorA || (ColorA = {}));
+        //#endregion
+        //#region 
+        writeh2("18.JSX");
+        //#endregion
+        //#region 19.装饰器
+        writeh2("19.装饰器");
+        //注意：装饰器是一项实验特性，在未来的版本中可能会发生改变
+        function sealed(target) {
+        }
+        function color(value) {
+            return function (target) {
+            };
+        }
+        function f() {
+            println("f(): evalueted");
+            return function (target, propertyKey, descripter) {
+                println("f() called");
+            };
+        }
+        function g() {
+            println("g(): evalueted");
+            return function (target, propertyKey, descripter) {
+                println("g() called");
+            };
+        }
+        class DuGuC {
+            method() {
+            }
+        }
+        __decorate([
+            f(),
+            g(),
+            __metadata("design:type", Function),
+            __metadata("design:paramtypes", []),
+            __metadata("design:returntype", void 0)
+        ], DuGuC.prototype, "method", null);
+        let x = new DuGuC();
+        function classDecorator(constructor) {
+            return class extends constructor {
+                constructor() {
+                    super(...arguments);
+                    this.newProperty = "new property";
+                    this.hello = "override";
+                }
+            };
+        }
+        //类装饰器
+        let DecoratorGreeter = class DecoratorGreeter {
+            constructor(m) {
+                this.property = "property";
+                this.hello = m;
+            }
+        };
+        DecoratorGreeter = __decorate([
+            classDecorator,
+            __metadata("design:paramtypes", [String])
+        ], DecoratorGreeter);
+        println(new DecoratorGreeter("world"));
+        //方法装饰器
+        function enumerable(value) {
+            return function (target, propertyKey, descripter) {
+                descripter.enumerable = value;
+            };
+        }
+        class GreeterSecond {
+            constructor(message) {
+                this.greeting = message;
+            }
+            greet() {
+                return "Hello," + this.greeting;
+            }
+        }
+        __decorate([
+            enumerable(false),
+            __metadata("design:type", Function),
+            __metadata("design:paramtypes", []),
+            __metadata("design:returntype", void 0)
+        ], GreeterSecond.prototype, "greet", null);
+        let tmp = new GreeterSecond("???");
+        println(tmp.greet());
+        //访问器装饰器
+        function configurable(value) {
+            return function (target, propertyKey, descripter) {
+                descripter.configurable = value;
+            };
+        }
+        class Point {
+            constructor(x, y) {
+                this._x = x;
+                this._y = y;
+            }
+            get x() { return this._x; }
+            get y() { return this._y; }
+        }
+        __decorate([
+            configurable(false),
+            __metadata("design:type", Object),
+            __metadata("design:paramtypes", [])
+        ], Point.prototype, "x", null);
+        __decorate([
+            configurable(false),
+            __metadata("design:type", Object),
+            __metadata("design:paramtypes", [])
+        ], Point.prototype, "y", null);
+        let point = new Point(12, 13);
+        println(`${point.x} ${point.y}`);
+        /*
+        const formatMetadataKey = Symbol("format");
+
+        function format(formatString : string) {
+            return Reflect.metadata(formatMetadataKey, formatString);
+        }
+
+        function getFormat(target : any, propertyKey : string) {
+            return Reflect.getMetadata(formatMetadataKey, target, propertyKey);
+        }
+
+        class FormatGreeter {
+            @format("Hello, %s")
+            greeting : string;
+
+            constructor(message : string) {
+                this.greeting = message;
+            }
+            greet() {
+                let formatString = getFormat(this, "greeting") as string;
+                return formatString.replace("s%", this.greeting);
+            }
+        }
+
+        const requiredMetadataKey = Symbol("required");
+        
+        function required(target: Object, propertyKey: string | symbol, parameterIndex: number) {
+            let existingRequiredParameters: number[] = Reflect.getOwnMetadata(requiredMetadataKey, target, propertyKey) || [];
+            existingRequiredParameters.push(parameterIndex);
+            Reflect.defineMetadata(requiredMetadataKey, existingRequiredParameters, target, propertyKey);
+        }
+        
+        function validate(target: any, propertyName: string, descriptor: TypedPropertyDescriptor<Function>) {
+            let method = descriptor.value;
+            descriptor.value = function () {
+                let requiredParameters: number[] = Reflect.getOwnMetadata(requiredMetadataKey, target, propertyName);
+                if (requiredParameters) {
+                    for (let parameterIndex of requiredParameters) {
+                        if (parameterIndex >= arguments.length || arguments[parameterIndex] === undefined) {
+                            throw new Error("Missing required argument.");
+                        }
+                    }
+                }
+        
+                return method.apply(this, arguments);
+            }
+        }
+
+        class ValidateGreeter {
+            greeting : string;
+
+            constructor(message : string) {
+                this.greeting = message;
+            }
+
+            @validate
+            greet(@required name : string) {
+                return "Hello " + name + ", " + this.greeting;
+            }
+
+        }
+
+        println(new ValidateGreeter("DuGu").greet("dugu"));
+
+        class Line {
+            private _p0 : Point;
+            private _p1 : Point;
+
+            @Reflect.metadata("design:type", Point)
+            set p0(value : Point) { this._p0 = value; }
+            get p0() { return this._p0; }
+            
+            @Reflect.metadata("design:type", Point)
+            set p1(value : Point) { this._p1 = value; }
+            get p1() { return this._p1; }
+
+        }
+        */
+        //#endregion
+        //#region 20.Mixins
+        writeh2("20.Mixins");
+        // Disposable Mixin
+        class Disposable {
+            dispose() {
+                this.isDisposed = true;
+            }
+        }
+        // Activatable Mixin
+        class Activatable {
+            activate() {
+                this.isActive = true;
+            }
+            deactivate() {
+                this.isActive = false;
+            }
+        }
+        class SmartObject {
+            constructor() {
+                // Disposable
+                this.isDisposed = false;
+                // Activatable
+                this.isActive = false;
+                setInterval(() => console.log(this.isActive + " : " + this.isDisposed), 500);
+            }
+            interact() {
+                this.activate();
+            }
+        }
+        applyMixins(SmartObject, [Disposable, Activatable]);
+        let smartObj = new SmartObject();
+        setTimeout(() => smartObj.interact(), 1000);
+        function applyMixins(derivedCtor, baseCtors) {
+            baseCtors.forEach(baseCtor => {
+                Object.getOwnPropertyNames(baseCtor.prototype).forEach(name => {
+                    derivedCtor.prototype[name] = baseCtor.prototype[name];
+                });
+            });
+        }
+        //#endregion
+        //#region 21.三斜线指令
+        console.log("21.三斜线指令");
         //#endregion
     }
     catch (error) {
