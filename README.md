@@ -3,7 +3,7 @@ This are HTML5, CSS, JavaScript, TypeScript files using *vs code*
 
 # Required
 
-* *node.js 9+*
+* *node.js 6+*
 * *nmp (node package manager)*
 * *TypeSctipt*
 
