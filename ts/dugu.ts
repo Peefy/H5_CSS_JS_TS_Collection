@@ -5,6 +5,8 @@
 
 //import "reflect-metadata"
 
+// Tips : 尽量用const代替let和var关键字
+
 class Student {
     fullName: string;
     constructor(public firstName = "", public middleInitial = ""
@@ -20,7 +22,7 @@ interface Person {
     lastName: string;
 }
 
-function greeter(person: Person) {
+function greeter(person: Person) : string {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
 
@@ -223,6 +225,8 @@ function main() {
             }
         }
         let greter = new Greeter("DuGu");
+        // 尽量用const代替let和var关键字
+        const conGreater = new Greeter("123");
         let varStr = greter.internalVar.toString();
         println(greter.greet());
         println(varStr);
