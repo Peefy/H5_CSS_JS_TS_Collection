@@ -28,7 +28,7 @@ function greeter(person: Person) : string {
 }
 
 function voidFunc(): void {
-
+    console.log("123");
 }
 
 function writeLine(message) {
