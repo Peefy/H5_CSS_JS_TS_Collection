@@ -6,6 +6,7 @@
 //import "reflect-metadata"
 
 // Tips : 尽量用const代替let和var关键字
+// Tips : 在for循环中用let代替var
 
 class Student {
     fullName: string;
