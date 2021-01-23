@@ -91,6 +91,11 @@ function main() {
         function testMoren(wholeObj: { a: string, b?: number }) {
             let { a, b = 1001 } = wholeObj;
         }
+        // 匿名Structure类型注解
+        let wholeObj: { a: string, b?: number } = {
+            a: "123",
+            b: 123,
+        }
         //函数指定默认值
         function fss({ a, b } = { a: "", b: 1 }) {
 
